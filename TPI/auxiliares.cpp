@@ -448,5 +448,3 @@ int cantHogaresCasaConNHabitaciones(eph_h th, int region, int habitaciones){
   * }
   * return i >= m.size();
   * */
-
-//probando cambios

@@ -376,6 +376,8 @@ int habitantesDeUnaCasa(hogar hog, eph_i ti) {
 
 /* año, rango trimestre, rango componente*/
 
+/*####################################################################################################################*/
+
 //IMPLEMENTACION PROBLEMA 2
 /*
 bool longitudIgualAMaximaCantidadHabitaciones(eph_h th, int region, vector<int> lista){

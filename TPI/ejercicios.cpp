@@ -19,39 +19,38 @@ bool esEncuestaValida ( eph_h th, eph_i ti ) {
 
 // Implementacion Problema 2
 vector < int > histHabitacional ( eph_h th, eph_i ti, int region ) {
-	vector < int > resultado = {-1, -1, -1, -1, -1, -1};
-    if( true ){
-        int j=0;
-        while(j<th.size()){
-            if(j<resultado.size()){
-                resultado[j]=cantHogaresCasaConNHabitaciones(th, region, j + 1);
-            }/*else{
-                resultado.push_back(cantHogaresCasaConNHabitaciones(th, region, j + 1));
-            }*/
+	vector < int > resultado; /*= {-1, -1, -1, -1, -1, -1};*/
+    longitudIgualAMaximaCantidadHabitaciones(th,region,resultado);
+    int j=0;
+    while(j<th.size()){
+        if(j<resultado.size()){
+            resultado[j]=cantHogaresCasaConNHabitaciones(th, region, j + 1);
+        }
         j++;
-        }
-        resultado.push_back(0);
-        int i=resultado.size()-1;
-        while(i>=0 && longitudIgualAMaximaCantidadHabitaciones(th,region,resultado)== false){
-            resultado.pop_back();
-            i--;
-        }
     }
 	// TODO
-	
 	return resultado;
 }
 
 // Implementacion Problema 3
 vector< pair < int, float > > laCasaEstaQuedandoChica ( eph_h th, eph_i ti ) {
-
+    int uno = 1;
     vector<pair<int,float>> resp = {make_pair(1,-1.0),
                                         make_pair(40, -1.0),
                                         make_pair(41, -1.0),
                                         make_pair(42,-1.0),
                                         make_pair(43,-1.0),
                                         make_pair(44,-1.0)};
-	// TODO
+
+    for (int k=0;k<resp.size();k++){
+        resp[k].second=proporcionDeCasasConHC(th,ti,resp[k].first);
+    }
+/*
+    for (int i = 0; i < resp.size(); ++i) {
+        resp[i].second = uno;
+    }*/
+
+    // TODO
 	
   return resp;
 }

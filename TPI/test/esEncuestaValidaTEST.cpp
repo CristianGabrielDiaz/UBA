@@ -167,6 +167,7 @@ TEST(esEncuestaValidaTEST, validaMenosOIgualA20MiembrosEnElHogar) {
 
     EXPECT_TRUE(esEncuestaValida(th, ti));
 }
+//No pasa el  test cuando se corre todo el tpi pero si cuando se corre individual
 
 TEST(esEncuestaValidaTEST, invalidaTrimestreNegativo) {
     eph_h th = {{22114, 2020,   -3,  319611, 629088, 3,  41, 0,  1,  3,  1,  2}};

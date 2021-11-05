@@ -41,13 +41,13 @@ bool rangoIv2(eph_h th);
 
 bool rangoIi2(eph_h th);
 
-bool rangoComponente(eph_h th,eph_i ti);
+bool rangoMiembrosHogar(eph_h th,eph_i ti);
 
 bool rangoCh6(eph_i ti);
 
 bool rangoP47t(eph_i ti);
 
-bool rangoIv1(eph_i ti);
+bool rangoIv1(eph_h th);
 
 bool rangoIi3(eph_i ti);
 
@@ -69,16 +69,37 @@ bool rangoPp04g(eph_i ti);
 
 int habitantesDeUnaCasa(hogar hog, eph_i ti);
 
+bool mismoAnio (eph_h th,eph_i ti);
+
 //IMPLENTACION PROBLEMA 2
 
 
-bool longitudIgualAMaximaCantidadHabitaciones(eph_h th,int  region,vector<int> resultado);
+void longitudIgualAMaximaCantidadHabitaciones(eph_h th,int  region,vector<int> &lista);
 
 int cantHogaresCasaConNHabitaciones(eph_h th,int region,int  j);
 
+//IMPLENTACION PROBLEMA 3
+
+float proporcionDeCasasConHC(eph_h th,eph_i ti, int region);
+
+float cantHogaresValidos(eph_h th,int region);
+
+float cantHogaresValidosConHC(eph_h th,eph_i ti,int region);
+
+bool esHogarValido (hogar th_k,int region);
+
+bool hogarConHC(hogar th_k, eph_i ti);
+
+int cantHabitantes(hogar th_k,eph_i ti);
 
 
 
-
-
+//IMPLENTACION PROBLEMA 4
+//IMPLENTACION PROBLEMA 5
+//IMPLENTACION PROBLEMA 6
+//IMPLENTACION PROBLEMA 7
+//IMPLENTACION PROBLEMA 8
+//IMPLENTACION PROBLEMA 9
+//IMPLENTACION PROBLEMA 10
+//IMPLENTACION PROBLEMA 11
 #endif //SOLUCION_AUXILIARES_H

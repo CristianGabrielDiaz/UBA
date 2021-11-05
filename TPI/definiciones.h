@@ -47,7 +47,15 @@ enum ItemInd {
 #define FILAS_INDIVIDUO 11
 
 #define GBA 1
-#define PAMPEANA 5
+#define NOA 40
+#define NEA 41
+#define CUYO 42
+#define PAMPEANA 43
+#define PATAGONIA 44
+
+#define cantItemHogar 12
+#define cantItemInd 11
+
 #define CANTIDAD_DE_REGIONES 6
 
 #define CASA 1

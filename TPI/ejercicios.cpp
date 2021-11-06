@@ -4,18 +4,14 @@
 
 using namespace std;
 // Implementacion Problema 1
-
 bool esEncuestaValida ( eph_h th, eph_i ti ) {
 	bool resp = false;
     if( esValida(th,ti) ){
         resp=true;
     }
 	// TODO
-	
 	return resp;
 }
-
-
 
 // Implementacion Problema 2
 vector < int > histHabitacional ( eph_h th, eph_i ti, int region ) {
@@ -45,13 +41,7 @@ vector< pair < int, float > > laCasaEstaQuedandoChica ( eph_h th, eph_i ti ) {
     for (int k=0;k<resp.size();k++){
         resp[k].second=proporcionDeCasasConHC(th,ti,resp[k].first);
     }
-/*
-    for (int i = 0; i < resp.size(); ++i) {
-        resp[i].second = uno;
-    }*/
-
     // TODO
-	
   return resp;
 }
 

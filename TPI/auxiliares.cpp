@@ -29,7 +29,7 @@ bool sinRepetidosEnIndividuos(eph_i ti){
     while ( i<ti.size() ){
         int j=0;
         while(j< ti.size()){
-            if((ti[i][COMPONENTE] == ti[j][COMPONENTE]) && i!= j&&ti[i][INDCODUSU] == ti[j][INDCODUSU]){
+            if(ti[i][COMPONENTE]==ti[j][COMPONENTE] && i!=j && ti[i][INDCODUSU]==ti[j][INDCODUSU]){
                 repetidos++;
             }
             j++;
@@ -39,18 +39,18 @@ bool sinRepetidosEnIndividuos(eph_i ti){
     return repetidos==0;
 }
 bool sinRepetidosEnHogares (eph_h th){
-    int i=0,k=0;
+    int i=0,repetidos=0;
     while ( i<th.size() ){
         int j=0;
         while(j< th.size()){
-            if((th[i][HOGCODUSU] == th[j][HOGCODUSU]) && i!= j){
-                k++;
+            if(th[i][HOGCODUSU]==th[j][HOGCODUSU] && i!= j){
+                repetidos++;
             }
             j++;
         }
         i++;
      }
-    return k==0;
+    return repetidos==0;
 }
 bool hogaresAsociadosIndividuos(eph_h th, eph_i ti){
     int i=0,asociadosTh=0,asociadosTi=0;
@@ -141,7 +141,7 @@ bool mismoTrimestreHogares(eph_h th){
     }
     return distintos==0;
 }
-bool mismoTrimestreIndividuos(eph_i ti){//este tiene algo
+bool mismoTrimestreIndividuos(eph_i ti){
     int i=0,distintos=0;
     while(i<ti.size()){
         int j=0;
@@ -167,9 +167,9 @@ bool iv2MayorOIgualIi2(eph_h th){
 }
 bool rangosValidos(eph_h th, eph_i ti){
      bool valido=false;
-     if(rangoTrimestre(th,ti)&&/*rangoCodusu(th,ti)&&*/rangoIv2(th) &&rangoIi2(th)&&rangoMiembrosHogar(th,ti)
-     &&rangoCh6(ti)&&rangoP47t(ti)&&rangoIv1(th)&&rangoIi3(ti)&&rangoIi7(th)&&rangoRegion(th)&&rangoMas500(th)
-     &&rangoCh4(ti)&&rangoNivelEd(ti)&&rangoEstado(ti)&&rangoCatOcup(ti)&&rangoPp04g(ti)){
+     if(rangoTrimestre(th,ti) && /*rangoCodusu(th,ti) && */ rangoIv2(th) && rangoIi2(th) && rangoMiembrosHogar(th,ti)
+     && rangoCh6(ti) && rangoP47t(ti) && rangoIv1(th) && rangoIi3(ti) && rangoIi7(th) && rangoRegion(th) && rangoMas500(th)
+     && rangoCh4(ti) && rangoNivelEd(ti) && rangoEstado(ti) && rangoCatOcup(ti) && rangoPp04g(ti)){
         valido=true;
      }
      return valido;
@@ -248,7 +248,7 @@ bool rangoCh6(eph_i ti){
     }
     return noEnRango==0;
 }
-bool rangoP47t( eph_i ti){
+bool rangoP47t(eph_i ti){
     int i=0,noEnRango=0;
     while(i<ti.size()){
         if(ti[i][p47T]<-1){
@@ -258,7 +258,7 @@ bool rangoP47t( eph_i ti){
     }
     return noEnRango==0;
 }
-bool rangoIv1( eph_h th){
+bool rangoIv1(eph_h th){
     int i=0,noEnRango=0;
     while(i<th.size()){
         if((5<th[i][IV1]) || (th[i][IV1]<1)){
@@ -268,7 +268,7 @@ bool rangoIv1( eph_h th){
     }
     return noEnRango==0;
 }
-bool rangoIi3( eph_i ti){
+bool rangoIi3(eph_i ti){
     int i=0,noEnRango=0;
     while(i<ti.size()){
         if(ti[i][II3]==1||ti[i][II3]==3){
@@ -278,7 +278,7 @@ bool rangoIi3( eph_i ti){
     }
     return noEnRango==0;
 }
-bool rangoIi7( eph_h th){
+bool rangoIi7(eph_h th){
     int i=0,noEnRango=0;
     while(i<th.size()){
         if(3<th[i][II7] || th[i][II7]<1){
@@ -291,7 +291,7 @@ bool rangoIi7( eph_h th){
 bool rangoRegion(eph_h th) {
     int i = 0, noEnRango = 0;
     while (i < th.size()) {
-        if (th[i][REGION]!=GBA&&th[i][REGION]!=NOA&&th[i][REGION]!=NEA&&th[i][REGION]!=CUYO&&th[i][REGION]!=PAMPEANA&&th[i][REGION]!=PATAGONIA) {
+        if (th[i][REGION]!=GBA && th[i][REGION]!=NOA && th[i][REGION]!=NEA && th[i][REGION]!=CUYO && th[i][REGION]!=PAMPEANA && th[i][REGION]!=PATAGONIA) {
             noEnRango++;
         }
         i++;
@@ -378,7 +378,7 @@ int habitantesDeUnaCasa(hogar hog, eph_i ti) {
 void longitudIgualAMaximaCantidadHabitaciones(eph_h th, int region, vector<int> &lista){
     int i=0,maximaCantHab=0;
     while(i<th.size()){
-        if(th[i][REGION]==region&& th[i][IV1]==1){
+        if(th[i][REGION]==region && th[i][IV1]==1){
                 if (maximaCantHab < th[i][IV2]) {
                     maximaCantHab = th[i][IV2];
                 }
@@ -400,7 +400,9 @@ int cantHogaresCasaConNHabitaciones(eph_h th, int region, int habitaciones){
     }
     return hogares;
 }
+
 /*####################################################################################################################*/
+
 //IMPLEMENTACION PROBLEMA 3
 float proporcionDeCasasConHC(eph_h th,eph_i ti, int region){
     if( cantHogaresValidos(th,region)>0){
@@ -429,14 +431,14 @@ float cantHogaresValidos(eph_h th, int region){
     return hogaresValidos;
 }
 bool esHogarValido (hogar th_k,int region){
-    if(th_k[IV1]==1&& th_k[REGION]==region&& th_k[MAS_500]==0){
+    if(th_k[IV1]==1 && th_k[REGION]==region && th_k[MAS_500]==0){
         return true;
     }else{
         return false;
     }
 }
 bool hogarConHC(hogar th_k, eph_i ti){
-    if(cantHabitantes(th_k,ti)>3*th_k[II2]){
+    if(cantHabitantes(th_k,ti) > 3*th_k[II2]){
         return true;
     }else{
         return false;

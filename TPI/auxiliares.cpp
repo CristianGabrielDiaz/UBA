@@ -167,8 +167,8 @@ bool iv2MayorOIgualIi2(eph_h th){
 }
 bool rangosValidos(eph_h th, eph_i ti){
      bool valido=false;
-     if(rangoTrimestre(th,ti) && /*rangoCodusu(th,ti) && */ rangoIv2(th) && rangoIi2(th) && rangoMiembrosHogar(th,ti)
-     && rangoCh6(ti) && rangoP47t(ti) && rangoIv1(th) && rangoIi3(ti) && rangoIi7(th) && rangoRegion(th) && rangoMas500(th)
+     if(rangoTrimestre(th,ti) && /*rangoCodusu(th,ti) && */ rangoIv2(th) && rangoIi2(th) &&rangoMiembrosHogar(th,ti)
+     && rangoCh6(ti) && rangoP47t(ti) && rangoIv1(th) && rangoIi3(th)  && rangoIi7(th) && rangoRegion(th) && rangoMas500(th)
      && rangoCh4(ti) && rangoNivelEd(ti) && rangoEstado(ti) && rangoCatOcup(ti) && rangoPp04g(ti)){
         valido=true;
      }
@@ -268,10 +268,10 @@ bool rangoIv1(eph_h th){
     }
     return noEnRango==0;
 }
-bool rangoIi3(eph_i ti){
+bool rangoIi3(eph_h th){
     int i=0,noEnRango=0;
-    while(i<ti.size()){
-        if(ti[i][II3]==1||ti[i][II3]==3){
+    while(i<th.size()){
+        if(th[i][II3]!=1 && th[i][II3]!=2){
             noEnRango ++;
         }
         i++;
@@ -454,10 +454,83 @@ int cantHabitantes(hogar th_k,eph_i ti){
     return habitantes;
 }
 //IMPLENTACION PROBLEMA 4
+float proporcionTeleworking(eph_h th,eph_i ti){
+    float proporcion=0;
+    if(cantIndividuosQueTrabajan(th,ti)>0){
+        proporcion = cantIndividuosTrabajandoEnSuVivienda(th,ti)/ cantIndividuosQueTrabajan(th,ti);
+    }
+    return proporcion;
+}
+
+
+float  cantIndividuosTrabajandoEnSuVivienda(eph_h th, eph_i ti){
+    float trabajadoresValidos=0;
+    for (int i = 0; i <ti.size() ; ++i) {
+        for (int j = 0; j <th.size() ; ++j) {
+            if (ti[i][ESTADO]==1 && ti[i][PP04G]==6 && ti[i][INDCODUSU]==th[j][HOGCODUSU] && th[j][II3]==1 && th[j][MAS_500]==1 && (th[j][IV1]==1 || th[j][IV1]==2)){
+                trabajadoresValidos++;
+            }
+        }
+    }
+    return trabajadoresValidos;
+}
+
+float cantIndividuosQueTrabajan(eph_h th, eph_i ti){
+    float trabajadoresValidos=0;
+    for(int i=0;i<ti.size();i++){
+        for(int k=0;k<th.size();k++){
+            if(ti[i][ESTADO]==1&&ti[i][INDCODUSU]==th[k][HOGCODUSU]&&th[k][MAS_500]==1&&ti[i][PP04G]==6){
+                trabajadoresValidos++;
+            }
+        }
+
+    }
+    return trabajadoresValidos;
+}
 
 //IMPLENTACION PROBLEMA 5
+
+bool tieneCasaChica(hogar th_k, eph_i ti){
+    bool casaChica=false;
+    if((cantHabitantes(th_k,ti)-2)>th_k[II2]){
+        casaChica=true;
+
+    }
+    return casaChica;
+}
 //IMPLENTACION PROBLEMA 6
 //IMPLENTACION PROBLEMA 7
+pair<int,int> findMinPosition(vector<pair<int,int>> &s, int d, int h) {
+    pair<int,int> min = d;
+    for(int i=d+1; i<h; i++) {
+        if (s[i].first < s[min].first) {
+            min = i;
+        }
+    }
+    return s[min];
+}
+void selectionSort(vector<pair<int,int>> &s) {
+    for(int i=0; i<s.size(); i++) {
+        int minPos = findMinPosition(s,i,s.size());
+        swap(s, i, minPos);
+    }
+}
+void swap(vector<pair<int,int>> &s,pair<int,int>& a, pair<int,int>& b){
+    /* COMPLETAR */
+    a.first=a.first+b.first;
+    b.first=a.first-b.first;
+    a.first=a.first-b.first;
+
+    a.second=a.second+b.second;
+    b.second=a.second-b.second;
+    a.second=a.second-b.second;
+
+
+
+
+}
+
+
 //IMPLENTACION PROBLEMA 8
 //IMPLENTACION PROBLEMA 9
 //IMPLENTACION PROBLEMA 10

@@ -7,11 +7,6 @@
 bool esValida(eph_h th, eph_i ti);
 
 bool esMatriz(vector<vector<int>> m);
-/*
-int cantItemHogar;
-
-int cantItemInd;
-*/
 
 bool sinRepetidosEnIndividuos(eph_i ti);
 
@@ -49,7 +44,7 @@ bool rangoP47t(eph_i ti);
 
 bool rangoIv1(eph_h th);
 
-bool rangoIi3(eph_i ti);
+bool rangoIi3(eph_h th);
 
 bool rangoIi7(eph_h th);
 
@@ -95,9 +90,26 @@ int cantHabitantes(hogar th_k,eph_i ti);
 
 
 //IMPLENTACION PROBLEMA 4
+
+float proporcionTeleworking(eph_h th,eph_i ti);
+
+float cantIndividuosTrabajandoEnSuVivienda(eph_h th, eph_i ti);
+
+float cantIndividuosQueTrabajan(eph_h th, eph_i ti);
 //IMPLENTACION PROBLEMA 5
+
+bool tieneCasaChica(hogar th_k, eph_i ti);
+
 //IMPLENTACION PROBLEMA 6
 //IMPLENTACION PROBLEMA 7
+void selectionSort(vector<pair<int,int>> &s);
+
+void swap(pair<int,int>& a, pair<int,int>& b);
+
+int findMinPosition(vector<pair<int,int>> &s, int d, int h);
+
+
+
 //IMPLENTACION PROBLEMA 8
 //IMPLENTACION PROBLEMA 9
 //IMPLENTACION PROBLEMA 10

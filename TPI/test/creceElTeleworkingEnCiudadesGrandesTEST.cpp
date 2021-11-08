@@ -97,7 +97,7 @@ TEST(creceElTeleworkingEnCiudadesGrandesTEST, eph2016a2018) {
     eph_i t1i;
     leerEncuesta ( "eph_3c_2018_1000", t1h, t1i );
 
-    eph_h t2h;
+    eph_h t2h;//
     eph_i t2i;
     leerEncuesta ( "eph_3c_2020_1000", t2h, t2i );
 

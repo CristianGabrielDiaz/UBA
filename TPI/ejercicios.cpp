@@ -48,7 +48,9 @@ vector< pair < int, float > > laCasaEstaQuedandoChica ( eph_h th, eph_i ti ) {
 // Implementacion Problema 4
 bool creceElTeleworkingEnCiudadesGrandes ( eph_h t1h, eph_i t1i, eph_h t2h, eph_i t2i ) {
 	bool resp = false;
-	
+    if(proporcionTeleworking(t2h,t2i)>proporcionTeleworking(t1h,t1i) ){
+        resp=true;
+    }
 	// TODO
 	
   return  resp;
@@ -56,10 +58,15 @@ bool creceElTeleworkingEnCiudadesGrandes ( eph_h t1h, eph_i t1i, eph_h t2h, eph_
 
 // Implementacion Problema 5
 int costoSubsidioMejora( eph_h th, eph_i ti, int monto ){
-	int resp = -1;
-	
+	int resp =0;
+
+    for (int i=0;i<th.size();i++){
+        if(th[i][II7]==1 && tieneCasaChica(th[i],ti)){
+            resp+=monto;
+        }
+    }
 	// TODO
-	
+
   return  resp;
 }
 
@@ -67,8 +74,17 @@ int costoSubsidioMejora( eph_h th, eph_i ti, int monto ){
 join_hi generarJoin( eph_h th, eph_i ti ){
     hogar h = {};
     individuo i = {};
-	join_hi resp = {make_pair(h,i)};
-	
+	join_hi resp = {};
+    for(int k=0;k<th.size();k++){
+        for(int j=0;j<ti.size();j++){
+            if (th[k][HOGCODUSU]==ti[j][INDCODUSU]){
+                h = th[k];
+                i = ti[j];
+                resp.push_back(make_pair(h,i));
+            }
+        }
+    }
+
 	// TODO
 	
   return  resp;
@@ -76,7 +92,26 @@ join_hi generarJoin( eph_h th, eph_i ti ){
 
 // Implementacion Problema 7
 void ordenarRegionYCODUSU (eph_h & th, eph_i & ti) {
-	
+    for(int j=0;j<th.size();j++){
+        for(int i=0;i<th[0].size();i++){
+            int max=0;
+            if(th[i][REGION]>max){
+                max=th[i][REGION];
+            }
+        }
+        if(th[j][REGION]==max){
+            th[]
+        }
+    }
+
+
+
+
+
+
+
+
+
 	// TODO
 	
 	return;

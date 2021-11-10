@@ -119,10 +119,9 @@ void corregirRegion( eph_h & th, eph_i ti ) {
 	int j=0;
     while(j<th.size()){
         if(th[j][REGION]==GBA){
-            th[j][]
-
+            th[j][REGION]=PAMPEANA;
         }
-
+        j++;
     }
 	// TODO
 	

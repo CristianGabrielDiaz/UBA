@@ -530,6 +530,89 @@ void swap(vector<pair<int,int>> &s,pair<int,int>& a, pair<int,int>& b){
 
 
 }
+*/
+
+void insertionSortRegion (eph_h &th ) {
+    for(int i=0; i < th . size () ; i++) {
+        insertarRegion (th ,i) ;
+    }
+
+}
+
+void insertarRegion(eph_h &th, int i) {
+
+    while (i > 0 && th [i][4] < th [i -1][4]) {//usamos 4 ya que REGION no coincide con lo definido en definiciones ya la tabla hogares le faltan filas
+        swap (th ,i,i -1) ;
+        i--;
+    }
+}
+void insertionSortCodusuEnRegion (eph_h &th ) {
+    for(int i=0; i < th.size () ; i++) {
+        insertarCodusuEnRegion (th ,i) ;
+    }
+}
+
+void insertarCodusuEnRegion(eph_h &th, int i) {
+    if (i > 0 && th [i][4] == th[i -1][4]) {
+        while (i > 0 && th[i][HOGCODUSU] < th[i - 1][HOGCODUSU]) {
+            swap(th, i, i - 1);
+            i--;
+        }
+    }
+}
+/*##################################################################################################################*/
+
+
+void insertionSortCodusu (eph_h &th, eph_i &ti) {
+    int j=0;
+    for(int i=0; i < th . size () ; i++) {
+        for (int k=0; k < ti . size () ; k++){
+            if(th[i][HOGCODUSU]==ti[k][INDCODUSU]){
+                swap (ti ,j ,k) ;
+                j++;
+            }
+
+        }
+
+    }
+
+}
+
+/*
+void insertarCodusu( eph_i &ti, int i) {//
+    while (i < ti.size() && ti [i][INDCODUSU] < ti [i -1][INDCODUSU]) {
+        swap (ti ,i ,i -1) ;
+        i--;
+    }
+}
+*/
+
+void insertionSortComponenteEnCodusu(vector<vector<int>> &matriz) {
+    for(int i=0; i < matriz . size () ; i++) {
+        insertarComponenteEnCodusu (matriz ,i) ;
+    }
+
+}
+
+
+
+void insertarComponenteEnCodusu(vector<vector<int>> &matriz, int i) {
+    if (i > 0 && matriz [i][INDCODUSU] == matriz[i -1][INDCODUSU]) {
+        int codusu1 = matriz[0][INDCODUSU],codusu2 = matriz[1][INDCODUSU],codusu3=matriz[2][INDCODUSU],codusu4= matriz[3][INDCODUSU];
+        while (i > 0 && matriz[i][6] < matriz[i - 1][6]&&matriz [i][INDCODUSU] == matriz[i -1][INDCODUSU]) {//COMOPONENTE=6 segun tabla del test
+            swap(matriz, i, i - 1);
+            i--;
+        }
+    }
+}
+
+void swap(vector<vector<int>> &matriz, int i, int j) {
+    vector<int> k= matriz [i];
+    matriz [i]= matriz [j];
+    matriz [j]=k;
+}
+
+
 
 
 //IMPLENTACION PROBLEMA 8

@@ -92,24 +92,11 @@ join_hi generarJoin( eph_h th, eph_i ti ){
 
 // Implementacion Problema 7
 void ordenarRegionYCODUSU (eph_h & th, eph_i & ti) {
-    for(int j=0;j<th.size();j++){
-        for(int i=0;i<th[0].size();i++){
-            int max=0;
-            if(th[i][REGION]>max){
-                max=th[i][REGION];
-            }
-        }
-        if(th[j][REGION]==max){
-            th[]
-        }
-    }
+    insertionSortRegion(th);
+    insertionSortCodusuEnRegion(th);
 
-
-
-
-
-
-
+    insertionSortCodusu(th,ti);
+    insertionSortComponenteEnCodusu(ti);
 
 
 	// TODO

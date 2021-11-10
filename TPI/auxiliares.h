@@ -102,11 +102,16 @@ bool tieneCasaChica(hogar th_k, eph_i ti);
 
 //IMPLENTACION PROBLEMA 6
 //IMPLENTACION PROBLEMA 7
-void selectionSort(vector<pair<int,int>> &s);
 
-void swap(pair<int,int>& a, pair<int,int>& b);
+void insertionSortRegion (eph_h &th );
 
-int findMinPosition(vector<pair<int,int>> &s, int d, int h);
+void insertarRegion (eph_h &th , int i);
+
+void swap (vector<vector<int>> &matriz , int i, int j);
+
+void insertionSortCodusuEnRegion (eph_h &th );
+
+void insertarCodusuEnRegion (eph_h &th , int i);
 
 void insertionSortCodusu (eph_h &th, eph_i &ti );
 

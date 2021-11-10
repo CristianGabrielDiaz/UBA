@@ -118,7 +118,10 @@ vector < hogar > muestraHomogenea( eph_h & th, eph_i & ti ){
 void corregirRegion( eph_h & th, eph_i ti ) {
 	int j=0;
     while(j<th.size()){
-        if(){}
+        if(th[j][REGION]==GBA){
+            th[j][]
+
+        }
 
     }
 	// TODO

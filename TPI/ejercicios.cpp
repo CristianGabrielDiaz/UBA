@@ -116,7 +116,11 @@ vector < hogar > muestraHomogenea( eph_h & th, eph_i & ti ){
 
 // Implementacion Problema 9
 void corregirRegion( eph_h & th, eph_i ti ) {
-	
+	int j=0;
+    while(j<th.size()){
+        if(){}
+
+    }
 	// TODO
 	
 	return;

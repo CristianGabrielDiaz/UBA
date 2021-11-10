@@ -167,7 +167,7 @@ bool iv2MayorOIgualIi2(eph_h th){
 }
 bool rangosValidos(eph_h th, eph_i ti){
      bool valido=false;
-     if(rangoTrimestre(th,ti) && /*rangoCodusu(th,ti) && */ rangoIv2(th) && rangoIi2(th) &&rangoMiembrosHogar(th,ti)
+     if(rangoTrimestre(th,ti) && /*rangoCodusu(th,ti) && */ rangoIv2(th)  &&rangoMiembrosHogar(th,ti)
      && rangoCh6(ti) && rangoP47t(ti) && rangoIv1(th) && rangoIi3(th)  && rangoIi7(th) && rangoRegion(th) && rangoMas500(th)
      && rangoCh4(ti) && rangoNivelEd(ti) && rangoEstado(ti) && rangoCatOcup(ti) && rangoPp04g(ti)){
         valido=true;
@@ -202,16 +202,7 @@ bool rangoIv2(eph_h th){
     }
     return noEnRango==0;
 }
-bool rangoIi2(eph_h th){
-    int i=0,noEnRango=0;
-    while(i<th.size()){
-        if(th[i][II2]>th[i][IV2]){
-            noEnRango ++;
-        }
-        i++;
-    }
-    return noEnRango==0;
-}
+
 bool rangoMiembrosHogar(eph_h th, eph_i ti){
     int i=0,noEnRango=0;
     while(i<th.size()){
@@ -544,8 +535,8 @@ void insertionSortCodusuEnRegion (eph_h &th ) {
 }
 
 void insertarCodusuEnRegion(eph_h &th, int i) {
-    if (i > 0 && th [i][4] == th[i -1][4]) {
-        while (i > 0 && th[i][HOGCODUSU] < th[i - 1][HOGCODUSU]) {
+    if (i > 0 && th [i][4] == th[i -1][4]) {//REGION=4
+        while (i > 0 && th[i][HOGCODUSU] < th[i - 1][HOGCODUSU]&& th [i][4] == th[i -1][4]) {
             swap(th, i, i - 1);
             i--;
         }

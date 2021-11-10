@@ -1,0 +1,511 @@
+        -:    0:Source:D:/Mi PC/Documents/UBA/AED1/TPI/test/histogramaDeAnillosConcentricosTEST.cpp
+        -:    0:Graph:D:\Mi PC\Documents\UBA\AED1\TPI\cmake-build-debug\CMakeFiles\tpi.dir\test\histogramaDeAnillosConcentricosTEST.gcno
+        -:    0:Data:D:\Mi PC\Documents\UBA\AED1\TPI\cmake-build-debug\CMakeFiles\tpi.dir\test\histogramaDeAnillosConcentricosTEST.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include "../definiciones.h"
+        -:    2:#include "../Funciones_TPI.h"
+        -:    3:#include "../ejercicios.h"
+        -:    4:#include "../auxiliares.h"
+        -:    5:#include "gtest/gtest.h"
+        -:    6:#include <iostream>
+        -:    7:#include <string>
+        -:    8:
+        -:    9:using namespace std;
+        -:   10:
+        -:   11:pair<eph_h, eph_i> encuesta_prueba(vector<pair<int, int>> pos);
+        -:   12:
+        -:   13:
+        2:   14:TEST(histogramaDeAnillosConcentricosTEST, primeroYUltimo) {
+        2:   15:    vector<int> distancias = {10, 20, 50, 100};
+        -:   16:
+        1:   17:    pair<int, int> centro = {0, 0};
+        -:   18:
+        -:   19:    pair<eph_h, eph_i> p = encuesta_prueba({
+        -:   20:        {1, 1},     // 1.41
+        -:   21:        {3, 5},     // 5.83
+        -:   22:        {53, 5},    // 52.24
+        -:   23:        {101, 21},  // 103.16
+        3:   24:    });
+        -:   25:
+        2:   26:    vector<int> res = {2, 0, 0, 1};
+        -:   27:
+        2:   28:    EXPECT_EQ(res, histogramaDeAnillosConcentricos(p.first, p.second, centro, distancias));
+        1:   29:}
+------------------
+_ZN55histogramaDeAnillosConcentricosTEST_primeroYUltimo_Test8TestBodyEv:
+function _ZN55histogramaDeAnillosConcentricosTEST_primeroYUltimo_Test8TestBodyEv called 1 returned 100% blocks executed 44%
+        1:   14:TEST(histogramaDeAnillosConcentricosTEST, primeroYUltimo) {
+        2:   15:    vector<int> distancias = {10, 20, 50, 100};
+        1:   15-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+call    4 returned 1
+    $$$$$:   15-block  1
+    $$$$$:   15-block  2
+    $$$$$:   15-block  3
+call    5 never executed
+        -:   16:
+        1:   17:    pair<int, int> centro = {0, 0};
+        -:   18:
+        -:   19:    pair<eph_h, eph_i> p = encuesta_prueba({
+        -:   20:        {1, 1},     // 1.41
+        -:   21:        {3, 5},     // 5.83
+        -:   22:        {53, 5},    // 52.24
+        -:   23:        {101, 21},  // 103.16
+        3:   24:    });
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   24-block  0
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+call    7 returned 1
+call    8 returned 1
+    $$$$$:   24-block  1
+    $$$$$:   24-block  2
+    $$$$$:   24-block  3
+    $$$$$:   24-block  4
+call    9 never executed
+        -:   25:
+        2:   26:    vector<int> res = {2, 0, 0, 1};
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+call    4 returned 1
+    $$$$$:   26-block  0
+    $$$$$:   26-block  1
+    $$$$$:   26-block  2
+call    5 never executed
+        -:   27:
+        2:   28:    EXPECT_EQ(res, histogramaDeAnillosConcentricos(p.first, p.second, centro, distancias));
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   28-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   28-block  1
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   28-block  2
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   28-block  3
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+branch 19 taken 1 (fallthrough)
+branch 20 taken 0
+        1:   28-block  4
+call   21 returned 1
+branch 22 taken 1 (fallthrough)
+branch 23 taken 0 (throw)
+        1:   28-block  5
+call   24 returned 1
+branch 25 taken 1 (fallthrough)
+branch 26 taken 0 (throw)
+        1:   28-block  6
+call   27 returned 1
+branch 28 taken 1 (fallthrough)
+branch 29 taken 0 (throw)
+        1:   28-block  7
+call   30 returned 1
+branch 31 taken 1 (fallthrough)
+branch 32 taken 0 (throw)
+        1:   28-block  8
+call   33 returned 1
+call   34 returned 1
+        1:   28-block  9
+call   35 returned 1
+    $$$$$:   28-block 10
+    $$$$$:   28-block 11
+    $$$$$:   28-block 12
+    $$$$$:   28-block 13
+    $$$$$:   28-block 14
+call   36 never executed
+    $$$$$:   28-block 15
+    $$$$$:   28-block 16
+call   37 never executed
+    $$$$$:   28-block 17
+    $$$$$:   28-block 18
+call   38 never executed
+        1:   29:}
+------------------
+_ZN55histogramaDeAnillosConcentricosTEST_primeroYUltimo_TestC1Ev:
+function _ZN55histogramaDeAnillosConcentricosTEST_primeroYUltimo_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:   14:TEST(histogramaDeAnillosConcentricosTEST, primeroYUltimo) {
+        1:   14-block  0
+call    0 returned 1
+------------------
+        -:   30:
+        2:   31:TEST(histogramaDeAnillosConcentricosTEST, cuatroCuadrantes) {
+        -:   32:
+        2:   33:    vector<int> distancias = {10, 20, 50, 100};
+        -:   34:
+        1:   35:    pair<int, int> centro = {0, 0};
+        -:   36:
+        -:   37:    pair<eph_h, eph_i> p = encuesta_prueba({
+        -:   38:        {11, 11},
+        -:   39:        {-11, -11},
+        -:   40:        {-11, 11},
+        -:   41:        {11, -11}
+        3:   42:    });
+        -:   43:
+        2:   44:    vector<int> res = {0, 4, 0, 0};
+        -:   45:
+        2:   46:    EXPECT_EQ(res, histogramaDeAnillosConcentricos(p.first, p.second, centro, distancias));
+        1:   47:}
+------------------
+_ZN57histogramaDeAnillosConcentricosTEST_cuatroCuadrantes_Test8TestBodyEv:
+function _ZN57histogramaDeAnillosConcentricosTEST_cuatroCuadrantes_Test8TestBodyEv called 1 returned 100% blocks executed 44%
+        1:   31:TEST(histogramaDeAnillosConcentricosTEST, cuatroCuadrantes) {
+        -:   32:
+        2:   33:    vector<int> distancias = {10, 20, 50, 100};
+        1:   33-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+call    4 returned 1
+    $$$$$:   33-block  1
+    $$$$$:   33-block  2
+    $$$$$:   33-block  3
+call    5 never executed
+        -:   34:
+        1:   35:    pair<int, int> centro = {0, 0};
+        -:   36:
+        -:   37:    pair<eph_h, eph_i> p = encuesta_prueba({
+        -:   38:        {11, 11},
+        -:   39:        {-11, -11},
+        -:   40:        {-11, 11},
+        -:   41:        {11, -11}
+        3:   42:    });
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   42-block  0
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+call    7 returned 1
+call    8 returned 1
+    $$$$$:   42-block  1
+    $$$$$:   42-block  2
+    $$$$$:   42-block  3
+    $$$$$:   42-block  4
+call    9 never executed
+        -:   43:
+        2:   44:    vector<int> res = {0, 4, 0, 0};
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+call    4 returned 1
+    $$$$$:   44-block  0
+    $$$$$:   44-block  1
+    $$$$$:   44-block  2
+call    5 never executed
+        -:   45:
+        2:   46:    EXPECT_EQ(res, histogramaDeAnillosConcentricos(p.first, p.second, centro, distancias));
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   46-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   46-block  1
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   46-block  2
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   46-block  3
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+branch 19 taken 1 (fallthrough)
+branch 20 taken 0
+        1:   46-block  4
+call   21 returned 1
+branch 22 taken 1 (fallthrough)
+branch 23 taken 0 (throw)
+        1:   46-block  5
+call   24 returned 1
+branch 25 taken 1 (fallthrough)
+branch 26 taken 0 (throw)
+        1:   46-block  6
+call   27 returned 1
+branch 28 taken 1 (fallthrough)
+branch 29 taken 0 (throw)
+        1:   46-block  7
+call   30 returned 1
+branch 31 taken 1 (fallthrough)
+branch 32 taken 0 (throw)
+        1:   46-block  8
+call   33 returned 1
+call   34 returned 1
+        1:   46-block  9
+call   35 returned 1
+    $$$$$:   46-block 10
+    $$$$$:   46-block 11
+    $$$$$:   46-block 12
+    $$$$$:   46-block 13
+    $$$$$:   46-block 14
+call   36 never executed
+    $$$$$:   46-block 15
+    $$$$$:   46-block 16
+call   37 never executed
+    $$$$$:   46-block 17
+    $$$$$:   46-block 18
+call   38 never executed
+        1:   47:}
+------------------
+_ZN57histogramaDeAnillosConcentricosTEST_cuatroCuadrantes_TestC1Ev:
+function _ZN57histogramaDeAnillosConcentricosTEST_cuatroCuadrantes_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:   31:TEST(histogramaDeAnillosConcentricosTEST, cuatroCuadrantes) {
+        1:   31-block  0
+call    0 returned 1
+------------------
+        -:   48:
+        -:   49:
+function _Z15encuesta_pruebaSt6vectorISt4pairIiiESaIS1_EE called 2 returned 100% blocks executed 43%
+        2:   50:pair<eph_h, eph_i> encuesta_prueba(vector<pair<int, int>> pos) {
+        -:   51:    eph_h th = {{22114, 2020,   3,  319611, 629088, 3,  41, 0,  1,  3,  1,  2},
+        -:   52:                {31117, 2020,   3,  332870, 642475, 3,  40, 0,  1,  6,  6,  2},
+        -:   53:                {22866, 2020,   3,  317157, 627217, 2,  42, 1,  1,  2,  2,  2},
+       16:   54:                {20957, 2020,   3,  313965, 623297, 1,  43, 0,  1,  3,  1,  2}};
+        2:   54-block  0
+call    0 returned 2
+call    1 returned 2
+branch  2 taken 2 (fallthrough)
+branch  3 taken 0 (throw)
+        2:   54-block  1
+call    4 returned 2
+call    5 returned 2
+branch  6 taken 2 (fallthrough)
+branch  7 taken 0 (throw)
+        2:   54-block  2
+call    8 returned 2
+call    9 returned 2
+branch 10 taken 2 (fallthrough)
+branch 11 taken 0 (throw)
+        2:   54-block  3
+call   12 returned 2
+call   13 returned 2
+branch 14 taken 2 (fallthrough)
+branch 15 taken 0 (throw)
+        2:   54-block  4
+call   16 returned 2
+call   17 returned 2
+branch 18 taken 2 (fallthrough)
+branch 19 taken 0 (throw)
+        8:   54-block  5
+call   20 returned 8
+        2:   54-block  6
+call   21 returned 2
+call   22 returned 2
+call   23 returned 2
+call   24 returned 2
+call   25 returned 2
+    $$$$$:   54-block  7
+    $$$$$:   54-block  8
+call   26 never executed
+    $$$$$:   54-block  9
+    $$$$$:   54-block 10
+    $$$$$:   54-block 11
+    $$$$$:   54-block 12
+    $$$$$:   54-block 13
+    $$$$$:   54-block 14
+    $$$$$:   54-block 15
+    $$$$$:   54-block 16
+    $$$$$:   54-block 17
+    $$$$$:   54-block 18
+call   27 never executed
+        -:   55:
+        -:   56:    eph_i ti = {{20957, 2020,   1,  1,  3,  1,  88, 0,  0,  90000,  10},
+        -:   57:                {20957, 2020,   2,  1,  3,  2,  82, 0,  0,  25000,  10},
+        -:   58:                {31117, 2020,   1,  0,  3,  1,  58, 1,  3,  22000,  1},
+        -:   59:                {31117, 2020,   2,  0,  3,  2,  54, 1,  1,  -1,     1},
+        -:   60:                {31117, 2020,   3,  0,  3,  2,  46, 1,  3,  17000,  1},
+        -:   61:                {31117, 2020,   4,  0,  3,  1,  20, 1,  3,  5000,   1},
+        -:   62:                {31117, 2020,   5,  0,  3,  2,  15, 0,  0,  5000,   10},
+        -:   63:                {31117, 2020,   6,  0,  3,  1,  7,  0,  0,  0,      10},
+        -:   64:                {31117, 2020,   8,  0,  3,  2,  11, 0,  0,  0,      10},
+        -:   65:                {31117, 2020,   9,  0,  3,  1,  50, 0,  2,  0,      10},
+        -:   66:                {31117, 2020,   10, 0,  3,  1,  28, 1,  3,  5000,   1},
+        -:   67:                {22866, 2020,   1,  0,  3,  1,  31, 1,  3,  59000,  10},
+        -:   68:                {22866, 2020,   2,  1,  3,  2,  28, 1,  3,  0,      6},
+       36:   69:                {22114, 2020,   1,  0,  3,  1,  18, 0,  0,  20000,  10}};
+call    0 returned 2
+call    1 returned 2
+branch  2 taken 2 (fallthrough)
+branch  3 taken 0 (throw)
+        2:   69-block  0
+call    4 returned 2
+call    5 returned 2
+branch  6 taken 2 (fallthrough)
+branch  7 taken 0 (throw)
+        2:   69-block  1
+call    8 returned 2
+call    9 returned 2
+branch 10 taken 2 (fallthrough)
+branch 11 taken 0 (throw)
+        2:   69-block  2
+call   12 returned 2
+call   13 returned 2
+branch 14 taken 2 (fallthrough)
+branch 15 taken 0 (throw)
+        2:   69-block  3
+call   16 returned 2
+call   17 returned 2
+branch 18 taken 2 (fallthrough)
+branch 19 taken 0 (throw)
+        2:   69-block  4
+call   20 returned 2
+call   21 returned 2
+branch 22 taken 2 (fallthrough)
+branch 23 taken 0 (throw)
+        2:   69-block  5
+call   24 returned 2
+call   25 returned 2
+branch 26 taken 2 (fallthrough)
+branch 27 taken 0 (throw)
+        2:   69-block  6
+call   28 returned 2
+call   29 returned 2
+branch 30 taken 2 (fallthrough)
+branch 31 taken 0 (throw)
+        2:   69-block  7
+call   32 returned 2
+call   33 returned 2
+branch 34 taken 2 (fallthrough)
+branch 35 taken 0 (throw)
+        2:   69-block  8
+call   36 returned 2
+call   37 returned 2
+branch 38 taken 2 (fallthrough)
+branch 39 taken 0 (throw)
+        2:   69-block  9
+call   40 returned 2
+call   41 returned 2
+branch 42 taken 2 (fallthrough)
+branch 43 taken 0 (throw)
+        2:   69-block 10
+call   44 returned 2
+call   45 returned 2
+branch 46 taken 2 (fallthrough)
+branch 47 taken 0 (throw)
+        2:   69-block 11
+call   48 returned 2
+call   49 returned 2
+branch 50 taken 2 (fallthrough)
+branch 51 taken 0 (throw)
+        2:   69-block 12
+call   52 returned 2
+call   53 returned 2
+branch 54 taken 2 (fallthrough)
+branch 55 taken 0 (throw)
+        2:   69-block 13
+call   56 returned 2
+call   57 returned 2
+branch 58 taken 2 (fallthrough)
+branch 59 taken 0 (throw)
+       28:   69-block 14
+call   60 returned 28
+        2:   69-block 15
+call   61 returned 2
+call   62 returned 2
+call   63 returned 2
+call   64 returned 2
+call   65 returned 2
+call   66 returned 2
+call   67 returned 2
+call   68 returned 2
+call   69 returned 2
+call   70 returned 2
+call   71 returned 2
+call   72 returned 2
+call   73 returned 2
+call   74 returned 2
+        2:   69-block 16
+call   75 returned 2
+    $$$$$:   69-block 17
+    $$$$$:   69-block 18
+call   76 never executed
+    $$$$$:   69-block 19
+    $$$$$:   69-block 20
+    $$$$$:   69-block 21
+    $$$$$:   69-block 22
+    $$$$$:   69-block 23
+    $$$$$:   69-block 24
+    $$$$$:   69-block 25
+    $$$$$:   69-block 26
+    $$$$$:   69-block 27
+    $$$$$:   69-block 28
+    $$$$$:   69-block 29
+    $$$$$:   69-block 30
+    $$$$$:   69-block 31
+    $$$$$:   69-block 32
+    $$$$$:   69-block 33
+    $$$$$:   69-block 34
+    $$$$$:   69-block 35
+    $$$$$:   69-block 36
+    $$$$$:   69-block 37
+    $$$$$:   69-block 38
+    $$$$$:   69-block 39
+    $$$$$:   69-block 40
+    $$$$$:   69-block 41
+    $$$$$:   69-block 42
+    $$$$$:   69-block 43
+    $$$$$:   69-block 44
+    $$$$$:   69-block 45
+    $$$$$:   69-block 46
+    $$$$$:   69-block 47
+    $$$$$:   69-block 48
+call   77 never executed
+        -:   70:
+       10:   71:    for(int i=0; i<pos.size(); i++) {
+       10:   71-block  0
+call    0 returned 10
+branch  1 taken 8 (fallthrough)
+branch  2 taken 2
+        8:   72:        th[i][HOGLATITUD] = pos[i].first;
+        8:   72-block  0
+call    0 returned 8
+call    1 returned 8
+call    2 returned 8
+        8:   73:        th[i][HOGLONGITUD] = pos[i].second;
+call    0 returned 8
+call    1 returned 8
+call    2 returned 8
+        -:   74:    }
+        -:   75:
+        4:   76:    return make_pair(th, ti);
+        2:   76-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   76-block  1
+        2:   76-block  2
+        -:   77:}

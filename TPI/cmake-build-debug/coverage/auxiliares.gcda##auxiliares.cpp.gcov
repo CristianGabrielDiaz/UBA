@@ -1,0 +1,2595 @@
+        -:    0:Source:D:/Mi PC/Documents/UBA/AED1/TPI/auxiliares.cpp
+        -:    0:Graph:D:\Mi PC\Documents\UBA\AED1\TPI\cmake-build-debug\CMakeFiles\tpi.dir\auxiliares.gcno
+        -:    0:Data:D:\Mi PC\Documents\UBA\AED1\TPI\cmake-build-debug\CMakeFiles\tpi.dir\auxiliares.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include "definiciones.h"
+        -:    2:#include "auxiliares.h"
+        -:    3:#include "gtest/gtest.h"
+        -:    4:#include "ejercicios.h"
+        -:    5:
+        -:    6://IMPLEMENTACION PROBLEMA 1
+        -:    7:
+function _Z8esValidaSt6vectorIS_IiSaIiEESaIS1_EES3_ called 38 returned 100% blocks executed 61%
+       38:    8:bool esValida(eph_h th, eph_i ti ) {
+       38:    9:    bool resp = false;
+       76:   10:    if( esMatriz(th) && esMatriz(ti) && th.size()>0 && ti.size()>0 && th[0].size()==cantItemHogar && ti[0].size()==cantItemInd
+       38:   10-block  0
+call    0 returned 38
+branch  1 taken 38 (fallthrough)
+branch  2 taken 0 (throw)
+       38:   10-block  1
+call    3 returned 38
+branch  4 taken 37 (fallthrough)
+branch  5 taken 1
+       37:   10-block  2
+call    6 returned 37
+branch  7 taken 36 (fallthrough)
+branch  8 taken 1
+       36:   10-block  3
+call    9 returned 36
+branch 10 taken 36 (fallthrough)
+branch 11 taken 0
+       36:   10-block  4
+call   12 returned 36
+call   13 returned 36
+branch 14 taken 35 (fallthrough)
+branch 15 taken 1
+       35:   10-block  5
+call   16 returned 35
+call   17 returned 35
+branch 18 taken 35 (fallthrough)
+branch 19 taken 0
+       38:   10-block  6
+call   20 returned 38
+       38:   10-block  7
+branch 21 taken 38 (fallthrough)
+branch 22 taken 0
+       38:   10-block  8
+call   23 returned 38
+       38:   10-block  9
+branch 24 taken 11 (fallthrough)
+branch 25 taken 27
+    $$$$$:   10-block 10
+branch 26 never executed
+branch 27 never executed
+    $$$$$:   10-block 11
+call   28 never executed
+    $$$$$:   10-block 12
+    $$$$$:   10-block 13
+branch 29 never executed
+branch 30 never executed
+    $$$$$:   10-block 14
+call   31 never executed
+       73:   11:         && sinRepetidosEnIndividuos(ti)  && sinRepetidosEnHogares(th)&& hogaresAsociadosIndividuos(th,ti)
+       35:   11-block  0
+call    0 returned 35
+branch  1 taken 35 (fallthrough)
+branch  2 taken 0 (throw)
+       35:   11-block  1
+call    3 returned 35
+branch  4 taken 34 (fallthrough)
+branch  5 taken 1
+       34:   11-block  2
+call    6 returned 34
+branch  7 taken 34 (fallthrough)
+branch  8 taken 0 (throw)
+       34:   11-block  3
+call    9 returned 34
+branch 10 taken 33 (fallthrough)
+branch 11 taken 1
+       33:   11-block  4
+call   12 returned 33
+branch 13 taken 33 (fallthrough)
+branch 14 taken 0 (throw)
+       33:   11-block  5
+call   15 returned 33
+branch 16 taken 33 (fallthrough)
+branch 17 taken 0 (throw)
+       33:   11-block  6
+call   18 returned 33
+branch 19 taken 32 (fallthrough)
+branch 20 taken 1
+       33:   11-block  7
+call   21 returned 33
+       38:   11-block  8
+branch 22 taken 33 (fallthrough)
+branch 23 taken 5
+       33:   11-block  9
+call   24 returned 33
+       38:   11-block 10
+branch 25 taken 34 (fallthrough)
+branch 26 taken 4
+       34:   11-block 11
+call   27 returned 34
+       38:   11-block 12
+branch 28 taken 35 (fallthrough)
+branch 29 taken 3
+       35:   11-block 13
+call   30 returned 35
+       38:   11-block 14
+branch 31 taken 38 (fallthrough)
+branch 32 taken 0
+    $$$$$:   11-block 15
+branch 33 never executed
+branch 34 never executed
+    $$$$$:   11-block 16
+call   35 never executed
+    $$$$$:   11-block 17
+    $$$$$:   11-block 18
+branch 36 never executed
+branch 37 never executed
+    $$$$$:   11-block 19
+call   38 never executed
+    $$$$$:   11-block 20
+    $$$$$:   11-block 21
+branch 39 never executed
+branch 40 never executed
+    $$$$$:   11-block 22
+call   41 never executed
+    $$$$$:   11-block 23
+    $$$$$:   11-block 24
+branch 42 never executed
+branch 43 never executed
+    $$$$$:   11-block 25
+call   44 never executed
+    $$$$$:   11-block 26
+       76:   12:        && mismoAnioYTrimestre(th,ti) && iv2MayorOIgualIi2(th) && rangosValidos(th,ti)){
+       38:   12-block  0
+call    0 returned 38
+branch  1 taken 38 (fallthrough)
+branch  2 taken 0 (throw)
+       38:   12-block  1
+call    3 returned 38
+branch  4 taken 38 (fallthrough)
+branch  5 taken 0
+       32:   12-block  2
+call    6 returned 32
+branch  7 taken 32 (fallthrough)
+branch  8 taken 0 (throw)
+       32:   12-block  3
+call    9 returned 32
+branch 10 taken 32 (fallthrough)
+branch 11 taken 0 (throw)
+       32:   12-block  4
+call   12 returned 32
+branch 13 taken 32 (fallthrough)
+branch 14 taken 0 (throw)
+       32:   12-block  5
+branch 15 taken 27 (fallthrough)
+branch 16 taken 5
+       27:   12-block  6
+call   17 returned 27
+branch 18 taken 27 (fallthrough)
+branch 19 taken 0 (throw)
+       27:   12-block  7
+call   20 returned 27
+branch 21 taken 26 (fallthrough)
+branch 22 taken 1
+       26:   12-block  8
+call   23 returned 26
+branch 24 taken 26 (fallthrough)
+branch 25 taken 0 (throw)
+       26:   12-block  9
+call   26 returned 26
+branch 27 taken 26 (fallthrough)
+branch 28 taken 0 (throw)
+       26:   12-block 10
+call   29 returned 26
+branch 30 taken 26 (fallthrough)
+branch 31 taken 0 (throw)
+       26:   12-block 11
+branch 32 taken 11 (fallthrough)
+branch 33 taken 15
+       11:   12-block 12
+       27:   12-block 13
+       38:   12-block 14
+branch 34 taken 26 (fallthrough)
+branch 35 taken 12
+       26:   12-block 15
+call   36 returned 26
+       38:   12-block 16
+branch 37 taken 26 (fallthrough)
+branch 38 taken 12
+       26:   12-block 17
+call   39 returned 26
+       38:   12-block 18
+branch 40 taken 27 (fallthrough)
+branch 41 taken 11
+       27:   12-block 19
+call   42 returned 27
+       38:   12-block 20
+branch 43 taken 32 (fallthrough)
+branch 44 taken 6
+       32:   12-block 21
+call   45 returned 32
+       38:   12-block 22
+branch 46 taken 32 (fallthrough)
+branch 47 taken 6
+       32:   12-block 23
+call   48 returned 32
+       38:   12-block 24
+branch 49 taken 33 (fallthrough)
+branch 50 taken 5
+    $$$$$:   12-block 25
+branch 51 never executed
+branch 52 never executed
+    $$$$$:   12-block 26
+call   53 never executed
+    $$$$$:   12-block 27
+    $$$$$:   12-block 28
+branch 54 never executed
+branch 55 never executed
+    $$$$$:   12-block 29
+call   56 never executed
+    $$$$$:   12-block 30
+    $$$$$:   12-block 31
+branch 57 never executed
+branch 58 never executed
+    $$$$$:   12-block 32
+call   59 never executed
+    $$$$$:   12-block 33
+    $$$$$:   12-block 34
+branch 60 never executed
+branch 61 never executed
+    $$$$$:   12-block 35
+call   62 never executed
+    $$$$$:   12-block 36
+    $$$$$:   12-block 37
+branch 63 never executed
+branch 64 never executed
+    $$$$$:   12-block 38
+call   65 never executed
+    $$$$$:   12-block 39
+       11:   13:        resp=true;
+       11:   13-block  0
+        -:   14:    }
+       38:   15:    return resp;
+       38:   15-block  0
+       38:   15-block  1
+        -:   16:}
+function _Z8esMatrizSt6vectorIS_IiSaIiEESaIS1_EE called 76 returned 100% blocks executed 100%
+       76:   17:bool esMatriz(vector<vector<int>> m) {
+       76:   18:    int i = 0,distintaLongitud=0;
+       76:   18-block  0
+     1359:   19:    while(i < m.size()){
+     1359:   19-block  0
+call    0 returned 1359
+branch  1 taken 1283 (fallthrough)
+branch  2 taken 76
+     1283:   20:        if (m[0].size() != m[i].size()){
+     1283:   20-block  0
+call    0 returned 1283
+call    1 returned 1283
+call    2 returned 1283
+call    3 returned 1283
+branch  4 taken 1 (fallthrough)
+branch  5 taken 1282
+        1:   21:            distintaLongitud++;
+        1:   21-block  0
+        -:   22:        }
+     1283:   23:        i++;
+     1283:   23-block  0
+        -:   24:    }
+       76:   25:    return distintaLongitud == 0;
+       76:   25-block  0
+        -:   26:}
+function _Z24sinRepetidosEnIndividuosSt6vectorIS_IiSaIiEESaIS1_EE called 35 returned 100% blocks executed 100%
+       35:   27:bool sinRepetidosEnIndividuos(eph_i ti){
+       35:   28:    int i=0,repetidos=0;
+       35:   28-block  0
+      998:   29:    while ( i<ti.size() ){
+      998:   29-block  0
+call    0 returned 998
+branch  1 taken 963 (fallthrough)
+branch  2 taken 35
+      963:   30:        int j=0;
+      963:   30-block  0
+   190152:   31:        while(j< ti.size()){
+   190152:   31-block  0
+call    0 returned 190152
+branch  1 taken 189189 (fallthrough)
+branch  2 taken 963
+   189189:   32:            if(ti[i][COMPONENTE]==ti[j][COMPONENTE] && i!=j && ti[i][INDCODUSU]==ti[j][INDCODUSU]){
+   189189:   32-block  0
+call    0 returned 189189
+call    1 returned 189189
+call    2 returned 189189
+call    3 returned 189189
+branch  4 taken 40035 (fallthrough)
+branch  5 taken 149154
+    40035:   32-block  1
+branch  6 taken 39072 (fallthrough)
+branch  7 taken 963
+    39072:   32-block  2
+call    8 returned 39072
+call    9 returned 39072
+call   10 returned 39072
+call   11 returned 39072
+branch 12 taken 2 (fallthrough)
+branch 13 taken 39070
+        2:   32-block  3
+   189187:   32-block  4
+   189189:   32-block  5
+branch 14 taken 2 (fallthrough)
+branch 15 taken 189187
+        2:   33:                repetidos++;
+        2:   33-block  0
+        -:   34:            }
+   189189:   35:            j++;
+   189189:   35-block  0
+        -:   36:        }
+      963:   37:        i++;
+      963:   37-block  0
+        -:   38:    }
+       35:   39:    return repetidos==0;
+       35:   39-block  0
+        -:   40:}
+function _Z21sinRepetidosEnHogaresSt6vectorIS_IiSaIiEESaIS1_EE called 34 returned 100% blocks executed 100%
+       34:   41:bool sinRepetidosEnHogares (eph_h th){
+       34:   42:    int i=0,repetidos=0;
+       34:   42-block  0
+      341:   43:    while ( i<th.size() ){
+      341:   43-block  0
+call    0 returned 341
+branch  1 taken 307 (fallthrough)
+branch  2 taken 34
+      307:   44:        int j=0;
+      307:   44-block  0
+    20722:   45:        while(j< th.size()){
+    20722:   45-block  0
+call    0 returned 20722
+branch  1 taken 20415 (fallthrough)
+branch  2 taken 307
+    20415:   46:            if(th[i][HOGCODUSU]==th[j][HOGCODUSU] && i!= j){
+    20415:   46-block  0
+call    0 returned 20415
+call    1 returned 20415
+call    2 returned 20415
+call    3 returned 20415
+branch  4 taken 309 (fallthrough)
+branch  5 taken 20106
+      309:   46-block  1
+branch  6 taken 2 (fallthrough)
+branch  7 taken 307
+        2:   46-block  2
+    20413:   46-block  3
+    20415:   46-block  4
+branch  8 taken 2 (fallthrough)
+branch  9 taken 20413
+        2:   47:                repetidos++;
+        2:   47-block  0
+        -:   48:            }
+    20415:   49:            j++;
+    20415:   49-block  0
+        -:   50:        }
+      307:   51:        i++;
+      307:   51-block  0
+        -:   52:     }
+       34:   53:    return repetidos==0;
+       34:   53-block  0
+        -:   54:}
+function _Z26hogaresAsociadosIndividuosSt6vectorIS_IiSaIiEESaIS1_EES3_ called 33 returned 100% blocks executed 100%
+       33:   55:bool hogaresAsociadosIndividuos(eph_h th, eph_i ti){
+       33:   56:    int i=0,asociadosTh=0,asociadosTi=0;
+       33:   56-block  0
+      336:   57:    while (i<th.size()){
+      336:   57-block  0
+call    0 returned 336
+branch  1 taken 303 (fallthrough)
+branch  2 taken 33
+      303:   58:        int j=0;
+      303:   58-block  0
+    62288:   59:        while (j<ti.size()){
+    62288:   59-block  0
+call    0 returned 62288
+branch  1 taken 61985 (fallthrough)
+branch  2 taken 303
+    61985:   60:            if(th[i][HOGCODUSU]==ti[j][INDCODUSU]){
+    61985:   60-block  0
+call    0 returned 61985
+call    1 returned 61985
+call    2 returned 61985
+call    3 returned 61985
+branch  4 taken 951 (fallthrough)
+branch  5 taken 61034
+      951:   61:                asociadosTh++;
+      951:   61-block  0
+        -:   62:            }
+    61985:   63:            j++;
+    61985:   63-block  0
+        -:   64:        }
+      303:   65:        i++;
+      303:   65-block  0
+        -:   66:    }
+       33:   67:    int k=0;
+       33:   67-block  0
+      983:   68:    while (k<ti.size()){
+      983:   68-block  0
+call    0 returned 983
+branch  1 taken 951 (fallthrough)
+branch  2 taken 32
+      951:   69:        int r=0;
+      951:   69-block  0
+    62932:   70:        while (r<th.size()){
+    62932:   70-block  0
+call    0 returned 62932
+branch  1 taken 61981 (fallthrough)
+branch  2 taken 951
+    61981:   71:            if(ti[k][INDCODUSU]==th[r][HOGCODUSU]){
+    61981:   71-block  0
+call    0 returned 61981
+call    1 returned 61981
+call    2 returned 61981
+call    3 returned 61981
+branch  4 taken 950 (fallthrough)
+branch  5 taken 61031
+      950:   72:                asociadosTi++;
+      950:   72-block  0
+        -:   73:            }
+    61981:   74:            r++;
+    61981:   74-block  0
+      951:   75:        }if( asociadosTi==0){
+      951:   75-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 950
+        1:   76:            return false;
+        1:   76-block  0
+        -:   77:        } else{
+      950:   78:            asociadosTi=0;
+        -:   79:        }
+        -:   80:
+      950:   81:        k++;
+      950:   81-block  0
+        -:   82:    }
+       32:   83:    return asociadosTh >= th.size()  ;
+       32:   83-block  0
+call    0 returned 32
+        -:   84:}
+        -:   85://Un individuo pude tener mas de una casa?
+        -:   86:
+        -:   87:/*hace falta "i!= j" dentro de las a condiciones del if */
+function _Z19mismoAnioYTrimestreSt6vectorIS_IiSaIiEESaIS1_EES3_ called 32 returned 100% blocks executed 63%
+       32:   88:bool mismoAnioYTrimestre(eph_h th, eph_i ti){
+       32:   89:    bool resp=false;
+       32:   90:    if(mismoAnio(th,ti)&&mismoTrimestreHogares(th)&&mismoTrimestreIndividuos(ti)){
+       32:   90-block  0
+call    0 returned 32
+branch  1 taken 32 (fallthrough)
+branch  2 taken 0 (throw)
+       32:   90-block  1
+call    3 returned 32
+branch  4 taken 32 (fallthrough)
+branch  5 taken 0 (throw)
+       32:   90-block  2
+call    6 returned 32
+branch  7 taken 32 (fallthrough)
+branch  8 taken 0 (throw)
+       32:   90-block  3
+branch  9 taken 29 (fallthrough)
+branch 10 taken 3
+       29:   90-block  4
+call   11 returned 29
+branch 12 taken 29 (fallthrough)
+branch 13 taken 0 (throw)
+       29:   90-block  5
+call   14 returned 29
+branch 15 taken 28 (fallthrough)
+branch 16 taken 1
+       28:   90-block  6
+call   17 returned 28
+branch 18 taken 28 (fallthrough)
+branch 19 taken 0 (throw)
+       28:   90-block  7
+call   20 returned 28
+branch 21 taken 27 (fallthrough)
+branch 22 taken 1
+       27:   90-block  8
+        5:   90-block  9
+       32:   90-block 10
+branch 23 taken 28 (fallthrough)
+branch 24 taken 4
+       28:   90-block 11
+call   25 returned 28
+       32:   90-block 12
+branch 26 taken 29 (fallthrough)
+branch 27 taken 3
+       29:   90-block 13
+call   28 returned 29
+       32:   90-block 14
+branch 29 taken 32 (fallthrough)
+branch 30 taken 0
+       32:   90-block 15
+call   31 returned 32
+       32:   90-block 16
+branch 32 taken 32 (fallthrough)
+branch 33 taken 0
+       32:   90-block 17
+call   34 returned 32
+       32:   90-block 18
+branch 35 taken 27 (fallthrough)
+branch 36 taken 5
+    $$$$$:   90-block 19
+branch 37 never executed
+branch 38 never executed
+    $$$$$:   90-block 20
+call   39 never executed
+    $$$$$:   90-block 21
+    $$$$$:   90-block 22
+branch 40 never executed
+branch 41 never executed
+    $$$$$:   90-block 23
+call   42 never executed
+    $$$$$:   90-block 24
+    $$$$$:   90-block 25
+branch 43 never executed
+branch 44 never executed
+    $$$$$:   90-block 26
+call   45 never executed
+    $$$$$:   90-block 27
+    $$$$$:   90-block 28
+branch 46 never executed
+branch 47 never executed
+    $$$$$:   90-block 29
+call   48 never executed
+       27:   91:        resp=true;
+       27:   91-block  0
+        -:   92:    }
+       32:   93:    return resp;
+       32:   93-block  0
+       32:   93-block  1
+        -:   94:}
+function _Z16mismoAnioHogaresSt6vectorIS_IiSaIiEESaIS1_EE called 31 returned 100% blocks executed 100%
+       31:   95:bool mismoAnioHogares(eph_h th){
+       31:   96:    int i=0,distintos=0;
+       31:   96-block  0
+      328:   97:    while(i<th.size()){
+      328:   97-block  0
+call    0 returned 328
+branch  1 taken 297 (fallthrough)
+branch  2 taken 31
+      297:   98:        int j=0;
+      297:   98-block  0
+    20676:   99:        while(j<th.size()){
+    20676:   99-block  0
+call    0 returned 20676
+branch  1 taken 20379 (fallthrough)
+branch  2 taken 297
+    20379:  100:            if(th[i][HOGANIO]!=th[j][HOGANIO]&& i!= j){
+    20379:  100-block  0
+call    0 returned 20379
+call    1 returned 20379
+call    2 returned 20379
+call    3 returned 20379
+branch  4 taken 4 (fallthrough)
+branch  5 taken 20375
+        4:  100-block  1
+branch  6 taken 4 (fallthrough)
+branch  7 taken 0
+        4:  100-block  2
+    20375:  100-block  3
+    20379:  100-block  4
+branch  8 taken 4 (fallthrough)
+branch  9 taken 20375
+        4:  101:                distintos++;
+        4:  101-block  0
+        -:  102:            }
+    20379:  103:            j++;
+    20379:  103-block  0
+        -:  104:        }
+      297:  105:        i++;
+      297:  105-block  0
+        -:  106:    }
+       31:  107:    return distintos==0;
+       31:  107-block  0
+        -:  108:}
+function _Z19mismoAnioIndividuosSt6vectorIS_IiSaIiEESaIS1_EE called 32 returned 100% blocks executed 100%
+       32:  109:bool mismoAnioIndividuos(eph_i ti){
+       32:  110:    int i=0,distintos=0;
+       32:  110-block  0
+      980:  111:    while(i<ti.size()){
+      980:  111-block  0
+call    0 returned 980
+branch  1 taken 948 (fallthrough)
+branch  2 taken 32
+      948:  112:        int j=0;
+      948:  112-block  0
+   190062:  113:        while(j<ti.size()){
+   190062:  113-block  0
+call    0 returned 190062
+branch  1 taken 189114 (fallthrough)
+branch  2 taken 948
+   189114:  114:            if(ti[i][INDANIO]!=ti[j][INDANIO]&& i!= j){
+   189114:  114-block  0
+call    0 returned 189114
+call    1 returned 189114
+call    2 returned 189114
+call    3 returned 189114
+branch  4 taken 26 (fallthrough)
+branch  5 taken 189088
+       26:  114-block  1
+branch  6 taken 26 (fallthrough)
+branch  7 taken 0
+       26:  114-block  2
+   189088:  114-block  3
+   189114:  114-block  4
+branch  8 taken 26 (fallthrough)
+branch  9 taken 189088
+       26:  115:                distintos++;
+       26:  115-block  0
+        -:  116:            }
+   189114:  117:            j++;
+   189114:  117-block  0
+        -:  118:        }
+      948:  119:        i++;
+      948:  119-block  0
+        -:  120:    }
+       32:  121:    return distintos==0;
+       32:  121-block  0
+        -:  122:}
+function _Z9mismoAnioSt6vectorIS_IiSaIiEESaIS1_EES3_ called 32 returned 100% blocks executed 75%
+       32:  123:bool mismoAnio(eph_h th, eph_i ti) {
+       32:  124:    if( mismoAnioIndividuos(ti)&&mismoAnioHogares(th)){
+       32:  124-block  0
+call    0 returned 32
+branch  1 taken 32 (fallthrough)
+branch  2 taken 0 (throw)
+       32:  124-block  1
+call    3 returned 32
+branch  4 taken 31 (fallthrough)
+branch  5 taken 1
+       31:  124-block  2
+call    6 returned 31
+branch  7 taken 31 (fallthrough)
+branch  8 taken 0 (throw)
+       31:  124-block  3
+call    9 returned 31
+branch 10 taken 30 (fallthrough)
+branch 11 taken 1
+       30:  124-block  4
+        2:  124-block  5
+       32:  124-block  6
+branch 12 taken 31 (fallthrough)
+branch 13 taken 1
+       31:  124-block  7
+call   14 returned 31
+       32:  124-block  8
+branch 15 taken 32 (fallthrough)
+branch 16 taken 0
+       32:  124-block  9
+call   17 returned 32
+       32:  124-block 10
+branch 18 taken 30 (fallthrough)
+branch 19 taken 2
+    $$$$$:  124-block 11
+branch 20 never executed
+branch 21 never executed
+    $$$$$:  124-block 12
+call   22 never executed
+    $$$$$:  124-block 13
+    $$$$$:  124-block 14
+branch 23 never executed
+branch 24 never executed
+    $$$$$:  124-block 15
+call   25 never executed
+       30:  125:        return  ti[0][INDANIO]==th[0][HOGANIO];
+       30:  125-block  0
+call    0 returned 30
+call    1 returned 30
+call    2 returned 30
+call    3 returned 30
+        -:  126:    }else{
+        2:  127:        return false;
+        2:  127-block  0
+        -:  128:    }
+        -:  129:}
+function _Z21mismoTrimestreHogaresSt6vectorIS_IiSaIiEESaIS1_EE called 29 returned 100% blocks executed 100%
+       29:  130:bool mismoTrimestreHogares(eph_h th){
+       29:  131:    int i=0,distintos=0;
+       29:  131-block  0
+      320:  132:    while(i<th.size()){
+      320:  132-block  0
+call    0 returned 320
+branch  1 taken 291 (fallthrough)
+branch  2 taken 29
+      291:  133:        int j=0;
+      291:  133-block  0
+    20652:  134:        while(j<th.size()){
+    20652:  134-block  0
+call    0 returned 20652
+branch  1 taken 20361 (fallthrough)
+branch  2 taken 291
+    20361:  135:            if(th[i][HOGTRIMESTRE]!=th[j][HOGTRIMESTRE]&& i!= j){
+    20361:  135-block  0
+call    0 returned 20361
+call    1 returned 20361
+call    2 returned 20361
+call    3 returned 20361
+branch  4 taken 4 (fallthrough)
+branch  5 taken 20357
+        4:  135-block  1
+branch  6 taken 4 (fallthrough)
+branch  7 taken 0
+        4:  135-block  2
+    20357:  135-block  3
+    20361:  135-block  4
+branch  8 taken 4 (fallthrough)
+branch  9 taken 20357
+        4:  136:                distintos++;
+        4:  136-block  0
+        -:  137:            }
+    20361:  138:            j++;
+    20361:  138-block  0
+        -:  139:        }
+      291:  140:        i++;
+      291:  140-block  0
+        -:  141:    }
+       29:  142:    return distintos==0;
+       29:  142-block  0
+        -:  143:}
+function _Z24mismoTrimestreIndividuosSt6vectorIS_IiSaIiEESaIS1_EE called 28 returned 100% blocks executed 100%
+       28:  144:bool mismoTrimestreIndividuos(eph_i ti){
+       28:  145:    int i=0,distintos=0;
+       28:  145-block  0
+      947:  146:    while(i<ti.size()){
+      947:  146-block  0
+call    0 returned 947
+branch  1 taken 919 (fallthrough)
+branch  2 taken 28
+      919:  147:        int j=0;
+      919:  147-block  0
+   189762:  148:        while(j<ti.size()){
+   189762:  148-block  0
+call    0 returned 189762
+branch  1 taken 188843 (fallthrough)
+branch  2 taken 919
+   188843:  149:            if(ti[i][INDTRIMESTRE]!=ti[j][INDTRIMESTRE]&& i!= j){
+   188843:  149-block  0
+call    0 returned 188843
+call    1 returned 188843
+call    2 returned 188843
+call    3 returned 188843
+branch  4 taken 8 (fallthrough)
+branch  5 taken 188835
+        8:  149-block  1
+branch  6 taken 8 (fallthrough)
+branch  7 taken 0
+        8:  149-block  2
+   188835:  149-block  3
+   188843:  149-block  4
+branch  8 taken 8 (fallthrough)
+branch  9 taken 188835
+        8:  150:                distintos++;
+        8:  150-block  0
+        -:  151:            }
+   188843:  152:            j++;
+   188843:  152-block  0
+        -:  153:        }
+      919:  154:        i++;
+      919:  154-block  0
+        -:  155:    }
+       28:  156:    return distintos==0;
+       28:  156-block  0
+        -:  157:}
+function _Z17iv2MayorOIgualIi2St6vectorIS_IiSaIiEESaIS1_EE called 27 returned 100% blocks executed 100%
+       27:  158:bool iv2MayorOIgualIi2(eph_h th){
+       27:  159:    int i=0,menores=0;
+       27:  159-block  0
+      312:  160:    while(i<th.size()){
+      312:  160-block  0
+call    0 returned 312
+branch  1 taken 285 (fallthrough)
+branch  2 taken 27
+      285:  161:        if(th[i][II2]>th[i][IV2]){
+      285:  161-block  0
+call    0 returned 285
+call    1 returned 285
+call    2 returned 285
+call    3 returned 285
+branch  4 taken 1 (fallthrough)
+branch  5 taken 284
+        1:  162:            menores++;
+        1:  162-block  0
+        -:  163:        }
+      285:  164:        i++;
+      285:  164-block  0
+        -:  165:    }
+       27:  166:    return menores==0;
+       27:  166-block  0
+        -:  167:}
+function _Z13rangosValidosSt6vectorIS_IiSaIiEESaIS1_EES3_ called 26 returned 100% blocks executed 57%
+       26:  168:bool rangosValidos(eph_h th, eph_i ti){
+       26:  169:     bool valido=false;
+       51:  170:     if(rangoTrimestre(th,ti) && /*rangoCodusu(th,ti) && */ rangoIv2(th)  &&rangoMiembrosHogar(th,ti)
+       25:  170-block  0
+call    0 returned 25
+branch  1 taken 25 (fallthrough)
+branch  2 taken 0 (throw)
+       25:  170-block  1
+call    3 returned 25
+branch  4 taken 24 (fallthrough)
+branch  5 taken 1
+       24:  170-block  2
+call    6 returned 24
+branch  7 taken 24 (fallthrough)
+branch  8 taken 0 (throw)
+       24:  170-block  3
+call    9 returned 24
+branch 10 taken 24 (fallthrough)
+branch 11 taken 0 (throw)
+       24:  170-block  4
+call   12 returned 24
+branch 13 taken 24 (fallthrough)
+branch 14 taken 0 (throw)
+       24:  170-block  5
+branch 15 taken 23 (fallthrough)
+branch 16 taken 1
+       24:  170-block  6
+call   17 returned 24
+       26:  170-block  7
+branch 18 taken 24 (fallthrough)
+branch 19 taken 2
+       24:  170-block  8
+call   20 returned 24
+       26:  170-block  9
+branch 21 taken 25 (fallthrough)
+branch 22 taken 1
+       25:  170-block 10
+call   23 returned 25
+       26:  170-block 11
+branch 24 taken 26 (fallthrough)
+branch 25 taken 0
+       26:  170-block 12
+call   26 returned 26
+       26:  170-block 13
+branch 27 taken 26 (fallthrough)
+branch 28 taken 0
+       26:  170-block 14
+call   29 returned 26
+       26:  170-block 15
+branch 30 taken 11 (fallthrough)
+branch 31 taken 15
+    $$$$$:  170-block 16
+branch 32 never executed
+branch 33 never executed
+    $$$$$:  170-block 17
+call   34 never executed
+    $$$$$:  170-block 18
+    $$$$$:  170-block 19
+branch 35 never executed
+branch 36 never executed
+    $$$$$:  170-block 20
+call   37 never executed
+    $$$$$:  170-block 21
+    $$$$$:  170-block 22
+branch 38 never executed
+branch 39 never executed
+    $$$$$:  170-block 23
+call   40 never executed
+    $$$$$:  170-block 24
+    $$$$$:  170-block 25
+branch 41 never executed
+branch 42 never executed
+    $$$$$:  170-block 26
+call   43 never executed
+    $$$$$:  170-block 27
+    $$$$$:  170-block 28
+branch 44 never executed
+branch 45 never executed
+    $$$$$:  170-block 29
+call   46 never executed
+       49:  171:     && rangoCh6(ti) && rangoP47t(ti) && rangoIv1(th) && rangoIi3(th)  && rangoIi7(th) && rangoRegion(th) && rangoMas500(th)
+       23:  171-block  0
+call    0 returned 23
+branch  1 taken 23 (fallthrough)
+branch  2 taken 0 (throw)
+       23:  171-block  1
+call    3 returned 23
+branch  4 taken 22 (fallthrough)
+branch  5 taken 1
+       22:  171-block  2
+call    6 returned 22
+branch  7 taken 22 (fallthrough)
+branch  8 taken 0 (throw)
+       22:  171-block  3
+call    9 returned 22
+branch 10 taken 21 (fallthrough)
+branch 11 taken 1
+       21:  171-block  4
+call   12 returned 21
+branch 13 taken 21 (fallthrough)
+branch 14 taken 0 (throw)
+       21:  171-block  5
+call   15 returned 21
+branch 16 taken 20 (fallthrough)
+branch 17 taken 1
+       20:  171-block  6
+call   18 returned 20
+branch 19 taken 20 (fallthrough)
+branch 20 taken 0 (throw)
+       20:  171-block  7
+call   21 returned 20
+branch 22 taken 19 (fallthrough)
+branch 23 taken 1
+       19:  171-block  8
+call   24 returned 19
+branch 25 taken 19 (fallthrough)
+branch 26 taken 0 (throw)
+       19:  171-block  9
+call   27 returned 19
+branch 28 taken 18 (fallthrough)
+branch 29 taken 1
+       18:  171-block 10
+call   30 returned 18
+branch 31 taken 18 (fallthrough)
+branch 32 taken 0 (throw)
+       18:  171-block 11
+call   33 returned 18
+branch 34 taken 17 (fallthrough)
+branch 35 taken 1
+       17:  171-block 12
+call   36 returned 17
+branch 37 taken 17 (fallthrough)
+branch 38 taken 0 (throw)
+       17:  171-block 13
+call   39 returned 17
+branch 40 taken 16 (fallthrough)
+branch 41 taken 1
+       17:  171-block 14
+call   42 returned 17
+       26:  171-block 15
+branch 43 taken 18 (fallthrough)
+branch 44 taken 8
+       18:  171-block 16
+call   45 returned 18
+       26:  171-block 17
+branch 46 taken 19 (fallthrough)
+branch 47 taken 7
+       19:  171-block 18
+call   48 returned 19
+       26:  171-block 19
+branch 49 taken 20 (fallthrough)
+branch 50 taken 6
+       20:  171-block 20
+call   51 returned 20
+       26:  171-block 21
+branch 52 taken 21 (fallthrough)
+branch 53 taken 5
+       21:  171-block 22
+call   54 returned 21
+       26:  171-block 23
+branch 55 taken 22 (fallthrough)
+branch 56 taken 4
+       22:  171-block 24
+call   57 returned 22
+       26:  171-block 25
+branch 58 taken 23 (fallthrough)
+branch 59 taken 3
+       23:  171-block 26
+call   60 returned 23
+       26:  171-block 27
+branch 61 taken 24 (fallthrough)
+branch 62 taken 2
+    $$$$$:  171-block 28
+branch 63 never executed
+branch 64 never executed
+    $$$$$:  171-block 29
+call   65 never executed
+    $$$$$:  171-block 30
+    $$$$$:  171-block 31
+branch 66 never executed
+branch 67 never executed
+    $$$$$:  171-block 32
+call   68 never executed
+    $$$$$:  171-block 33
+    $$$$$:  171-block 34
+branch 69 never executed
+branch 70 never executed
+    $$$$$:  171-block 35
+call   71 never executed
+    $$$$$:  171-block 36
+    $$$$$:  171-block 37
+branch 72 never executed
+branch 73 never executed
+    $$$$$:  171-block 38
+call   74 never executed
+    $$$$$:  171-block 39
+    $$$$$:  171-block 40
+branch 75 never executed
+branch 76 never executed
+    $$$$$:  171-block 41
+call   77 never executed
+    $$$$$:  171-block 42
+    $$$$$:  171-block 43
+branch 78 never executed
+branch 79 never executed
+    $$$$$:  171-block 44
+call   80 never executed
+    $$$$$:  171-block 45
+    $$$$$:  171-block 46
+branch 81 never executed
+branch 82 never executed
+    $$$$$:  171-block 47
+call   83 never executed
+    $$$$$:  171-block 48
+       51:  172:     && rangoCh4(ti) && rangoNivelEd(ti) && rangoEstado(ti) && rangoCatOcup(ti) && rangoPp04g(ti)){
+       26:  172-block  0
+call    0 returned 26
+branch  1 taken 26 (fallthrough)
+branch  2 taken 0 (throw)
+       26:  172-block  1
+call    3 returned 26
+branch  4 taken 26 (fallthrough)
+branch  5 taken 0 (throw)
+       26:  172-block  2
+call    6 returned 26
+branch  7 taken 25 (fallthrough)
+branch  8 taken 1
+       16:  172-block  3
+call    9 returned 16
+branch 10 taken 16 (fallthrough)
+branch 11 taken 0 (throw)
+       16:  172-block  4
+call   12 returned 16
+branch 13 taken 15 (fallthrough)
+branch 14 taken 1
+       15:  172-block  5
+call   15 returned 15
+branch 16 taken 15 (fallthrough)
+branch 17 taken 0 (throw)
+       15:  172-block  6
+call   18 returned 15
+branch 19 taken 14 (fallthrough)
+branch 20 taken 1
+       14:  172-block  7
+call   21 returned 14
+branch 22 taken 14 (fallthrough)
+branch 23 taken 0 (throw)
+       14:  172-block  8
+call   24 returned 14
+branch 25 taken 13 (fallthrough)
+branch 26 taken 1
+       13:  172-block  9
+call   27 returned 13
+branch 28 taken 13 (fallthrough)
+branch 29 taken 0 (throw)
+       13:  172-block 10
+call   30 returned 13
+branch 31 taken 12 (fallthrough)
+branch 32 taken 1
+       12:  172-block 11
+call   33 returned 12
+branch 34 taken 12 (fallthrough)
+branch 35 taken 0 (throw)
+       12:  172-block 12
+call   36 returned 12
+branch 37 taken 11 (fallthrough)
+branch 38 taken 1
+       11:  172-block 13
+       15:  172-block 14
+       26:  172-block 15
+branch 39 taken 12 (fallthrough)
+branch 40 taken 14
+       12:  172-block 16
+call   41 returned 12
+       26:  172-block 17
+branch 42 taken 13 (fallthrough)
+branch 43 taken 13
+       13:  172-block 18
+call   44 returned 13
+       26:  172-block 19
+branch 45 taken 14 (fallthrough)
+branch 46 taken 12
+       14:  172-block 20
+call   47 returned 14
+       26:  172-block 21
+branch 48 taken 15 (fallthrough)
+branch 49 taken 11
+       15:  172-block 22
+call   50 returned 15
+       26:  172-block 23
+branch 51 taken 16 (fallthrough)
+branch 52 taken 10
+       16:  172-block 24
+call   53 returned 16
+       26:  172-block 25
+branch 54 taken 17 (fallthrough)
+branch 55 taken 9
+    $$$$$:  172-block 26
+branch 56 never executed
+branch 57 never executed
+    $$$$$:  172-block 27
+call   58 never executed
+    $$$$$:  172-block 28
+    $$$$$:  172-block 29
+branch 59 never executed
+branch 60 never executed
+    $$$$$:  172-block 30
+call   61 never executed
+    $$$$$:  172-block 31
+    $$$$$:  172-block 32
+branch 62 never executed
+branch 63 never executed
+    $$$$$:  172-block 33
+call   64 never executed
+    $$$$$:  172-block 34
+    $$$$$:  172-block 35
+branch 65 never executed
+branch 66 never executed
+    $$$$$:  172-block 36
+call   67 never executed
+    $$$$$:  172-block 37
+    $$$$$:  172-block 38
+branch 68 never executed
+branch 69 never executed
+    $$$$$:  172-block 39
+call   70 never executed
+    $$$$$:  172-block 40
+       11:  173:        valido=true;
+       11:  173-block  0
+        -:  174:     }
+       26:  175:     return valido;
+       26:  175-block  0
+       26:  175-block  1
+        -:  176:}
+        -:  177://es necesario?
+        -:  178:
+function _Z14rangoTrimestreSt6vectorIS_IiSaIiEESaIS1_EES3_ called 26 returned 100% blocks executed 100%
+       26:  179:bool rangoTrimestre(eph_h th, eph_i ti){
+       26:  180:    int i=0,j=0,noEnRango=0;
+       26:  180-block  0
+      307:  181:    while(i<th.size()){
+      307:  181-block  0
+call    0 returned 307
+branch  1 taken 281 (fallthrough)
+branch  2 taken 26
+      281:  182:        if((3<th[i][HOGTRIMESTRE]) || (th[i][HOGTRIMESTRE]<1)){
+      281:  182-block  0
+call    0 returned 281
+call    1 returned 281
+branch  2 taken 281 (fallthrough)
+branch  3 taken 0
+      281:  182-block  1
+call    4 returned 281
+call    5 returned 281
+branch  6 taken 1 (fallthrough)
+branch  7 taken 280
+        1:  182-block  2
+      280:  182-block  3
+      281:  182-block  4
+branch  8 taken 1 (fallthrough)
+branch  9 taken 280
+        1:  183:            noEnRango++;
+        1:  183-block  0
+        -:  184:        }
+      281:  185:        i++;
+      281:  185-block  0
+        -:  186:    }
+      926:  187:    while(j<ti.size()){
+      926:  187-block  0
+call    0 returned 926
+branch  1 taken 900 (fallthrough)
+branch  2 taken 26
+      900:  188:        if((3<ti[j][INDTRIMESTRE]) || (ti[j][INDTRIMESTRE]<1)){
+      900:  188-block  0
+call    0 returned 900
+call    1 returned 900
+branch  2 taken 900 (fallthrough)
+branch  3 taken 0
+      900:  188-block  1
+call    4 returned 900
+call    5 returned 900
+branch  6 taken 1 (fallthrough)
+branch  7 taken 899
+        1:  188-block  2
+      899:  188-block  3
+      900:  188-block  4
+branch  8 taken 1 (fallthrough)
+branch  9 taken 899
+        1:  189:            noEnRango++;
+        1:  189-block  0
+        -:  190:        }
+      900:  191:        j++;
+      900:  191-block  0
+        -:  192:    }
+       26:  193:    return noEnRango==0;
+       26:  193-block  0
+        -:  194:}
+function _Z8rangoIv2St6vectorIS_IiSaIiEESaIS1_EE called 25 returned 100% blocks executed 100%
+       25:  195:bool rangoIv2(eph_h th){
+       25:  196:    int i=0,noEnRango=0;
+       25:  196-block  0
+      305:  197:    while(i<th.size()){
+      305:  197-block  0
+call    0 returned 305
+branch  1 taken 280 (fallthrough)
+branch  2 taken 25
+      280:  198:        if(th[i][IV2]<1){
+      280:  198-block  0
+call    0 returned 280
+call    1 returned 280
+branch  2 taken 1 (fallthrough)
+branch  3 taken 279
+        1:  199:            noEnRango ++;
+        1:  199-block  0
+        -:  200:        }
+      280:  201:        i++;
+      280:  201-block  0
+        -:  202:    }
+       25:  203:    return noEnRango==0;
+       25:  203-block  0
+        -:  204:}
+        -:  205:
+function _Z18rangoMiembrosHogarSt6vectorIS_IiSaIiEESaIS1_EES3_ called 24 returned 100% blocks executed 66%
+       24:  206:bool rangoMiembrosHogar(eph_h th, eph_i ti){
+       24:  207:    int i=0,noEnRango=0;
+       24:  207-block  0
+      300:  208:    while(i<th.size()){
+      300:  208-block  0
+call    0 returned 300
+branch  1 taken 276 (fallthrough)
+branch  2 taken 24
+      276:  209:        if(habitantesDeUnaCasa(th[i],ti)<0 || habitantesDeUnaCasa(th[i],ti)>20 ){
+      276:  209-block  0
+call    0 returned 276
+branch  1 taken 276 (fallthrough)
+branch  2 taken 0 (throw)
+      276:  209-block  1
+call    3 returned 276
+call    4 returned 276
+branch  5 taken 276 (fallthrough)
+branch  6 taken 0 (throw)
+      276:  209-block  2
+call    7 returned 276
+branch  8 taken 276 (fallthrough)
+branch  9 taken 0
+      276:  209-block  3
+call   10 returned 276
+branch 11 taken 276 (fallthrough)
+branch 12 taken 0 (throw)
+      276:  209-block  4
+call   13 returned 276
+call   14 returned 276
+branch 15 taken 276 (fallthrough)
+branch 16 taken 0 (throw)
+      276:  209-block  5
+call   17 returned 276
+branch 18 taken 1 (fallthrough)
+branch 19 taken 275
+        1:  209-block  6
+      275:  209-block  7
+      276:  209-block  8
+branch 20 taken 276 (fallthrough)
+branch 21 taken 0
+      276:  209-block  9
+call   22 returned 276
+      276:  209-block 10
+branch 23 taken 276 (fallthrough)
+branch 24 taken 0
+      276:  209-block 11
+call   25 returned 276
+      276:  209-block 12
+branch 26 taken 276 (fallthrough)
+branch 27 taken 0
+      276:  209-block 13
+call   28 returned 276
+      276:  209-block 14
+branch 29 taken 276 (fallthrough)
+branch 30 taken 0
+      276:  209-block 15
+call   31 returned 276
+      276:  209-block 16
+branch 32 taken 1 (fallthrough)
+branch 33 taken 275
+    $$$$$:  209-block 17
+branch 34 never executed
+branch 35 never executed
+    $$$$$:  209-block 18
+call   36 never executed
+    $$$$$:  209-block 19
+    $$$$$:  209-block 20
+branch 37 never executed
+branch 38 never executed
+    $$$$$:  209-block 21
+call   39 never executed
+    $$$$$:  209-block 22
+    $$$$$:  209-block 23
+branch 40 never executed
+branch 41 never executed
+    $$$$$:  209-block 24
+call   42 never executed
+    $$$$$:  209-block 25
+    $$$$$:  209-block 26
+branch 43 never executed
+branch 44 never executed
+    $$$$$:  209-block 27
+call   45 never executed
+        1:  210:            noEnRango ++;
+        1:  210-block  0
+        -:  211:        }
+      276:  212:        i++;
+      276:  212-block  0
+        -:  213:    }
+       24:  214:    return noEnRango==0;
+       24:  214-block  0
+       24:  214-block  1
+        -:  215:}
+function _Z8rangoCh6St6vectorIS_IiSaIiEESaIS1_EE called 23 returned 100% blocks executed 100%
+       23:  216:bool rangoCh6(eph_i ti){
+       23:  217:    int i=0,noEnRango=0;
+       23:  217-block  0
+      887:  218:    while(i<ti.size()){
+      887:  218-block  0
+call    0 returned 887
+branch  1 taken 864 (fallthrough)
+branch  2 taken 23
+      864:  219:        if(ti[i][CH6]<0){
+      864:  219-block  0
+call    0 returned 864
+call    1 returned 864
+branch  2 taken 1 (fallthrough)
+branch  3 taken 863
+        1:  220:            noEnRango ++;
+        1:  220-block  0
+        -:  221:        }
+      864:  222:        i++;
+      864:  222-block  0
+        -:  223:    }
+       23:  224:    return noEnRango==0;
+       23:  224-block  0
+        -:  225:}
+function _Z9rangoP47tSt6vectorIS_IiSaIiEESaIS1_EE called 22 returned 100% blocks executed 100%
+       22:  226:bool rangoP47t(eph_i ti){
+       22:  227:    int i=0,noEnRango=0;
+       22:  227-block  0
+      872:  228:    while(i<ti.size()){
+      872:  228-block  0
+call    0 returned 872
+branch  1 taken 850 (fallthrough)
+branch  2 taken 22
+      850:  229:        if(ti[i][p47T]<-1){
+      850:  229-block  0
+call    0 returned 850
+call    1 returned 850
+branch  2 taken 1 (fallthrough)
+branch  3 taken 849
+        1:  230:            noEnRango ++;
+        1:  230-block  0
+        -:  231:        }
+      850:  232:        i++;
+      850:  232-block  0
+        -:  233:    }
+       22:  234:    return noEnRango==0;
+       22:  234-block  0
+        -:  235:}
+function _Z8rangoIv1St6vectorIS_IiSaIiEESaIS1_EE called 21 returned 100% blocks executed 100%
+       21:  236:bool rangoIv1(eph_h th){
+       21:  237:    int i=0,noEnRango=0;
+       21:  237-block  0
+      288:  238:    while(i<th.size()){
+      288:  238-block  0
+call    0 returned 288
+branch  1 taken 267 (fallthrough)
+branch  2 taken 21
+      267:  239:        if((5<th[i][IV1]) || (th[i][IV1]<1)){
+      267:  239-block  0
+call    0 returned 267
+call    1 returned 267
+branch  2 taken 267 (fallthrough)
+branch  3 taken 0
+      267:  239-block  1
+call    4 returned 267
+call    5 returned 267
+branch  6 taken 1 (fallthrough)
+branch  7 taken 266
+        1:  239-block  2
+      266:  239-block  3
+      267:  239-block  4
+branch  8 taken 1 (fallthrough)
+branch  9 taken 266
+        1:  240:            noEnRango ++;
+        1:  240-block  0
+        -:  241:        }
+      267:  242:        i++;
+      267:  242-block  0
+        -:  243:    }
+       21:  244:    return noEnRango==0;
+       21:  244-block  0
+        -:  245:}
+function _Z8rangoIi3St6vectorIS_IiSaIiEESaIS1_EE called 20 returned 100% blocks executed 100%
+       20:  246:bool rangoIi3(eph_h th){
+       20:  247:    int i=0,noEnRango=0;
+       20:  247-block  0
+      283:  248:    while(i<th.size()){
+      283:  248-block  0
+call    0 returned 283
+branch  1 taken 263 (fallthrough)
+branch  2 taken 20
+      263:  249:        if(th[i][II3]!=1 && th[i][II3]!=2){
+      263:  249-block  0
+call    0 returned 263
+call    1 returned 263
+branch  2 taken 247 (fallthrough)
+branch  3 taken 16
+      247:  249-block  1
+call    4 returned 247
+call    5 returned 247
+branch  6 taken 1 (fallthrough)
+branch  7 taken 246
+        1:  249-block  2
+      262:  249-block  3
+      263:  249-block  4
+branch  8 taken 1 (fallthrough)
+branch  9 taken 262
+        1:  250:            noEnRango ++;
+        1:  250-block  0
+        -:  251:        }
+      263:  252:        i++;
+      263:  252-block  0
+        -:  253:    }
+       20:  254:    return noEnRango==0;
+       20:  254-block  0
+        -:  255:}
+function _Z8rangoIi7St6vectorIS_IiSaIiEESaIS1_EE called 19 returned 100% blocks executed 100%
+       19:  256:bool rangoIi7(eph_h th){
+       19:  257:    int i=0,noEnRango=0;
+       19:  257-block  0
+      278:  258:    while(i<th.size()){
+      278:  258-block  0
+call    0 returned 278
+branch  1 taken 259 (fallthrough)
+branch  2 taken 19
+      259:  259:        if(3<th[i][II7] || th[i][II7]<1){
+      259:  259-block  0
+call    0 returned 259
+call    1 returned 259
+branch  2 taken 259 (fallthrough)
+branch  3 taken 0
+      259:  259-block  1
+call    4 returned 259
+call    5 returned 259
+branch  6 taken 1 (fallthrough)
+branch  7 taken 258
+        1:  259-block  2
+      258:  259-block  3
+      259:  259-block  4
+branch  8 taken 1 (fallthrough)
+branch  9 taken 258
+        1:  260:            noEnRango ++;
+        1:  260-block  0
+        -:  261:        }
+      259:  262:        i++;
+      259:  262-block  0
+        -:  263:    }
+       19:  264:    return noEnRango==0;
+       19:  264-block  0
+        -:  265:}
+function _Z11rangoRegionSt6vectorIS_IiSaIiEESaIS1_EE called 18 returned 100% blocks executed 100%
+       18:  266:bool rangoRegion(eph_h th) {
+       18:  267:    int i = 0, noEnRango = 0;
+       18:  267-block  0
+      273:  268:    while (i < th.size()) {
+      273:  268-block  0
+call    0 returned 273
+branch  1 taken 255 (fallthrough)
+branch  2 taken 18
+      255:  269:        if (th[i][REGION]!=GBA && th[i][REGION]!=NOA && th[i][REGION]!=NEA && th[i][REGION]!=CUYO && th[i][REGION]!=PAMPEANA && th[i][REGION]!=PATAGONIA) {
+      255:  269-block  0
+call    0 returned 255
+call    1 returned 255
+branch  2 taken 227 (fallthrough)
+branch  3 taken 28
+      227:  269-block  1
+call    4 returned 227
+call    5 returned 227
+branch  6 taken 177 (fallthrough)
+branch  7 taken 50
+      177:  269-block  2
+call    8 returned 177
+call    9 returned 177
+branch 10 taken 138 (fallthrough)
+branch 11 taken 39
+      138:  269-block  3
+call   12 returned 138
+call   13 returned 138
+branch 14 taken 112 (fallthrough)
+branch 15 taken 26
+      112:  269-block  4
+call   16 returned 112
+call   17 returned 112
+branch 18 taken 37 (fallthrough)
+branch 19 taken 75
+       37:  269-block  5
+call   20 returned 37
+call   21 returned 37
+branch 22 taken 1 (fallthrough)
+branch 23 taken 36
+        1:  269-block  6
+      254:  269-block  7
+      255:  269-block  8
+branch 24 taken 1 (fallthrough)
+branch 25 taken 254
+        1:  270:            noEnRango++;
+        1:  270-block  0
+        -:  271:        }
+      255:  272:        i++;
+      255:  272-block  0
+        -:  273:    }
+       18:  274:    return noEnRango == 0;
+       18:  274-block  0
+        -:  275:}
+function _Z11rangoMas500St6vectorIS_IiSaIiEESaIS1_EE called 17 returned 100% blocks executed 100%
+       17:  276:bool rangoMas500(eph_h th){
+       17:  277:    int i = 0, noEnRango = 0;
+       17:  277-block  0
+      268:  278:    while (i < th.size()) {
+      268:  278-block  0
+call    0 returned 268
+branch  1 taken 251 (fallthrough)
+branch  2 taken 17
+      251:  279:        if (th[i][MAS_500]!=0 && th[i][MAS_500]!=1)  {
+      251:  279-block  0
+call    0 returned 251
+call    1 returned 251
+branch  2 taken 87 (fallthrough)
+branch  3 taken 164
+       87:  279-block  1
+call    4 returned 87
+call    5 returned 87
+branch  6 taken 1 (fallthrough)
+branch  7 taken 86
+        1:  279-block  2
+      250:  279-block  3
+      251:  279-block  4
+branch  8 taken 1 (fallthrough)
+branch  9 taken 250
+        1:  280:            noEnRango++;
+        1:  280-block  0
+        -:  281:        }
+      251:  282:        i++;
+      251:  282-block  0
+        -:  283:    }
+       17:  284:    return noEnRango == 0;
+       17:  284-block  0
+        -:  285:
+        -:  286:}
+function _Z8rangoCh4St6vectorIS_IiSaIiEESaIS1_EE called 16 returned 100% blocks executed 100%
+       16:  287:bool rangoCh4(eph_i ti){
+       16:  288:    int i = 0, noEnRango = 0;
+       16:  288-block  0
+      782:  289:    while (i < ti.size()) {
+      782:  289-block  0
+call    0 returned 782
+branch  1 taken 766 (fallthrough)
+branch  2 taken 16
+      766:  290:        if (ti[i][CH4]!=1 && ti[i][CH4]!=2)  {
+      766:  290-block  0
+call    0 returned 766
+call    1 returned 766
+branch  2 taken 390 (fallthrough)
+branch  3 taken 376
+      390:  290-block  1
+call    4 returned 390
+call    5 returned 390
+branch  6 taken 1 (fallthrough)
+branch  7 taken 389
+        1:  290-block  2
+      765:  290-block  3
+      766:  290-block  4
+branch  8 taken 1 (fallthrough)
+branch  9 taken 765
+        1:  291:            noEnRango++;
+        1:  291-block  0
+        -:  292:        }
+      766:  293:        i++;
+      766:  293-block  0
+        -:  294:    }
+       16:  295:    return noEnRango == 0;
+       16:  295-block  0
+        -:  296:}
+function _Z12rangoNivelEdSt6vectorIS_IiSaIiEESaIS1_EE called 15 returned 100% blocks executed 100%
+       15:  297:bool rangoNivelEd(eph_i ti){
+       15:  298:    int i = 0, noEnRango = 0;
+       15:  298-block  0
+      767:  299:    while (i < ti.size()) {
+      767:  299-block  0
+call    0 returned 767
+branch  1 taken 752 (fallthrough)
+branch  2 taken 15
+      752:  300:        if (ti[i][NIVEL_ED]!=0 && ti[i][NIVEL_ED]!=1)  {
+      752:  300-block  0
+call    0 returned 752
+call    1 returned 752
+branch  2 taken 98 (fallthrough)
+branch  3 taken 654
+       98:  300-block  1
+call    4 returned 98
+call    5 returned 98
+branch  6 taken 1 (fallthrough)
+branch  7 taken 97
+        1:  300-block  2
+      751:  300-block  3
+      752:  300-block  4
+branch  8 taken 1 (fallthrough)
+branch  9 taken 751
+        1:  301:            noEnRango++;
+        1:  301-block  0
+        -:  302:        }
+      752:  303:        i++;
+      752:  303-block  0
+        -:  304:    }
+       15:  305:    return noEnRango == 0;
+       15:  305-block  0
+        -:  306:}
+        -:  307:
+function _Z11rangoEstadoSt6vectorIS_IiSaIiEESaIS1_EE called 14 returned 100% blocks executed 100%
+       14:  308:bool rangoEstado(eph_i ti){
+       14:  309:    int i = 0, noEnRango = 0;
+       14:  309-block  0
+      752:  310:    while (i < ti.size()) {
+      752:  310-block  0
+call    0 returned 752
+branch  1 taken 738 (fallthrough)
+branch  2 taken 14
+      738:  311:        if (1 < ti[i][ESTADO] || ti[i][ESTADO] <-1 ) {
+      738:  311-block  0
+call    0 returned 738
+call    1 returned 738
+branch  2 taken 738 (fallthrough)
+branch  3 taken 0
+      738:  311-block  1
+call    4 returned 738
+call    5 returned 738
+branch  6 taken 1 (fallthrough)
+branch  7 taken 737
+        1:  311-block  2
+      737:  311-block  3
+      738:  311-block  4
+branch  8 taken 1 (fallthrough)
+branch  9 taken 737
+        1:  312:            noEnRango++;
+        1:  312-block  0
+        -:  313:        }
+      738:  314:        i++;
+      738:  314-block  0
+        -:  315:    }
+       14:  316:    return noEnRango == 0;
+       14:  316-block  0
+        -:  317:}
+function _Z12rangoCatOcupSt6vectorIS_IiSaIiEESaIS1_EE called 13 returned 100% blocks executed 100%
+       13:  318:bool rangoCatOcup(eph_i ti){
+       13:  319:    int i = 0, noEnRango = 0;
+       13:  319-block  0
+      737:  320:    while (i < ti.size()) {
+      737:  320-block  0
+call    0 returned 737
+branch  1 taken 724 (fallthrough)
+branch  2 taken 13
+      724:  321:        if (4 < ti[i][CAT_OCUP] || ti[i][CAT_OCUP] < 0) {
+      724:  321-block  0
+call    0 returned 724
+call    1 returned 724
+branch  2 taken 724 (fallthrough)
+branch  3 taken 0
+      724:  321-block  1
+call    4 returned 724
+call    5 returned 724
+branch  6 taken 1 (fallthrough)
+branch  7 taken 723
+        1:  321-block  2
+      723:  321-block  3
+      724:  321-block  4
+branch  8 taken 1 (fallthrough)
+branch  9 taken 723
+        1:  322:            noEnRango++;
+        1:  322-block  0
+        -:  323:        }
+      724:  324:        i++;
+      724:  324-block  0
+        -:  325:    }
+       13:  326:    return noEnRango == 0;
+       13:  326-block  0
+        -:  327:}
+function _Z10rangoPp04gSt6vectorIS_IiSaIiEESaIS1_EE called 12 returned 100% blocks executed 100%
+       12:  328:bool rangoPp04g(eph_i ti){
+       12:  329:    int i=0,noEnRango=0;
+       12:  329-block  0
+      722:  330:    while (i < ti.size()){
+      722:  330-block  0
+call    0 returned 722
+branch  1 taken 710 (fallthrough)
+branch  2 taken 12
+      710:  331:        if (10<ti[i][PP04G] || ti[i][PP04G]<0 ){
+      710:  331-block  0
+call    0 returned 710
+call    1 returned 710
+branch  2 taken 710 (fallthrough)
+branch  3 taken 0
+      710:  331-block  1
+call    4 returned 710
+call    5 returned 710
+branch  6 taken 1 (fallthrough)
+branch  7 taken 709
+        1:  331-block  2
+      709:  331-block  3
+      710:  331-block  4
+branch  8 taken 1 (fallthrough)
+branch  9 taken 709
+        1:  332:            noEnRango++;
+        1:  332-block  0
+        -:  333:        }
+      710:  334:        i++;
+      710:  334-block  0
+        -:  335:    }
+       12:  336:    return noEnRango == 0;
+       12:  336-block  0
+        -:  337:}
+        -:  338:
+function _Z19habitantesDeUnaCasaSt6vectorIiSaIiEES_IS1_SaIS1_EE called 552 returned 100% blocks executed 100%
+      552:  339:int habitantesDeUnaCasa(hogar hog, eph_i ti) {
+      552:  340:    int i=0,habitantes=0;
+      552:  340-block  0
+   124044:  341:    while (i<ti.size()){
+   124044:  341-block  0
+call    0 returned 124044
+branch  1 taken 123492 (fallthrough)
+branch  2 taken 552
+   123492:  342:        if (hog[HOGCODUSU] == ti[i][INDCODUSU]){
+   123492:  342-block  0
+call    0 returned 123492
+call    1 returned 123492
+call    2 returned 123492
+branch  3 taken 1770 (fallthrough)
+branch  4 taken 121722
+     1770:  343:            habitantes++;
+     1770:  343-block  0
+        -:  344:        }
+   123492:  345:        i++;
+   123492:  345-block  0
+        -:  346:    }
+      552:  347:    return habitantes;
+      552:  347-block  0
+        -:  348:}
+        -:  349:
+        -:  350:/*####################################################################################################################*/
+        -:  351:
+        -:  352://IMPLEMENTACION PROBLEMA 2
+function _Z40longitudIgualAMaximaCantidadHabitacionesSt6vectorIS_IiSaIiEESaIS1_EEiRS1_ called 4 returned 100% blocks executed 100%
+        4:  353:void longitudIgualAMaximaCantidadHabitaciones(eph_h th, int region, vector<int> &lista){
+        4:  354:    int i=0,maximaCantHab=0;
+        4:  354-block  0
+      311:  355:    while(i<th.size()){
+      311:  355-block  0
+call    0 returned 311
+branch  1 taken 307 (fallthrough)
+branch  2 taken 4
+      307:  356:        if(th[i][REGION]==region && th[i][IV1]==1){
+      307:  356-block  0
+call    0 returned 307
+call    1 returned 307
+branch  2 taken 63 (fallthrough)
+branch  3 taken 244
+       63:  356-block  1
+call    4 returned 63
+call    5 returned 63
+branch  6 taken 57 (fallthrough)
+branch  7 taken 6
+       57:  356-block  2
+      250:  356-block  3
+      307:  356-block  4
+branch  8 taken 57 (fallthrough)
+branch  9 taken 250
+       57:  357:                if (maximaCantHab < th[i][IV2]) {
+       57:  357-block  0
+call    0 returned 57
+call    1 returned 57
+branch  2 taken 7 (fallthrough)
+branch  3 taken 50
+        7:  358:                    maximaCantHab = th[i][IV2];
+        7:  358-block  0
+call    0 returned 7
+call    1 returned 7
+        -:  359:                }
+        -:  360:        }
+      307:  361:    i++;
+      307:  361-block  0
+        -:  362:    }
+       23:  363:    for(int k=0;k<maximaCantHab;k++){
+        4:  363-block  0
+       23:  363-block  1
+branch  0 taken 19 (fallthrough)
+branch  1 taken 4
+       19:  364:        lista.push_back(0);
+       19:  364-block  0
+call    0 returned 19
+branch  1 taken 19 (fallthrough)
+branch  2 taken 0 (throw)
+       19:  364-block  1
+        -:  365:    }
+        4:  366:}
+        4:  366-block  0
+        -:  367:
+function _Z31cantHogaresCasaConNHabitacionesSt6vectorIS_IiSaIiEESaIS1_EEii called 19 returned 100% blocks executed 100%
+       19:  368:int cantHogaresCasaConNHabitaciones(eph_h th, int region, int habitaciones){
+       19:  369:    int i=0, hogares=0;
+       19:  369-block  0
+     1547:  370:    while(i<th.size()){
+     1547:  370-block  0
+call    0 returned 1547
+branch  1 taken 1528 (fallthrough)
+branch  2 taken 19
+     1528:  371:        if (th[i][IV1] == 1 && th[i][IV2] == habitaciones && th[i][REGION] == region){
+     1528:  371-block  0
+call    0 returned 1528
+call    1 returned 1528
+branch  2 taken 1408 (fallthrough)
+branch  3 taken 120
+     1408:  371-block  1
+call    4 returned 1408
+call    5 returned 1408
+branch  6 taken 266 (fallthrough)
+branch  7 taken 1142
+      266:  371-block  2
+call    8 returned 266
+call    9 returned 266
+branch 10 taken 57 (fallthrough)
+branch 11 taken 209
+       57:  371-block  3
+     1471:  371-block  4
+     1528:  371-block  5
+branch 12 taken 57 (fallthrough)
+branch 13 taken 1471
+       57:  372:            hogares++;
+       57:  372-block  0
+        -:  373:        }
+     1528:  374:        i++;
+     1528:  374-block  0
+        -:  375:    }
+       19:  376:    return hogares;
+       19:  376-block  0
+        -:  377:}
+        -:  378:
+        -:  379:/*####################################################################################################################*/
+        -:  380:
+        -:  381://IMPLEMENTACION PROBLEMA 3
+function _Z22proporcionDeCasasConHCSt6vectorIS_IiSaIiEESaIS1_EES3_i called 18 returned 100% blocks executed 59%
+       18:  382:float proporcionDeCasasConHC(eph_h th,eph_i ti, int region){
+       18:  383:    if( cantHogaresValidos(th,region)>0){
+       18:  383-block  0
+call    0 returned 18
+call    1 returned 18
+branch  2 taken 18 (fallthrough)
+branch  3 taken 0 (throw)
+       18:  383-block  1
+call    4 returned 18
+branch  5 taken 17 (fallthrough)
+branch  6 taken 1
+    $$$$$:  383-block  2
+call    7 never executed
+    $$$$$:  383-block  3
+call    8 never executed
+       17:  384:        return  cantHogaresValidosConHC(th,ti,region)/cantHogaresValidos(th,region);
+       17:  384-block  0
+call    0 returned 17
+call    1 returned 17
+branch  2 taken 17 (fallthrough)
+branch  3 taken 0 (throw)
+       17:  384-block  1
+call    4 returned 17
+branch  5 taken 17 (fallthrough)
+branch  6 taken 0 (throw)
+       17:  384-block  2
+call    7 returned 17
+branch  8 taken 17 (fallthrough)
+branch  9 taken 0 (throw)
+       17:  384-block  3
+call   10 returned 17
+branch 11 taken 17 (fallthrough)
+branch 12 taken 0 (throw)
+       17:  384-block  4
+call   13 returned 17
+call   14 returned 17
+call   15 returned 17
+    $$$$$:  384-block  5
+call   16 never executed
+    $$$$$:  384-block  6
+    $$$$$:  384-block  7
+call   17 never executed
+    $$$$$:  384-block  8
+    $$$$$:  384-block  9
+call   18 never executed
+        -:  385:    } else{
+        1:  386:        return  0;
+        1:  386-block  0
+        -:  387:    }
+        -:  388:}
+function _Z23cantHogaresValidosConHCSt6vectorIS_IiSaIiEESaIS1_EES3_i called 17 returned 100% blocks executed 70%
+       17:  389:float cantHogaresValidosConHC(eph_h th, eph_i ti, int region){
+       17:  390:    float hogaresValidosConHC=0;
+      114:  391:    for(int k=0;k<th.size();k++){
+       17:  391-block  0
+      114:  391-block  1
+call    0 returned 114
+branch  1 taken 97 (fallthrough)
+branch  2 taken 17
+       97:  391-block  2
+       97:  392:        if(esHogarValido(th[k],region)&& hogarConHC(th[k],ti)){
+       97:  392-block  0
+call    0 returned 97
+call    1 returned 97
+branch  2 taken 97 (fallthrough)
+branch  3 taken 0 (throw)
+       97:  392-block  1
+call    4 returned 97
+branch  5 taken 17 (fallthrough)
+branch  6 taken 80
+       17:  392-block  2
+call    7 returned 17
+branch  8 taken 17 (fallthrough)
+branch  9 taken 0 (throw)
+       17:  392-block  3
+call   10 returned 17
+call   11 returned 17
+branch 12 taken 17 (fallthrough)
+branch 13 taken 0 (throw)
+       17:  392-block  4
+call   14 returned 17
+branch 15 taken 17 (fallthrough)
+branch 16 taken 0 (throw)
+       17:  392-block  5
+branch 17 taken 16 (fallthrough)
+branch 18 taken 1
+       16:  392-block  6
+       81:  392-block  7
+       97:  392-block  8
+branch 19 taken 17 (fallthrough)
+branch 20 taken 80
+       17:  392-block  9
+call   21 returned 17
+       97:  392-block 10
+branch 22 taken 17 (fallthrough)
+branch 23 taken 80
+       17:  392-block 11
+call   24 returned 17
+       97:  392-block 12
+branch 25 taken 97 (fallthrough)
+branch 26 taken 0
+       97:  392-block 13
+call   27 returned 97
+       97:  392-block 14
+branch 28 taken 16 (fallthrough)
+branch 29 taken 81
+    $$$$$:  392-block 15
+branch 30 never executed
+branch 31 never executed
+    $$$$$:  392-block 16
+call   32 never executed
+    $$$$$:  392-block 17
+    $$$$$:  392-block 18
+branch 33 never executed
+branch 34 never executed
+    $$$$$:  392-block 19
+call   35 never executed
+    $$$$$:  392-block 20
+    $$$$$:  392-block 21
+branch 36 never executed
+branch 37 never executed
+    $$$$$:  392-block 22
+call   38 never executed
+       16:  393:            hogaresValidosConHC++;
+       16:  393-block  0
+        -:  394:        }
+        -:  395:
+        -:  396:    }
+       17:  397:    return hogaresValidosConHC;
+       17:  397-block  0
+       17:  397-block  1
+        -:  398:}
+function _Z18cantHogaresValidosSt6vectorIS_IiSaIiEESaIS1_EEi called 35 returned 100% blocks executed 100%
+       35:  399:float cantHogaresValidos(eph_h th, int region){
+       35:  400:    float hogaresValidos=0;
+      234:  401:    for(int k=0;k<th.size();k++){
+       35:  401-block  0
+      234:  401-block  1
+call    0 returned 234
+branch  1 taken 199 (fallthrough)
+branch  2 taken 35
+      199:  401-block  2
+      199:  402:        if(esHogarValido (th[k], region)){
+      199:  402-block  0
+call    0 returned 199
+call    1 returned 199
+call    2 returned 199
+call    3 returned 199
+branch  4 taken 34 (fallthrough)
+branch  5 taken 165
+       34:  403:            hogaresValidos++;
+       34:  403-block  0
+        -:  404:        }
+        -:  405:    }
+       35:  406:    return hogaresValidos;
+       35:  406-block  0
+        -:  407:}
+function _Z13esHogarValidoSt6vectorIiSaIiEEi called 296 returned 100% blocks executed 100%
+      296:  408:bool esHogarValido (hogar th_k,int region){
+      296:  409:    if(th_k[IV1]==1 && th_k[REGION]==region && th_k[MAS_500]==0){
+      296:  409-block  0
+call    0 returned 296
+branch  1 taken 296 (fallthrough)
+branch  2 taken 0
+      296:  409-block  1
+call    3 returned 296
+branch  4 taken 51 (fallthrough)
+branch  5 taken 245
+       51:  409-block  2
+call    6 returned 51
+branch  7 taken 51 (fallthrough)
+branch  8 taken 0
+       51:  409-block  3
+      245:  409-block  4
+      296:  409-block  5
+branch  9 taken 51 (fallthrough)
+branch 10 taken 245
+       51:  410:        return true;
+       51:  410-block  0
+        -:  411:    }else{
+      245:  412:        return false;
+      245:  412-block  0
+        -:  413:    }
+        -:  414:}
+function _Z10hogarConHCSt6vectorIiSaIiEES_IS1_SaIS1_EE called 17 returned 100% blocks executed 85%
+       17:  415:bool hogarConHC(hogar th_k, eph_i ti){
+       17:  416:    if(cantHabitantes(th_k,ti) > 3*th_k[II2]){
+       17:  416-block  0
+call    0 returned 17
+call    1 returned 17
+branch  2 taken 17 (fallthrough)
+branch  3 taken 0 (throw)
+       17:  416-block  1
+call    4 returned 17
+call    5 returned 17
+call    6 returned 17
+call    7 returned 17
+branch  8 taken 16 (fallthrough)
+branch  9 taken 1
+    $$$$$:  416-block  2
+call   10 never executed
+       16:  417:        return true;
+       16:  417-block  0
+        -:  418:    }else{
+        1:  419:        return false;
+        1:  419-block  0
+        -:  420:    }
+        -:  421:}
+function _Z14cantHabitantesSt6vectorIiSaIiEES_IS1_SaIS1_EE called 21 returned 100% blocks executed 100%
+       21:  422:int cantHabitantes(hogar th_k,eph_i ti){
+       21:  423:    int habitantes=0;
+      460:  424:    for(int j=0;j<ti.size();j++){
+       21:  424-block  0
+      460:  424-block  1
+call    0 returned 460
+branch  1 taken 439 (fallthrough)
+branch  2 taken 21
+      439:  424-block  2
+      439:  425:        if(th_k[HOGCODUSU]==ti[j][INDCODUSU]){
+      439:  425-block  0
+call    0 returned 439
+call    1 returned 439
+call    2 returned 439
+branch  3 taken 81 (fallthrough)
+branch  4 taken 358
+       81:  426:           habitantes++;
+       81:  426-block  0
+        -:  427:        }
+        -:  428:    }
+       21:  429:    return habitantes;
+       21:  429-block  0
+        -:  430:}
+        -:  431:
+        -:  432:/*####################################################################################################################*/
+        -:  433:
+        -:  434://IMPLENTACION PROBLEMA 4
+function _Z21proporcionTeleworkingSt6vectorIS_IiSaIiEESaIS1_EES3_ called 6 returned 100% blocks executed 65%
+        6:  435:float proporcionTeleworking(eph_h th,eph_i ti){
+        6:  436:    float proporcion=0;
+        6:  437:    if(cantIndividuosQueTrabajan(th,ti)>0){
+        6:  437-block  0
+call    0 returned 6
+call    1 returned 6
+branch  2 taken 6 (fallthrough)
+branch  3 taken 0 (throw)
+        6:  437-block  1
+call    4 returned 6
+call    5 returned 6
+call    6 returned 6
+branch  7 taken 6 (fallthrough)
+branch  8 taken 0
+    $$$$$:  437-block  2
+call    9 never executed
+    $$$$$:  437-block  3
+call   10 never executed
+        6:  438:        proporcion = cantIndividuosTrabajandoEnSuVivienda(th,ti)/ cantIndividuosQueTrabajan(th,ti);
+        6:  438-block  0
+call    0 returned 6
+call    1 returned 6
+branch  2 taken 6 (fallthrough)
+branch  3 taken 0 (throw)
+        6:  438-block  1
+call    4 returned 6
+call    5 returned 6
+branch  6 taken 6 (fallthrough)
+branch  7 taken 0 (throw)
+        6:  438-block  2
+call    8 returned 6
+branch  9 taken 6 (fallthrough)
+branch 10 taken 0 (throw)
+        6:  438-block  3
+call   11 returned 6
+call   12 returned 6
+call   13 returned 6
+call   14 returned 6
+call   15 returned 6
+    $$$$$:  438-block  4
+call   16 never executed
+    $$$$$:  438-block  5
+    $$$$$:  438-block  6
+call   17 never executed
+    $$$$$:  438-block  7
+    $$$$$:  438-block  8
+call   18 never executed
+        -:  439:    }
+        6:  440:    return proporcion;
+        6:  440-block  0
+        6:  440-block  1
+        -:  441:}
+        -:  442:
+        -:  443:
+function _Z36cantIndividuosTrabajandoEnSuViviendaSt6vectorIS_IiSaIiEESaIS1_EES3_ called 6 returned 100% blocks executed 100%
+        6:  444:float  cantIndividuosTrabajandoEnSuVivienda(eph_h th, eph_i ti){
+        6:  445:    float trabajadoresValidos=0;
+     6086:  446:    for (int i = 0; i <ti.size() ; ++i) {
+        6:  446-block  0
+     6086:  446-block  1
+call    0 returned 6086
+branch  1 taken 6080 (fallthrough)
+branch  2 taken 6
+     6080:  446-block  2
+  6054208:  447:        for (int j = 0; j <th.size() ; ++j) {
+     6080:  447-block  0
+  6054208:  447-block  1
+call    0 returned 6054208
+branch  1 taken 6048128 (fallthrough)
+branch  2 taken 6080
+  6048128:  447-block  2
+  6048128:  448:            if (ti[i][ESTADO]==1 && ti[i][PP04G]==6 && ti[i][INDCODUSU]==th[j][HOGCODUSU] && th[j][II3]==1 && th[j][MAS_500]==1 && (th[j][IV1]==1 || th[j][IV1]==2)){
+  6048128:  448-block  0
+call    0 returned 6048128
+call    1 returned 6048128
+branch  2 taken 2464068 (fallthrough)
+branch  3 taken 3584060
+  2464068:  448-block  1
+call    4 returned 2464068
+call    5 returned 2464068
+branch  6 taken 287036 (fallthrough)
+branch  7 taken 2177032
+   287036:  448-block  2
+call    8 returned 287036
+call    9 returned 287036
+call   10 returned 287036
+call   11 returned 287036
+branch 12 taken 296 (fallthrough)
+branch 13 taken 286740
+      296:  448-block  3
+call   14 returned 296
+call   15 returned 296
+branch 16 taken 44 (fallthrough)
+branch 17 taken 252
+       44:  448-block  4
+call   18 returned 44
+call   19 returned 44
+branch 20 taken 23 (fallthrough)
+branch 21 taken 21
+       23:  448-block  5
+call   22 returned 23
+call   23 returned 23
+branch 24 taken 8 (fallthrough)
+branch 25 taken 15
+        8:  448-block  6
+call   26 returned 8
+call   27 returned 8
+branch 28 taken 4 (fallthrough)
+branch 29 taken 4
+       19:  448-block  7
+  6048109:  448-block  8
+  6048128:  448-block  9
+branch 30 taken 19 (fallthrough)
+branch 31 taken 6048109
+       19:  449:                trabajadoresValidos++;
+       19:  449-block  0
+        -:  450:            }
+        -:  451:        }
+        -:  452:    }
+        6:  453:    return trabajadoresValidos;
+        6:  453-block  0
+        -:  454:}
+        -:  455:
+function _Z25cantIndividuosQueTrabajanSt6vectorIS_IiSaIiEESaIS1_EES3_ called 12 returned 100% blocks executed 100%
+       12:  456:float cantIndividuosQueTrabajan(eph_h th, eph_i ti){
+       12:  457:    float trabajadoresValidos=0;
+    12172:  458:    for(int i=0;i<ti.size();i++){
+       12:  458-block  0
+    12172:  458-block  1
+call    0 returned 12172
+branch  1 taken 12160 (fallthrough)
+branch  2 taken 12
+    12160:  458-block  2
+ 12108416:  459:        for(int k=0;k<th.size();k++){
+    12160:  459-block  0
+ 12108416:  459-block  1
+call    0 returned 12108416
+branch  1 taken 12096256 (fallthrough)
+branch  2 taken 12160
+ 12096256:  459-block  2
+ 12096256:  460:            if(ti[i][ESTADO]==1&&ti[i][INDCODUSU]==th[k][HOGCODUSU]&&th[k][MAS_500]==1&&ti[i][PP04G]==6){
+ 12096256:  460-block  0
+call    0 returned 12096256
+call    1 returned 12096256
+branch  2 taken 4928136 (fallthrough)
+branch  3 taken 7168120
+  4928136:  460-block  1
+call    4 returned 4928136
+call    5 returned 4928136
+call    6 returned 4928136
+call    7 returned 4928136
+branch  8 taken 4962 (fallthrough)
+branch  9 taken 4923174
+     4962:  460-block  2
+call   10 returned 4962
+call   11 returned 4962
+branch 12 taken 2054 (fallthrough)
+branch 13 taken 2908
+     2054:  460-block  3
+call   14 returned 2054
+call   15 returned 2054
+branch 16 taken 302 (fallthrough)
+branch 17 taken 1752
+      302:  460-block  4
+ 12095954:  460-block  5
+ 12096256:  460-block  6
+branch 18 taken 302 (fallthrough)
+branch 19 taken 12095954
+      302:  461:                trabajadoresValidos++;
+      302:  461-block  0
+        -:  462:            }
+        -:  463:        }
+        -:  464:
+        -:  465:    }
+       12:  466:    return trabajadoresValidos;
+       12:  466-block  0
+        -:  467:}
+        -:  468:
+        -:  469:/*####################################################################################################################*/
+        -:  470:
+        -:  471://IMPLENTACION PROBLEMA 5
+        -:  472:
+function _Z14tieneCasaChicaSt6vectorIiSaIiEES_IS1_SaIS1_EE called 4 returned 100% blocks executed 85%
+        4:  473:bool tieneCasaChica(hogar th_k, eph_i ti){
+        4:  474:    bool casaChica=false;
+        4:  475:    if((cantHabitantes(th_k,ti)-2)>th_k[II2]){
+        4:  475-block  0
+call    0 returned 4
+call    1 returned 4
+branch  2 taken 4 (fallthrough)
+branch  3 taken 0 (throw)
+        4:  475-block  1
+call    4 returned 4
+call    5 returned 4
+call    6 returned 4
+call    7 returned 4
+branch  8 taken 2 (fallthrough)
+branch  9 taken 2
+    $$$$$:  475-block  2
+call   10 never executed
+        2:  476:        casaChica=true;
+        2:  476-block  0
+        -:  477:
+        -:  478:    }
+        4:  479:    return casaChica;
+        4:  479-block  0
+        4:  479-block  1
+        -:  480:}
+        -:  481:
+        -:  482:/*####################################################################################################################*/
+        -:  483://IMPLENTACION PROBLEMA 6
+        -:  484://IMPLENTACION PROBLEMA 7
+        -:  485:/*
+        -:  486:pair<int,int> findMinPosition(vector<pair<int,int>> &s, int d, int h) {
+        -:  487:    pair<int,int> min = d;
+        -:  488:    for(int i=d+1; i<h; i++) {
+        -:  489:        if (s[i].first < s[min].first) {
+        -:  490:            min = i;
+        -:  491:        }
+        -:  492:    }
+        -:  493:    return s[min];
+        -:  494:}
+        -:  495:void selectionSort(vector<pair<int,int>> &s) {
+        -:  496:    for(int i=0; i<s.size(); i++) {
+        -:  497:        int minPos = findMinPosition(s,i,s.size());
+        -:  498:        swap(s, i, minPos);
+        -:  499:    }
+        -:  500:}
+        -:  501:void swap(vector<pair<int,int>> &s,pair<int,int>& a, pair<int,int>& b){
+        -:  502:
+        -:  503:    a.first=a.first+b.first;
+        -:  504:    b.first=a.first-b.first;
+        -:  505:    a.first=a.first-b.first;
+        -:  506:
+        -:  507:    a.second=a.second+b.second;
+        -:  508:    b.second=a.second-b.second;
+        -:  509:    a.second=a.second-b.second;
+        -:  510:
+        -:  511:
+        -:  512:
+        -:  513:
+        -:  514:}
+        -:  515:*/
+        -:  516:
+function _Z19insertionSortRegionRSt6vectorIS_IiSaIiEESaIS1_EE called 2 returned 100% blocks executed 100%
+        2:  517:void insertionSortRegion (eph_h &th ) {
+        7:  518:    for(int i=0; i < th . size () ; i++) {
+        2:  518-block  0
+        7:  518-block  1
+call    0 returned 7
+branch  1 taken 5 (fallthrough)
+branch  2 taken 2
+        5:  519:        insertarRegion (th ,i) ;
+        5:  519-block  0
+call    0 returned 5
+        -:  520:    }
+        -:  521:
+        2:  522:}
+        -:  523:
+function _Z14insertarRegionRSt6vectorIS_IiSaIiEESaIS1_EEi called 5 returned 100% blocks executed 100%
+        7:  524:void insertarRegion(eph_h &th, int i) {
+        -:  525:
+        7:  526:    while (i > 0 && th [i][4] < th [i -1][4]) {//usamos 4 ya que REGION no coincide con lo definido en definiciones ya la tabla hogares le faltan filas
+        7:  526-block  0
+branch  0 taken 3 (fallthrough)
+branch  1 taken 4
+        3:  526-block  1
+call    2 returned 3
+call    3 returned 3
+call    4 returned 3
+call    5 returned 3
+branch  6 taken 2 (fallthrough)
+branch  7 taken 1
+        2:  526-block  2
+        5:  526-block  3
+        7:  526-block  4
+branch  8 taken 2 (fallthrough)
+branch  9 taken 5
+        2:  527:        swap (th ,i,i -1) ;
+        2:  527-block  0
+call    0 returned 2
+        2:  528:        i--;
+        -:  529:    }
+        5:  530:}
+function _Z27insertionSortCodusuEnRegionRSt6vectorIS_IiSaIiEESaIS1_EE called 2 returned 100% blocks executed 100%
+        2:  531:void insertionSortCodusuEnRegion (eph_h &th ) {
+        7:  532:    for(int i=0; i < th.size () ; i++) {
+        2:  532-block  0
+        7:  532-block  1
+call    0 returned 7
+branch  1 taken 5 (fallthrough)
+branch  2 taken 2
+        5:  533:        insertarCodusuEnRegion (th ,i) ;
+        5:  533-block  0
+call    0 returned 5
+        -:  534:    }
+        2:  535:}
+        -:  536:
+function _Z22insertarCodusuEnRegionRSt6vectorIS_IiSaIiEESaIS1_EEi called 5 returned 100% blocks executed 100%
+        5:  537:void insertarCodusuEnRegion(eph_h &th, int i) {
+        5:  538:    if (i > 0 && th [i][4] == th[i -1][4]) {//REGION=4
+        5:  538-block  0
+branch  0 taken 3 (fallthrough)
+branch  1 taken 2
+        3:  538-block  1
+call    2 returned 3
+call    3 returned 3
+call    4 returned 3
+call    5 returned 3
+branch  6 taken 1 (fallthrough)
+branch  7 taken 2
+        1:  538-block  2
+        4:  538-block  3
+        5:  538-block  4
+branch  8 taken 1 (fallthrough)
+branch  9 taken 4
+        2:  539:        while (i > 0 && th[i][HOGCODUSU] < th[i - 1][HOGCODUSU]&& th [i][4] == th[i -1][4]) {
+        2:  539-block  0
+branch  0 taken 2 (fallthrough)
+branch  1 taken 0
+        2:  539-block  1
+call    2 returned 2
+call    3 returned 2
+call    4 returned 2
+call    5 returned 2
+branch  6 taken 2 (fallthrough)
+branch  7 taken 0
+        2:  539-block  2
+call    8 returned 2
+call    9 returned 2
+call   10 returned 2
+call   11 returned 2
+branch 12 taken 1 (fallthrough)
+branch 13 taken 1
+        1:  539-block  3
+        1:  539-block  4
+        2:  539-block  5
+branch 14 taken 1 (fallthrough)
+branch 15 taken 1
+        1:  540:            swap(th, i, i - 1);
+        1:  540-block  0
+call    0 returned 1
+        1:  541:            i--;
+        -:  542:        }
+        -:  543:    }
+        5:  544:}
+        -:  545:
+        -:  546:
+function _Z19insertionSortCodusuRSt6vectorIS_IiSaIiEESaIS1_EES4_ called 2 returned 100% blocks executed 100%
+        2:  547:void insertionSortCodusu (eph_h &th, eph_i &ti) {
+        2:  548:    int j=0;
+        7:  549:    for(int i=0; i < th . size () ; i++) {
+        2:  549-block  0
+        7:  549-block  1
+call    0 returned 7
+branch  1 taken 5 (fallthrough)
+branch  2 taken 2
+        5:  549-block  2
+       28:  550:        for (int k=0; k < ti . size () ; k++){
+        5:  550-block  0
+       28:  550-block  1
+call    0 returned 28
+branch  1 taken 23 (fallthrough)
+branch  2 taken 5
+       23:  550-block  2
+       23:  551:            if(th[i][HOGCODUSU]==ti[k][INDCODUSU]){
+       23:  551-block  0
+call    0 returned 23
+call    1 returned 23
+call    2 returned 23
+call    3 returned 23
+branch  4 taken 9 (fallthrough)
+branch  5 taken 14
+        9:  552:                swap (ti ,j ,k) ;
+        9:  552-block  0
+call    0 returned 9
+        9:  553:                j++;
+        -:  554:            }
+        -:  555:
+        -:  556:        }
+        -:  557:
+        -:  558:    }
+        -:  559:
+        2:  560:}
+        -:  561:
+        -:  562:/*
+        -:  563:void insertarCodusu( eph_i &ti, int i) {//
+        -:  564:    while (i < ti.size() && ti [i][INDCODUSU] < ti [i -1][INDCODUSU]) {
+        -:  565:        swap (ti ,i ,i -1) ;
+        -:  566:        i--;
+        -:  567:    }
+        -:  568:}
+        -:  569:*/
+        -:  570:
+function _Z31insertionSortComponenteEnCodusuRSt6vectorIS_IiSaIiEESaIS1_EE called 2 returned 100% blocks executed 100%
+        2:  571:void insertionSortComponenteEnCodusu(vector<vector<int>> &matriz) {
+       11:  572:    for(int i=0; i < matriz . size () ; i++) {
+        2:  572-block  0
+       11:  572-block  1
+call    0 returned 11
+branch  1 taken 9 (fallthrough)
+branch  2 taken 2
+        9:  573:        insertarComponenteEnCodusu (matriz ,i) ;
+        9:  573-block  0
+call    0 returned 9
+        -:  574:    }
+        -:  575:
+        2:  576:}
+        -:  577:
+        -:  578:
+function _Z26insertarComponenteEnCodusuRSt6vectorIS_IiSaIiEESaIS1_EEi called 9 returned 100% blocks executed 100%
+        9:  579:void insertarComponenteEnCodusu(vector<vector<int>> &matriz, int i) {
+        9:  580:    if (i > 0 && matriz [i][INDCODUSU] == matriz[i -1][INDCODUSU]) {
+        9:  580-block  0
+branch  0 taken 7 (fallthrough)
+branch  1 taken 2
+        7:  580-block  1
+call    2 returned 7
+call    3 returned 7
+call    4 returned 7
+call    5 returned 7
+branch  6 taken 4 (fallthrough)
+branch  7 taken 3
+        4:  580-block  2
+        5:  580-block  3
+        9:  580-block  4
+branch  8 taken 4 (fallthrough)
+branch  9 taken 5
+        4:  581:        int codusu1 = matriz[0][INDCODUSU],codusu2 = matriz[1][INDCODUSU],codusu3=matriz[2][INDCODUSU],codusu4= matriz[3][INDCODUSU];
+        4:  581-block  0
+call    0 returned 4
+call    1 returned 4
+call    2 returned 4
+call    3 returned 4
+call    4 returned 4
+call    5 returned 4
+call    6 returned 4
+call    7 returned 4
+       10:  582:        while (i > 0 && matriz[i][6] < matriz[i - 1][6]&&matriz [i][INDCODUSU] == matriz[i -1][INDCODUSU]) {//COMOPONENTE=6 segun tabla del test
+       10:  582-block  0
+branch  0 taken 6 (fallthrough)
+branch  1 taken 4
+        6:  582-block  1
+call    2 returned 6
+call    3 returned 6
+call    4 returned 6
+call    5 returned 6
+branch  6 taken 6 (fallthrough)
+branch  7 taken 0
+        6:  582-block  2
+call    8 returned 6
+call    9 returned 6
+call   10 returned 6
+call   11 returned 6
+branch 12 taken 6 (fallthrough)
+branch 13 taken 0
+        6:  582-block  3
+        4:  582-block  4
+       10:  582-block  5
+branch 14 taken 6 (fallthrough)
+branch 15 taken 4
+        6:  583:            swap(matriz, i, i - 1);
+        6:  583-block  0
+call    0 returned 6
+        6:  584:            i--;
+        -:  585:        }
+        -:  586:    }
+        9:  587:}
+        -:  588:
+function _Z4swapRSt6vectorIS_IiSaIiEESaIS1_EEii called 18 returned 100% blocks executed 83%
+       18:  589:void swap(vector<vector<int>> &matriz, int i, int j) {
+       36:  590:    vector<int> k= matriz [i];
+       18:  590-block  0
+call    0 returned 18
+call    1 returned 18
+branch  2 taken 18 (fallthrough)
+branch  3 taken 0 (throw)
+       18:  590-block  1
+call    4 returned 18
+    $$$$$:  590-block  2
+call    5 never executed
+       18:  591:    matriz [i]= matriz [j];
+       18:  591-block  0
+call    0 returned 18
+call    1 returned 18
+call    2 returned 18
+branch  3 taken 18 (fallthrough)
+branch  4 taken 0 (throw)
+       18:  592:    matriz [j]=k;
+       18:  592-block  0
+call    0 returned 18
+call    1 returned 18
+branch  2 taken 18 (fallthrough)
+branch  3 taken 0 (throw)
+       18:  593:}
+        -:  594:/*####################################################################################################################*/
+        -:  595:
+        -:  596://IMPLENTACION PROBLEMA 8
+        -:  597:
+        -:  598:
+        -:  599://IMPLENTACION PROBLEMA 9
+        -:  600://IMPLENTACION PROBLEMA 10
+        -:  601://IMPLENTACION PROBLEMA 11

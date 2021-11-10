@@ -87,7 +87,7 @@ bool hogaresAsociadosIndividuos(eph_h th, eph_i ti){
 /*hace falta "i!= j" dentro de las a condiciones del if */
 bool mismoAnioYTrimestre(eph_h th, eph_i ti){
     bool resp=false;
-    if(mismoAnio(ti,th)&&mismoTrimestreHogares(th)&&mismoTrimestreIndividuos(ti)){
+    if(mismoAnio(th,ti)&&mismoTrimestreHogares(th)&&mismoTrimestreIndividuos(ti)){
         resp=true;
     }
     return resp;
@@ -175,23 +175,7 @@ bool rangosValidos(eph_h th, eph_i ti){
      return valido;
 }
 //es necesario?
-bool rangoCodusu(eph_h th, eph_i ti){
-    int i=0,noEnRango=0;
-    while(i<th.size()){
-        if(th[i][HOGCODUSU]<=0){
-            noEnRango ++;
-        }
-        i++;
-    }
-    int j=0;
-    while(i<ti.size()){
-        if(ti[j][INDCODUSU]<=0){
-            noEnRango ++;
-        }
-        j++;
-    }
-    return noEnRango==0;
-}
+
 bool rangoTrimestre(eph_h th, eph_i ti){
     int i=0,j=0,noEnRango=0;
     while(i<th.size()){
@@ -453,6 +437,9 @@ int cantHabitantes(hogar th_k,eph_i ti){
     }
     return habitantes;
 }
+
+/*####################################################################################################################*/
+
 //IMPLENTACION PROBLEMA 4
 float proporcionTeleworking(eph_h th,eph_i ti){
     float proporcion=0;
@@ -488,6 +475,8 @@ float cantIndividuosQueTrabajan(eph_h th, eph_i ti){
     return trabajadoresValidos;
 }
 
+/*####################################################################################################################*/
+
 //IMPLENTACION PROBLEMA 5
 
 bool tieneCasaChica(hogar th_k, eph_i ti){
@@ -498,6 +487,8 @@ bool tieneCasaChica(hogar th_k, eph_i ti){
     }
     return casaChica;
 }
+
+/*####################################################################################################################*/
 //IMPLENTACION PROBLEMA 6
 //IMPLENTACION PROBLEMA 7
 /*
@@ -560,7 +551,6 @@ void insertarCodusuEnRegion(eph_h &th, int i) {
         }
     }
 }
-/*##################################################################################################################*/
 
 
 void insertionSortCodusu (eph_h &th, eph_i &ti) {
@@ -595,7 +585,6 @@ void insertionSortComponenteEnCodusu(vector<vector<int>> &matriz) {
 }
 
 
-
 void insertarComponenteEnCodusu(vector<vector<int>> &matriz, int i) {
     if (i > 0 && matriz [i][INDCODUSU] == matriz[i -1][INDCODUSU]) {
         int codusu1 = matriz[0][INDCODUSU],codusu2 = matriz[1][INDCODUSU],codusu3=matriz[2][INDCODUSU],codusu4= matriz[3][INDCODUSU];
@@ -611,11 +600,11 @@ void swap(vector<vector<int>> &matriz, int i, int j) {
     matriz [i]= matriz [j];
     matriz [j]=k;
 }
-
-
-
+/*####################################################################################################################*/
 
 //IMPLENTACION PROBLEMA 8
+
+
 //IMPLENTACION PROBLEMA 9
 //IMPLENTACION PROBLEMA 10
 //IMPLENTACION PROBLEMA 11

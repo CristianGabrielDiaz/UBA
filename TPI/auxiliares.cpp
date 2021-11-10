@@ -500,6 +500,7 @@ bool tieneCasaChica(hogar th_k, eph_i ti){
 }
 //IMPLENTACION PROBLEMA 6
 //IMPLENTACION PROBLEMA 7
+/*
 pair<int,int> findMinPosition(vector<pair<int,int>> &s, int d, int h) {
     pair<int,int> min = d;
     for(int i=d+1; i<h; i++) {
@@ -516,7 +517,7 @@ void selectionSort(vector<pair<int,int>> &s) {
     }
 }
 void swap(vector<pair<int,int>> &s,pair<int,int>& a, pair<int,int>& b){
-    /* COMPLETAR */
+
     a.first=a.first+b.first;
     b.first=a.first-b.first;
     a.first=a.first-b.first;

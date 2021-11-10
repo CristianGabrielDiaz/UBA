@@ -108,7 +108,13 @@ void swap(pair<int,int>& a, pair<int,int>& b);
 
 int findMinPosition(vector<pair<int,int>> &s, int d, int h);
 
+void insertionSortCodusu (eph_h &th, eph_i &ti );
 
+void insertionSortComponenteEnCodusu (vector<vector <int >> &matriz );
+
+void insertarCodusu(eph_i &ti, int i);
+
+void insertarComponenteEnCodusu(vector<vector<int>> &matriz, int i);
 
 //IMPLENTACION PROBLEMA 8
 //IMPLENTACION PROBLEMA 9

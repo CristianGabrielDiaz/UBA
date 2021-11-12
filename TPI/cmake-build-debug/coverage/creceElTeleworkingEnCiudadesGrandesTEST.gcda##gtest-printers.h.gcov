@@ -313,11 +313,11 @@
         -:  308:template <typename ToPrint, typename OtherOperand>
         -:  309:class FormatForComparison {
         -:  310: public:
-function _ZN7testing8internal19FormatForComparisonIbbE6FormatB5cxx11ERKb called 2 returned 100% blocks executed 100%
-        2:  311:  static ::std::string Format(const ToPrint& value) {
-        2:  312:    return ::testing::PrintToString(value);
-        2:  312-block  0
-call    0 returned 2
+function _ZN7testing8internal19FormatForComparisonIbbE6FormatB5cxx11ERKb called 0 returned 0% blocks executed 0%
+    #####:  311:  static ::std::string Format(const ToPrint& value) {
+    #####:  312:    return ::testing::PrintToString(value);
+    %%%%%:  312-block  0
+call    0 never executed
         -:  313:  }
         -:  314:};
         -:  315:
@@ -390,12 +390,12 @@ call    0 returned 2
         -:  382://
         -:  383:// INTERNAL IMPLEMENTATION - DO NOT USE IN A USER PROGRAM.
         -:  384:template <typename T1, typename T2>
-function _ZN7testing8internal33FormatForComparisonFailureMessageIbbEENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKT_RKT0_ called 2 returned 100% blocks executed 100%
-        2:  385:std::string FormatForComparisonFailureMessage(
+function _ZN7testing8internal33FormatForComparisonFailureMessageIbbEENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKT_RKT0_ called 0 returned 0% blocks executed 0%
+    #####:  385:std::string FormatForComparisonFailureMessage(
         -:  386:    const T1& value, const T2& /* other_operand */) {
-        2:  387:  return FormatForComparison<T1, T2>::Format(value);
-        2:  387-block  0
-call    0 returned 2
+    #####:  387:  return FormatForComparison<T1, T2>::Format(value);
+    %%%%%:  387-block  0
+call    0 never executed
         -:  388:}
         -:  389:
         -:  390:// UniversalPrinter<T>::Print(value, ostream_ptr) prints the given
@@ -551,17 +551,17 @@ call    0 returned 2
         -:  540:}
         -:  541:
         -:  542:// Overloads for other simple built-in types.
-function _ZN7testing8internal7PrintToEbPSo called 2 returned 100% blocks executed 100%
-        2:  543:inline void PrintTo(bool x, ::std::ostream* os) {
-        2:  544:  *os << (x ? "true" : "false");
-        2:  544-block  0
-branch  0 taken 1 (fallthrough)
-branch  1 taken 1
-        1:  544-block  1
-        1:  544-block  2
-        2:  544-block  3
-call    2 returned 2
-        2:  545:}
+function _ZN7testing8internal7PrintToEbPSo called 0 returned 0% blocks executed 0%
+    #####:  543:inline void PrintTo(bool x, ::std::ostream* os) {
+    #####:  544:  *os << (x ? "true" : "false");
+    %%%%%:  544-block  0
+branch  0 never executed
+branch  1 never executed
+    %%%%%:  544-block  1
+    %%%%%:  544-block  2
+    %%%%%:  544-block  3
+call    2 never executed
+    #####:  545:}
         -:  546:
         -:  547:// Overload for wchar_t type.
         -:  548:// Prints a wchar_t as a symbol if it is printable or as its internal
@@ -769,8 +769,8 @@ call    2 returned 2
         -:  750:  // Note: we deliberately don't call this PrintTo(), as that name
         -:  751:  // conflicts with ::testing::internal::PrintTo in the body of the
         -:  752:  // function.
-function _ZN7testing8internal16UniversalPrinterIbE5PrintERKbPSo called 2 returned 100% blocks executed 100%
-        2:  753:  static void Print(const T& value, ::std::ostream* os) {
+function _ZN7testing8internal16UniversalPrinterIbE5PrintERKbPSo called 0 returned 0% blocks executed 0%
+    #####:  753:  static void Print(const T& value, ::std::ostream* os) {
         -:  754:    // By default, ::testing::internal::PrintTo() is used for printing
         -:  755:    // the value.
         -:  756:    //
@@ -779,10 +779,10 @@ function _ZN7testing8internal16UniversalPrinterIbE5PrintERKbPSo called 2 returne
         -:  759:    // be visible here.  Since it is more specific than the generic ones
         -:  760:    // in ::testing::internal, it will be picked by the compiler in the
         -:  761:    // following statement - exactly what we want.
-        2:  762:    PrintTo(value, os);
-        2:  762-block  0
-call    0 returned 2
-        2:  763:  }
+    #####:  762:    PrintTo(value, os);
+    %%%%%:  762-block  0
+call    0 never executed
+    #####:  763:  }
         -:  764:
         -:  765:  GTEST_DISABLE_MSC_WARNINGS_POP_()
         -:  766:};
@@ -877,12 +877,12 @@ call    0 returned 2
         -:  855:template <typename T>
         -:  856:class UniversalTersePrinter {
         -:  857: public:
-function _ZN7testing8internal21UniversalTersePrinterIbE5PrintERKbPSo called 2 returned 100% blocks executed 100%
-        2:  858:  static void Print(const T& value, ::std::ostream* os) {
-        2:  859:    UniversalPrint(value, os);
-        2:  859-block  0
-call    0 returned 2
-        2:  860:  }
+function _ZN7testing8internal21UniversalTersePrinterIbE5PrintERKbPSo called 0 returned 0% blocks executed 0%
+    #####:  858:  static void Print(const T& value, ::std::ostream* os) {
+    #####:  859:    UniversalPrint(value, os);
+    %%%%%:  859-block  0
+call    0 never executed
+    #####:  860:  }
         -:  861:};
         -:  862:template <typename T>
         -:  863:class UniversalTersePrinter<T&> {
@@ -949,15 +949,15 @@ call    0 returned 2
         -:  924:// (const) char pointer, this prints both the pointer and the
         -:  925:// NUL-terminated string.
         -:  926:template <typename T>
-function _ZN7testing8internal14UniversalPrintIbEEvRKT_PSo called 2 returned 100% blocks executed 100%
-        2:  927:void UniversalPrint(const T& value, ::std::ostream* os) {
+function _ZN7testing8internal14UniversalPrintIbEEvRKT_PSo called 0 returned 0% blocks executed 0%
+    #####:  927:void UniversalPrint(const T& value, ::std::ostream* os) {
         -:  928:  // A workarond for the bug in VC++ 7.1 that prevents us from instantiating
         -:  929:  // UniversalPrinter with T directly.
         -:  930:  typedef T T1;
-        2:  931:  UniversalPrinter<T1>::Print(value, os);
-        2:  931-block  0
-call    0 returned 2
-        2:  932:}
+    #####:  931:  UniversalPrinter<T1>::Print(value, os);
+    %%%%%:  931-block  0
+call    0 never executed
+    #####:  932:}
         -:  933:
         -:  934:typedef ::std::vector< ::std::string> Strings;
         -:  935:
@@ -1090,30 +1090,30 @@ call    0 returned 2
         -: 1062:#endif
         -: 1063:
         -: 1064:template <typename T>
-function _ZN7testing13PrintToStringIbEENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKT_ called 2 returned 100% blocks executed 82%
-        2: 1065:::std::string PrintToString(const T& value) {
-        4: 1066:  ::std::stringstream ss;
-        2: 1066-block  0
-call    0 returned 2
-call    1 returned 2
-branch  2 taken 2 (fallthrough)
-branch  3 taken 0 (throw)
-        2: 1066-block  1
-call    4 returned 2
+function _ZN7testing13PrintToStringIbEENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKT_ called 0 returned 0% blocks executed 0%
+    #####: 1065:::std::string PrintToString(const T& value) {
+    #####: 1066:  ::std::stringstream ss;
+    %%%%%: 1066-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%: 1066-block  1
+call    4 never executed
     $$$$$: 1066-block  2
 call    5 never executed
-        2: 1067:  internal::UniversalTersePrinter<T>::Print(value, &ss);
-        2: 1067-block  0
-call    0 returned 2
-branch  1 taken 2 (fallthrough)
-branch  2 taken 0 (throw)
-        4: 1068:  return ss.str();
-        2: 1068-block  0
-call    0 returned 2
-branch  1 taken 2 (fallthrough)
-branch  2 taken 0 (throw)
-        2: 1068-block  1
-        2: 1068-block  2
+    #####: 1067:  internal::UniversalTersePrinter<T>::Print(value, &ss);
+    %%%%%: 1067-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####: 1068:  return ss.str();
+    %%%%%: 1068-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%: 1068-block  1
+    %%%%%: 1068-block  2
         -: 1069:}
         -: 1070:
         -: 1071:}  // namespace testing

@@ -170,10 +170,10 @@
         -:  165:#endif // __cpp_aligned_new
         -:  166:
         -:  167:// Default placement versions of operator new.
-function _ZnwyPv called 329270 returned 100% blocks executed 100%
-   329270:  168:inline void* operator new(std::size_t, void* __p) _GLIBCXX_USE_NOEXCEPT
-   329270:  169:{ return __p; }
-   329270:  169-block  0
+function _ZnwyPv called 331351 returned 100% blocks executed 100%
+   331351:  168:inline void* operator new(std::size_t, void* __p) _GLIBCXX_USE_NOEXCEPT
+   331351:  169:{ return __p; }
+   331351:  169-block  0
         -:  170:inline void* operator new[](std::size_t, void* __p) _GLIBCXX_USE_NOEXCEPT
         -:  171:{ return __p; }
         -:  172:

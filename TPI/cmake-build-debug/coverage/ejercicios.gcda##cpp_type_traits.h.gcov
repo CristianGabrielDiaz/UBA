@@ -410,14 +410,14 @@
         -:  405:  // remove the move_iterator wrapper.
         -:  406:  template<typename _Iterator>
         -:  407:    inline _Iterator
-    1628*:  408:    __miter_base(_Iterator __it)
-    1628*:  409:    { return __it; }
+       2*:  408:    __miter_base(_Iterator __it)
+       2*:  409:    { return __it; }
 ------------------
-_ZSt12__miter_baseIPKiET_S2_:
-function _ZSt12__miter_baseIPKiET_S2_ called 1628 returned 100% blocks executed 100%
-     1628:  408:    __miter_base(_Iterator __it)
-     1628:  409:    { return __it; }
-     1628:  409-block  0
+_ZSt12__miter_baseIPKSt6vectorIiSaIiEEET_S5_:
+function _ZSt12__miter_baseIPKSt6vectorIiSaIiEEET_S5_ called 2 returned 100% blocks executed 100%
+        2:  408:    __miter_base(_Iterator __it)
+        2:  409:    { return __it; }
+        2:  409-block  0
 ------------------
 _ZSt12__miter_baseIPiET_S1_:
 function _ZSt12__miter_baseIPiET_S1_ called 0 returned 0% blocks executed 0%

@@ -260,8 +260,8 @@
         -:  255:// Used to print a value that is not an STL-style container when the
         -:  256:// user doesn't define PrintTo() for it.
         -:  257:template <typename T>
-function _ZN16testing_internal26DefaultPrintNonContainerToIiEEvRKT_PSo called 388 returned 100% blocks executed 100%
-      388:  258:void DefaultPrintNonContainerTo(const T& value, ::std::ostream* os) {
+function _ZN16testing_internal26DefaultPrintNonContainerToIiEEvRKT_PSo called 0 returned 0% blocks executed 0%
+    #####:  258:void DefaultPrintNonContainerTo(const T& value, ::std::ostream* os) {
         -:  259:  // With the following statement, during unqualified name lookup,
         -:  260:  // testing::internal2::operator<< appears as if it was declared in
         -:  261:  // the nearest enclosing namespace that contains both
@@ -288,10 +288,10 @@ function _ZN16testing_internal26DefaultPrintNonContainerToIiEEvRKT_PSo called 38
         -:  282:  // impossible to define #1 (e.g. when foo is ::std, defining
         -:  283:  // anything in it is undefined behavior unless you are a compiler
         -:  284:  // vendor.).
-      388:  285:  *os << value;
-      388:  285-block  0
-call    0 returned 388
-      388:  286:}
+    #####:  285:  *os << value;
+    %%%%%:  285-block  0
+call    0 never executed
+    #####:  286:}
         -:  287:
         -:  288:}  // namespace testing_internal
         -:  289:
@@ -316,11 +316,11 @@ call    0 returned 388
         -:  308:template <typename ToPrint, typename OtherOperand>
         -:  309:class FormatForComparison {
         -:  310: public:
-function _ZN7testing8internal19FormatForComparisonISt6vectorIS2_IiSaIiEESaIS4_EES6_E6FormatB5cxx11ERKS6_ called 6 returned 100% blocks executed 100%
-        6:  311:  static ::std::string Format(const ToPrint& value) {
-        6:  312:    return ::testing::PrintToString(value);
-        6:  312-block  0
-call    0 returned 6
+function _ZN7testing8internal19FormatForComparisonISt6vectorIS2_IiSaIiEESaIS4_EES6_E6FormatB5cxx11ERKS6_ called 0 returned 0% blocks executed 0%
+    #####:  311:  static ::std::string Format(const ToPrint& value) {
+    #####:  312:    return ::testing::PrintToString(value);
+    %%%%%:  312-block  0
+call    0 never executed
         -:  313:  }
         -:  314:};
         -:  315:
@@ -393,12 +393,12 @@ call    0 returned 6
         -:  382://
         -:  383:// INTERNAL IMPLEMENTATION - DO NOT USE IN A USER PROGRAM.
         -:  384:template <typename T1, typename T2>
-function _ZN7testing8internal33FormatForComparisonFailureMessageISt6vectorIS2_IiSaIiEESaIS4_EES6_EENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKT_RKT0_ called 6 returned 100% blocks executed 100%
-        6:  385:std::string FormatForComparisonFailureMessage(
+function _ZN7testing8internal33FormatForComparisonFailureMessageISt6vectorIS2_IiSaIiEESaIS4_EES6_EENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKT_RKT0_ called 0 returned 0% blocks executed 0%
+    #####:  385:std::string FormatForComparisonFailureMessage(
         -:  386:    const T1& value, const T2& /* other_operand */) {
-        6:  387:  return FormatForComparison<T1, T2>::Format(value);
-        6:  387-block  0
-call    0 returned 6
+    #####:  387:  return FormatForComparison<T1, T2>::Format(value);
+    %%%%%:  387-block  0
+call    0 never executed
         -:  388:}
         -:  389:
         -:  390:// UniversalPrinter<T>::Print(value, ostream_ptr) prints the given
@@ -425,64 +425,64 @@ call    0 returned 6
         -:  411:// Used to print an STL-style container when the user doesn't define
         -:  412:// a PrintTo() for it.
         -:  413:template <typename C>
-       44:  414:void DefaultPrintTo(WrapPrinterType<kPrintContainer> /* dummy */,
+    #####:  414:void DefaultPrintTo(WrapPrinterType<kPrintContainer> /* dummy */,
         -:  415:                    const C& container, ::std::ostream* os) {
-       44:  416:  const size_t kMaxCount = 32;  // The maximum number of elements to print.
-       44:  417:  *os << '{';
-       44:  418:  size_t count = 0;
-      459:  419:  for (typename C::const_iterator it = container.begin();
-      874:  420:       it != container.end(); ++it, ++count) {
-      415:  421:    if (count > 0) {
-      374:  422:      *os << ',';
-      374:  423:      if (count == kMaxCount) {  // Enough has been printed.
+    #####:  416:  const size_t kMaxCount = 32;  // The maximum number of elements to print.
+    #####:  417:  *os << '{';
+    #####:  418:  size_t count = 0;
+    #####:  419:  for (typename C::const_iterator it = container.begin();
+    #####:  420:       it != container.end(); ++it, ++count) {
+    #####:  421:    if (count > 0) {
+    #####:  422:      *os << ',';
+    #####:  423:      if (count == kMaxCount) {  // Enough has been printed.
     #####:  424:        *os << " ...";
     #####:  425:        break;
         -:  426:      }
         -:  427:    }
-      415:  428:    *os << ' ';
+    #####:  428:    *os << ' ';
         -:  429:    // We cannot call PrintTo(*it, os) here as PrintTo() doesn't
         -:  430:    // handle *it being a native array.
-      415:  431:    internal::UniversalPrint(*it, os);
+    #####:  431:    internal::UniversalPrint(*it, os);
         -:  432:  }
         -:  433:
-       44:  434:  if (count > 0) {
-       41:  435:    *os << ' ';
+    #####:  434:  if (count > 0) {
+    #####:  435:    *os << ' ';
         -:  436:  }
-       44:  437:  *os << '}';
-       44:  438:}
+    #####:  437:  *os << '}';
+    #####:  438:}
 ------------------
 _ZN7testing8internal14DefaultPrintToISt6vectorIiSaIiEEEEvNS0_15WrapPrinterTypeILNS0_18DefaultPrinterTypeE0EEERKT_PSo:
-function _ZN7testing8internal14DefaultPrintToISt6vectorIiSaIiEEEEvNS0_15WrapPrinterTypeILNS0_18DefaultPrinterTypeE0EEERKT_PSo called 38 returned 100% blocks executed 90%
-       38:  414:void DefaultPrintTo(WrapPrinterType<kPrintContainer> /* dummy */,
+function _ZN7testing8internal14DefaultPrintToISt6vectorIiSaIiEEEEvNS0_15WrapPrinterTypeILNS0_18DefaultPrinterTypeE0EEERKT_PSo called 0 returned 0% blocks executed 0%
+    #####:  414:void DefaultPrintTo(WrapPrinterType<kPrintContainer> /* dummy */,
         -:  415:                    const C& container, ::std::ostream* os) {
-       38:  416:  const size_t kMaxCount = 32;  // The maximum number of elements to print.
-       38:  417:  *os << '{';
-       38:  417-block  0
-call    0 returned 38
-       38:  418:  size_t count = 0;
-      423:  419:  for (typename C::const_iterator it = container.begin();
-call    0 returned 38
-      808:  420:       it != container.end(); ++it, ++count) {
-      423:  420-block  0
-call    0 returned 423
-call    1 returned 423
-branch  2 taken 385 (fallthrough)
-branch  3 taken 38
-      385:  420-block  1
-call    4 returned 385
-      385:  421:    if (count > 0) {
-      385:  421-block  0
-branch  0 taken 350 (fallthrough)
-branch  1 taken 35
-      350:  422:      *os << ',';
-      350:  422-block  0
-call    0 returned 350
-branch  1 taken 350 (fallthrough)
-branch  2 taken 0 (throw)
-      350:  423:      if (count == kMaxCount) {  // Enough has been printed.
-      350:  423-block  0
-branch  0 taken 0 (fallthrough)
-branch  1 taken 350
+    #####:  416:  const size_t kMaxCount = 32;  // The maximum number of elements to print.
+    #####:  417:  *os << '{';
+    %%%%%:  417-block  0
+call    0 never executed
+    #####:  418:  size_t count = 0;
+    #####:  419:  for (typename C::const_iterator it = container.begin();
+call    0 never executed
+    #####:  420:       it != container.end(); ++it, ++count) {
+    %%%%%:  420-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:  420-block  1
+call    4 never executed
+    #####:  421:    if (count > 0) {
+    %%%%%:  421-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  422:      *os << ',';
+    %%%%%:  422-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  423:      if (count == kMaxCount) {  // Enough has been printed.
+    %%%%%:  423-block  0
+branch  0 never executed
+branch  1 never executed
     #####:  424:        *os << " ...";
     %%%%%:  424-block  0
 call    0 never executed
@@ -492,66 +492,66 @@ branch  2 never executed
     %%%%%:  425-block  0
         -:  426:      }
         -:  427:    }
-      385:  428:    *os << ' ';
-      385:  428-block  0
-call    0 returned 385
-branch  1 taken 385 (fallthrough)
-branch  2 taken 0 (throw)
+    #####:  428:    *os << ' ';
+    %%%%%:  428-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
         -:  429:    // We cannot call PrintTo(*it, os) here as PrintTo() doesn't
         -:  430:    // handle *it being a native array.
-      385:  431:    internal::UniversalPrint(*it, os);
-      385:  431-block  0
-call    0 returned 385
-call    1 returned 385
-branch  2 taken 385 (fallthrough)
-branch  3 taken 0 (throw)
+    #####:  431:    internal::UniversalPrint(*it, os);
+    %%%%%:  431-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
         -:  432:  }
         -:  433:
-       38:  434:  if (count > 0) {
-       38:  434-block  0
-branch  0 taken 35 (fallthrough)
-branch  1 taken 3
-       35:  435:    *os << ' ';
-       35:  435-block  0
-call    0 returned 35
+    #####:  434:  if (count > 0) {
+    %%%%%:  434-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  435:    *os << ' ';
+    %%%%%:  435-block  0
+call    0 never executed
         -:  436:  }
-       38:  437:  *os << '}';
-       38:  437-block  0
-call    0 returned 38
-       38:  438:}
+    #####:  437:  *os << '}';
+    %%%%%:  437-block  0
+call    0 never executed
+    #####:  438:}
 ------------------
 _ZN7testing8internal14DefaultPrintToISt6vectorIS2_IiSaIiEESaIS4_EEEEvNS0_15WrapPrinterTypeILNS0_18DefaultPrinterTypeE0EEERKT_PSo:
-function _ZN7testing8internal14DefaultPrintToISt6vectorIS2_IiSaIiEESaIS4_EEEEvNS0_15WrapPrinterTypeILNS0_18DefaultPrinterTypeE0EEERKT_PSo called 6 returned 100% blocks executed 90%
-        6:  414:void DefaultPrintTo(WrapPrinterType<kPrintContainer> /* dummy */,
+function _ZN7testing8internal14DefaultPrintToISt6vectorIS2_IiSaIiEESaIS4_EEEEvNS0_15WrapPrinterTypeILNS0_18DefaultPrinterTypeE0EEERKT_PSo called 0 returned 0% blocks executed 0%
+    #####:  414:void DefaultPrintTo(WrapPrinterType<kPrintContainer> /* dummy */,
         -:  415:                    const C& container, ::std::ostream* os) {
-        6:  416:  const size_t kMaxCount = 32;  // The maximum number of elements to print.
-        6:  417:  *os << '{';
-        6:  417-block  0
-call    0 returned 6
-        6:  418:  size_t count = 0;
-       36:  419:  for (typename C::const_iterator it = container.begin();
-call    0 returned 6
-       66:  420:       it != container.end(); ++it, ++count) {
-       36:  420-block  0
-call    0 returned 36
-call    1 returned 36
-branch  2 taken 30 (fallthrough)
-branch  3 taken 6
-       30:  420-block  1
-call    4 returned 30
-       30:  421:    if (count > 0) {
-       30:  421-block  0
-branch  0 taken 24 (fallthrough)
-branch  1 taken 6
-       24:  422:      *os << ',';
-       24:  422-block  0
-call    0 returned 24
-branch  1 taken 24 (fallthrough)
-branch  2 taken 0 (throw)
-       24:  423:      if (count == kMaxCount) {  // Enough has been printed.
-       24:  423-block  0
-branch  0 taken 0 (fallthrough)
-branch  1 taken 24
+    #####:  416:  const size_t kMaxCount = 32;  // The maximum number of elements to print.
+    #####:  417:  *os << '{';
+    %%%%%:  417-block  0
+call    0 never executed
+    #####:  418:  size_t count = 0;
+    #####:  419:  for (typename C::const_iterator it = container.begin();
+call    0 never executed
+    #####:  420:       it != container.end(); ++it, ++count) {
+    %%%%%:  420-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:  420-block  1
+call    4 never executed
+    #####:  421:    if (count > 0) {
+    %%%%%:  421-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  422:      *os << ',';
+    %%%%%:  422-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  423:      if (count == kMaxCount) {  // Enough has been printed.
+    %%%%%:  423-block  0
+branch  0 never executed
+branch  1 never executed
     #####:  424:        *os << " ...";
     %%%%%:  424-block  0
 call    0 never executed
@@ -561,33 +561,33 @@ branch  2 never executed
     %%%%%:  425-block  0
         -:  426:      }
         -:  427:    }
-       30:  428:    *os << ' ';
-       30:  428-block  0
-call    0 returned 30
-branch  1 taken 30 (fallthrough)
-branch  2 taken 0 (throw)
+    #####:  428:    *os << ' ';
+    %%%%%:  428-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
         -:  429:    // We cannot call PrintTo(*it, os) here as PrintTo() doesn't
         -:  430:    // handle *it being a native array.
-       30:  431:    internal::UniversalPrint(*it, os);
-       30:  431-block  0
-call    0 returned 30
-call    1 returned 30
-branch  2 taken 30 (fallthrough)
-branch  3 taken 0 (throw)
+    #####:  431:    internal::UniversalPrint(*it, os);
+    %%%%%:  431-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
         -:  432:  }
         -:  433:
-        6:  434:  if (count > 0) {
-        6:  434-block  0
-branch  0 taken 6 (fallthrough)
-branch  1 taken 0
-        6:  435:    *os << ' ';
-        6:  435-block  0
-call    0 returned 6
+    #####:  434:  if (count > 0) {
+    %%%%%:  434-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  435:    *os << ' ';
+    %%%%%:  435-block  0
+call    0 never executed
         -:  436:  }
-        6:  437:  *os << '}';
-        6:  437-block  0
-call    0 returned 6
-        6:  438:}
+    #####:  437:  *os << '}';
+    %%%%%:  437-block  0
+call    0 never executed
+    #####:  438:}
 ------------------
         -:  439:
         -:  440:// Used to print a pointer that is neither a char pointer nor a member
@@ -624,13 +624,13 @@ call    0 returned 6
         -:  471:// Used to print a non-container, non-pointer value when the user
         -:  472:// doesn't define PrintTo() for it.
         -:  473:template <typename T>
-function _ZN7testing8internal14DefaultPrintToIiEEvNS0_15WrapPrinterTypeILNS0_18DefaultPrinterTypeE3EEERKT_PSo called 388 returned 100% blocks executed 100%
-      388:  474:void DefaultPrintTo(WrapPrinterType<kPrintOther> /* dummy */,
+function _ZN7testing8internal14DefaultPrintToIiEEvNS0_15WrapPrinterTypeILNS0_18DefaultPrinterTypeE3EEERKT_PSo called 0 returned 0% blocks executed 0%
+    #####:  474:void DefaultPrintTo(WrapPrinterType<kPrintOther> /* dummy */,
         -:  475:                    const T& value, ::std::ostream* os) {
-      388:  476:  ::testing_internal::DefaultPrintNonContainerTo(value, os);
-      388:  476-block  0
-call    0 returned 388
-      388:  477:}
+    #####:  476:  ::testing_internal::DefaultPrintNonContainerTo(value, os);
+    %%%%%:  476-block  0
+call    0 never executed
+    #####:  477:}
         -:  478:
         -:  479:// Prints the given value using the << operator if it has one;
         -:  480:// otherwise prints the bytes in it.  This is what
@@ -644,7 +644,7 @@ call    0 returned 388
         -:  488:// or there is already a << operator but it doesn't do what the user
         -:  489:// wants).
         -:  490:template <typename T>
-      432:  491:void PrintTo(const T& value, ::std::ostream* os) {
+    #####:  491:void PrintTo(const T& value, ::std::ostream* os) {
         -:  492:  // DefaultPrintTo() is overloaded.  The type of its first argument
         -:  493:  // determines which version will be picked.
         -:  494:  //
@@ -664,7 +664,7 @@ call    0 returned 388
         -:  508:  // cause this warning, and use a separate overload of DefaultPrintTo for
         -:  509:  // function pointers so that the `*os << p` in the object pointer overload
         -:  510:  // doesn't cause that warning either.
-      432:  511:  DefaultPrintTo(
+    #####:  511:  DefaultPrintTo(
         -:  512:      WrapPrinterType <
         -:  513:                  (sizeof(IsContainerTest<T>(0)) == sizeof(IsContainer)) &&
         -:  514:              !IsRecursiveContainer<T>::value
@@ -679,11 +679,11 @@ call    0 returned 388
         -:  523:                      ? kPrintFunctionPointer
         -:  524:                      : kPrintPointer > (),
         -:  525:      value, os);
-      432:  526:}
+    #####:  526:}
 ------------------
 _ZN7testing8internal7PrintToIiEEvRKT_PSo:
-function _ZN7testing8internal7PrintToIiEEvRKT_PSo called 388 returned 100% blocks executed 100%
-      388:  491:void PrintTo(const T& value, ::std::ostream* os) {
+function _ZN7testing8internal7PrintToIiEEvRKT_PSo called 0 returned 0% blocks executed 0%
+    #####:  491:void PrintTo(const T& value, ::std::ostream* os) {
         -:  492:  // DefaultPrintTo() is overloaded.  The type of its first argument
         -:  493:  // determines which version will be picked.
         -:  494:  //
@@ -703,11 +703,11 @@ function _ZN7testing8internal7PrintToIiEEvRKT_PSo called 388 returned 100% block
         -:  508:  // cause this warning, and use a separate overload of DefaultPrintTo for
         -:  509:  // function pointers so that the `*os << p` in the object pointer overload
         -:  510:  // doesn't cause that warning either.
-      388:  511:  DefaultPrintTo(
-      388:  511-block  0
-call    0 returned 388
-branch  1 taken 388 (fallthrough)
-branch  2 taken 0 (throw)
+    #####:  511:  DefaultPrintTo(
+    %%%%%:  511-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
         -:  512:      WrapPrinterType <
         -:  513:                  (sizeof(IsContainerTest<T>(0)) == sizeof(IsContainer)) &&
         -:  514:              !IsRecursiveContainer<T>::value
@@ -722,12 +722,12 @@ branch  2 taken 0 (throw)
         -:  523:                      ? kPrintFunctionPointer
         -:  524:                      : kPrintPointer > (),
         -:  525:      value, os);
-      388:  526:}
-      388:  526-block  0
+    #####:  526:}
+    %%%%%:  526-block  0
 ------------------
 _ZN7testing8internal7PrintToISt6vectorIiSaIiEEEEvRKT_PSo:
-function _ZN7testing8internal7PrintToISt6vectorIiSaIiEEEEvRKT_PSo called 38 returned 100% blocks executed 100%
-       38:  491:void PrintTo(const T& value, ::std::ostream* os) {
+function _ZN7testing8internal7PrintToISt6vectorIiSaIiEEEEvRKT_PSo called 0 returned 0% blocks executed 0%
+    #####:  491:void PrintTo(const T& value, ::std::ostream* os) {
         -:  492:  // DefaultPrintTo() is overloaded.  The type of its first argument
         -:  493:  // determines which version will be picked.
         -:  494:  //
@@ -747,11 +747,11 @@ function _ZN7testing8internal7PrintToISt6vectorIiSaIiEEEEvRKT_PSo called 38 retu
         -:  508:  // cause this warning, and use a separate overload of DefaultPrintTo for
         -:  509:  // function pointers so that the `*os << p` in the object pointer overload
         -:  510:  // doesn't cause that warning either.
-       38:  511:  DefaultPrintTo(
-       38:  511-block  0
-call    0 returned 38
-branch  1 taken 38 (fallthrough)
-branch  2 taken 0 (throw)
+    #####:  511:  DefaultPrintTo(
+    %%%%%:  511-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
         -:  512:      WrapPrinterType <
         -:  513:                  (sizeof(IsContainerTest<T>(0)) == sizeof(IsContainer)) &&
         -:  514:              !IsRecursiveContainer<T>::value
@@ -766,12 +766,12 @@ branch  2 taken 0 (throw)
         -:  523:                      ? kPrintFunctionPointer
         -:  524:                      : kPrintPointer > (),
         -:  525:      value, os);
-       38:  526:}
-       38:  526-block  0
+    #####:  526:}
+    %%%%%:  526-block  0
 ------------------
 _ZN7testing8internal7PrintToISt6vectorIS2_IiSaIiEESaIS4_EEEEvRKT_PSo:
-function _ZN7testing8internal7PrintToISt6vectorIS2_IiSaIiEESaIS4_EEEEvRKT_PSo called 6 returned 100% blocks executed 100%
-        6:  491:void PrintTo(const T& value, ::std::ostream* os) {
+function _ZN7testing8internal7PrintToISt6vectorIS2_IiSaIiEESaIS4_EEEEvRKT_PSo called 0 returned 0% blocks executed 0%
+    #####:  491:void PrintTo(const T& value, ::std::ostream* os) {
         -:  492:  // DefaultPrintTo() is overloaded.  The type of its first argument
         -:  493:  // determines which version will be picked.
         -:  494:  //
@@ -791,11 +791,11 @@ function _ZN7testing8internal7PrintToISt6vectorIS2_IiSaIiEESaIS4_EEEEvRKT_PSo ca
         -:  508:  // cause this warning, and use a separate overload of DefaultPrintTo for
         -:  509:  // function pointers so that the `*os << p` in the object pointer overload
         -:  510:  // doesn't cause that warning either.
-        6:  511:  DefaultPrintTo(
-        6:  511-block  0
-call    0 returned 6
-branch  1 taken 6 (fallthrough)
-branch  2 taken 0 (throw)
+    #####:  511:  DefaultPrintTo(
+    %%%%%:  511-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
         -:  512:      WrapPrinterType <
         -:  513:                  (sizeof(IsContainerTest<T>(0)) == sizeof(IsContainer)) &&
         -:  514:              !IsRecursiveContainer<T>::value
@@ -810,8 +810,8 @@ branch  2 taken 0 (throw)
         -:  523:                      ? kPrintFunctionPointer
         -:  524:                      : kPrintPointer > (),
         -:  525:      value, os);
-        6:  526:}
-        6:  526-block  0
+    #####:  526:}
+    %%%%%:  526-block  0
 ------------------
         -:  527:
         -:  528:// The following list of PrintTo() overloads tells
@@ -1039,7 +1039,7 @@ branch  2 taken 0 (throw)
         -:  750:  // Note: we deliberately don't call this PrintTo(), as that name
         -:  751:  // conflicts with ::testing::internal::PrintTo in the body of the
         -:  752:  // function.
-      432:  753:  static void Print(const T& value, ::std::ostream* os) {
+    #####:  753:  static void Print(const T& value, ::std::ostream* os) {
         -:  754:    // By default, ::testing::internal::PrintTo() is used for printing
         -:  755:    // the value.
         -:  756:    //
@@ -1048,12 +1048,12 @@ branch  2 taken 0 (throw)
         -:  759:    // be visible here.  Since it is more specific than the generic ones
         -:  760:    // in ::testing::internal, it will be picked by the compiler in the
         -:  761:    // following statement - exactly what we want.
-      432:  762:    PrintTo(value, os);
-      432:  763:  }
+    #####:  762:    PrintTo(value, os);
+    #####:  763:  }
 ------------------
 _ZN7testing8internal16UniversalPrinterIiE5PrintERKiPSo:
-function _ZN7testing8internal16UniversalPrinterIiE5PrintERKiPSo called 388 returned 100% blocks executed 100%
-      388:  753:  static void Print(const T& value, ::std::ostream* os) {
+function _ZN7testing8internal16UniversalPrinterIiE5PrintERKiPSo called 0 returned 0% blocks executed 0%
+    #####:  753:  static void Print(const T& value, ::std::ostream* os) {
         -:  754:    // By default, ::testing::internal::PrintTo() is used for printing
         -:  755:    // the value.
         -:  756:    //
@@ -1062,14 +1062,14 @@ function _ZN7testing8internal16UniversalPrinterIiE5PrintERKiPSo called 388 retur
         -:  759:    // be visible here.  Since it is more specific than the generic ones
         -:  760:    // in ::testing::internal, it will be picked by the compiler in the
         -:  761:    // following statement - exactly what we want.
-      388:  762:    PrintTo(value, os);
-      388:  762-block  0
-call    0 returned 388
-      388:  763:  }
+    #####:  762:    PrintTo(value, os);
+    %%%%%:  762-block  0
+call    0 never executed
+    #####:  763:  }
 ------------------
 _ZN7testing8internal16UniversalPrinterISt6vectorIiSaIiEEE5PrintERKS4_PSo:
-function _ZN7testing8internal16UniversalPrinterISt6vectorIiSaIiEEE5PrintERKS4_PSo called 38 returned 100% blocks executed 100%
-       38:  753:  static void Print(const T& value, ::std::ostream* os) {
+function _ZN7testing8internal16UniversalPrinterISt6vectorIiSaIiEEE5PrintERKS4_PSo called 0 returned 0% blocks executed 0%
+    #####:  753:  static void Print(const T& value, ::std::ostream* os) {
         -:  754:    // By default, ::testing::internal::PrintTo() is used for printing
         -:  755:    // the value.
         -:  756:    //
@@ -1078,14 +1078,14 @@ function _ZN7testing8internal16UniversalPrinterISt6vectorIiSaIiEEE5PrintERKS4_PS
         -:  759:    // be visible here.  Since it is more specific than the generic ones
         -:  760:    // in ::testing::internal, it will be picked by the compiler in the
         -:  761:    // following statement - exactly what we want.
-       38:  762:    PrintTo(value, os);
-       38:  762-block  0
-call    0 returned 38
-       38:  763:  }
+    #####:  762:    PrintTo(value, os);
+    %%%%%:  762-block  0
+call    0 never executed
+    #####:  763:  }
 ------------------
 _ZN7testing8internal16UniversalPrinterISt6vectorIS2_IiSaIiEESaIS4_EEE5PrintERKS6_PSo:
-function _ZN7testing8internal16UniversalPrinterISt6vectorIS2_IiSaIiEESaIS4_EEE5PrintERKS6_PSo called 6 returned 100% blocks executed 100%
-        6:  753:  static void Print(const T& value, ::std::ostream* os) {
+function _ZN7testing8internal16UniversalPrinterISt6vectorIS2_IiSaIiEESaIS4_EEE5PrintERKS6_PSo called 0 returned 0% blocks executed 0%
+    #####:  753:  static void Print(const T& value, ::std::ostream* os) {
         -:  754:    // By default, ::testing::internal::PrintTo() is used for printing
         -:  755:    // the value.
         -:  756:    //
@@ -1094,10 +1094,10 @@ function _ZN7testing8internal16UniversalPrinterISt6vectorIS2_IiSaIiEESaIS4_EEE5P
         -:  759:    // be visible here.  Since it is more specific than the generic ones
         -:  760:    // in ::testing::internal, it will be picked by the compiler in the
         -:  761:    // following statement - exactly what we want.
-        6:  762:    PrintTo(value, os);
-        6:  762-block  0
-call    0 returned 6
-        6:  763:  }
+    #####:  762:    PrintTo(value, os);
+    %%%%%:  762-block  0
+call    0 never executed
+    #####:  763:  }
 ------------------
         -:  764:
         -:  765:  GTEST_DISABLE_MSC_WARNINGS_POP_()
@@ -1193,12 +1193,12 @@ call    0 returned 6
         -:  855:template <typename T>
         -:  856:class UniversalTersePrinter {
         -:  857: public:
-function _ZN7testing8internal21UniversalTersePrinterISt6vectorIS2_IiSaIiEESaIS4_EEE5PrintERKS6_PSo called 6 returned 100% blocks executed 100%
-        6:  858:  static void Print(const T& value, ::std::ostream* os) {
-        6:  859:    UniversalPrint(value, os);
-        6:  859-block  0
-call    0 returned 6
-        6:  860:  }
+function _ZN7testing8internal21UniversalTersePrinterISt6vectorIS2_IiSaIiEESaIS4_EEE5PrintERKS6_PSo called 0 returned 0% blocks executed 0%
+    #####:  858:  static void Print(const T& value, ::std::ostream* os) {
+    #####:  859:    UniversalPrint(value, os);
+    %%%%%:  859-block  0
+call    0 never executed
+    #####:  860:  }
         -:  861:};
         -:  862:template <typename T>
         -:  863:class UniversalTersePrinter<T&> {
@@ -1265,45 +1265,45 @@ call    0 returned 6
         -:  924:// (const) char pointer, this prints both the pointer and the
         -:  925:// NUL-terminated string.
         -:  926:template <typename T>
-      432:  927:void UniversalPrint(const T& value, ::std::ostream* os) {
+    #####:  927:void UniversalPrint(const T& value, ::std::ostream* os) {
         -:  928:  // A workarond for the bug in VC++ 7.1 that prevents us from instantiating
         -:  929:  // UniversalPrinter with T directly.
         -:  930:  typedef T T1;
-      432:  931:  UniversalPrinter<T1>::Print(value, os);
-      432:  932:}
+    #####:  931:  UniversalPrinter<T1>::Print(value, os);
+    #####:  932:}
 ------------------
 _ZN7testing8internal14UniversalPrintIiEEvRKT_PSo:
-function _ZN7testing8internal14UniversalPrintIiEEvRKT_PSo called 388 returned 100% blocks executed 100%
-      388:  927:void UniversalPrint(const T& value, ::std::ostream* os) {
+function _ZN7testing8internal14UniversalPrintIiEEvRKT_PSo called 0 returned 0% blocks executed 0%
+    #####:  927:void UniversalPrint(const T& value, ::std::ostream* os) {
         -:  928:  // A workarond for the bug in VC++ 7.1 that prevents us from instantiating
         -:  929:  // UniversalPrinter with T directly.
         -:  930:  typedef T T1;
-      388:  931:  UniversalPrinter<T1>::Print(value, os);
-      388:  931-block  0
-call    0 returned 388
-      388:  932:}
+    #####:  931:  UniversalPrinter<T1>::Print(value, os);
+    %%%%%:  931-block  0
+call    0 never executed
+    #####:  932:}
 ------------------
 _ZN7testing8internal14UniversalPrintISt6vectorIiSaIiEEEEvRKT_PSo:
-function _ZN7testing8internal14UniversalPrintISt6vectorIiSaIiEEEEvRKT_PSo called 38 returned 100% blocks executed 100%
-       38:  927:void UniversalPrint(const T& value, ::std::ostream* os) {
+function _ZN7testing8internal14UniversalPrintISt6vectorIiSaIiEEEEvRKT_PSo called 0 returned 0% blocks executed 0%
+    #####:  927:void UniversalPrint(const T& value, ::std::ostream* os) {
         -:  928:  // A workarond for the bug in VC++ 7.1 that prevents us from instantiating
         -:  929:  // UniversalPrinter with T directly.
         -:  930:  typedef T T1;
-       38:  931:  UniversalPrinter<T1>::Print(value, os);
-       38:  931-block  0
-call    0 returned 38
-       38:  932:}
+    #####:  931:  UniversalPrinter<T1>::Print(value, os);
+    %%%%%:  931-block  0
+call    0 never executed
+    #####:  932:}
 ------------------
 _ZN7testing8internal14UniversalPrintISt6vectorIS2_IiSaIiEESaIS4_EEEEvRKT_PSo:
-function _ZN7testing8internal14UniversalPrintISt6vectorIS2_IiSaIiEESaIS4_EEEEvRKT_PSo called 6 returned 100% blocks executed 100%
-        6:  927:void UniversalPrint(const T& value, ::std::ostream* os) {
+function _ZN7testing8internal14UniversalPrintISt6vectorIS2_IiSaIiEESaIS4_EEEEvRKT_PSo called 0 returned 0% blocks executed 0%
+    #####:  927:void UniversalPrint(const T& value, ::std::ostream* os) {
         -:  928:  // A workarond for the bug in VC++ 7.1 that prevents us from instantiating
         -:  929:  // UniversalPrinter with T directly.
         -:  930:  typedef T T1;
-        6:  931:  UniversalPrinter<T1>::Print(value, os);
-        6:  931-block  0
-call    0 returned 6
-        6:  932:}
+    #####:  931:  UniversalPrinter<T1>::Print(value, os);
+    %%%%%:  931-block  0
+call    0 never executed
+    #####:  932:}
 ------------------
         -:  933:
         -:  934:typedef ::std::vector< ::std::string> Strings;
@@ -1437,30 +1437,30 @@ call    0 returned 6
         -: 1062:#endif
         -: 1063:
         -: 1064:template <typename T>
-function _ZN7testing13PrintToStringISt6vectorIS1_IiSaIiEESaIS3_EEEENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKT_ called 6 returned 100% blocks executed 82%
-        6: 1065:::std::string PrintToString(const T& value) {
-       12: 1066:  ::std::stringstream ss;
-        6: 1066-block  0
-call    0 returned 6
-call    1 returned 6
-branch  2 taken 6 (fallthrough)
-branch  3 taken 0 (throw)
-        6: 1066-block  1
-call    4 returned 6
+function _ZN7testing13PrintToStringISt6vectorIS1_IiSaIiEESaIS3_EEEENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKT_ called 0 returned 0% blocks executed 0%
+    #####: 1065:::std::string PrintToString(const T& value) {
+    #####: 1066:  ::std::stringstream ss;
+    %%%%%: 1066-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%: 1066-block  1
+call    4 never executed
     $$$$$: 1066-block  2
 call    5 never executed
-        6: 1067:  internal::UniversalTersePrinter<T>::Print(value, &ss);
-        6: 1067-block  0
-call    0 returned 6
-branch  1 taken 6 (fallthrough)
-branch  2 taken 0 (throw)
-       12: 1068:  return ss.str();
-        6: 1068-block  0
-call    0 returned 6
-branch  1 taken 6 (fallthrough)
-branch  2 taken 0 (throw)
-        6: 1068-block  1
-        6: 1068-block  2
+    #####: 1067:  internal::UniversalTersePrinter<T>::Print(value, &ss);
+    %%%%%: 1067-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####: 1068:  return ss.str();
+    %%%%%: 1068-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%: 1068-block  1
+    %%%%%: 1068-block  2
         -: 1069:}
         -: 1070:
         -: 1071:}  // namespace testing

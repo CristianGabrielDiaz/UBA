@@ -14,50 +14,51 @@
         -:    9:using namespace std;
         -:   10:
         2:   11:TEST(muestraHomogeneaTEST, unaSolucionDe4) {
-        -:   12:    vector <hogar> res = {{2354, 2018, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1},
-        -:   13:                          {1,    2018, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1},
-        -:   14:                          {4377, 2018, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1},
-        8:   15:                          {340,  2018, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1}};
+        -:   12:    vector <hogar> res = {{2354, 2018, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1}, //20
+        -:   13:                          {1,    2018, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1}, //25
+        -:   14:                          {4377, 2018, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1}, //30
+        8:   15:                          {340,  2018, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1}};//35
         -:   16:    eph_h th = {
-        -:   17:            {960,  2018, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1},
-        -:   18:            {340,  2018, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1},
-        -:   19:            {1009, 2018, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1},
-        -:   20:            {210,  2018, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1},
-        -:   21:            {4377, 2018, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1},
-        -:   22:            {200,  2018, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1},
-        -:   23:            {334,  2018, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1},
-        -:   24:            {543,  2018, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1},
-        -:   25:            {2354, 2018, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1},
-        -:   26:            {1,    2018, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1},
+        -:   17:            {960,  2018, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1}, //0
+        -:   18:            {340,  2018, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1}, //35
+        -:   19:            {1009, 2018, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1}, //26
+        -:   20:            {210,  2018, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1}, //27
+        -:   21:            {4377, 2018, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1}, //30
+        -:   22:            {200,  2018, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1}, //0
+        -:   23:            {334,  2018, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1}, //180
+        -:   24:            {543,  2018, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1}, //1
+        -:   25:            {2354, 2018, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1}, //20
+        -:   26:            {1,    2018, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1}, //25
        14:   27:    };
-        -:   28:
-        -:   29:    eph_i ti = {{543,   2018, 1, 1, 1, 1, 36, 1,  3, 1, 1}, // 1
-        -:   30:                {334,   2018, 1, 1, 1, 1, 36, 1,  3, 90, 1},
-        -:   31:                {340,   2018, 1, 1, 1, 1, 36, 1,  3, 30, 1}, // 35
-        -:   32:                {340,   2018, 3, 1, 1, 1, 36, 1,  3, 5, 1},
-        -:   33:                {334,   2018, 2, 1, 1, 1, 31, 1,  3, 90, 1},
-        -:   34:                {1009,  2018, 1, 1, 1, 2, 36, 1,  3, 26, 1}, // 26
-        -:   35:                {210,   2018, 1, 1, 1, 1, 36, 1,  1, 25, 1}, // 27
-        -:   36:                {210,   2018, 2, 1, 1, 1, 36, 1,  3, 2, 1},
-        -:   37:                {1,     2018, 1, 1, 1, 2, 5,  1,  2, 25, 1},  // 25
-        -:   38:                {4377,  2018, 1, 1, 1, 1, 36, 1,  3, 15, 1}, // 30
-        -:   39:                {4377,  2018, 3, 1, 1, 1, 7,  1,  3, 15, 1},
-        -:   40:                {2354,  2018, 1, 1, 1, 2, 36, 1,  3, 20, 1}, // 20
-        -:   41:                {200,   2018, 2, 1, 1, 1, 36, 1,  3, 0, 1}, // 0
-        -:   42:                {960,   2018, 3, 1, 1, 2, 51, 1,  4, 0,  1}, // 0
-        -:   43:                {960,   2018, 2, 1, 1, 2, 51, 1,  4, 0,  1},
-        -:   44:                {960,   2018, 1, 1, 1, 2, 51, 1,  4, 0,  1}
-       20:   45:    };
-        2:   46:    EXPECT_EQ(res,muestraHomogenea(th,ti));
-        1:   47:}
+        -:   28://                                                ingresos
+        -:   29://                                                   v
+        -:   30:    eph_i ti = {{543,   2018, 1, 1, 1, 1, 36, 1,  3, 1, 1}, // 1
+        -:   31:                {334,   2018, 1, 1, 1, 1, 36, 1,  3, 90, 1}, //180
+        -:   32:                {340,   2018, 1, 1, 1, 1, 36, 1,  3, 30, 1}, // 35
+        -:   33:                {340,   2018, 3, 1, 1, 1, 36, 1,  3, 5, 1},
+        -:   34:                {334,   2018, 2, 1, 1, 1, 31, 1,  3, 90, 1},
+        -:   35:                {1009,  2018, 1, 1, 1, 2, 36, 1,  3, 26, 1}, // 26
+        -:   36:                {210,   2018, 1, 1, 1, 1, 36, 1,  1, 25, 1}, // 27
+        -:   37:                {210,   2018, 2, 1, 1, 1, 36, 1,  3, 2, 1},
+        -:   38:                {1,     2018, 1, 1, 1, 2, 5,  1,  2, 25, 1},  // 25
+        -:   39:                {4377,  2018, 1, 1, 1, 1, 36, 1,  3, 15, 1}, // 30
+        -:   40:                {4377,  2018, 3, 1, 1, 1, 7,  1,  3, 15, 1},
+        -:   41:                {2354,  2018, 1, 1, 1, 2, 36, 1,  3, 20, 1}, // 20
+        -:   42:                {200,   2018, 2, 1, 1, 1, 36, 1,  3, 0, 1}, // 0
+        -:   43:                {960,   2018, 3, 1, 1, 2, 51, 1,  4, 0,  1}, // 0
+        -:   44:                {960,   2018, 2, 1, 1, 2, 51, 1,  4, 0,  1},
+        -:   45:                {960,   2018, 1, 1, 1, 2, 51, 1,  4, 0,  1}
+       20:   46:    };
+       2*:   47:    EXPECT_EQ(res,muestraHomogenea(th,ti));
+        1:   48:}
 ------------------
 _ZN40muestraHomogeneaTEST_unaSolucionDe4_Test8TestBodyEv:
-function _ZN40muestraHomogeneaTEST_unaSolucionDe4_Test8TestBodyEv called 1 returned 100% blocks executed 40%
+function _ZN40muestraHomogeneaTEST_unaSolucionDe4_Test8TestBodyEv called 1 returned 100% blocks executed 37%
         1:   11:TEST(muestraHomogeneaTEST, unaSolucionDe4) {
-        -:   12:    vector <hogar> res = {{2354, 2018, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1},
-        -:   13:                          {1,    2018, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1},
-        -:   14:                          {4377, 2018, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1},
-        8:   15:                          {340,  2018, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1}};
+        -:   12:    vector <hogar> res = {{2354, 2018, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1}, //20
+        -:   13:                          {1,    2018, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1}, //25
+        -:   14:                          {4377, 2018, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1}, //30
+        8:   15:                          {340,  2018, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1}};//35
         1:   15-block  0
 call    0 returned 1
 call    1 returned 1
@@ -106,16 +107,16 @@ call   26 never executed
     $$$$$:   15-block 18
 call   27 never executed
         -:   16:    eph_h th = {
-        -:   17:            {960,  2018, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1},
-        -:   18:            {340,  2018, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1},
-        -:   19:            {1009, 2018, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1},
-        -:   20:            {210,  2018, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1},
-        -:   21:            {4377, 2018, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1},
-        -:   22:            {200,  2018, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1},
-        -:   23:            {334,  2018, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1},
-        -:   24:            {543,  2018, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1},
-        -:   25:            {2354, 2018, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1},
-        -:   26:            {1,    2018, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1},
+        -:   17:            {960,  2018, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1}, //0
+        -:   18:            {340,  2018, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1}, //35
+        -:   19:            {1009, 2018, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1}, //26
+        -:   20:            {210,  2018, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1}, //27
+        -:   21:            {4377, 2018, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1}, //30
+        -:   22:            {200,  2018, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1}, //0
+        -:   23:            {334,  2018, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1}, //180
+        -:   24:            {543,  2018, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1}, //1
+        -:   25:            {2354, 2018, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1}, //20
+        -:   26:            {1,    2018, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1}, //25
        14:   27:    };
 call    0 returned 1
 call    1 returned 1
@@ -211,111 +212,112 @@ call   56 never executed
     $$$$$:   27-block 34
     $$$$$:   27-block 35
 call   57 never executed
-        -:   28:
-        -:   29:    eph_i ti = {{543,   2018, 1, 1, 1, 1, 36, 1,  3, 1, 1}, // 1
-        -:   30:                {334,   2018, 1, 1, 1, 1, 36, 1,  3, 90, 1},
-        -:   31:                {340,   2018, 1, 1, 1, 1, 36, 1,  3, 30, 1}, // 35
-        -:   32:                {340,   2018, 3, 1, 1, 1, 36, 1,  3, 5, 1},
-        -:   33:                {334,   2018, 2, 1, 1, 1, 31, 1,  3, 90, 1},
-        -:   34:                {1009,  2018, 1, 1, 1, 2, 36, 1,  3, 26, 1}, // 26
-        -:   35:                {210,   2018, 1, 1, 1, 1, 36, 1,  1, 25, 1}, // 27
-        -:   36:                {210,   2018, 2, 1, 1, 1, 36, 1,  3, 2, 1},
-        -:   37:                {1,     2018, 1, 1, 1, 2, 5,  1,  2, 25, 1},  // 25
-        -:   38:                {4377,  2018, 1, 1, 1, 1, 36, 1,  3, 15, 1}, // 30
-        -:   39:                {4377,  2018, 3, 1, 1, 1, 7,  1,  3, 15, 1},
-        -:   40:                {2354,  2018, 1, 1, 1, 2, 36, 1,  3, 20, 1}, // 20
-        -:   41:                {200,   2018, 2, 1, 1, 1, 36, 1,  3, 0, 1}, // 0
-        -:   42:                {960,   2018, 3, 1, 1, 2, 51, 1,  4, 0,  1}, // 0
-        -:   43:                {960,   2018, 2, 1, 1, 2, 51, 1,  4, 0,  1},
-        -:   44:                {960,   2018, 1, 1, 1, 2, 51, 1,  4, 0,  1}
-       20:   45:    };
+        -:   28://                                                ingresos
+        -:   29://                                                   v
+        -:   30:    eph_i ti = {{543,   2018, 1, 1, 1, 1, 36, 1,  3, 1, 1}, // 1
+        -:   31:                {334,   2018, 1, 1, 1, 1, 36, 1,  3, 90, 1}, //180
+        -:   32:                {340,   2018, 1, 1, 1, 1, 36, 1,  3, 30, 1}, // 35
+        -:   33:                {340,   2018, 3, 1, 1, 1, 36, 1,  3, 5, 1},
+        -:   34:                {334,   2018, 2, 1, 1, 1, 31, 1,  3, 90, 1},
+        -:   35:                {1009,  2018, 1, 1, 1, 2, 36, 1,  3, 26, 1}, // 26
+        -:   36:                {210,   2018, 1, 1, 1, 1, 36, 1,  1, 25, 1}, // 27
+        -:   37:                {210,   2018, 2, 1, 1, 1, 36, 1,  3, 2, 1},
+        -:   38:                {1,     2018, 1, 1, 1, 2, 5,  1,  2, 25, 1},  // 25
+        -:   39:                {4377,  2018, 1, 1, 1, 1, 36, 1,  3, 15, 1}, // 30
+        -:   40:                {4377,  2018, 3, 1, 1, 1, 7,  1,  3, 15, 1},
+        -:   41:                {2354,  2018, 1, 1, 1, 2, 36, 1,  3, 20, 1}, // 20
+        -:   42:                {200,   2018, 2, 1, 1, 1, 36, 1,  3, 0, 1}, // 0
+        -:   43:                {960,   2018, 3, 1, 1, 2, 51, 1,  4, 0,  1}, // 0
+        -:   44:                {960,   2018, 2, 1, 1, 2, 51, 1,  4, 0,  1},
+        -:   45:                {960,   2018, 1, 1, 1, 2, 51, 1,  4, 0,  1}
+       20:   46:    };
 call    0 returned 1
 call    1 returned 1
 branch  2 taken 1 (fallthrough)
 branch  3 taken 0 (throw)
-        1:   45-block  0
+        1:   46-block  0
 call    4 returned 1
 call    5 returned 1
 branch  6 taken 1 (fallthrough)
 branch  7 taken 0 (throw)
-        1:   45-block  1
+        1:   46-block  1
 call    8 returned 1
 call    9 returned 1
 branch 10 taken 1 (fallthrough)
 branch 11 taken 0 (throw)
-        1:   45-block  2
+        1:   46-block  2
 call   12 returned 1
 call   13 returned 1
 branch 14 taken 1 (fallthrough)
 branch 15 taken 0 (throw)
-        1:   45-block  3
+        1:   46-block  3
 call   16 returned 1
 call   17 returned 1
 branch 18 taken 1 (fallthrough)
 branch 19 taken 0 (throw)
-        1:   45-block  4
+        1:   46-block  4
 call   20 returned 1
 call   21 returned 1
 branch 22 taken 1 (fallthrough)
 branch 23 taken 0 (throw)
-        1:   45-block  5
+        1:   46-block  5
 call   24 returned 1
 call   25 returned 1
 branch 26 taken 1 (fallthrough)
 branch 27 taken 0 (throw)
-        1:   45-block  6
+        1:   46-block  6
 call   28 returned 1
 call   29 returned 1
 branch 30 taken 1 (fallthrough)
 branch 31 taken 0 (throw)
-        1:   45-block  7
+        1:   46-block  7
 call   32 returned 1
 call   33 returned 1
 branch 34 taken 1 (fallthrough)
 branch 35 taken 0 (throw)
-        1:   45-block  8
+        1:   46-block  8
 call   36 returned 1
 call   37 returned 1
 branch 38 taken 1 (fallthrough)
 branch 39 taken 0 (throw)
-        1:   45-block  9
+        1:   46-block  9
 call   40 returned 1
 call   41 returned 1
 branch 42 taken 1 (fallthrough)
 branch 43 taken 0 (throw)
-        1:   45-block 10
+        1:   46-block 10
 call   44 returned 1
 call   45 returned 1
 branch 46 taken 1 (fallthrough)
 branch 47 taken 0 (throw)
-        1:   45-block 11
+        1:   46-block 11
 call   48 returned 1
 call   49 returned 1
 branch 50 taken 1 (fallthrough)
 branch 51 taken 0 (throw)
-        1:   45-block 12
+        1:   46-block 12
 call   52 returned 1
 call   53 returned 1
 branch 54 taken 1 (fallthrough)
 branch 55 taken 0 (throw)
-        1:   45-block 13
+        1:   46-block 13
 call   56 returned 1
 call   57 returned 1
 branch 58 taken 1 (fallthrough)
 branch 59 taken 0 (throw)
-        1:   45-block 14
+        1:   46-block 14
 call   60 returned 1
 call   61 returned 1
 branch 62 taken 1 (fallthrough)
 branch 63 taken 0 (throw)
-        1:   45-block 15
+        1:   46-block 15
 call   64 returned 1
 call   65 returned 1
 branch 66 taken 1 (fallthrough)
 branch 67 taken 0 (throw)
-       16:   45-block 16
+       16:   46-block 16
 call   68 returned 16
-        1:   45-block 17
+        1:   46-block 17
 call   69 returned 1
 call   70 returned 1
 call   71 returned 1
@@ -333,86 +335,86 @@ call   82 returned 1
 call   83 returned 1
 call   84 returned 1
 call   85 returned 1
-    $$$$$:   45-block 18
-    $$$$$:   45-block 19
+    $$$$$:   46-block 18
+    $$$$$:   46-block 19
 call   86 never executed
-    $$$$$:   45-block 20
-    $$$$$:   45-block 21
-    $$$$$:   45-block 22
-    $$$$$:   45-block 23
-    $$$$$:   45-block 24
-    $$$$$:   45-block 25
-    $$$$$:   45-block 26
-    $$$$$:   45-block 27
-    $$$$$:   45-block 28
-    $$$$$:   45-block 29
-    $$$$$:   45-block 30
-    $$$$$:   45-block 31
-    $$$$$:   45-block 32
-    $$$$$:   45-block 33
-    $$$$$:   45-block 34
-    $$$$$:   45-block 35
-    $$$$$:   45-block 36
-    $$$$$:   45-block 37
-    $$$$$:   45-block 38
-    $$$$$:   45-block 39
-    $$$$$:   45-block 40
-    $$$$$:   45-block 41
-    $$$$$:   45-block 42
-    $$$$$:   45-block 43
-    $$$$$:   45-block 44
-    $$$$$:   45-block 45
-    $$$$$:   45-block 46
-    $$$$$:   45-block 47
-    $$$$$:   45-block 48
-    $$$$$:   45-block 49
-    $$$$$:   45-block 50
-    $$$$$:   45-block 51
-    $$$$$:   45-block 52
-    $$$$$:   45-block 53
+    $$$$$:   46-block 20
+    $$$$$:   46-block 21
+    $$$$$:   46-block 22
+    $$$$$:   46-block 23
+    $$$$$:   46-block 24
+    $$$$$:   46-block 25
+    $$$$$:   46-block 26
+    $$$$$:   46-block 27
+    $$$$$:   46-block 28
+    $$$$$:   46-block 29
+    $$$$$:   46-block 30
+    $$$$$:   46-block 31
+    $$$$$:   46-block 32
+    $$$$$:   46-block 33
+    $$$$$:   46-block 34
+    $$$$$:   46-block 35
+    $$$$$:   46-block 36
+    $$$$$:   46-block 37
+    $$$$$:   46-block 38
+    $$$$$:   46-block 39
+    $$$$$:   46-block 40
+    $$$$$:   46-block 41
+    $$$$$:   46-block 42
+    $$$$$:   46-block 43
+    $$$$$:   46-block 44
+    $$$$$:   46-block 45
+    $$$$$:   46-block 46
+    $$$$$:   46-block 47
+    $$$$$:   46-block 48
+    $$$$$:   46-block 49
+    $$$$$:   46-block 50
+    $$$$$:   46-block 51
+    $$$$$:   46-block 52
+    $$$$$:   46-block 53
 call   87 never executed
-        2:   46:    EXPECT_EQ(res,muestraHomogenea(th,ti));
+       2*:   47:    EXPECT_EQ(res,muestraHomogenea(th,ti));
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-        1:   46-block  0
+        1:   47-block  0
 call    3 returned 1
 branch  4 taken 1 (fallthrough)
 branch  5 taken 0 (throw)
 call    6 returned 1
-branch  7 taken 1 (fallthrough)
-branch  8 taken 0
-        1:   46-block  1
-call    9 returned 1
-branch 10 taken 1 (fallthrough)
-branch 11 taken 0 (throw)
-        1:   46-block  2
-call   12 returned 1
-branch 13 taken 1 (fallthrough)
-branch 14 taken 0 (throw)
-        1:   46-block  3
-call   15 returned 1
-branch 16 taken 1 (fallthrough)
-branch 17 taken 0 (throw)
-        1:   46-block  4
-call   18 returned 1
-branch 19 taken 1 (fallthrough)
-branch 20 taken 0 (throw)
-        1:   46-block  5
-call   21 returned 1
-call   22 returned 1
-        1:   46-block  6
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:   47-block  1
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    %%%%%:   47-block  2
+call   12 never executed
+branch 13 never executed
+branch 14 never executed
+    %%%%%:   47-block  3
+call   15 never executed
+branch 16 never executed
+branch 17 never executed
+    %%%%%:   47-block  4
+call   18 never executed
+branch 19 never executed
+branch 20 never executed
+    %%%%%:   47-block  5
+call   21 never executed
+call   22 never executed
+        1:   47-block  6
 call   23 returned 1
-    $$$$$:   46-block  7
-    $$$$$:   46-block  8
+    $$$$$:   47-block  7
+    $$$$$:   47-block  8
 call   24 never executed
-    $$$$$:   46-block  9
-    $$$$$:   46-block 10
+    $$$$$:   47-block  9
+    $$$$$:   47-block 10
 call   25 never executed
-    $$$$$:   46-block 11
-    $$$$$:   46-block 12
+    $$$$$:   47-block 11
+    $$$$$:   47-block 12
 call   26 never executed
-        1:   47:}
+        1:   48:}
 ------------------
 _ZN40muestraHomogeneaTEST_unaSolucionDe4_TestC1Ev:
 function _ZN40muestraHomogeneaTEST_unaSolucionDe4_TestC1Ev called 1 returned 100% blocks executed 100%
@@ -420,216 +422,216 @@ function _ZN40muestraHomogeneaTEST_unaSolucionDe4_TestC1Ev called 1 returned 100
         1:   11-block  0
 call    0 returned 1
 ------------------
-        -:   48:
         -:   49:
-        2:   50:TEST(muestraHomogeneaTEST, dosSolucionesDe3) {
-        -:   51:    vector <hogar> res1 = {{1,    2018, 1, 1, 2, 1, 1, 1, 1, 2,1,1},
-        -:   52:                           {210,  2018, 1, 1, 2, 1, 1, 1, 1, 2,1,1},
-        7:   53:                           {340,  2018, 1, 1, 1, 1, 1, 1, 1, 2,1,1}};
-        -:   54:
-        -:   55:    vector <hogar> res2 = {{1,    2018, 1, 1, 2, 1, 1, 1, 1, 2,1,1},
-        -:   56:                           {210,  2018, 1, 1, 2, 1, 1, 1, 1, 2,1,1},
-        7:   57:                           {4377, 2018, 1, 1, 2, 1, 1, 1, 1, 2,1,1}};
-        -:   58:
-        -:   59:    eph_h th = {
-        -:   60:            {960,  2018, 1, 1, 1, 1, 1, 1, 1, 2,1,1},
-        -:   61:            {340,  2018, 1, 1, 1, 1, 1, 1, 1, 2,1,1},
-        -:   62:            {1009, 2018, 1, 1, 2, 1, 1, 1, 1, 2,1,1},
-        -:   63:            {210,  2018, 1, 1, 2, 1, 1, 1, 1, 2,1,1},
-        -:   64:            {4377, 2018, 1, 1, 2, 1, 1, 1, 1, 2,1,1},
-        -:   65:            {200,  2018, 1, 1, 2, 1, 1, 1, 1, 2,1,1},
-        -:   66:            {334,  2018, 1, 1, 2, 1, 1, 1, 1, 2,1,1},
-        -:   67:            {543,  2018, 1, 1, 2, 1, 1, 1, 1, 2,1,1},
-        -:   68:            {2354, 2018, 1, 1, 2, 1, 1, 1, 1, 2,1,1},
-        -:   69:            {1,    2018, 1, 1, 2, 1, 1, 1, 1, 2,1,1},
-        -:   70:            {800,  2018, 1, 1, 2, 1, 1, 1, 1, 2,1,1},
-       15:   71:    };
-        -:   72:
-        -:   73:    eph_i ti = {{543,  2018, 1, 1, 1, 1, 36, 1,  3, 1,  1}, // 1
-        -:   74:                {334,  2018, 1, 1, 1, 1, 36, 1,  3, 1,  1}, // 3
-        -:   75:                {334,  2018, 2, 1, 1, 1, 36, 1,  3, 2,  1},
-        -:   76:                {340,  2018, 1, 1, 1, 1, 36, 1,  3, 30,  1},  // 30
-        -:   77:                {340,  2018, 3, 1, 1, 1, 36, 1,  3, 0,  1},
-        -:   78:                {1009, 2018, 1, 1, 1, 1, 36, 1,  3, 26,  1}, // 26
-        -:   79:                {210,  2018, 1, 1, 1, 1, 36, 1,  3, 25,  1}, // 27
-        -:   80:                {210,  2018, 2, 1, 1, 1, 36, 1,  3, 2,  1},
-        -:   81:                {1,    2018, 1, 1, 1, 1, 36, 1,  3, 24,  1}, // 24
-        -:   82:                {4377, 2018, 1, 1, 1, 1, 36, 1,  3, 15,  1}, // 30
-        -:   83:                {4377, 2018, 3, 1, 1, 1, 36, 1,  3, 15,  1},
-        -:   84:                {2354, 2018, 1, 1, 1, 1, 36, 1,  3, 20,  1}, // 20
-        -:   85:                {800,  2018, 2, 1, 1, 1, 36, 1,  3, 0,  1}, // 0
-        -:   86:                {200,  2018, 2, 1, 1, 1, 36, 1,  3, 0,  1}, // 0
-        -:   87:                {960,  2018, 3, 1, 1, 2, 51, 1,  4, 0,   1}, // 0
-        -:   88:                {960,  2018, 2, 1, 1, 2, 51, 1,  4, 0,   1},
-       21:   89:                {960,  2018, 1, 1, 1, 2, 51, 1,  4, 0,   1}};
-        2:   90:    vector <hogar> propuesto = muestraHomogenea(th,ti);
-       1*:   91:    bool esperado = res1 == propuesto || res2 == propuesto;
-        1:   92:    EXPECT_EQ(true,esperado);
-        1:   93:}
+        -:   50:
+        2:   51:TEST(muestraHomogeneaTEST, dosSolucionesDe3) {
+        -:   52:    vector <hogar> res1 = {{1,    2018, 1, 1, 2, 1, 1, 1, 1, 2,1,1},//24
+        -:   53:                           {210,  2018, 1, 1, 2, 1, 1, 1, 1, 2,1,1},//27
+        7:   54:                           {340,  2018, 1, 1, 1, 1, 1, 1, 1, 2,1,1}};//30
+        -:   55:
+        -:   56:    vector <hogar> res2 = {{1,    2018, 1, 1, 2, 1, 1, 1, 1, 2,1,1},//24
+        -:   57:                           {210,  2018, 1, 1, 2, 1, 1, 1, 1, 2,1,1},//27
+        7:   58:                           {4377, 2018, 1, 1, 2, 1, 1, 1, 1, 2,1,1}};//30
+        -:   59:
+        -:   60:    eph_h th = {
+        -:   61:            {960,  2018, 1, 1, 1, 1, 1, 1, 1, 2,1,1},//0
+        -:   62:            {340,  2018, 1, 1, 1, 1, 1, 1, 1, 2,1,1},//30
+        -:   63:            {1009, 2018, 1, 1, 2, 1, 1, 1, 1, 2,1,1},//26
+        -:   64:            {210,  2018, 1, 1, 2, 1, 1, 1, 1, 2,1,1},//27
+        -:   65:            {4377, 2018, 1, 1, 2, 1, 1, 1, 1, 2,1,1},//30
+        -:   66:            {200,  2018, 1, 1, 2, 1, 1, 1, 1, 2,1,1},//0
+        -:   67:            {334,  2018, 1, 1, 2, 1, 1, 1, 1, 2,1,1},//3
+        -:   68:            {543,  2018, 1, 1, 2, 1, 1, 1, 1, 2,1,1},//1
+        -:   69:            {2354, 2018, 1, 1, 2, 1, 1, 1, 1, 2,1,1},//20
+        -:   70:            {1,    2018, 1, 1, 2, 1, 1, 1, 1, 2,1,1},//24
+        -:   71:            {800,  2018, 1, 1, 2, 1, 1, 1, 1, 2,1,1},//0
+       15:   72:    };
+        -:   73:
+        -:   74:    eph_i ti = {{543,  2018, 1, 1, 1, 1, 36, 1,  3, 1,  1}, // 1
+        -:   75:                {334,  2018, 1, 1, 1, 1, 36, 1,  3, 1,  1}, // 3
+        -:   76:                {334,  2018, 2, 1, 1, 1, 36, 1,  3, 2,  1},
+        -:   77:                {340,  2018, 1, 1, 1, 1, 36, 1,  3, 30,  1},  // 30
+        -:   78:                {340,  2018, 3, 1, 1, 1, 36, 1,  3, 0,  1},
+        -:   79:                {1009, 2018, 1, 1, 1, 1, 36, 1,  3, 26,  1}, // 26
+        -:   80:                {210,  2018, 1, 1, 1, 1, 36, 1,  3, 25,  1}, // 27
+        -:   81:                {210,  2018, 2, 1, 1, 1, 36, 1,  3, 2,  1},
+        -:   82:                {1,    2018, 1, 1, 1, 1, 36, 1,  3, 24,  1}, // 24
+        -:   83:                {4377, 2018, 1, 1, 1, 1, 36, 1,  3, 15,  1}, // 30
+        -:   84:                {4377, 2018, 3, 1, 1, 1, 36, 1,  3, 15,  1},
+        -:   85:                {2354, 2018, 1, 1, 1, 1, 36, 1,  3, 20,  1}, // 20
+        -:   86:                {800,  2018, 2, 1, 1, 1, 36, 1,  3, 0,  1}, // 0
+        -:   87:                {200,  2018, 2, 1, 1, 1, 36, 1,  3, 0,  1}, // 0
+        -:   88:                {960,  2018, 3, 1, 1, 2, 51, 1,  4, 0,   1}, // 0
+        -:   89:                {960,  2018, 2, 1, 1, 2, 51, 1,  4, 0,   1},
+       21:   90:                {960,  2018, 1, 1, 1, 2, 51, 1,  4, 0,   1}};
+        2:   91:    vector <hogar> propuesto = muestraHomogenea(th,ti);
+       1*:   92:    bool esperado = res1 == propuesto || res2 == propuesto;
+       1*:   93:    EXPECT_EQ(true,esperado);
+        1:   94:}
 ------------------
 _ZN42muestraHomogeneaTEST_dosSolucionesDe3_Test8TestBodyEv:
-function _ZN42muestraHomogeneaTEST_dosSolucionesDe3_Test8TestBodyEv called 1 returned 100% blocks executed 40%
-        1:   50:TEST(muestraHomogeneaTEST, dosSolucionesDe3) {
-        -:   51:    vector <hogar> res1 = {{1,    2018, 1, 1, 2, 1, 1, 1, 1, 2,1,1},
-        -:   52:                           {210,  2018, 1, 1, 2, 1, 1, 1, 1, 2,1,1},
-        7:   53:                           {340,  2018, 1, 1, 1, 1, 1, 1, 1, 2,1,1}};
-        1:   53-block  0
+function _ZN42muestraHomogeneaTEST_dosSolucionesDe3_Test8TestBodyEv called 1 returned 100% blocks executed 38%
+        1:   51:TEST(muestraHomogeneaTEST, dosSolucionesDe3) {
+        -:   52:    vector <hogar> res1 = {{1,    2018, 1, 1, 2, 1, 1, 1, 1, 2,1,1},//24
+        -:   53:                           {210,  2018, 1, 1, 2, 1, 1, 1, 1, 2,1,1},//27
+        7:   54:                           {340,  2018, 1, 1, 1, 1, 1, 1, 1, 2,1,1}};//30
+        1:   54-block  0
 call    0 returned 1
 call    1 returned 1
 branch  2 taken 1 (fallthrough)
 branch  3 taken 0 (throw)
-        1:   53-block  1
+        1:   54-block  1
 call    4 returned 1
 call    5 returned 1
 branch  6 taken 1 (fallthrough)
 branch  7 taken 0 (throw)
-        1:   53-block  2
+        1:   54-block  2
 call    8 returned 1
 call    9 returned 1
 branch 10 taken 1 (fallthrough)
 branch 11 taken 0 (throw)
-        1:   53-block  3
+        1:   54-block  3
 call   12 returned 1
 call   13 returned 1
 branch 14 taken 1 (fallthrough)
 branch 15 taken 0 (throw)
-        3:   53-block  4
+        3:   54-block  4
 call   16 returned 3
-        1:   53-block  5
+        1:   54-block  5
 call   17 returned 1
 call   18 returned 1
 call   19 returned 1
 call   20 returned 1
-    $$$$$:   53-block  6
-    $$$$$:   53-block  7
+    $$$$$:   54-block  6
+    $$$$$:   54-block  7
 call   21 never executed
-    $$$$$:   53-block  8
-    $$$$$:   53-block  9
-    $$$$$:   53-block 10
-    $$$$$:   53-block 11
-    $$$$$:   53-block 12
-    $$$$$:   53-block 13
-    $$$$$:   53-block 14
-    $$$$$:   53-block 15
+    $$$$$:   54-block  8
+    $$$$$:   54-block  9
+    $$$$$:   54-block 10
+    $$$$$:   54-block 11
+    $$$$$:   54-block 12
+    $$$$$:   54-block 13
+    $$$$$:   54-block 14
+    $$$$$:   54-block 15
 call   22 never executed
-        -:   54:
-        -:   55:    vector <hogar> res2 = {{1,    2018, 1, 1, 2, 1, 1, 1, 1, 2,1,1},
-        -:   56:                           {210,  2018, 1, 1, 2, 1, 1, 1, 1, 2,1,1},
-        7:   57:                           {4377, 2018, 1, 1, 2, 1, 1, 1, 1, 2,1,1}};
+        -:   55:
+        -:   56:    vector <hogar> res2 = {{1,    2018, 1, 1, 2, 1, 1, 1, 1, 2,1,1},//24
+        -:   57:                           {210,  2018, 1, 1, 2, 1, 1, 1, 1, 2,1,1},//27
+        7:   58:                           {4377, 2018, 1, 1, 2, 1, 1, 1, 1, 2,1,1}};//30
 call    0 returned 1
 call    1 returned 1
 branch  2 taken 1 (fallthrough)
 branch  3 taken 0 (throw)
-        1:   57-block  0
+        1:   58-block  0
 call    4 returned 1
 call    5 returned 1
 branch  6 taken 1 (fallthrough)
 branch  7 taken 0 (throw)
-        1:   57-block  1
+        1:   58-block  1
 call    8 returned 1
 call    9 returned 1
 branch 10 taken 1 (fallthrough)
 branch 11 taken 0 (throw)
-        1:   57-block  2
+        1:   58-block  2
 call   12 returned 1
 call   13 returned 1
 branch 14 taken 1 (fallthrough)
 branch 15 taken 0 (throw)
-        3:   57-block  3
+        3:   58-block  3
 call   16 returned 3
-        1:   57-block  4
+        1:   58-block  4
 call   17 returned 1
 call   18 returned 1
 call   19 returned 1
 call   20 returned 1
-    $$$$$:   57-block  5
-    $$$$$:   57-block  6
+    $$$$$:   58-block  5
+    $$$$$:   58-block  6
 call   21 never executed
-    $$$$$:   57-block  7
-    $$$$$:   57-block  8
-    $$$$$:   57-block  9
-    $$$$$:   57-block 10
-    $$$$$:   57-block 11
-    $$$$$:   57-block 12
-    $$$$$:   57-block 13
-    $$$$$:   57-block 14
+    $$$$$:   58-block  7
+    $$$$$:   58-block  8
+    $$$$$:   58-block  9
+    $$$$$:   58-block 10
+    $$$$$:   58-block 11
+    $$$$$:   58-block 12
+    $$$$$:   58-block 13
+    $$$$$:   58-block 14
 call   22 never executed
-        -:   58:
-        -:   59:    eph_h th = {
-        -:   60:            {960,  2018, 1, 1, 1, 1, 1, 1, 1, 2,1,1},
-        -:   61:            {340,  2018, 1, 1, 1, 1, 1, 1, 1, 2,1,1},
-        -:   62:            {1009, 2018, 1, 1, 2, 1, 1, 1, 1, 2,1,1},
-        -:   63:            {210,  2018, 1, 1, 2, 1, 1, 1, 1, 2,1,1},
-        -:   64:            {4377, 2018, 1, 1, 2, 1, 1, 1, 1, 2,1,1},
-        -:   65:            {200,  2018, 1, 1, 2, 1, 1, 1, 1, 2,1,1},
-        -:   66:            {334,  2018, 1, 1, 2, 1, 1, 1, 1, 2,1,1},
-        -:   67:            {543,  2018, 1, 1, 2, 1, 1, 1, 1, 2,1,1},
-        -:   68:            {2354, 2018, 1, 1, 2, 1, 1, 1, 1, 2,1,1},
-        -:   69:            {1,    2018, 1, 1, 2, 1, 1, 1, 1, 2,1,1},
-        -:   70:            {800,  2018, 1, 1, 2, 1, 1, 1, 1, 2,1,1},
-       15:   71:    };
+        -:   59:
+        -:   60:    eph_h th = {
+        -:   61:            {960,  2018, 1, 1, 1, 1, 1, 1, 1, 2,1,1},//0
+        -:   62:            {340,  2018, 1, 1, 1, 1, 1, 1, 1, 2,1,1},//30
+        -:   63:            {1009, 2018, 1, 1, 2, 1, 1, 1, 1, 2,1,1},//26
+        -:   64:            {210,  2018, 1, 1, 2, 1, 1, 1, 1, 2,1,1},//27
+        -:   65:            {4377, 2018, 1, 1, 2, 1, 1, 1, 1, 2,1,1},//30
+        -:   66:            {200,  2018, 1, 1, 2, 1, 1, 1, 1, 2,1,1},//0
+        -:   67:            {334,  2018, 1, 1, 2, 1, 1, 1, 1, 2,1,1},//3
+        -:   68:            {543,  2018, 1, 1, 2, 1, 1, 1, 1, 2,1,1},//1
+        -:   69:            {2354, 2018, 1, 1, 2, 1, 1, 1, 1, 2,1,1},//20
+        -:   70:            {1,    2018, 1, 1, 2, 1, 1, 1, 1, 2,1,1},//24
+        -:   71:            {800,  2018, 1, 1, 2, 1, 1, 1, 1, 2,1,1},//0
+       15:   72:    };
 call    0 returned 1
 call    1 returned 1
 branch  2 taken 1 (fallthrough)
 branch  3 taken 0 (throw)
-        1:   71-block  0
+        1:   72-block  0
 call    4 returned 1
 call    5 returned 1
 branch  6 taken 1 (fallthrough)
 branch  7 taken 0 (throw)
-        1:   71-block  1
+        1:   72-block  1
 call    8 returned 1
 call    9 returned 1
 branch 10 taken 1 (fallthrough)
 branch 11 taken 0 (throw)
-        1:   71-block  2
+        1:   72-block  2
 call   12 returned 1
 call   13 returned 1
 branch 14 taken 1 (fallthrough)
 branch 15 taken 0 (throw)
-        1:   71-block  3
+        1:   72-block  3
 call   16 returned 1
 call   17 returned 1
 branch 18 taken 1 (fallthrough)
 branch 19 taken 0 (throw)
-        1:   71-block  4
+        1:   72-block  4
 call   20 returned 1
 call   21 returned 1
 branch 22 taken 1 (fallthrough)
 branch 23 taken 0 (throw)
-        1:   71-block  5
+        1:   72-block  5
 call   24 returned 1
 call   25 returned 1
 branch 26 taken 1 (fallthrough)
 branch 27 taken 0 (throw)
-        1:   71-block  6
+        1:   72-block  6
 call   28 returned 1
 call   29 returned 1
 branch 30 taken 1 (fallthrough)
 branch 31 taken 0 (throw)
-        1:   71-block  7
+        1:   72-block  7
 call   32 returned 1
 call   33 returned 1
 branch 34 taken 1 (fallthrough)
 branch 35 taken 0 (throw)
-        1:   71-block  8
+        1:   72-block  8
 call   36 returned 1
 call   37 returned 1
 branch 38 taken 1 (fallthrough)
 branch 39 taken 0 (throw)
-        1:   71-block  9
+        1:   72-block  9
 call   40 returned 1
 call   41 returned 1
 branch 42 taken 1 (fallthrough)
 branch 43 taken 0 (throw)
-        1:   71-block 10
+        1:   72-block 10
 call   44 returned 1
 call   45 returned 1
 branch 46 taken 1 (fallthrough)
 branch 47 taken 0 (throw)
-       11:   71-block 11
+       11:   72-block 11
 call   48 returned 11
-        1:   71-block 12
+        1:   72-block 12
 call   49 returned 1
 call   50 returned 1
 call   51 returned 1
@@ -642,144 +644,144 @@ call   57 returned 1
 call   58 returned 1
 call   59 returned 1
 call   60 returned 1
-    $$$$$:   71-block 13
-    $$$$$:   71-block 14
+    $$$$$:   72-block 13
+    $$$$$:   72-block 14
 call   61 never executed
-    $$$$$:   71-block 15
-    $$$$$:   71-block 16
-    $$$$$:   71-block 17
-    $$$$$:   71-block 18
-    $$$$$:   71-block 19
-    $$$$$:   71-block 20
-    $$$$$:   71-block 21
-    $$$$$:   71-block 22
-    $$$$$:   71-block 23
-    $$$$$:   71-block 24
-    $$$$$:   71-block 25
-    $$$$$:   71-block 26
-    $$$$$:   71-block 27
-    $$$$$:   71-block 28
-    $$$$$:   71-block 29
-    $$$$$:   71-block 30
-    $$$$$:   71-block 31
-    $$$$$:   71-block 32
-    $$$$$:   71-block 33
-    $$$$$:   71-block 34
-    $$$$$:   71-block 35
-    $$$$$:   71-block 36
-    $$$$$:   71-block 37
-    $$$$$:   71-block 38
+    $$$$$:   72-block 15
+    $$$$$:   72-block 16
+    $$$$$:   72-block 17
+    $$$$$:   72-block 18
+    $$$$$:   72-block 19
+    $$$$$:   72-block 20
+    $$$$$:   72-block 21
+    $$$$$:   72-block 22
+    $$$$$:   72-block 23
+    $$$$$:   72-block 24
+    $$$$$:   72-block 25
+    $$$$$:   72-block 26
+    $$$$$:   72-block 27
+    $$$$$:   72-block 28
+    $$$$$:   72-block 29
+    $$$$$:   72-block 30
+    $$$$$:   72-block 31
+    $$$$$:   72-block 32
+    $$$$$:   72-block 33
+    $$$$$:   72-block 34
+    $$$$$:   72-block 35
+    $$$$$:   72-block 36
+    $$$$$:   72-block 37
+    $$$$$:   72-block 38
 call   62 never executed
-        -:   72:
-        -:   73:    eph_i ti = {{543,  2018, 1, 1, 1, 1, 36, 1,  3, 1,  1}, // 1
-        -:   74:                {334,  2018, 1, 1, 1, 1, 36, 1,  3, 1,  1}, // 3
-        -:   75:                {334,  2018, 2, 1, 1, 1, 36, 1,  3, 2,  1},
-        -:   76:                {340,  2018, 1, 1, 1, 1, 36, 1,  3, 30,  1},  // 30
-        -:   77:                {340,  2018, 3, 1, 1, 1, 36, 1,  3, 0,  1},
-        -:   78:                {1009, 2018, 1, 1, 1, 1, 36, 1,  3, 26,  1}, // 26
-        -:   79:                {210,  2018, 1, 1, 1, 1, 36, 1,  3, 25,  1}, // 27
-        -:   80:                {210,  2018, 2, 1, 1, 1, 36, 1,  3, 2,  1},
-        -:   81:                {1,    2018, 1, 1, 1, 1, 36, 1,  3, 24,  1}, // 24
-        -:   82:                {4377, 2018, 1, 1, 1, 1, 36, 1,  3, 15,  1}, // 30
-        -:   83:                {4377, 2018, 3, 1, 1, 1, 36, 1,  3, 15,  1},
-        -:   84:                {2354, 2018, 1, 1, 1, 1, 36, 1,  3, 20,  1}, // 20
-        -:   85:                {800,  2018, 2, 1, 1, 1, 36, 1,  3, 0,  1}, // 0
-        -:   86:                {200,  2018, 2, 1, 1, 1, 36, 1,  3, 0,  1}, // 0
-        -:   87:                {960,  2018, 3, 1, 1, 2, 51, 1,  4, 0,   1}, // 0
-        -:   88:                {960,  2018, 2, 1, 1, 2, 51, 1,  4, 0,   1},
-       21:   89:                {960,  2018, 1, 1, 1, 2, 51, 1,  4, 0,   1}};
+        -:   73:
+        -:   74:    eph_i ti = {{543,  2018, 1, 1, 1, 1, 36, 1,  3, 1,  1}, // 1
+        -:   75:                {334,  2018, 1, 1, 1, 1, 36, 1,  3, 1,  1}, // 3
+        -:   76:                {334,  2018, 2, 1, 1, 1, 36, 1,  3, 2,  1},
+        -:   77:                {340,  2018, 1, 1, 1, 1, 36, 1,  3, 30,  1},  // 30
+        -:   78:                {340,  2018, 3, 1, 1, 1, 36, 1,  3, 0,  1},
+        -:   79:                {1009, 2018, 1, 1, 1, 1, 36, 1,  3, 26,  1}, // 26
+        -:   80:                {210,  2018, 1, 1, 1, 1, 36, 1,  3, 25,  1}, // 27
+        -:   81:                {210,  2018, 2, 1, 1, 1, 36, 1,  3, 2,  1},
+        -:   82:                {1,    2018, 1, 1, 1, 1, 36, 1,  3, 24,  1}, // 24
+        -:   83:                {4377, 2018, 1, 1, 1, 1, 36, 1,  3, 15,  1}, // 30
+        -:   84:                {4377, 2018, 3, 1, 1, 1, 36, 1,  3, 15,  1},
+        -:   85:                {2354, 2018, 1, 1, 1, 1, 36, 1,  3, 20,  1}, // 20
+        -:   86:                {800,  2018, 2, 1, 1, 1, 36, 1,  3, 0,  1}, // 0
+        -:   87:                {200,  2018, 2, 1, 1, 1, 36, 1,  3, 0,  1}, // 0
+        -:   88:                {960,  2018, 3, 1, 1, 2, 51, 1,  4, 0,   1}, // 0
+        -:   89:                {960,  2018, 2, 1, 1, 2, 51, 1,  4, 0,   1},
+       21:   90:                {960,  2018, 1, 1, 1, 2, 51, 1,  4, 0,   1}};
 call    0 returned 1
 call    1 returned 1
 branch  2 taken 1 (fallthrough)
 branch  3 taken 0 (throw)
-        1:   89-block  0
+        1:   90-block  0
 call    4 returned 1
 call    5 returned 1
 branch  6 taken 1 (fallthrough)
 branch  7 taken 0 (throw)
-        1:   89-block  1
+        1:   90-block  1
 call    8 returned 1
 call    9 returned 1
 branch 10 taken 1 (fallthrough)
 branch 11 taken 0 (throw)
-        1:   89-block  2
+        1:   90-block  2
 call   12 returned 1
 call   13 returned 1
 branch 14 taken 1 (fallthrough)
 branch 15 taken 0 (throw)
-        1:   89-block  3
+        1:   90-block  3
 call   16 returned 1
 call   17 returned 1
 branch 18 taken 1 (fallthrough)
 branch 19 taken 0 (throw)
-        1:   89-block  4
+        1:   90-block  4
 call   20 returned 1
 call   21 returned 1
 branch 22 taken 1 (fallthrough)
 branch 23 taken 0 (throw)
-        1:   89-block  5
+        1:   90-block  5
 call   24 returned 1
 call   25 returned 1
 branch 26 taken 1 (fallthrough)
 branch 27 taken 0 (throw)
-        1:   89-block  6
+        1:   90-block  6
 call   28 returned 1
 call   29 returned 1
 branch 30 taken 1 (fallthrough)
 branch 31 taken 0 (throw)
-        1:   89-block  7
+        1:   90-block  7
 call   32 returned 1
 call   33 returned 1
 branch 34 taken 1 (fallthrough)
 branch 35 taken 0 (throw)
-        1:   89-block  8
+        1:   90-block  8
 call   36 returned 1
 call   37 returned 1
 branch 38 taken 1 (fallthrough)
 branch 39 taken 0 (throw)
-        1:   89-block  9
+        1:   90-block  9
 call   40 returned 1
 call   41 returned 1
 branch 42 taken 1 (fallthrough)
 branch 43 taken 0 (throw)
-        1:   89-block 10
+        1:   90-block 10
 call   44 returned 1
 call   45 returned 1
 branch 46 taken 1 (fallthrough)
 branch 47 taken 0 (throw)
-        1:   89-block 11
+        1:   90-block 11
 call   48 returned 1
 call   49 returned 1
 branch 50 taken 1 (fallthrough)
 branch 51 taken 0 (throw)
-        1:   89-block 12
+        1:   90-block 12
 call   52 returned 1
 call   53 returned 1
 branch 54 taken 1 (fallthrough)
 branch 55 taken 0 (throw)
-        1:   89-block 13
+        1:   90-block 13
 call   56 returned 1
 call   57 returned 1
 branch 58 taken 1 (fallthrough)
 branch 59 taken 0 (throw)
-        1:   89-block 14
+        1:   90-block 14
 call   60 returned 1
 call   61 returned 1
 branch 62 taken 1 (fallthrough)
 branch 63 taken 0 (throw)
-        1:   89-block 15
+        1:   90-block 15
 call   64 returned 1
 call   65 returned 1
 branch 66 taken 1 (fallthrough)
 branch 67 taken 0 (throw)
-        1:   89-block 16
+        1:   90-block 16
 call   68 returned 1
 call   69 returned 1
 branch 70 taken 1 (fallthrough)
 branch 71 taken 0 (throw)
-       17:   89-block 17
+       17:   90-block 17
 call   72 returned 17
-        1:   89-block 18
+        1:   90-block 18
 call   73 returned 1
 call   74 returned 1
 call   75 returned 1
@@ -798,114 +800,280 @@ call   87 returned 1
 call   88 returned 1
 call   89 returned 1
 call   90 returned 1
-    $$$$$:   89-block 19
-    $$$$$:   89-block 20
+    $$$$$:   90-block 19
+    $$$$$:   90-block 20
 call   91 never executed
-    $$$$$:   89-block 21
-    $$$$$:   89-block 22
-    $$$$$:   89-block 23
-    $$$$$:   89-block 24
-    $$$$$:   89-block 25
-    $$$$$:   89-block 26
-    $$$$$:   89-block 27
-    $$$$$:   89-block 28
-    $$$$$:   89-block 29
-    $$$$$:   89-block 30
-    $$$$$:   89-block 31
-    $$$$$:   89-block 32
-    $$$$$:   89-block 33
-    $$$$$:   89-block 34
-    $$$$$:   89-block 35
-    $$$$$:   89-block 36
-    $$$$$:   89-block 37
-    $$$$$:   89-block 38
-    $$$$$:   89-block 39
-    $$$$$:   89-block 40
-    $$$$$:   89-block 41
-    $$$$$:   89-block 42
-    $$$$$:   89-block 43
-    $$$$$:   89-block 44
-    $$$$$:   89-block 45
-    $$$$$:   89-block 46
-    $$$$$:   89-block 47
-    $$$$$:   89-block 48
-    $$$$$:   89-block 49
-    $$$$$:   89-block 50
-    $$$$$:   89-block 51
-    $$$$$:   89-block 52
-    $$$$$:   89-block 53
-    $$$$$:   89-block 54
-    $$$$$:   89-block 55
-    $$$$$:   89-block 56
+    $$$$$:   90-block 21
+    $$$$$:   90-block 22
+    $$$$$:   90-block 23
+    $$$$$:   90-block 24
+    $$$$$:   90-block 25
+    $$$$$:   90-block 26
+    $$$$$:   90-block 27
+    $$$$$:   90-block 28
+    $$$$$:   90-block 29
+    $$$$$:   90-block 30
+    $$$$$:   90-block 31
+    $$$$$:   90-block 32
+    $$$$$:   90-block 33
+    $$$$$:   90-block 34
+    $$$$$:   90-block 35
+    $$$$$:   90-block 36
+    $$$$$:   90-block 37
+    $$$$$:   90-block 38
+    $$$$$:   90-block 39
+    $$$$$:   90-block 40
+    $$$$$:   90-block 41
+    $$$$$:   90-block 42
+    $$$$$:   90-block 43
+    $$$$$:   90-block 44
+    $$$$$:   90-block 45
+    $$$$$:   90-block 46
+    $$$$$:   90-block 47
+    $$$$$:   90-block 48
+    $$$$$:   90-block 49
+    $$$$$:   90-block 50
+    $$$$$:   90-block 51
+    $$$$$:   90-block 52
+    $$$$$:   90-block 53
+    $$$$$:   90-block 54
+    $$$$$:   90-block 55
+    $$$$$:   90-block 56
 call   92 never executed
-        2:   90:    vector <hogar> propuesto = muestraHomogenea(th,ti);
+        2:   91:    vector <hogar> propuesto = muestraHomogenea(th,ti);
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
 call    3 returned 1
-    $$$$$:   90-block  0
+    $$$$$:   91-block  0
 call    4 never executed
-       1*:   91:    bool esperado = res1 == propuesto || res2 == propuesto;
-        1:   91-block  0
-call    0 returned 1
-branch  1 taken 1 (fallthrough)
-branch  2 taken 0 (throw)
-        1:   91-block  1
-branch  3 taken 1 (fallthrough)
-branch  4 taken 0
-        1:   91-block  2
-call    5 returned 1
-branch  6 taken 1 (fallthrough)
-branch  7 taken 0 (throw)
-        1:   91-block  3
-branch  8 taken 0 (fallthrough)
-branch  9 taken 1
-    %%%%%:   91-block  4
-        1:   91-block  5
-        1:   92:    EXPECT_EQ(true,esperado);
+       1*:   92:    bool esperado = res1 == propuesto || res2 == propuesto;
         1:   92-block  0
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
         1:   92-block  1
-call    3 returned 1
-branch  4 taken 1 (fallthrough)
-branch  5 taken 0
-        1:   92-block  2
-call    6 returned 1
-branch  7 taken 1 (fallthrough)
-branch  8 taken 0 (throw)
-        1:   92-block  3
-call    9 returned 1
-branch 10 taken 1 (fallthrough)
-branch 11 taken 0 (throw)
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   92-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+    %%%%%:   92-block  3
+branch  8 never executed
+branch  9 never executed
         1:   92-block  4
-call   12 returned 1
-branch 13 taken 1 (fallthrough)
-branch 14 taken 0 (throw)
-        1:   92-block  5
-call   15 returned 1
-branch 16 taken 1 (fallthrough)
-branch 17 taken 0 (throw)
-        1:   92-block  6
-call   18 returned 1
-call   19 returned 1
-        1:   92-block  7
+    %%%%%:   92-block  5
+       1*:   93:    EXPECT_EQ(true,esperado);
+        1:   93-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   93-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   93-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:   93-block  3
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    %%%%%:   93-block  4
+call   12 never executed
+branch 13 never executed
+branch 14 never executed
+    %%%%%:   93-block  5
+call   15 never executed
+branch 16 never executed
+branch 17 never executed
+    %%%%%:   93-block  6
+call   18 never executed
+call   19 never executed
+        1:   93-block  7
 call   20 returned 1
-    $$$$$:   92-block  8
-    $$$$$:   92-block  9
+    $$$$$:   93-block  8
+    $$$$$:   93-block  9
 call   21 never executed
-    $$$$$:   92-block 10
-    $$$$$:   92-block 11
+    $$$$$:   93-block 10
+    $$$$$:   93-block 11
 call   22 never executed
-    $$$$$:   92-block 12
-    $$$$$:   92-block 13
+    $$$$$:   93-block 12
+    $$$$$:   93-block 13
 call   23 never executed
-        1:   93:}
+        1:   94:}
 ------------------
 _ZN42muestraHomogeneaTEST_dosSolucionesDe3_TestC1Ev:
 function _ZN42muestraHomogeneaTEST_dosSolucionesDe3_TestC1Ev called 1 returned 100% blocks executed 100%
-        1:   50:TEST(muestraHomogeneaTEST, dosSolucionesDe3) {
-        1:   50-block  0
+        1:   51:TEST(muestraHomogeneaTEST, dosSolucionesDe3) {
+        1:   51-block  0
+call    0 returned 1
+------------------
+        -:   95:
+        2:   96:TEST(muestraHomogeneaTEST, unaSolucionDe0) {
+        2:   97:    vector <hogar> res = {};
+        -:   98:
+        -:   99:    eph_h th = {
+        -:  100:            {960,  2018, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1}, //0
+        -:  101:            {1009, 2018, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1}, //26
+        6:  102:    };
+        -:  103://                                                ingresos
+        -:  104://                                                   v
+        -:  105:    eph_i ti = {
+        -:  106:                {1009,  2018, 1, 1, 1, 2, 36, 1,  3, 26, 1}, // 26
+        -:  107:                {960,   2018, 3, 1, 1, 2, 51, 1,  4, 0,  1}, // 0
+        -:  108:                {960,   2018, 2, 1, 1, 2, 51, 1,  4, 0,  1},
+        -:  109:                {960,   2018, 1, 1, 1, 2, 51, 1,  4, 0,  1}
+        8:  110:    };
+       2*:  111:    EXPECT_EQ(res,muestraHomogenea(th,ti));
+        1:  112:}
+------------------
+_ZN40muestraHomogeneaTEST_unaSolucionDe0_Test8TestBodyEv:
+function _ZN40muestraHomogeneaTEST_unaSolucionDe0_Test8TestBodyEv called 1 returned 100% blocks executed 37%
+        1:   96:TEST(muestraHomogeneaTEST, unaSolucionDe0) {
+        2:   97:    vector <hogar> res = {};
+        1:   97-block  0
+call    0 returned 1
+call    1 returned 1
+    $$$$$:   97-block  1
+call    2 never executed
+        -:   98:
+        -:   99:    eph_h th = {
+        -:  100:            {960,  2018, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1}, //0
+        -:  101:            {1009, 2018, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1}, //26
+        6:  102:    };
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  102-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  102-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        2:  102-block  2
+call   12 returned 2
+        1:  102-block  3
+call   13 returned 1
+call   14 returned 1
+call   15 returned 1
+    $$$$$:  102-block  4
+    $$$$$:  102-block  5
+call   16 never executed
+    $$$$$:  102-block  6
+    $$$$$:  102-block  7
+    $$$$$:  102-block  8
+    $$$$$:  102-block  9
+    $$$$$:  102-block 10
+    $$$$$:  102-block 11
+call   17 never executed
+        -:  103://                                                ingresos
+        -:  104://                                                   v
+        -:  105:    eph_i ti = {
+        -:  106:                {1009,  2018, 1, 1, 1, 2, 36, 1,  3, 26, 1}, // 26
+        -:  107:                {960,   2018, 3, 1, 1, 2, 51, 1,  4, 0,  1}, // 0
+        -:  108:                {960,   2018, 2, 1, 1, 2, 51, 1,  4, 0,  1},
+        -:  109:                {960,   2018, 1, 1, 1, 2, 51, 1,  4, 0,  1}
+        8:  110:    };
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  110-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  110-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  110-block  2
+call   12 returned 1
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+        1:  110-block  3
+call   16 returned 1
+call   17 returned 1
+branch 18 taken 1 (fallthrough)
+branch 19 taken 0 (throw)
+        4:  110-block  4
+call   20 returned 4
+        1:  110-block  5
+call   21 returned 1
+call   22 returned 1
+call   23 returned 1
+call   24 returned 1
+call   25 returned 1
+    $$$$$:  110-block  6
+    $$$$$:  110-block  7
+call   26 never executed
+    $$$$$:  110-block  8
+    $$$$$:  110-block  9
+    $$$$$:  110-block 10
+    $$$$$:  110-block 11
+    $$$$$:  110-block 12
+    $$$$$:  110-block 13
+    $$$$$:  110-block 14
+    $$$$$:  110-block 15
+    $$$$$:  110-block 16
+    $$$$$:  110-block 17
+call   27 never executed
+       2*:  111:    EXPECT_EQ(res,muestraHomogenea(th,ti));
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  111-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+call    6 returned 1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  111-block  1
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    %%%%%:  111-block  2
+call   12 never executed
+branch 13 never executed
+branch 14 never executed
+    %%%%%:  111-block  3
+call   15 never executed
+branch 16 never executed
+branch 17 never executed
+    %%%%%:  111-block  4
+call   18 never executed
+branch 19 never executed
+branch 20 never executed
+    %%%%%:  111-block  5
+call   21 never executed
+call   22 never executed
+        1:  111-block  6
+call   23 returned 1
+    $$$$$:  111-block  7
+    $$$$$:  111-block  8
+call   24 never executed
+    $$$$$:  111-block  9
+    $$$$$:  111-block 10
+call   25 never executed
+    $$$$$:  111-block 11
+    $$$$$:  111-block 12
+call   26 never executed
+        1:  112:}
+------------------
+_ZN40muestraHomogeneaTEST_unaSolucionDe0_TestC1Ev:
+function _ZN40muestraHomogeneaTEST_unaSolucionDe0_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:   96:TEST(muestraHomogeneaTEST, unaSolucionDe0) {
+        1:   96-block  0
 call    0 returned 1
 ------------------

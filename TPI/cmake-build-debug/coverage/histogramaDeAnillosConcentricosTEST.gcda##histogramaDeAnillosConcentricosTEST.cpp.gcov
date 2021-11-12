@@ -30,11 +30,11 @@
         -:   25:
         2:   26:    vector<int> res = {2, 0, 0, 1};
         -:   27:
-        2:   28:    EXPECT_EQ(res, histogramaDeAnillosConcentricos(p.first, p.second, centro, distancias));
+       2*:   28:    EXPECT_EQ(res, histogramaDeAnillosConcentricos(p.first, p.second, centro, distancias));
         1:   29:}
 ------------------
 _ZN55histogramaDeAnillosConcentricosTEST_primeroYUltimo_Test8TestBodyEv:
-function _ZN55histogramaDeAnillosConcentricosTEST_primeroYUltimo_Test8TestBodyEv called 1 returned 100% blocks executed 44%
+function _ZN55histogramaDeAnillosConcentricosTEST_primeroYUltimo_Test8TestBodyEv called 1 returned 100% blocks executed 35%
         1:   14:TEST(histogramaDeAnillosConcentricosTEST, primeroYUltimo) {
         2:   15:    vector<int> distancias = {10, 20, 50, 100};
         1:   15-block  0
@@ -83,7 +83,7 @@ call    4 returned 1
     $$$$$:   26-block  2
 call    5 never executed
         -:   27:
-        2:   28:    EXPECT_EQ(res, histogramaDeAnillosConcentricos(p.first, p.second, centro, distancias));
+       2*:   28:    EXPECT_EQ(res, histogramaDeAnillosConcentricos(p.first, p.second, centro, distancias));
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
@@ -107,27 +107,27 @@ call   15 returned 1
 call   16 returned 1
 call   17 returned 1
 call   18 returned 1
-branch 19 taken 1 (fallthrough)
-branch 20 taken 0
-        1:   28-block  4
-call   21 returned 1
-branch 22 taken 1 (fallthrough)
-branch 23 taken 0 (throw)
-        1:   28-block  5
-call   24 returned 1
-branch 25 taken 1 (fallthrough)
-branch 26 taken 0 (throw)
-        1:   28-block  6
-call   27 returned 1
-branch 28 taken 1 (fallthrough)
-branch 29 taken 0 (throw)
-        1:   28-block  7
-call   30 returned 1
-branch 31 taken 1 (fallthrough)
-branch 32 taken 0 (throw)
-        1:   28-block  8
-call   33 returned 1
-call   34 returned 1
+branch 19 taken 0 (fallthrough)
+branch 20 taken 1
+    %%%%%:   28-block  4
+call   21 never executed
+branch 22 never executed
+branch 23 never executed
+    %%%%%:   28-block  5
+call   24 never executed
+branch 25 never executed
+branch 26 never executed
+    %%%%%:   28-block  6
+call   27 never executed
+branch 28 never executed
+branch 29 never executed
+    %%%%%:   28-block  7
+call   30 never executed
+branch 31 never executed
+branch 32 never executed
+    %%%%%:   28-block  8
+call   33 never executed
+call   34 never executed
         1:   28-block  9
 call   35 returned 1
     $$$$$:   28-block 10
@@ -166,11 +166,11 @@ call    0 returned 1
         -:   43:
         2:   44:    vector<int> res = {0, 4, 0, 0};
         -:   45:
-        2:   46:    EXPECT_EQ(res, histogramaDeAnillosConcentricos(p.first, p.second, centro, distancias));
+       2*:   46:    EXPECT_EQ(res, histogramaDeAnillosConcentricos(p.first, p.second, centro, distancias));
         1:   47:}
 ------------------
 _ZN57histogramaDeAnillosConcentricosTEST_cuatroCuadrantes_Test8TestBodyEv:
-function _ZN57histogramaDeAnillosConcentricosTEST_cuatroCuadrantes_Test8TestBodyEv called 1 returned 100% blocks executed 44%
+function _ZN57histogramaDeAnillosConcentricosTEST_cuatroCuadrantes_Test8TestBodyEv called 1 returned 100% blocks executed 35%
         1:   31:TEST(histogramaDeAnillosConcentricosTEST, cuatroCuadrantes) {
         -:   32:
         2:   33:    vector<int> distancias = {10, 20, 50, 100};
@@ -220,7 +220,7 @@ call    4 returned 1
     $$$$$:   44-block  2
 call    5 never executed
         -:   45:
-        2:   46:    EXPECT_EQ(res, histogramaDeAnillosConcentricos(p.first, p.second, centro, distancias));
+       2*:   46:    EXPECT_EQ(res, histogramaDeAnillosConcentricos(p.first, p.second, centro, distancias));
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
@@ -244,27 +244,27 @@ call   15 returned 1
 call   16 returned 1
 call   17 returned 1
 call   18 returned 1
-branch 19 taken 1 (fallthrough)
-branch 20 taken 0
-        1:   46-block  4
-call   21 returned 1
-branch 22 taken 1 (fallthrough)
-branch 23 taken 0 (throw)
-        1:   46-block  5
-call   24 returned 1
-branch 25 taken 1 (fallthrough)
-branch 26 taken 0 (throw)
-        1:   46-block  6
-call   27 returned 1
-branch 28 taken 1 (fallthrough)
-branch 29 taken 0 (throw)
-        1:   46-block  7
-call   30 returned 1
-branch 31 taken 1 (fallthrough)
-branch 32 taken 0 (throw)
-        1:   46-block  8
-call   33 returned 1
-call   34 returned 1
+branch 19 taken 0 (fallthrough)
+branch 20 taken 1
+    %%%%%:   46-block  4
+call   21 never executed
+branch 22 never executed
+branch 23 never executed
+    %%%%%:   46-block  5
+call   24 never executed
+branch 25 never executed
+branch 26 never executed
+    %%%%%:   46-block  6
+call   27 never executed
+branch 28 never executed
+branch 29 never executed
+    %%%%%:   46-block  7
+call   30 never executed
+branch 31 never executed
+branch 32 never executed
+    %%%%%:   46-block  8
+call   33 never executed
+call   34 never executed
         1:   46-block  9
 call   35 returned 1
     $$$$$:   46-block 10

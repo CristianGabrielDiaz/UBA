@@ -120,7 +120,7 @@
         -:  115:
         -:  116:  template<typename _Tp, typename _Alloc>
         -:  117:    typename vector<_Tp, _Alloc>::iterator
-function _ZNSt6vectorIS_IiSaIiEESaIS1_EE6insertEN9__gnu_cxx17__normal_iteratorIPKS1_S3_EERS6_ called 1 returned 100% blocks executed 39%
+function _ZNSt6vectorIS_IiSaIiEESaIS1_EE6insertEN9__gnu_cxx17__normal_iteratorIPKS1_S3_EERS6_ called 1 returned 100% blocks executed 64%
         1:  118:    vector<_Tp, _Alloc>::
         -:  119:#if __cplusplus >= 201103L
         -:  120:    insert(const_iterator __position, const value_type& __x)
@@ -133,14 +133,14 @@ function _ZNSt6vectorIS_IiSaIiEESaIS1_EE6insertEN9__gnu_cxx17__normal_iteratorIP
 call    0 returned 1
 call    1 returned 1
         1:  126:      if (this->_M_impl._M_finish != this->_M_impl._M_end_of_storage)
-branch  0 taken 0 (fallthrough)
-branch  1 taken 1
-    #####:  127:	if (__position == end())
-    %%%%%:  127-block  0
-call    0 never executed
-call    1 never executed
-branch  2 never executed
-branch  3 never executed
+branch  0 taken 1 (fallthrough)
+branch  1 taken 0
+        1:  127:	if (__position == end())
+        1:  127-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 0 (fallthrough)
+branch  3 taken 1
         -:  128:	  {
         -:  129:	    _GLIBCXX_ASAN_ANNOTATE_GROW(1);
     #####:  130:	    _Alloc_traits::construct(this->_M_impl, this->_M_impl._M_finish,
@@ -153,45 +153,45 @@ call    0 never executed
         -:  135:	else
         -:  136:	  {
         -:  137:#if __cplusplus >= 201103L
-    #####:  138:	    const auto __pos = begin() + (__position - cbegin());
-    %%%%%:  138-block  0
-call    0 never executed
-call    1 never executed
-call    2 never executed
-call    3 never executed
+        1:  138:	    const auto __pos = begin() + (__position - cbegin());
+        1:  138-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
         -:  139:	    // __x could be an existing element of this vector, so make a
         -:  140:	    // copy of it before _M_insert_aux moves elements around.
-    #####:  141:	    _Temporary_value __x_copy(this, __x);
-call    0 never executed
-branch  1 never executed
-branch  2 never executed
-    %%%%%:  141-block  0
-call    3 never executed
+        2:  141:	    _Temporary_value __x_copy(this, __x);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  141-block  0
+call    3 returned 1
     $$$$$:  141-block  1
 call    4 never executed
-    #####:  142:	    _M_insert_aux(__pos, std::move(__x_copy._M_val()));
-    %%%%%:  142-block  0
-call    0 never executed
-call    1 never executed
-call    2 never executed
-branch  3 never executed
-branch  4 never executed
+        1:  142:	    _M_insert_aux(__pos, std::move(__x_copy._M_val()));
+        1:  142-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
         -:  143:#else
         -:  144:	    _M_insert_aux(__position, __x);
         -:  145:#endif
         -:  146:	  }
         -:  147:      else
         -:  148:#if __cplusplus >= 201103L
-        1:  149:	_M_realloc_insert(begin() + (__position - cbegin()), __x);
-        1:  149-block  0
-call    0 returned 1
-call    1 returned 1
-call    2 returned 1
-call    3 returned 1
-call    4 returned 1
-branch  5 taken 1 (fallthrough)
-branch  6 taken 0 (throw)
-        1:  149-block  1
+    #####:  149:	_M_realloc_insert(begin() + (__position - cbegin()), __x);
+    %%%%%:  149-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    %%%%%:  149-block  1
     $$$$$:  149-block  2
         -:  150:#else
         -:  151:	_M_realloc_insert(__position, __x);
@@ -428,8 +428,8 @@ call    0 returned 1
         -:  379:  template<typename _Tp, typename _Alloc>
         -:  380:    template<typename _Arg>
         -:  381:      void
-function _ZNSt6vectorIS_IiSaIiEESaIS1_EE13_M_insert_auxIS1_EEvN9__gnu_cxx17__normal_iteratorIPS1_S3_EEOT_ called 0 returned 0% blocks executed 0%
-    #####:  382:      vector<_Tp, _Alloc>::
+function _ZNSt6vectorIS_IiSaIiEESaIS1_EE13_M_insert_auxIS1_EEvN9__gnu_cxx17__normal_iteratorIPS1_S3_EEOT_ called 1 returned 100% blocks executed 100%
+        1:  382:      vector<_Tp, _Alloc>::
         -:  383:      _M_insert_aux(iterator __position, _Arg&& __arg)
         -:  384:#else
         -:  385:  template<typename _Tp, typename _Alloc>
@@ -439,30 +439,30 @@ function _ZNSt6vectorIS_IiSaIiEESaIS1_EE13_M_insert_auxIS1_EEvN9__gnu_cxx17__nor
         -:  389:#endif
         -:  390:    {
         -:  391:      _GLIBCXX_ASAN_ANNOTATE_GROW(1);
-    #####:  392:      _Alloc_traits::construct(this->_M_impl, this->_M_impl._M_finish,
-call    0 never executed
-    #####:  393:			       _GLIBCXX_MOVE(*(this->_M_impl._M_finish - 1)));
-    %%%%%:  393-block  0
-call    0 never executed
-    #####:  394:      ++this->_M_impl._M_finish;
+        1:  392:      _Alloc_traits::construct(this->_M_impl, this->_M_impl._M_finish,
+call    0 returned 1
+        1:  393:			       _GLIBCXX_MOVE(*(this->_M_impl._M_finish - 1)));
+        1:  393-block  0
+call    0 returned 1
+        1:  394:      ++this->_M_impl._M_finish;
         -:  395:      _GLIBCXX_ASAN_ANNOTATE_GREW(1);
         -:  396:#if __cplusplus < 201103L
         -:  397:      _Tp __x_copy = __x;
         -:  398:#endif
-    #####:  399:      _GLIBCXX_MOVE_BACKWARD3(__position.base(),
-call    0 never executed
-call    1 never executed
+        1:  399:      _GLIBCXX_MOVE_BACKWARD3(__position.base(),
+call    0 returned 1
+call    1 returned 1
         -:  400:			      this->_M_impl._M_finish - 2,
         -:  401:			      this->_M_impl._M_finish - 1);
         -:  402:#if __cplusplus < 201103L
         -:  403:      *__position = __x_copy;
         -:  404:#else
-    #####:  405:      *__position = std::forward<_Arg>(__arg);
-call    0 never executed
-call    1 never executed
-call    2 never executed
+        1:  405:      *__position = std::forward<_Arg>(__arg);
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
         -:  406:#endif
-    #####:  407:    }
+        1:  407:    }
         -:  408:
         -:  409:#if __cplusplus >= 201103L
         -:  410:  template<typename _Tp, typename _Alloc>

@@ -6055,14 +6055,14 @@ branch  2 taken 0 (throw)
         -: 5986:
         -: 5987:  template<typename _CharT, typename _Traits, typename _Alloc>
         -: 5988:    inline basic_string<_CharT, _Traits, _Alloc>
-function _ZStplIcSt11char_traitsIcESaIcEENSt7__cxx1112basic_stringIT_T0_T1_EEOS8_PKS5_ called 144 returned 100% blocks executed 100%
-      144: 5989:    operator+(basic_string<_CharT, _Traits, _Alloc>&& __lhs,
+function _ZStplIcSt11char_traitsIcESaIcEENSt7__cxx1112basic_stringIT_T0_T1_EEOS8_PKS5_ called 135 returned 100% blocks executed 100%
+      135: 5989:    operator+(basic_string<_CharT, _Traits, _Alloc>&& __lhs,
         -: 5990:	      const _CharT* __rhs)
-      144: 5991:    { return std::move(__lhs.append(__rhs)); }
-      144: 5991-block  0
-call    0 returned 144
-call    1 returned 144
-call    2 returned 144
+      135: 5991:    { return std::move(__lhs.append(__rhs)); }
+      135: 5991-block  0
+call    0 returned 135
+call    1 returned 135
+call    2 returned 135
         -: 5992:
         -: 5993:  template<typename _CharT, typename _Traits, typename _Alloc>
         -: 5994:    inline basic_string<_CharT, _Traits, _Alloc>

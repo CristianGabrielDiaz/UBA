@@ -458,8 +458,8 @@ function _ZN7testing8internal15TestFactoryBaseD2Ev called 0 returned 0% blocks e
         -:  452:  virtual Test* CreateTest() = 0;
         -:  453:
         -:  454: protected:
-function _ZN7testing8internal15TestFactoryBaseC2Ev called 55 returned 100% blocks executed 100%
-       55:  455:  TestFactoryBase() {}
+function _ZN7testing8internal15TestFactoryBaseC2Ev called 59 returned 100% blocks executed 100%
+       59:  455:  TestFactoryBase() {}
         -:  456:
         -:  457: private:
         -:  458:  GTEST_DISALLOW_COPY_AND_ASSIGN_(TestFactoryBase);
@@ -501,11 +501,11 @@ call    4 never executed
         -:  484:typedef void (*TearDownTestCaseFunc)();
         -:  485:
         -:  486:struct CodeLocation {
-function _ZN7testing8internal12CodeLocationC1ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi called 55 returned 100% blocks executed 100%
-       55:  487:  CodeLocation(const std::string& a_file, int a_line)
-       55:  488:      : file(a_file), line(a_line) {}
-       55:  488-block  0
-call    0 returned 55
+function _ZN7testing8internal12CodeLocationC1ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi called 59 returned 100% blocks executed 100%
+       59:  487:  CodeLocation(const std::string& a_file, int a_line)
+       59:  488:      : file(a_file), line(a_line) {}
+       59:  488-block  0
+call    0 returned 59
         -:  489:
         -:  490:  std::string file;
         -:  491:  int line;

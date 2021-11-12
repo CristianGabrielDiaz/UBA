@@ -106,9 +106,20 @@ void ordenarRegionYCODUSU (eph_h & th, eph_i & ti) {
 
 // Implementacion Problema 8
 vector < hogar > muestraHomogenea( eph_h & th, eph_i & ti ){
-    hogar h = {};
-    vector < hogar > resp = {h};
-
+    vector<pair<int,int>> ingresosDeHogares=ingresoTotalPorHogar( th, ti);
+    ordenarPorIngresos( ingresosDeHogares );
+    vector<pair<int,int>>  ingresosHomogeneos = mesetaDeIngresosMasLarga (ingresosDeHogares);
+    vector < hogar > resp = {};
+    for(int k=0;k<ingresosHomogeneos.size();k++){
+        for(int i=0;i<th.size();i++){
+            if(ingresosHomogeneos[k].first==th[i][HOGCODUSU]){
+                resp.push_back(th[i]);
+            }
+        }
+    }
+    if (resp.size() < 3){
+        resp = {};
+    }
     // TODO
 
     return  resp;

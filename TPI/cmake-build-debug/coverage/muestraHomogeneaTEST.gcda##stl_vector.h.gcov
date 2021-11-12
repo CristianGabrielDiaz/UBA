@@ -97,9 +97,12 @@
         -:   92:	pointer _M_finish;
         -:   93:	pointer _M_end_of_storage;
         -:   94:
-        -:   95:	_Vector_impl()
-        -:   96:	: _Tp_alloc_type(), _M_start(), _M_finish(), _M_end_of_storage()
-        -:   97:	{ }
+function _ZNSt12_Vector_baseISt6vectorIiSaIiEESaIS2_EE12_Vector_implC1Ev called 0 returned 0% blocks executed 0%
+    #####:   95:	_Vector_impl()
+    #####:   96:	: _Tp_alloc_type(), _M_start(), _M_finish(), _M_end_of_storage()
+    %%%%%:   96-block  0
+call    0 never executed
+    #####:   97:	{ }
         -:   98:
     #####:   99:	_Vector_impl(_Tp_alloc_type const& __a) _GLIBCXX_NOEXCEPT
     #####:  100:	: _Tp_alloc_type(__a), _M_start(), _M_finish(), _M_end_of_storage()
@@ -282,8 +285,11 @@ function _ZNKSt12_Vector_baseIiSaIiEE19_M_get_Tp_allocatorEv called 0 returned 0
         -:  245:      get_allocator() const _GLIBCXX_NOEXCEPT
         -:  246:      { return allocator_type(_M_get_Tp_allocator()); }
         -:  247:
-        -:  248:      _Vector_base()
-        -:  249:      : _M_impl() { }
+function _ZNSt12_Vector_baseISt6vectorIiSaIiEESaIS2_EEC2Ev called 0 returned 0% blocks executed 0%
+    #####:  248:      _Vector_base()
+    #####:  249:      : _M_impl() { }
+    %%%%%:  249-block  0
+call    0 never executed
         -:  250:
     #####:  251:      _Vector_base(const allocator_type& __a) _GLIBCXX_NOEXCEPT
     #####:  252:      : _M_impl(__a) { }
@@ -535,11 +541,14 @@ call    0 never executed
         -:  388:      /**
         -:  389:       *  @brief  Creates a %vector with no elements.
         -:  390:       */
-        -:  391:      vector()
+function _ZNSt6vectorIS_IiSaIiEESaIS1_EEC1Ev called 0 returned 0% blocks executed 0%
+    #####:  391:      vector()
         -:  392:#if __cplusplus >= 201103L
         -:  393:      noexcept(is_nothrow_default_constructible<_Alloc>::value)
         -:  394:#endif
-        -:  395:      : _Base() { }
+    #####:  395:      : _Base() { }
+    %%%%%:  395-block  0
+call    0 never executed
         -:  396:
         -:  397:      /**
         -:  398:       *  @brief  Creates a %vector with no elements.

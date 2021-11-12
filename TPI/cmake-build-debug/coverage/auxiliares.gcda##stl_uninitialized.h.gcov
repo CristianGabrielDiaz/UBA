@@ -78,31 +78,49 @@
         -:   73:    {
         -:   74:      template<typename _InputIterator, typename _ForwardIterator>
         -:   75:        static _ForwardIterator
-function _ZNSt20__uninitialized_copyILb0EE13__uninit_copyIN9__gnu_cxx17__normal_iteratorIPKSt6vectorIiSaIiEES4_IS6_SaIS6_EEEEPS6_EET0_T_SE_SD_ called 1842 returned 100% blocks executed 69%
-     1842:   76:        __uninit_copy(_InputIterator __first, _InputIterator __last,
+    2132*:   76:        __uninit_copy(_InputIterator __first, _InputIterator __last,
         -:   77:		      _ForwardIterator __result)
         -:   78:        {
-     1842:   79:	  _ForwardIterator __cur = __result;
-     1842:   79-block  0
+    2132*:   79:	  _ForwardIterator __cur = __result;
         -:   80:	  __try
         -:   81:	    {
-   193276:   82:	      for (; __first != __last; ++__first, (void)++__cur)
-   193276:   82-block  0
-call    0 returned 193276
-branch  1 taken 191434 (fallthrough)
-branch  2 taken 1842
-   191434:   82-block  1
-call    3 returned 191434
-   191434:   83:		std::_Construct(std::__addressof(*__cur), *__first);
-   191434:   83-block  0
-call    0 returned 191434
-call    1 returned 191434
-call    2 returned 191434
-branch  3 taken 191434 (fallthrough)
-branch  4 taken 0 (throw)
-     1842:   84:	      return __cur;
-     1842:   84-block  0
-     1842:   84-block  1
+  195576*:   82:	      for (; __first != __last; ++__first, (void)++__cur)
+  193444*:   83:		std::_Construct(std::__addressof(*__cur), *__first);
+    2132*:   84:	      return __cur;
+        -:   85:	    }
+    =====:   86:	  __catch(...)
+        -:   87:	    {
+    =====:   88:	      std::_Destroy(__result, __cur);
+    =====:   89:	      __throw_exception_again;
+        -:   90:	    }
+        -:   91:	}
+------------------
+_ZNSt20__uninitialized_copyILb0EE13__uninit_copyISt13move_iteratorIPSt4pairIiiEES5_EET0_T_S8_S7_:
+function _ZNSt20__uninitialized_copyILb0EE13__uninit_copyISt13move_iteratorIPSt4pairIiiEES5_EET0_T_S8_S7_ called 32 returned 100% blocks executed 69%
+       32:   76:        __uninit_copy(_InputIterator __first, _InputIterator __last,
+        -:   77:		      _ForwardIterator __result)
+        -:   78:        {
+       32:   79:	  _ForwardIterator __cur = __result;
+       32:   79-block  0
+        -:   80:	  __try
+        -:   81:	    {
+       71:   82:	      for (; __first != __last; ++__first, (void)++__cur)
+       71:   82-block  0
+call    0 returned 71
+branch  1 taken 71 (fallthrough)
+branch  2 taken 0 (throw)
+       71:   82-block  1
+branch  3 taken 39 (fallthrough)
+branch  4 taken 32
+call    5 returned 39
+       39:   83:		std::_Construct(std::__addressof(*__cur), *__first);
+       39:   83-block  0
+call    0 returned 39
+call    1 returned 39
+call    2 returned 39
+       32:   84:	      return __cur;
+       32:   84-block  0
+       32:   84-block  1
         -:   85:	    }
     =====:   86:	  __catch(...)
     $$$$$:   86-block  0
@@ -119,6 +137,134 @@ branch  2 never executed
 call    0 never executed
         -:   90:	    }
         -:   91:	}
+------------------
+_ZNSt20__uninitialized_copyILb0EE13__uninit_copyIN9__gnu_cxx17__normal_iteratorIPKSt4pairIiiESt6vectorIS5_SaIS5_EEEEPS5_EET0_T_SE_SD_:
+function _ZNSt20__uninitialized_copyILb0EE13__uninit_copyIN9__gnu_cxx17__normal_iteratorIPKSt4pairIiiESt6vectorIS5_SaIS5_EEEEPS5_EET0_T_SE_SD_ called 33 returned 100% blocks executed 100%
+       33:   76:        __uninit_copy(_InputIterator __first, _InputIterator __last,
+        -:   77:		      _ForwardIterator __result)
+        -:   78:        {
+       33:   79:	  _ForwardIterator __cur = __result;
+       33:   79-block  0
+        -:   80:	  __try
+        -:   81:	    {
+       83:   82:	      for (; __first != __last; ++__first, (void)++__cur)
+       83:   82-block  0
+call    0 returned 83
+branch  1 taken 50 (fallthrough)
+branch  2 taken 33
+call    3 returned 50
+       50:   83:		std::_Construct(std::__addressof(*__cur), *__first);
+       50:   83-block  0
+call    0 returned 50
+call    1 returned 50
+call    2 returned 50
+       33:   84:	      return __cur;
+       33:   84-block  0
+        -:   85:	    }
+        -:   86:	  __catch(...)
+        -:   87:	    {
+        -:   88:	      std::_Destroy(__result, __cur);
+        -:   89:	      __throw_exception_again;
+        -:   90:	    }
+        -:   91:	}
+------------------
+_ZNSt20__uninitialized_copyILb0EE13__uninit_copyIPKSt4pairIiiEPS3_EET0_T_S8_S7_:
+function _ZNSt20__uninitialized_copyILb0EE13__uninit_copyIPKSt4pairIiiEPS3_EET0_T_S8_S7_ called 106 returned 100% blocks executed 100%
+      106:   76:        __uninit_copy(_InputIterator __first, _InputIterator __last,
+        -:   77:		      _ForwardIterator __result)
+        -:   78:        {
+      106:   79:	  _ForwardIterator __cur = __result;
+      106:   79-block  0
+        -:   80:	  __try
+        -:   81:	    {
+      320:   82:	      for (; __first != __last; ++__first, (void)++__cur)
+      320:   82-block  0
+branch  0 taken 214 (fallthrough)
+branch  1 taken 106
+      214:   83:		std::_Construct(std::__addressof(*__cur), *__first);
+      214:   83-block  0
+call    0 returned 214
+call    1 returned 214
+      106:   84:	      return __cur;
+      106:   84-block  0
+        -:   85:	    }
+        -:   86:	  __catch(...)
+        -:   87:	    {
+        -:   88:	      std::_Destroy(__result, __cur);
+        -:   89:	      __throw_exception_again;
+        -:   90:	    }
+        -:   91:	}
+------------------
+_ZNSt20__uninitialized_copyILb0EE13__uninit_copyIPSt4pairIiiES4_EET0_T_S6_S5_:
+function _ZNSt20__uninitialized_copyILb0EE13__uninit_copyIPSt4pairIiiES4_EET0_T_S6_S5_ called 0 returned 0% blocks executed 0%
+    #####:   76:        __uninit_copy(_InputIterator __first, _InputIterator __last,
+        -:   77:		      _ForwardIterator __result)
+        -:   78:        {
+    #####:   79:	  _ForwardIterator __cur = __result;
+    %%%%%:   79-block  0
+        -:   80:	  __try
+        -:   81:	    {
+    #####:   82:	      for (; __first != __last; ++__first, (void)++__cur)
+    %%%%%:   82-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:   83:		std::_Construct(std::__addressof(*__cur), *__first);
+    %%%%%:   83-block  0
+call    0 never executed
+call    1 never executed
+    #####:   84:	      return __cur;
+    %%%%%:   84-block  0
+        -:   85:	    }
+        -:   86:	  __catch(...)
+        -:   87:	    {
+        -:   88:	      std::_Destroy(__result, __cur);
+        -:   89:	      __throw_exception_again;
+        -:   90:	    }
+        -:   91:	}
+------------------
+_ZNSt20__uninitialized_copyILb0EE13__uninit_copyIN9__gnu_cxx17__normal_iteratorIPKSt6vectorIiSaIiEES4_IS6_SaIS6_EEEEPS6_EET0_T_SE_SD_:
+function _ZNSt20__uninitialized_copyILb0EE13__uninit_copyIN9__gnu_cxx17__normal_iteratorIPKSt6vectorIiSaIiEES4_IS6_SaIS6_EEEEPS6_EET0_T_SE_SD_ called 1961 returned 100% blocks executed 69%
+     1961:   76:        __uninit_copy(_InputIterator __first, _InputIterator __last,
+        -:   77:		      _ForwardIterator __result)
+        -:   78:        {
+     1961:   79:	  _ForwardIterator __cur = __result;
+     1961:   79-block  0
+        -:   80:	  __try
+        -:   81:	    {
+   195102:   82:	      for (; __first != __last; ++__first, (void)++__cur)
+   195102:   82-block  0
+call    0 returned 195102
+branch  1 taken 193141 (fallthrough)
+branch  2 taken 1961
+   193141:   82-block  1
+call    3 returned 193141
+   193141:   83:		std::_Construct(std::__addressof(*__cur), *__first);
+   193141:   83-block  0
+call    0 returned 193141
+call    1 returned 193141
+call    2 returned 193141
+branch  3 taken 193141 (fallthrough)
+branch  4 taken 0 (throw)
+     1961:   84:	      return __cur;
+     1961:   84-block  0
+     1961:   84-block  1
+        -:   85:	    }
+    =====:   86:	  __catch(...)
+    $$$$$:   86-block  0
+call    0 never executed
+    $$$$$:   86-block  1
+call    1 never executed
+        -:   87:	    {
+    =====:   88:	      std::_Destroy(__result, __cur);
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    =====:   89:	      __throw_exception_again;
+    $$$$$:   89-block  0
+call    0 never executed
+        -:   90:	    }
+        -:   91:	}
+------------------
         -:   92:    };
         -:   93:
         -:   94:  template<>
@@ -126,17 +272,17 @@ call    0 never executed
         -:   96:    {
         -:   97:      template<typename _InputIterator, typename _ForwardIterator>
         -:   98:        static _ForwardIterator
-  304019*:   99:        __uninit_copy(_InputIterator __first, _InputIterator __last,
+  305943*:   99:        __uninit_copy(_InputIterator __first, _InputIterator __last,
         -:  100:		      _ForwardIterator __result)
-  304019*:  101:        { return std::copy(__first, __last, __result); }
+  305943*:  101:        { return std::copy(__first, __last, __result); }
 ------------------
 _ZNSt20__uninitialized_copyILb1EE13__uninit_copyISt13move_iteratorIPiES3_EET0_T_S6_S5_:
-function _ZNSt20__uninitialized_copyILb1EE13__uninit_copyISt13move_iteratorIPiES3_EET0_T_S6_S5_ called 100764 returned 100% blocks executed 100%
-   100764:   99:        __uninit_copy(_InputIterator __first, _InputIterator __last,
+function _ZNSt20__uninitialized_copyILb1EE13__uninit_copyISt13move_iteratorIPiES3_EET0_T_S6_S5_ called 100782 returned 100% blocks executed 100%
+   100782:   99:        __uninit_copy(_InputIterator __first, _InputIterator __last,
         -:  100:		      _ForwardIterator __result)
-   100764:  101:        { return std::copy(__first, __last, __result); }
-   100764:  101-block  0
-call    0 returned 100764
+   100782:  101:        { return std::copy(__first, __last, __result); }
+   100782:  101-block  0
+call    0 returned 100782
 ------------------
 _ZNSt20__uninitialized_copyILb1EE13__uninit_copyIPiS2_EET0_T_S4_S3_:
 function _ZNSt20__uninitialized_copyILb1EE13__uninit_copyIPiS2_EET0_T_S4_S3_ called 0 returned 0% blocks executed 0%
@@ -147,12 +293,12 @@ function _ZNSt20__uninitialized_copyILb1EE13__uninit_copyIPiS2_EET0_T_S4_S3_ cal
 call    0 never executed
 ------------------
 _ZNSt20__uninitialized_copyILb1EE13__uninit_copyIN9__gnu_cxx17__normal_iteratorIPKiSt6vectorIiSaIiEEEEPiEET0_T_SC_SB_:
-function _ZNSt20__uninitialized_copyILb1EE13__uninit_copyIN9__gnu_cxx17__normal_iteratorIPKiSt6vectorIiSaIiEEEEPiEET0_T_SC_SB_ called 203255 returned 100% blocks executed 100%
-   203255:   99:        __uninit_copy(_InputIterator __first, _InputIterator __last,
+function _ZNSt20__uninitialized_copyILb1EE13__uninit_copyIN9__gnu_cxx17__normal_iteratorIPKiSt6vectorIiSaIiEEEEPiEET0_T_SC_SB_ called 205161 returned 100% blocks executed 100%
+   205161:   99:        __uninit_copy(_InputIterator __first, _InputIterator __last,
         -:  100:		      _ForwardIterator __result)
-   203255:  101:        { return std::copy(__first, __last, __result); }
-   203255:  101-block  0
-call    0 returned 203255
+   205161:  101:        { return std::copy(__first, __last, __result); }
+   205161:  101-block  0
+call    0 returned 205161
 ------------------
         -:  102:    };
         -:  103:
@@ -167,7 +313,7 @@ call    0 returned 203255
         -:  112:  */
         -:  113:  template<typename _InputIterator, typename _ForwardIterator>
         -:  114:    inline _ForwardIterator
-  305861*:  115:    uninitialized_copy(_InputIterator __first, _InputIterator __last,
+  308075*:  115:    uninitialized_copy(_InputIterator __first, _InputIterator __last,
         -:  116:		       _ForwardIterator __result)
         -:  117:    {
         -:  118:      typedef typename iterator_traits<_InputIterator>::value_type
@@ -180,18 +326,18 @@ call    0 returned 203255
         -:  125:      // trivial types can have deleted assignment
         -:  126:      typedef typename iterator_traits<_InputIterator>::reference _RefType1;
         -:  127:      typedef typename iterator_traits<_ForwardIterator>::reference _RefType2;
-  305861*:  128:      const bool __assignable = is_assignable<_RefType2, _RefType1>::value;
+  308075*:  128:      const bool __assignable = is_assignable<_RefType2, _RefType1>::value;
         -:  129:#endif
         -:  130:
         -:  131:      return std::__uninitialized_copy<__is_trivial(_ValueType1)
         -:  132:				       && __is_trivial(_ValueType2)
         -:  133:				       && __assignable>::
-  305861*:  134:	__uninit_copy(__first, __last, __result);
+  308075*:  134:	__uninit_copy(__first, __last, __result);
         -:  135:    }
 ------------------
 _ZSt18uninitialized_copyISt13move_iteratorIPiES1_ET0_T_S4_S3_:
-function _ZSt18uninitialized_copyISt13move_iteratorIPiES1_ET0_T_S4_S3_ called 100764 returned 100% blocks executed 100%
-   100764:  115:    uninitialized_copy(_InputIterator __first, _InputIterator __last,
+function _ZSt18uninitialized_copyISt13move_iteratorIPiES1_ET0_T_S4_S3_ called 100782 returned 100% blocks executed 100%
+   100782:  115:    uninitialized_copy(_InputIterator __first, _InputIterator __last,
         -:  116:		       _ForwardIterator __result)
         -:  117:    {
         -:  118:      typedef typename iterator_traits<_InputIterator>::value_type
@@ -204,15 +350,119 @@ function _ZSt18uninitialized_copyISt13move_iteratorIPiES1_ET0_T_S4_S3_ called 10
         -:  125:      // trivial types can have deleted assignment
         -:  126:      typedef typename iterator_traits<_InputIterator>::reference _RefType1;
         -:  127:      typedef typename iterator_traits<_ForwardIterator>::reference _RefType2;
-   100764:  128:      const bool __assignable = is_assignable<_RefType2, _RefType1>::value;
+   100782:  128:      const bool __assignable = is_assignable<_RefType2, _RefType1>::value;
         -:  129:#endif
         -:  130:
         -:  131:      return std::__uninitialized_copy<__is_trivial(_ValueType1)
         -:  132:				       && __is_trivial(_ValueType2)
         -:  133:				       && __assignable>::
-   100764:  134:	__uninit_copy(__first, __last, __result);
-   100764:  134-block  0
-call    0 returned 100764
+   100782:  134:	__uninit_copy(__first, __last, __result);
+   100782:  134-block  0
+call    0 returned 100782
+        -:  135:    }
+------------------
+_ZSt18uninitialized_copyISt13move_iteratorIPSt4pairIiiEES3_ET0_T_S6_S5_:
+function _ZSt18uninitialized_copyISt13move_iteratorIPSt4pairIiiEES3_ET0_T_S6_S5_ called 32 returned 100% blocks executed 100%
+       32:  115:    uninitialized_copy(_InputIterator __first, _InputIterator __last,
+        -:  116:		       _ForwardIterator __result)
+        -:  117:    {
+        -:  118:      typedef typename iterator_traits<_InputIterator>::value_type
+        -:  119:	_ValueType1;
+        -:  120:      typedef typename iterator_traits<_ForwardIterator>::value_type
+        -:  121:	_ValueType2;
+        -:  122:#if __cplusplus < 201103L
+        -:  123:      const bool __assignable = true;
+        -:  124:#else
+        -:  125:      // trivial types can have deleted assignment
+        -:  126:      typedef typename iterator_traits<_InputIterator>::reference _RefType1;
+        -:  127:      typedef typename iterator_traits<_ForwardIterator>::reference _RefType2;
+       32:  128:      const bool __assignable = is_assignable<_RefType2, _RefType1>::value;
+        -:  129:#endif
+        -:  130:
+        -:  131:      return std::__uninitialized_copy<__is_trivial(_ValueType1)
+        -:  132:				       && __is_trivial(_ValueType2)
+        -:  133:				       && __assignable>::
+       32:  134:	__uninit_copy(__first, __last, __result);
+       32:  134-block  0
+call    0 returned 32
+        -:  135:    }
+------------------
+_ZSt18uninitialized_copyIN9__gnu_cxx17__normal_iteratorIPKSt4pairIiiESt6vectorIS3_SaIS3_EEEEPS3_ET0_T_SC_SB_:
+function _ZSt18uninitialized_copyIN9__gnu_cxx17__normal_iteratorIPKSt4pairIiiESt6vectorIS3_SaIS3_EEEEPS3_ET0_T_SC_SB_ called 33 returned 100% blocks executed 100%
+       33:  115:    uninitialized_copy(_InputIterator __first, _InputIterator __last,
+        -:  116:		       _ForwardIterator __result)
+        -:  117:    {
+        -:  118:      typedef typename iterator_traits<_InputIterator>::value_type
+        -:  119:	_ValueType1;
+        -:  120:      typedef typename iterator_traits<_ForwardIterator>::value_type
+        -:  121:	_ValueType2;
+        -:  122:#if __cplusplus < 201103L
+        -:  123:      const bool __assignable = true;
+        -:  124:#else
+        -:  125:      // trivial types can have deleted assignment
+        -:  126:      typedef typename iterator_traits<_InputIterator>::reference _RefType1;
+        -:  127:      typedef typename iterator_traits<_ForwardIterator>::reference _RefType2;
+       33:  128:      const bool __assignable = is_assignable<_RefType2, _RefType1>::value;
+        -:  129:#endif
+        -:  130:
+        -:  131:      return std::__uninitialized_copy<__is_trivial(_ValueType1)
+        -:  132:				       && __is_trivial(_ValueType2)
+        -:  133:				       && __assignable>::
+       33:  134:	__uninit_copy(__first, __last, __result);
+       33:  134-block  0
+call    0 returned 33
+        -:  135:    }
+------------------
+_ZSt18uninitialized_copyIPKSt4pairIiiEPS1_ET0_T_S6_S5_:
+function _ZSt18uninitialized_copyIPKSt4pairIiiEPS1_ET0_T_S6_S5_ called 106 returned 100% blocks executed 100%
+      106:  115:    uninitialized_copy(_InputIterator __first, _InputIterator __last,
+        -:  116:		       _ForwardIterator __result)
+        -:  117:    {
+        -:  118:      typedef typename iterator_traits<_InputIterator>::value_type
+        -:  119:	_ValueType1;
+        -:  120:      typedef typename iterator_traits<_ForwardIterator>::value_type
+        -:  121:	_ValueType2;
+        -:  122:#if __cplusplus < 201103L
+        -:  123:      const bool __assignable = true;
+        -:  124:#else
+        -:  125:      // trivial types can have deleted assignment
+        -:  126:      typedef typename iterator_traits<_InputIterator>::reference _RefType1;
+        -:  127:      typedef typename iterator_traits<_ForwardIterator>::reference _RefType2;
+      106:  128:      const bool __assignable = is_assignable<_RefType2, _RefType1>::value;
+        -:  129:#endif
+        -:  130:
+        -:  131:      return std::__uninitialized_copy<__is_trivial(_ValueType1)
+        -:  132:				       && __is_trivial(_ValueType2)
+        -:  133:				       && __assignable>::
+      106:  134:	__uninit_copy(__first, __last, __result);
+      106:  134-block  0
+call    0 returned 106
+        -:  135:    }
+------------------
+_ZSt18uninitialized_copyIPSt4pairIiiES2_ET0_T_S4_S3_:
+function _ZSt18uninitialized_copyIPSt4pairIiiES2_ET0_T_S4_S3_ called 0 returned 0% blocks executed 0%
+    #####:  115:    uninitialized_copy(_InputIterator __first, _InputIterator __last,
+        -:  116:		       _ForwardIterator __result)
+        -:  117:    {
+        -:  118:      typedef typename iterator_traits<_InputIterator>::value_type
+        -:  119:	_ValueType1;
+        -:  120:      typedef typename iterator_traits<_ForwardIterator>::value_type
+        -:  121:	_ValueType2;
+        -:  122:#if __cplusplus < 201103L
+        -:  123:      const bool __assignable = true;
+        -:  124:#else
+        -:  125:      // trivial types can have deleted assignment
+        -:  126:      typedef typename iterator_traits<_InputIterator>::reference _RefType1;
+        -:  127:      typedef typename iterator_traits<_ForwardIterator>::reference _RefType2;
+    #####:  128:      const bool __assignable = is_assignable<_RefType2, _RefType1>::value;
+        -:  129:#endif
+        -:  130:
+        -:  131:      return std::__uninitialized_copy<__is_trivial(_ValueType1)
+        -:  132:				       && __is_trivial(_ValueType2)
+        -:  133:				       && __assignable>::
+    #####:  134:	__uninit_copy(__first, __last, __result);
+    %%%%%:  134-block  0
+call    0 never executed
         -:  135:    }
 ------------------
 _ZSt18uninitialized_copyIPiS0_ET0_T_S2_S1_:
@@ -242,8 +492,8 @@ call    0 never executed
         -:  135:    }
 ------------------
 _ZSt18uninitialized_copyIN9__gnu_cxx17__normal_iteratorIPKiSt6vectorIiSaIiEEEEPiET0_T_SA_S9_:
-function _ZSt18uninitialized_copyIN9__gnu_cxx17__normal_iteratorIPKiSt6vectorIiSaIiEEEEPiET0_T_SA_S9_ called 203255 returned 100% blocks executed 100%
-   203255:  115:    uninitialized_copy(_InputIterator __first, _InputIterator __last,
+function _ZSt18uninitialized_copyIN9__gnu_cxx17__normal_iteratorIPKiSt6vectorIiSaIiEEEEPiET0_T_SA_S9_ called 205161 returned 100% blocks executed 100%
+   205161:  115:    uninitialized_copy(_InputIterator __first, _InputIterator __last,
         -:  116:		       _ForwardIterator __result)
         -:  117:    {
         -:  118:      typedef typename iterator_traits<_InputIterator>::value_type
@@ -256,20 +506,20 @@ function _ZSt18uninitialized_copyIN9__gnu_cxx17__normal_iteratorIPKiSt6vectorIiS
         -:  125:      // trivial types can have deleted assignment
         -:  126:      typedef typename iterator_traits<_InputIterator>::reference _RefType1;
         -:  127:      typedef typename iterator_traits<_ForwardIterator>::reference _RefType2;
-   203255:  128:      const bool __assignable = is_assignable<_RefType2, _RefType1>::value;
+   205161:  128:      const bool __assignable = is_assignable<_RefType2, _RefType1>::value;
         -:  129:#endif
         -:  130:
         -:  131:      return std::__uninitialized_copy<__is_trivial(_ValueType1)
         -:  132:				       && __is_trivial(_ValueType2)
         -:  133:				       && __assignable>::
-   203255:  134:	__uninit_copy(__first, __last, __result);
-   203255:  134-block  0
-call    0 returned 203255
+   205161:  134:	__uninit_copy(__first, __last, __result);
+   205161:  134-block  0
+call    0 returned 205161
         -:  135:    }
 ------------------
 _ZSt18uninitialized_copyIN9__gnu_cxx17__normal_iteratorIPKSt6vectorIiSaIiEES2_IS4_SaIS4_EEEEPS4_ET0_T_SC_SB_:
-function _ZSt18uninitialized_copyIN9__gnu_cxx17__normal_iteratorIPKSt6vectorIiSaIiEES2_IS4_SaIS4_EEEEPS4_ET0_T_SC_SB_ called 1842 returned 100% blocks executed 100%
-     1842:  115:    uninitialized_copy(_InputIterator __first, _InputIterator __last,
+function _ZSt18uninitialized_copyIN9__gnu_cxx17__normal_iteratorIPKSt6vectorIiSaIiEES2_IS4_SaIS4_EEEEPS4_ET0_T_SC_SB_ called 1961 returned 100% blocks executed 100%
+     1961:  115:    uninitialized_copy(_InputIterator __first, _InputIterator __last,
         -:  116:		       _ForwardIterator __result)
         -:  117:    {
         -:  118:      typedef typename iterator_traits<_InputIterator>::value_type
@@ -282,15 +532,15 @@ function _ZSt18uninitialized_copyIN9__gnu_cxx17__normal_iteratorIPKSt6vectorIiSa
         -:  125:      // trivial types can have deleted assignment
         -:  126:      typedef typename iterator_traits<_InputIterator>::reference _RefType1;
         -:  127:      typedef typename iterator_traits<_ForwardIterator>::reference _RefType2;
-     1842:  128:      const bool __assignable = is_assignable<_RefType2, _RefType1>::value;
+     1961:  128:      const bool __assignable = is_assignable<_RefType2, _RefType1>::value;
         -:  129:#endif
         -:  130:
         -:  131:      return std::__uninitialized_copy<__is_trivial(_ValueType1)
         -:  132:				       && __is_trivial(_ValueType2)
         -:  133:				       && __assignable>::
-     1842:  134:	__uninit_copy(__first, __last, __result);
-     1842:  134-block  0
-call    0 returned 1842
+     1961:  134:	__uninit_copy(__first, __last, __result);
+     1961:  134-block  0
+call    0 returned 1961
         -:  135:    }
 ------------------
         -:  136:
@@ -444,17 +694,49 @@ call    0 returned 1842
         -:  284:
         -:  285:  template<typename _InputIterator, typename _ForwardIterator, typename _Tp>
         -:  286:    inline _ForwardIterator
-  305861*:  287:    __uninitialized_copy_a(_InputIterator __first, _InputIterator __last,
+  308075*:  287:    __uninitialized_copy_a(_InputIterator __first, _InputIterator __last,
         -:  288:			   _ForwardIterator __result, allocator<_Tp>&)
-  305861*:  289:    { return std::uninitialized_copy(__first, __last, __result); }
+  308075*:  289:    { return std::uninitialized_copy(__first, __last, __result); }
 ------------------
 _ZSt22__uninitialized_copy_aISt13move_iteratorIPiES1_iET0_T_S4_S3_RSaIT1_E:
-function _ZSt22__uninitialized_copy_aISt13move_iteratorIPiES1_iET0_T_S4_S3_RSaIT1_E called 100764 returned 100% blocks executed 100%
-   100764:  287:    __uninitialized_copy_a(_InputIterator __first, _InputIterator __last,
+function _ZSt22__uninitialized_copy_aISt13move_iteratorIPiES1_iET0_T_S4_S3_RSaIT1_E called 100782 returned 100% blocks executed 100%
+   100782:  287:    __uninitialized_copy_a(_InputIterator __first, _InputIterator __last,
         -:  288:			   _ForwardIterator __result, allocator<_Tp>&)
-   100764:  289:    { return std::uninitialized_copy(__first, __last, __result); }
-   100764:  289-block  0
-call    0 returned 100764
+   100782:  289:    { return std::uninitialized_copy(__first, __last, __result); }
+   100782:  289-block  0
+call    0 returned 100782
+------------------
+_ZSt22__uninitialized_copy_aISt13move_iteratorIPSt4pairIiiEES3_S2_ET0_T_S6_S5_RSaIT1_E:
+function _ZSt22__uninitialized_copy_aISt13move_iteratorIPSt4pairIiiEES3_S2_ET0_T_S6_S5_RSaIT1_E called 32 returned 100% blocks executed 100%
+       32:  287:    __uninitialized_copy_a(_InputIterator __first, _InputIterator __last,
+        -:  288:			   _ForwardIterator __result, allocator<_Tp>&)
+       32:  289:    { return std::uninitialized_copy(__first, __last, __result); }
+       32:  289-block  0
+call    0 returned 32
+------------------
+_ZSt22__uninitialized_copy_aIN9__gnu_cxx17__normal_iteratorIPKSt4pairIiiESt6vectorIS3_SaIS3_EEEEPS3_S3_ET0_T_SC_SB_RSaIT1_E:
+function _ZSt22__uninitialized_copy_aIN9__gnu_cxx17__normal_iteratorIPKSt4pairIiiESt6vectorIS3_SaIS3_EEEEPS3_S3_ET0_T_SC_SB_RSaIT1_E called 33 returned 100% blocks executed 100%
+       33:  287:    __uninitialized_copy_a(_InputIterator __first, _InputIterator __last,
+        -:  288:			   _ForwardIterator __result, allocator<_Tp>&)
+       33:  289:    { return std::uninitialized_copy(__first, __last, __result); }
+       33:  289-block  0
+call    0 returned 33
+------------------
+_ZSt22__uninitialized_copy_aIPKSt4pairIiiEPS1_S1_ET0_T_S6_S5_RSaIT1_E:
+function _ZSt22__uninitialized_copy_aIPKSt4pairIiiEPS1_S1_ET0_T_S6_S5_RSaIT1_E called 106 returned 100% blocks executed 100%
+      106:  287:    __uninitialized_copy_a(_InputIterator __first, _InputIterator __last,
+        -:  288:			   _ForwardIterator __result, allocator<_Tp>&)
+      106:  289:    { return std::uninitialized_copy(__first, __last, __result); }
+      106:  289-block  0
+call    0 returned 106
+------------------
+_ZSt22__uninitialized_copy_aIPSt4pairIiiES2_S1_ET0_T_S4_S3_RSaIT1_E:
+function _ZSt22__uninitialized_copy_aIPSt4pairIiiES2_S1_ET0_T_S4_S3_RSaIT1_E called 0 returned 0% blocks executed 0%
+    #####:  287:    __uninitialized_copy_a(_InputIterator __first, _InputIterator __last,
+        -:  288:			   _ForwardIterator __result, allocator<_Tp>&)
+    #####:  289:    { return std::uninitialized_copy(__first, __last, __result); }
+    %%%%%:  289-block  0
+call    0 never executed
 ------------------
 _ZSt22__uninitialized_copy_aIPiS0_iET0_T_S2_S1_RSaIT1_E:
 function _ZSt22__uninitialized_copy_aIPiS0_iET0_T_S2_S1_RSaIT1_E called 0 returned 0% blocks executed 0%
@@ -465,20 +747,20 @@ function _ZSt22__uninitialized_copy_aIPiS0_iET0_T_S2_S1_RSaIT1_E called 0 return
 call    0 never executed
 ------------------
 _ZSt22__uninitialized_copy_aIN9__gnu_cxx17__normal_iteratorIPKiSt6vectorIiSaIiEEEEPiiET0_T_SA_S9_RSaIT1_E:
-function _ZSt22__uninitialized_copy_aIN9__gnu_cxx17__normal_iteratorIPKiSt6vectorIiSaIiEEEEPiiET0_T_SA_S9_RSaIT1_E called 203255 returned 100% blocks executed 100%
-   203255:  287:    __uninitialized_copy_a(_InputIterator __first, _InputIterator __last,
+function _ZSt22__uninitialized_copy_aIN9__gnu_cxx17__normal_iteratorIPKiSt6vectorIiSaIiEEEEPiiET0_T_SA_S9_RSaIT1_E called 205161 returned 100% blocks executed 100%
+   205161:  287:    __uninitialized_copy_a(_InputIterator __first, _InputIterator __last,
         -:  288:			   _ForwardIterator __result, allocator<_Tp>&)
-   203255:  289:    { return std::uninitialized_copy(__first, __last, __result); }
-   203255:  289-block  0
-call    0 returned 203255
+   205161:  289:    { return std::uninitialized_copy(__first, __last, __result); }
+   205161:  289-block  0
+call    0 returned 205161
 ------------------
 _ZSt22__uninitialized_copy_aIN9__gnu_cxx17__normal_iteratorIPKSt6vectorIiSaIiEES2_IS4_SaIS4_EEEEPS4_S4_ET0_T_SC_SB_RSaIT1_E:
-function _ZSt22__uninitialized_copy_aIN9__gnu_cxx17__normal_iteratorIPKSt6vectorIiSaIiEES2_IS4_SaIS4_EEEEPS4_S4_ET0_T_SC_SB_RSaIT1_E called 1842 returned 100% blocks executed 100%
-     1842:  287:    __uninitialized_copy_a(_InputIterator __first, _InputIterator __last,
+function _ZSt22__uninitialized_copy_aIN9__gnu_cxx17__normal_iteratorIPKSt6vectorIiSaIiEES2_IS4_SaIS4_EEEEPS4_S4_ET0_T_SC_SB_RSaIT1_E called 1961 returned 100% blocks executed 100%
+     1961:  287:    __uninitialized_copy_a(_InputIterator __first, _InputIterator __last,
         -:  288:			   _ForwardIterator __result, allocator<_Tp>&)
-     1842:  289:    { return std::uninitialized_copy(__first, __last, __result); }
-     1842:  289-block  0
-call    0 returned 1842
+     1961:  289:    { return std::uninitialized_copy(__first, __last, __result); }
+     1961:  289-block  0
+call    0 returned 1961
 ------------------
         -:  290:
         -:  291:  template<typename _InputIterator, typename _ForwardIterator,
@@ -495,19 +777,14 @@ call    0 returned 1842
         -:  302:  template<typename _InputIterator, typename _ForwardIterator,
         -:  303:	   typename _Allocator>
         -:  304:    inline _ForwardIterator
-function _ZSt34__uninitialized_move_if_noexcept_aIPiS0_SaIiEET0_T_S3_S2_RT1_ called 100764 returned 100% blocks executed 100%
-   100764:  305:    __uninitialized_move_if_noexcept_a(_InputIterator __first,
+   100814:  305:    __uninitialized_move_if_noexcept_a(_InputIterator __first,
         -:  306:				       _InputIterator __last,
         -:  307:				       _ForwardIterator __result,
         -:  308:				       _Allocator& __alloc)
         -:  309:    {
         -:  310:      return std::__uninitialized_copy_a
-   100764:  311:	(_GLIBCXX_MAKE_MOVE_IF_NOEXCEPT_ITERATOR(__first),
-   100764:  311-block  0
-call    0 returned 100764
-call    1 returned 100764
-call    2 returned 100764
-   100764:  312:	 _GLIBCXX_MAKE_MOVE_IF_NOEXCEPT_ITERATOR(__last), __result, __alloc);
+   100814:  311:	(_GLIBCXX_MAKE_MOVE_IF_NOEXCEPT_ITERATOR(__first),
+   100814:  312:	 _GLIBCXX_MAKE_MOVE_IF_NOEXCEPT_ITERATOR(__last), __result, __alloc);
         -:  313:    }
         -:  314:
         -:  315:  template<typename _ForwardIterator, typename _Tp, typename _Allocator>

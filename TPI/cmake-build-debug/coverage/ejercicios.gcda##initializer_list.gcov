@@ -73,17 +73,12 @@
         -:   68:
         -:   69:      // Number of elements.
         -:   70:      constexpr size_type
-      934:   71:      size() const noexcept { return _M_len; }
-------------------
-_ZNKSt16initializer_listIiE4sizeEv:
-function _ZNKSt16initializer_listIiE4sizeEv called 814 returned 100% blocks executed 100%
-      814:   71:      size() const noexcept { return _M_len; }
-      814:   71-block  0
+      123:   71:      size() const noexcept { return _M_len; }
 ------------------
 _ZNKSt16initializer_listISt6vectorIiSaIiEEE4sizeEv:
-function _ZNKSt16initializer_listISt6vectorIiSaIiEEE4sizeEv called 114 returned 100% blocks executed 100%
-      114:   71:      size() const noexcept { return _M_len; }
-      114:   71-block  0
+function _ZNKSt16initializer_listISt6vectorIiSaIiEEE4sizeEv called 117 returned 100% blocks executed 100%
+      117:   71:      size() const noexcept { return _M_len; }
+      117:   71-block  0
 ------------------
 _ZNKSt16initializer_listISt4pairIifEE4sizeEv:
 function _ZNKSt16initializer_listISt4pairIifEE4sizeEv called 6 returned 100% blocks executed 100%
@@ -93,17 +88,12 @@ function _ZNKSt16initializer_listISt4pairIifEE4sizeEv called 6 returned 100% blo
         -:   72:
         -:   73:      // First element.
         -:   74:      constexpr const_iterator
-     1868:   75:      begin() const noexcept { return _M_array; }
-------------------
-_ZNKSt16initializer_listIiE5beginEv:
-function _ZNKSt16initializer_listIiE5beginEv called 1628 returned 100% blocks executed 100%
-     1628:   75:      begin() const noexcept { return _M_array; }
-     1628:   75-block  0
+      246:   75:      begin() const noexcept { return _M_array; }
 ------------------
 _ZNKSt16initializer_listISt6vectorIiSaIiEEE5beginEv:
-function _ZNKSt16initializer_listISt6vectorIiSaIiEEE5beginEv called 228 returned 100% blocks executed 100%
-      228:   75:      begin() const noexcept { return _M_array; }
-      228:   75-block  0
+function _ZNKSt16initializer_listISt6vectorIiSaIiEEE5beginEv called 234 returned 100% blocks executed 100%
+      234:   75:      begin() const noexcept { return _M_array; }
+      234:   75-block  0
 ------------------
 _ZNKSt16initializer_listISt4pairIifEE5beginEv:
 function _ZNKSt16initializer_listISt4pairIifEE5beginEv called 12 returned 100% blocks executed 100%
@@ -113,21 +103,14 @@ function _ZNKSt16initializer_listISt4pairIifEE5beginEv called 12 returned 100% b
         -:   76:
         -:   77:      // One past the last element.
         -:   78:      constexpr const_iterator
-      934:   79:      end() const noexcept { return begin() + size(); }
-------------------
-_ZNKSt16initializer_listIiE3endEv:
-function _ZNKSt16initializer_listIiE3endEv called 814 returned 100% blocks executed 100%
-      814:   79:      end() const noexcept { return begin() + size(); }
-      814:   79-block  0
-call    0 returned 814
-call    1 returned 814
+      123:   79:      end() const noexcept { return begin() + size(); }
 ------------------
 _ZNKSt16initializer_listISt6vectorIiSaIiEEE3endEv:
-function _ZNKSt16initializer_listISt6vectorIiSaIiEEE3endEv called 114 returned 100% blocks executed 100%
-      114:   79:      end() const noexcept { return begin() + size(); }
-      114:   79-block  0
-call    0 returned 114
-call    1 returned 114
+function _ZNKSt16initializer_listISt6vectorIiSaIiEEE3endEv called 117 returned 100% blocks executed 100%
+      117:   79:      end() const noexcept { return begin() + size(); }
+      117:   79-block  0
+call    0 returned 117
+call    1 returned 117
 ------------------
 _ZNKSt16initializer_listISt4pairIifEE3endEv:
 function _ZNKSt16initializer_listISt4pairIifEE3endEv called 6 returned 100% blocks executed 100%

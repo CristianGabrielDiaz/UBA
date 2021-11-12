@@ -313,12 +313,12 @@ function _ZNKSt12_Vector_baseISt6vectorIiSaIiEESaIS2_EE19_M_get_Tp_allocatorEv c
 ------------------
         -:  243:
         -:  244:      allocator_type
-function _ZNKSt12_Vector_baseIiSaIiEE13get_allocatorEv called 74 returned 100% blocks executed 100%
-       74:  245:      get_allocator() const _GLIBCXX_NOEXCEPT
-       74:  246:      { return allocator_type(_M_get_Tp_allocator()); }
-       74:  246-block  0
-call    0 returned 74
-call    1 returned 74
+function _ZNKSt12_Vector_baseIiSaIiEE13get_allocatorEv called 0 returned 0% blocks executed 0%
+    #####:  245:      get_allocator() const _GLIBCXX_NOEXCEPT
+    #####:  246:      { return allocator_type(_M_get_Tp_allocator()); }
+    %%%%%:  246-block  0
+call    0 never executed
+call    1 never executed
         -:  247:
         -:  248:      _Vector_base()
         -:  249:      : _M_impl() { }
@@ -677,11 +677,11 @@ call    0 never executed
         -:  399:       *  @param  __a  An allocator object.
         -:  400:       */
         -:  401:      explicit
-function _ZNSt6vectorIiSaIiEEC1ERKS0_ called 74 returned 100% blocks executed 100%
-       74:  402:      vector(const allocator_type& __a) _GLIBCXX_NOEXCEPT
-       74:  403:      : _Base(__a) { }
-       74:  403-block  0
-call    0 returned 74
+function _ZNSt6vectorIiSaIiEEC1ERKS0_ called 0 returned 0% blocks executed 0%
+    #####:  402:      vector(const allocator_type& __a) _GLIBCXX_NOEXCEPT
+    #####:  403:      : _Base(__a) { }
+    %%%%%:  403-block  0
+call    0 never executed
         -:  404:
         -:  405:#if __cplusplus >= 201103L
         -:  406:      /**
@@ -1051,17 +1051,17 @@ call    0 never executed
         -:  593:       *  Whether the allocator is moved depends on the allocator traits.
         -:  594:       */
         -:  595:      vector&
-function _ZNSt6vectorIiSaIiEEaSEOS1_ called 74 returned 100% blocks executed 100%
-       74:  596:      operator=(vector&& __x) noexcept(_Alloc_traits::_S_nothrow_move())
+function _ZNSt6vectorIiSaIiEEaSEOS1_ called 0 returned 0% blocks executed 0%
+    #####:  596:      operator=(vector&& __x) noexcept(_Alloc_traits::_S_nothrow_move())
         -:  597:      {
-       74:  598:	constexpr bool __move_storage =
+    #####:  598:	constexpr bool __move_storage =
         -:  599:	  _Alloc_traits::_S_propagate_on_move_assign()
         -:  600:	  || _Alloc_traits::_S_always_equal();
-       74:  601:	_M_move_assign(std::move(__x), __bool_constant<__move_storage>());
-       74:  601-block  0
-call    0 returned 74
-call    1 returned 74
-       74:  602:	return *this;
+    #####:  601:	_M_move_assign(std::move(__x), __bool_constant<__move_storage>());
+    %%%%%:  601-block  0
+call    0 never executed
+call    1 never executed
+    #####:  602:	return *this;
         -:  603:      }
         -:  604:
         -:  605:      /**
@@ -2264,23 +2264,23 @@ call    0 never executed
         -: 1669:      // moved, either because the source's allocator will move too
         -: 1670:      // or because the allocators are equal.
         -: 1671:      void
-function _ZNSt6vectorIiSaIiEE14_M_move_assignEOS1_St17integral_constantIbLb1EE called 74 returned 100% blocks executed 100%
-       74: 1672:      _M_move_assign(vector&& __x, std::true_type) noexcept
+function _ZNSt6vectorIiSaIiEE14_M_move_assignEOS1_St17integral_constantIbLb1EE called 0 returned 0% blocks executed 0%
+    #####: 1672:      _M_move_assign(vector&& __x, std::true_type) noexcept
         -: 1673:      {
-      148: 1674:	vector __tmp(get_allocator());
-       74: 1674-block  0
-call    0 returned 74
-call    1 returned 74
-call    2 returned 74
-       74: 1675:	this->_M_impl._M_swap_data(__tmp._M_impl);
-call    0 returned 74
-       74: 1676:	this->_M_impl._M_swap_data(__x._M_impl);
-call    0 returned 74
-       74: 1677:	std::__alloc_on_move(_M_get_Tp_allocator(), __x._M_get_Tp_allocator());
-call    0 returned 74
-call    1 returned 74
-call    2 returned 74
-       74: 1678:      }
+    #####: 1674:	vector __tmp(get_allocator());
+    %%%%%: 1674-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+    #####: 1675:	this->_M_impl._M_swap_data(__tmp._M_impl);
+call    0 never executed
+    #####: 1676:	this->_M_impl._M_swap_data(__x._M_impl);
+call    0 never executed
+    #####: 1677:	std::__alloc_on_move(_M_get_Tp_allocator(), __x._M_get_Tp_allocator());
+call    0 never executed
+call    1 never executed
+call    2 never executed
+    #####: 1678:      }
         -: 1679:
         -: 1680:      // Do move assignment when it might not be possible to move source
         -: 1681:      // object's memory, resulting in a linear-time operation.

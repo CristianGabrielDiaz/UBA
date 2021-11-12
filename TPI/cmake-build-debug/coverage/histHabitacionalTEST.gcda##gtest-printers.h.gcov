@@ -316,11 +316,11 @@ call    0 never executed
         -:  308:template <typename ToPrint, typename OtherOperand>
         -:  309:class FormatForComparison {
         -:  310: public:
-function _ZN7testing8internal19FormatForComparisonISt6vectorIiSaIiEES4_E6FormatB5cxx11ERKS4_ called 8 returned 100% blocks executed 100%
-        8:  311:  static ::std::string Format(const ToPrint& value) {
-        8:  312:    return ::testing::PrintToString(value);
-        8:  312-block  0
-call    0 returned 8
+function _ZN7testing8internal19FormatForComparisonISt6vectorIiSaIiEES4_E6FormatB5cxx11ERKS4_ called 0 returned 0% blocks executed 0%
+    #####:  311:  static ::std::string Format(const ToPrint& value) {
+    #####:  312:    return ::testing::PrintToString(value);
+    %%%%%:  312-block  0
+call    0 never executed
         -:  313:  }
         -:  314:};
         -:  315:
@@ -393,12 +393,12 @@ call    0 returned 8
         -:  382://
         -:  383:// INTERNAL IMPLEMENTATION - DO NOT USE IN A USER PROGRAM.
         -:  384:template <typename T1, typename T2>
-function _ZN7testing8internal33FormatForComparisonFailureMessageISt6vectorIiSaIiEES4_EENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKT_RKT0_ called 8 returned 100% blocks executed 100%
-        8:  385:std::string FormatForComparisonFailureMessage(
+function _ZN7testing8internal33FormatForComparisonFailureMessageISt6vectorIiSaIiEES4_EENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKT_RKT0_ called 0 returned 0% blocks executed 0%
+    #####:  385:std::string FormatForComparisonFailureMessage(
         -:  386:    const T1& value, const T2& /* other_operand */) {
-        8:  387:  return FormatForComparison<T1, T2>::Format(value);
-        8:  387-block  0
-call    0 returned 8
+    #####:  387:  return FormatForComparison<T1, T2>::Format(value);
+    %%%%%:  387-block  0
+call    0 never executed
         -:  388:}
         -:  389:
         -:  390:// UniversalPrinter<T>::Print(value, ostream_ptr) prints the given
@@ -1036,12 +1036,12 @@ call    0 never executed
         -:  855:template <typename T>
         -:  856:class UniversalTersePrinter {
         -:  857: public:
-function _ZN7testing8internal21UniversalTersePrinterISt6vectorIiSaIiEEE5PrintERKS4_PSo called 8 returned 100% blocks executed 100%
-        8:  858:  static void Print(const T& value, ::std::ostream* os) {
-        8:  859:    UniversalPrint(value, os);
-        8:  859-block  0
-call    0 returned 8
-        8:  860:  }
+function _ZN7testing8internal21UniversalTersePrinterISt6vectorIiSaIiEEE5PrintERKS4_PSo called 0 returned 0% blocks executed 0%
+    #####:  858:  static void Print(const T& value, ::std::ostream* os) {
+    #####:  859:    UniversalPrint(value, os);
+    %%%%%:  859-block  0
+call    0 never executed
+    #####:  860:  }
         -:  861:};
         -:  862:template <typename T>
         -:  863:class UniversalTersePrinter<T&> {
@@ -1269,30 +1269,30 @@ call    0 never executed
         -: 1062:#endif
         -: 1063:
         -: 1064:template <typename T>
-function _ZN7testing13PrintToStringISt6vectorIiSaIiEEEENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKT_ called 8 returned 100% blocks executed 82%
-        8: 1065:::std::string PrintToString(const T& value) {
-       16: 1066:  ::std::stringstream ss;
-        8: 1066-block  0
-call    0 returned 8
-call    1 returned 8
-branch  2 taken 8 (fallthrough)
-branch  3 taken 0 (throw)
-        8: 1066-block  1
-call    4 returned 8
+function _ZN7testing13PrintToStringISt6vectorIiSaIiEEEENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKT_ called 0 returned 0% blocks executed 0%
+    #####: 1065:::std::string PrintToString(const T& value) {
+    #####: 1066:  ::std::stringstream ss;
+    %%%%%: 1066-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%: 1066-block  1
+call    4 never executed
     $$$$$: 1066-block  2
 call    5 never executed
-        8: 1067:  internal::UniversalTersePrinter<T>::Print(value, &ss);
-        8: 1067-block  0
-call    0 returned 8
-branch  1 taken 8 (fallthrough)
-branch  2 taken 0 (throw)
-       16: 1068:  return ss.str();
-        8: 1068-block  0
-call    0 returned 8
-branch  1 taken 8 (fallthrough)
-branch  2 taken 0 (throw)
-        8: 1068-block  1
-        8: 1068-block  2
+    #####: 1067:  internal::UniversalTersePrinter<T>::Print(value, &ss);
+    %%%%%: 1067-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####: 1068:  return ss.str();
+    %%%%%: 1068-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%: 1068-block  1
+    %%%%%: 1068-block  2
         -: 1069:}
         -: 1070:
         -: 1071:}  // namespace testing

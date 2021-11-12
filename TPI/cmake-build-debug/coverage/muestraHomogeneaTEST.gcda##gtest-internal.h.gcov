@@ -470,7 +470,7 @@ function _ZN7testing8internal15TestFactoryBaseC2Ev called 0 returned 0% blocks e
         -:  463:template <class TestClass>
         -:  464:class TestFactoryImpl : public TestFactoryBase {
         -:  465: public:
-        2:  466:  virtual Test* CreateTest() { return new TestClass; }
+        3:  466:  virtual Test* CreateTest() { return new TestClass; }
 ------------------
 _ZN7testing8internal15TestFactoryImplI40muestraHomogeneaTEST_unaSolucionDe4_TestE10CreateTestEv:
 function _ZN7testing8internal15TestFactoryImplI40muestraHomogeneaTEST_unaSolucionDe4_TestE10CreateTestEv called 1 returned 100% blocks executed 83%
@@ -487,6 +487,19 @@ call    4 never executed
 ------------------
 _ZN7testing8internal15TestFactoryImplI42muestraHomogeneaTEST_dosSolucionesDe3_TestE10CreateTestEv:
 function _ZN7testing8internal15TestFactoryImplI42muestraHomogeneaTEST_dosSolucionesDe3_TestE10CreateTestEv called 1 returned 100% blocks executed 83%
+        1:  466:  virtual Test* CreateTest() { return new TestClass; }
+        1:  466-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  466-block  1
+        1:  466-block  2
+    $$$$$:  466-block  3
+call    4 never executed
+------------------
+_ZN7testing8internal15TestFactoryImplI40muestraHomogeneaTEST_unaSolucionDe0_TestE10CreateTestEv:
+function _ZN7testing8internal15TestFactoryImplI40muestraHomogeneaTEST_unaSolucionDe0_TestE10CreateTestEv called 1 returned 100% blocks executed 83%
         1:  466:  virtual Test* CreateTest() { return new TestClass; }
         1:  466-block  0
 call    0 returned 1

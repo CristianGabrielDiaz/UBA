@@ -1435,14 +1435,14 @@ function _ZN7testing4Test5SetupEv called 0 returned 0% blocks executed 0%
         -: 1411:// frame size of CmpHelperEQ. This helps reduce the overhead of some sanitizers
         -: 1412:// when calling EXPECT_* in a tight loop.
         -: 1413:template <typename T1, typename T2>
-       3*: 1414:AssertionResult CmpHelperEQFailure(const char* lhs_expression,
+    #####: 1414:AssertionResult CmpHelperEQFailure(const char* lhs_expression,
         -: 1415:                                   const char* rhs_expression,
         -: 1416:                                   const T1& lhs, const T2& rhs) {
         -: 1417:  return EqFailure(lhs_expression,
         -: 1418:                   rhs_expression,
         -: 1419:                   FormatForComparisonFailureMessage(lhs, rhs),
         -: 1420:                   FormatForComparisonFailureMessage(rhs, lhs),
-       3*: 1421:                   false);
+    #####: 1421:                   false);
         -: 1422:}
 ------------------
 _ZN7testing8internal18CmpHelperEQFailureISt6vectorIS2_IiSaIiEESaIS4_EES6_EENS_15AssertionResultEPKcS9_RKT_RKT0_:
@@ -1506,28 +1506,28 @@ call   10 never executed
         -: 1422:}
 ------------------
 _ZN7testing8internal18CmpHelperEQFailureIiyEENS_15AssertionResultEPKcS4_RKT_RKT0_:
-function _ZN7testing8internal18CmpHelperEQFailureIiyEENS_15AssertionResultEPKcS4_RKT_RKT0_ called 3 returned 100% blocks executed 62%
-        3: 1414:AssertionResult CmpHelperEQFailure(const char* lhs_expression,
+function _ZN7testing8internal18CmpHelperEQFailureIiyEENS_15AssertionResultEPKcS4_RKT_RKT0_ called 0 returned 0% blocks executed 0%
+    #####: 1414:AssertionResult CmpHelperEQFailure(const char* lhs_expression,
         -: 1415:                                   const char* rhs_expression,
         -: 1416:                                   const T1& lhs, const T2& rhs) {
         -: 1417:  return EqFailure(lhs_expression,
         -: 1418:                   rhs_expression,
         -: 1419:                   FormatForComparisonFailureMessage(lhs, rhs),
         -: 1420:                   FormatForComparisonFailureMessage(rhs, lhs),
-        3: 1421:                   false);
-        3: 1421-block  0
-call    0 returned 3
-call    1 returned 3
-branch  2 taken 3 (fallthrough)
-branch  3 taken 0 (throw)
-        3: 1421-block  1
-call    4 returned 3
-branch  5 taken 3 (fallthrough)
-branch  6 taken 0 (throw)
-        3: 1421-block  2
-call    7 returned 3
-call    8 returned 3
-        3: 1421-block  3
+    #####: 1421:                   false);
+    %%%%%: 1421-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%: 1421-block  1
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    %%%%%: 1421-block  2
+call    7 never executed
+call    8 never executed
+    %%%%%: 1421-block  3
     $$$$$: 1421-block  4
 call    9 never executed
     $$$$$: 1421-block  5
@@ -1538,15 +1538,15 @@ call   10 never executed
         -: 1423:
         -: 1424:// The helper function for {ASSERT|EXPECT}_EQ.
         -: 1425:template <typename T1, typename T2>
-       6*: 1426:AssertionResult CmpHelperEQ(const char* lhs_expression,
+      10*: 1426:AssertionResult CmpHelperEQ(const char* lhs_expression,
         -: 1427:                            const char* rhs_expression,
         -: 1428:                            const T1& lhs,
         -: 1429:                            const T2& rhs) {
-       6*: 1430:  if (lhs == rhs) {
-       3*: 1431:    return AssertionSuccess();
+      10*: 1430:  if (lhs == rhs) {
+      10*: 1431:    return AssertionSuccess();
         -: 1432:  }
         -: 1433:
-       3*: 1434:  return CmpHelperEQFailure(lhs_expression, rhs_expression, lhs, rhs);
+    #####: 1434:  return CmpHelperEQFailure(lhs_expression, rhs_expression, lhs, rhs);
         -: 1435:}
 ------------------
 _ZN7testing8internal11CmpHelperEQISt6vectorIS2_IiSaIiEESaIS4_EES6_EENS_15AssertionResultEPKcS9_RKT_RKT0_:
@@ -1592,23 +1592,23 @@ call    0 never executed
         -: 1435:}
 ------------------
 _ZN7testing8internal11CmpHelperEQIiyEENS_15AssertionResultEPKcS4_RKT_RKT0_:
-function _ZN7testing8internal11CmpHelperEQIiyEENS_15AssertionResultEPKcS4_RKT_RKT0_ called 6 returned 100% blocks executed 100%
-        6: 1426:AssertionResult CmpHelperEQ(const char* lhs_expression,
+function _ZN7testing8internal11CmpHelperEQIiyEENS_15AssertionResultEPKcS4_RKT_RKT0_ called 10 returned 100% blocks executed 75%
+       10: 1426:AssertionResult CmpHelperEQ(const char* lhs_expression,
         -: 1427:                            const char* rhs_expression,
         -: 1428:                            const T1& lhs,
         -: 1429:                            const T2& rhs) {
-        6: 1430:  if (lhs == rhs) {
-        6: 1430-block  0
-branch  0 taken 3 (fallthrough)
-branch  1 taken 3
-        3: 1431:    return AssertionSuccess();
-        3: 1431-block  0
-call    0 returned 3
+       10: 1430:  if (lhs == rhs) {
+       10: 1430-block  0
+branch  0 taken 10 (fallthrough)
+branch  1 taken 0
+       10: 1431:    return AssertionSuccess();
+       10: 1431-block  0
+call    0 returned 10
         -: 1432:  }
         -: 1433:
-        3: 1434:  return CmpHelperEQFailure(lhs_expression, rhs_expression, lhs, rhs);
-        3: 1434-block  0
-call    0 returned 3
+    #####: 1434:  return CmpHelperEQFailure(lhs_expression, rhs_expression, lhs, rhs);
+    %%%%%: 1434-block  0
+call    0 never executed
         -: 1435:}
 ------------------
         -: 1436:
@@ -1629,11 +1629,11 @@ call    0 returned 3
         -: 1451: public:
         -: 1452:  // This templatized version is for the general case.
         -: 1453:  template <typename T1, typename T2>
-       6*: 1454:  static AssertionResult Compare(const char* lhs_expression,
+      10*: 1454:  static AssertionResult Compare(const char* lhs_expression,
         -: 1455:                                 const char* rhs_expression,
         -: 1456:                                 const T1& lhs,
         -: 1457:                                 const T2& rhs) {
-       6*: 1458:    return CmpHelperEQ(lhs_expression, rhs_expression, lhs, rhs);
+      10*: 1458:    return CmpHelperEQ(lhs_expression, rhs_expression, lhs, rhs);
         -: 1459:  }
         -: 1460:
         -: 1461:  // With this overloaded version, we allow anonymous enums to be used

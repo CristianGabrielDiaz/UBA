@@ -133,68 +133,106 @@
         -:  128:      typedef true_type is_always_equal;
         -:  129:#endif
         -:  130:
-        -:  131:      allocator() throw() { }
+    10202:  131:      allocator() throw() { }
+------------------
+_ZNSaIiEC2Ev:
+function _ZNSaIiEC2Ev called 10090 returned 100% blocks executed 100%
+    10090:  131:      allocator() throw() { }
+    10090:  131-block  0
+call    0 returned 10090
+------------------
+_ZNSaISt4pairIiiEEC1Ev:
+function _ZNSaISt4pairIiiEEC1Ev called 106 returned 100% blocks executed 100%
+      106:  131:      allocator() throw() { }
+      106:  131-block  0
+call    0 returned 106
+------------------
+_ZNSaISt4pairIiiEEC2Ev:
+function _ZNSaISt4pairIiiEEC2Ev called 6 returned 100% blocks executed 100%
+        6:  131:      allocator() throw() { }
+        6:  131-block  0
+call    0 returned 6
+------------------
         -:  132:
-   424817:  133:      allocator(const allocator& __a) throw()
-   424817:  134:      : __allocator_base<_Tp>(__a) { }
+   429096:  133:      allocator(const allocator& __a) throw()
+   429096:  134:      : __allocator_base<_Tp>(__a) { }
+------------------
+_ZNSaISt4pairIiiEEC2ERKS1_:
+function _ZNSaISt4pairIiiEEC2ERKS1_ called 134 returned 100% blocks executed 100%
+      134:  133:      allocator(const allocator& __a) throw()
+      134:  134:      : __allocator_base<_Tp>(__a) { }
+      134:  134-block  0
+call    0 returned 134
 ------------------
 _ZNSaIiEC1ERKS_:
-function _ZNSaIiEC1ERKS_ called 203327 returned 100% blocks executed 100%
-   203327:  133:      allocator(const allocator& __a) throw()
-   203327:  134:      : __allocator_base<_Tp>(__a) { }
-   203327:  134-block  0
-call    0 returned 203327
+function _ZNSaIiEC1ERKS_ called 205242 returned 100% blocks executed 100%
+   205242:  133:      allocator(const allocator& __a) throw()
+   205242:  134:      : __allocator_base<_Tp>(__a) { }
+   205242:  134-block  0
+call    0 returned 205242
 ------------------
 _ZNSaIiEC2ERKS_:
-function _ZNSaIiEC2ERKS_ called 217664 returned 100% blocks executed 100%
-   217664:  133:      allocator(const allocator& __a) throw()
-   217664:  134:      : __allocator_base<_Tp>(__a) { }
-   217664:  134-block  0
-call    0 returned 217664
+function _ZNSaIiEC2ERKS_ called 219642 returned 100% blocks executed 100%
+   219642:  133:      allocator(const allocator& __a) throw()
+   219642:  134:      : __allocator_base<_Tp>(__a) { }
+   219642:  134-block  0
+call    0 returned 219642
 ------------------
 _ZNSaISt6vectorIiSaIiEEEC1ERKS2_:
-function _ZNSaISt6vectorIiSaIiEEEC1ERKS2_ called 1856 returned 100% blocks executed 100%
-     1856:  133:      allocator(const allocator& __a) throw()
-     1856:  134:      : __allocator_base<_Tp>(__a) { }
-     1856:  134-block  0
-call    0 returned 1856
+function _ZNSaISt6vectorIiSaIiEEEC1ERKS2_ called 1981 returned 100% blocks executed 100%
+     1981:  133:      allocator(const allocator& __a) throw()
+     1981:  134:      : __allocator_base<_Tp>(__a) { }
+     1981:  134-block  0
+call    0 returned 1981
 ------------------
 _ZNSaISt6vectorIiSaIiEEEC2ERKS2_:
-function _ZNSaISt6vectorIiSaIiEEEC2ERKS2_ called 1970 returned 100% blocks executed 100%
-     1970:  133:      allocator(const allocator& __a) throw()
-     1970:  134:      : __allocator_base<_Tp>(__a) { }
-     1970:  134-block  0
-call    0 returned 1970
+function _ZNSaISt6vectorIiSaIiEEEC2ERKS2_ called 2097 returned 100% blocks executed 100%
+     2097:  133:      allocator(const allocator& __a) throw()
+     2097:  134:      : __allocator_base<_Tp>(__a) { }
+     2097:  134-block  0
+call    0 returned 2097
 ------------------
         -:  135:
         -:  136:      template<typename _Tp1>
         -:  137:	allocator(const allocator<_Tp1>&) throw() { }
         -:  138:
-   435853:  139:      ~allocator() throw() { }
+   440333:  139:      ~allocator() throw() { }
 ------------------
 _ZNSaIiED1Ev:
-function _ZNSaIiED1Ev called 204141 returned 100% blocks executed 100%
-   204141:  139:      ~allocator() throw() { }
-   204141:  139-block  0
-call    0 returned 204141
+function _ZNSaIiED1Ev called 206105 returned 100% blocks executed 100%
+   206105:  139:      ~allocator() throw() { }
+   206105:  139-block  0
+call    0 returned 206105
 ------------------
 _ZNSaIiED2Ev:
-function _ZNSaIiED2Ev called 227742 returned 100% blocks executed 100%
-   227742:  139:      ~allocator() throw() { }
-   227742:  139-block  0
-call    0 returned 227742
+function _ZNSaIiED2Ev called 229720 returned 100% blocks executed 100%
+   229720:  139:      ~allocator() throw() { }
+   229720:  139-block  0
+call    0 returned 229720
 ------------------
 _ZNSaISt6vectorIiSaIiEEED1Ev:
-function _ZNSaISt6vectorIiSaIiEEED1Ev called 1970 returned 100% blocks executed 100%
-     1970:  139:      ~allocator() throw() { }
-     1970:  139-block  0
-call    0 returned 1970
+function _ZNSaISt6vectorIiSaIiEEED1Ev called 2097 returned 100% blocks executed 100%
+     2097:  139:      ~allocator() throw() { }
+     2097:  139-block  0
+call    0 returned 2097
 ------------------
 _ZNSaISt6vectorIiSaIiEEED2Ev:
-function _ZNSaISt6vectorIiSaIiEEED2Ev called 2000 returned 100% blocks executed 100%
-     2000:  139:      ~allocator() throw() { }
-     2000:  139-block  0
-call    0 returned 2000
+function _ZNSaISt6vectorIiSaIiEEED2Ev called 2137 returned 100% blocks executed 100%
+     2137:  139:      ~allocator() throw() { }
+     2137:  139-block  0
+call    0 returned 2137
+------------------
+_ZNSaISt4pairIiiEED1Ev:
+function _ZNSaISt4pairIiiEED1Ev called 134 returned 100% blocks executed 100%
+      134:  139:      ~allocator() throw() { }
+      134:  139-block  0
+call    0 returned 134
+------------------
+_ZNSaISt4pairIiiEED2Ev:
+function _ZNSaISt4pairIiiEED2Ev called 140 returned 100% blocks executed 100%
+      140:  139:      ~allocator() throw() { }
+      140:  139-block  0
+call    0 returned 140
 ------------------
         -:  140:
         -:  141:      // Inherit everything else.
@@ -220,11 +258,24 @@ call    0 returned 2000
         -:  161:
         -:  162:  template<typename _Tp>
         -:  163:    inline bool
+    #####:  164:    operator!=(const allocator<_Tp>&, const allocator<_Tp>&)
+        -:  165:    _GLIBCXX_USE_NOEXCEPT
+    #####:  166:    { return false; }
+------------------
+_ZStneISt4pairIiiEEbRKSaIT_ES5_:
+function _ZStneISt4pairIiiEEbRKSaIT_ES5_ called 0 returned 0% blocks executed 0%
+    #####:  164:    operator!=(const allocator<_Tp>&, const allocator<_Tp>&)
+        -:  165:    _GLIBCXX_USE_NOEXCEPT
+    #####:  166:    { return false; }
+    %%%%%:  166-block  0
+------------------
+_ZStneIiEbRKSaIT_ES3_:
 function _ZStneIiEbRKSaIT_ES3_ called 0 returned 0% blocks executed 0%
     #####:  164:    operator!=(const allocator<_Tp>&, const allocator<_Tp>&)
         -:  165:    _GLIBCXX_USE_NOEXCEPT
     #####:  166:    { return false; }
     %%%%%:  166-block  0
+------------------
         -:  167:
         -:  168:  // Invalid allocator<cv T> partial specializations.
         -:  169:  // allocator_traits::rebind_alloc can be used to form a valid allocator type.

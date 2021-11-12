@@ -806,14 +806,14 @@ function _ZN9__gnu_cxx17__normal_iteratorIPKSt6vectorIiSaIiEES1_IS3_SaIS3_EEEC1E
         -:  790:
         -:  791:      // Forward iterator requirements
         -:  792:      reference
-     385*:  793:      operator*() const _GLIBCXX_NOEXCEPT
-     385*:  794:      { return *_M_current; }
+    #####:  793:      operator*() const _GLIBCXX_NOEXCEPT
+    #####:  794:      { return *_M_current; }
 ------------------
 _ZNK9__gnu_cxx17__normal_iteratorIPKiSt6vectorIiSaIiEEEdeEv:
-function _ZNK9__gnu_cxx17__normal_iteratorIPKiSt6vectorIiSaIiEEEdeEv called 385 returned 100% blocks executed 100%
-      385:  793:      operator*() const _GLIBCXX_NOEXCEPT
-      385:  794:      { return *_M_current; }
-      385:  794-block  0
+function _ZNK9__gnu_cxx17__normal_iteratorIPKiSt6vectorIiSaIiEEEdeEv called 0 returned 0% blocks executed 0%
+    #####:  793:      operator*() const _GLIBCXX_NOEXCEPT
+    #####:  794:      { return *_M_current; }
+    %%%%%:  794-block  0
 ------------------
 _ZNK9__gnu_cxx17__normal_iteratorIPKSt6vectorIiSaIiEES1_IS3_SaIS3_EEEdeEv:
 function _ZNK9__gnu_cxx17__normal_iteratorIPKSt6vectorIiSaIiEES1_IS3_SaIS3_EEEdeEv called 0 returned 0% blocks executed 0%
@@ -827,19 +827,19 @@ function _ZNK9__gnu_cxx17__normal_iteratorIPKSt6vectorIiSaIiEES1_IS3_SaIS3_EEEde
         -:  798:      { return _M_current; }
         -:  799:
         -:  800:      __normal_iterator&
-     385*:  801:      operator++() _GLIBCXX_NOEXCEPT
+    #####:  801:      operator++() _GLIBCXX_NOEXCEPT
         -:  802:      {
-     385*:  803:	++_M_current;
-     385*:  804:	return *this;
+    #####:  803:	++_M_current;
+    #####:  804:	return *this;
         -:  805:      }
 ------------------
 _ZN9__gnu_cxx17__normal_iteratorIPKiSt6vectorIiSaIiEEEppEv:
-function _ZN9__gnu_cxx17__normal_iteratorIPKiSt6vectorIiSaIiEEEppEv called 385 returned 100% blocks executed 100%
-      385:  801:      operator++() _GLIBCXX_NOEXCEPT
+function _ZN9__gnu_cxx17__normal_iteratorIPKiSt6vectorIiSaIiEEEppEv called 0 returned 0% blocks executed 0%
+    #####:  801:      operator++() _GLIBCXX_NOEXCEPT
         -:  802:      {
-      385:  803:	++_M_current;
-      385:  804:	return *this;
-      385:  804-block  0
+    #####:  803:	++_M_current;
+    #####:  804:	return *this;
+    %%%%%:  804-block  0
         -:  805:      }
 ------------------
 _ZN9__gnu_cxx17__normal_iteratorIPKSt6vectorIiSaIiEES1_IS3_SaIS3_EEEppEv:
@@ -939,20 +939,20 @@ function _ZNK9__gnu_cxx17__normal_iteratorIPKSt6vectorIiSaIiEES1_IS3_SaIS3_EEE4b
         -:  878:
         -:  879:  template<typename _Iterator, typename _Container>
         -:  880:    inline bool
-     423*:  881:    operator!=(const __normal_iterator<_Iterator, _Container>& __lhs,
+    #####:  881:    operator!=(const __normal_iterator<_Iterator, _Container>& __lhs,
         -:  882:	       const __normal_iterator<_Iterator, _Container>& __rhs)
         -:  883:    _GLIBCXX_NOEXCEPT
-     423*:  884:    { return __lhs.base() != __rhs.base(); }
+    #####:  884:    { return __lhs.base() != __rhs.base(); }
 ------------------
 _ZN9__gnu_cxxneIPKiSt6vectorIiSaIiEEEEbRKNS_17__normal_iteratorIT_T0_EESB_:
-function _ZN9__gnu_cxxneIPKiSt6vectorIiSaIiEEEEbRKNS_17__normal_iteratorIT_T0_EESB_ called 423 returned 100% blocks executed 100%
-      423:  881:    operator!=(const __normal_iterator<_Iterator, _Container>& __lhs,
+function _ZN9__gnu_cxxneIPKiSt6vectorIiSaIiEEEEbRKNS_17__normal_iteratorIT_T0_EESB_ called 0 returned 0% blocks executed 0%
+    #####:  881:    operator!=(const __normal_iterator<_Iterator, _Container>& __lhs,
         -:  882:	       const __normal_iterator<_Iterator, _Container>& __rhs)
         -:  883:    _GLIBCXX_NOEXCEPT
-      423:  884:    { return __lhs.base() != __rhs.base(); }
-      423:  884-block  0
-call    0 returned 423
-call    1 returned 423
+    #####:  884:    { return __lhs.base() != __rhs.base(); }
+    %%%%%:  884-block  0
+call    0 never executed
+call    1 never executed
 ------------------
 _ZN9__gnu_cxxneIPKSt6vectorIiSaIiEES1_IS3_SaIS3_EEEEbRKNS_17__normal_iteratorIT_T0_EESD_:
 function _ZN9__gnu_cxxneIPKSt6vectorIiSaIiEES1_IS3_SaIS3_EEEEbRKNS_17__normal_iteratorIT_T0_EESD_ called 0 returned 0% blocks executed 0%
@@ -1063,8 +1063,8 @@ call    1 never executed
         -:  981:
         -:  982:  template<typename _Iterator, typename _Container>
         -:  983:    _Iterator
-      18*:  984:    __niter_base(__gnu_cxx::__normal_iterator<_Iterator, _Container> __it)
-      18*:  985:    { return __it.base(); }
+      30*:  984:    __niter_base(__gnu_cxx::__normal_iterator<_Iterator, _Container> __it)
+      30*:  985:    { return __it.base(); }
 ------------------
 _ZSt12__niter_baseIPKiSt6vectorIiSaIiEEET_N9__gnu_cxx17__normal_iteratorIS5_T0_EE:
 function _ZSt12__niter_baseIPKiSt6vectorIiSaIiEEET_N9__gnu_cxx17__normal_iteratorIS5_T0_EE called 0 returned 0% blocks executed 0%
@@ -1074,11 +1074,11 @@ function _ZSt12__niter_baseIPKiSt6vectorIiSaIiEEET_N9__gnu_cxx17__normal_iterato
 call    0 never executed
 ------------------
 _ZSt12__niter_baseIPKSt6vectorIiSaIiEES0_IS2_SaIS2_EEET_N9__gnu_cxx17__normal_iteratorIS7_T0_EE:
-function _ZSt12__niter_baseIPKSt6vectorIiSaIiEES0_IS2_SaIS2_EEET_N9__gnu_cxx17__normal_iteratorIS7_T0_EE called 18 returned 100% blocks executed 100%
-       18:  984:    __niter_base(__gnu_cxx::__normal_iterator<_Iterator, _Container> __it)
-       18:  985:    { return __it.base(); }
-       18:  985-block  0
-call    0 returned 18
+function _ZSt12__niter_baseIPKSt6vectorIiSaIiEES0_IS2_SaIS2_EEET_N9__gnu_cxx17__normal_iteratorIS7_T0_EE called 30 returned 100% blocks executed 100%
+       30:  984:    __niter_base(__gnu_cxx::__normal_iterator<_Iterator, _Container> __it)
+       30:  985:    { return __it.base(); }
+       30:  985-block  0
+call    0 returned 30
 ------------------
         -:  986:
         -:  987:#if __cplusplus >= 201103L

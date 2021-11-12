@@ -133,7 +133,7 @@
         -:  128:      typedef true_type is_always_equal;
         -:  129:#endif
         -:  130:
-      30*:  131:      allocator() throw() { }
+    #####:  131:      allocator() throw() { }
 ------------------
 _ZNSaIiEC2Ev:
 function _ZNSaIiEC2Ev called 0 returned 0% blocks executed 0%
@@ -142,10 +142,10 @@ function _ZNSaIiEC2Ev called 0 returned 0% blocks executed 0%
 call    0 never executed
 ------------------
 _ZNSaISt6vectorIiSaIiEEEC2Ev:
-function _ZNSaISt6vectorIiSaIiEEEC2Ev called 30 returned 100% blocks executed 100%
-       30:  131:      allocator() throw() { }
-       30:  131-block  0
-call    0 returned 30
+function _ZNSaISt6vectorIiSaIiEEEC2Ev called 0 returned 0% blocks executed 0%
+    #####:  131:      allocator() throw() { }
+    %%%%%:  131-block  0
+call    0 never executed
 ------------------
         -:  132:
     #####:  133:      allocator(const allocator& __a) throw()

@@ -779,55 +779,55 @@ call    0 never executed
         -:  512:       *  This will call the element type's copy constructor N times
         -:  513:       *  (where N is @a __l.size()) and do no memory reallocation.
         -:  514:       */
-    #####:  515:      vector(initializer_list<value_type> __l,
+      979:  515:      vector(initializer_list<value_type> __l,
         -:  516:	     const allocator_type& __a = allocator_type())
-    #####:  517:      : _Base(__a)
+      979:  517:      : _Base(__a)
         -:  518:      {
-    #####:  519:	_M_range_initialize(__l.begin(), __l.end(),
+      979:  519:	_M_range_initialize(__l.begin(), __l.end(),
         -:  520:			    random_access_iterator_tag());
-    #####:  521:      }
+      979:  521:      }
 ------------------
 _ZNSt6vectorIS_IiSaIiEESaIS1_EEC1ESt16initializer_listIS1_ERKS2_:
-function _ZNSt6vectorIS_IiSaIiEESaIS1_EEC1ESt16initializer_listIS1_ERKS2_ called 0 returned 0% blocks executed 0%
-    #####:  515:      vector(initializer_list<value_type> __l,
+function _ZNSt6vectorIS_IiSaIiEESaIS1_EEC1ESt16initializer_listIS1_ERKS2_ called 116 returned 100% blocks executed 75%
+      116:  515:      vector(initializer_list<value_type> __l,
         -:  516:	     const allocator_type& __a = allocator_type())
-    #####:  517:      : _Base(__a)
-    %%%%%:  517-block  0
-call    0 never executed
+      116:  517:      : _Base(__a)
+      116:  517-block  0
+call    0 returned 116
     $$$$$:  517-block  1
 call    1 never executed
         -:  518:      {
-    #####:  519:	_M_range_initialize(__l.begin(), __l.end(),
-call    0 never executed
-call    1 never executed
-call    2 never executed
-branch  3 never executed
-branch  4 never executed
+      116:  519:	_M_range_initialize(__l.begin(), __l.end(),
+call    0 returned 116
+call    1 returned 116
+call    2 returned 116
+branch  3 taken 116 (fallthrough)
+branch  4 taken 0 (throw)
     $$$$$:  519-block  0
         -:  520:			    random_access_iterator_tag());
-    #####:  521:      }
-    %%%%%:  521-block  0
+      116:  521:      }
+      116:  521-block  0
 ------------------
 _ZNSt6vectorIiSaIiEEC1ESt16initializer_listIiERKS0_:
-function _ZNSt6vectorIiSaIiEEC1ESt16initializer_listIiERKS0_ called 0 returned 0% blocks executed 0%
-    #####:  515:      vector(initializer_list<value_type> __l,
+function _ZNSt6vectorIiSaIiEEC1ESt16initializer_listIiERKS0_ called 863 returned 100% blocks executed 75%
+      863:  515:      vector(initializer_list<value_type> __l,
         -:  516:	     const allocator_type& __a = allocator_type())
-    #####:  517:      : _Base(__a)
-    %%%%%:  517-block  0
-call    0 never executed
+      863:  517:      : _Base(__a)
+      863:  517-block  0
+call    0 returned 863
     $$$$$:  517-block  1
 call    1 never executed
         -:  518:      {
-    #####:  519:	_M_range_initialize(__l.begin(), __l.end(),
-call    0 never executed
-call    1 never executed
-call    2 never executed
-branch  3 never executed
-branch  4 never executed
+      863:  519:	_M_range_initialize(__l.begin(), __l.end(),
+call    0 returned 863
+call    1 returned 863
+call    2 returned 863
+branch  3 taken 863 (fallthrough)
+branch  4 taken 0 (throw)
     $$$$$:  519-block  0
         -:  520:			    random_access_iterator_tag());
-    #####:  521:      }
-    %%%%%:  521-block  0
+      863:  521:      }
+      863:  521-block  0
 ------------------
         -:  522:#endif
         -:  523:
@@ -1834,55 +1834,55 @@ function _ZNKSt6vectorIS_IiSaIiEESaIS1_EE4sizeEv called 0 returned 0% blocks exe
         -: 1454:      // Called by the second initialize_dispatch above
         -: 1455:      template<typename _ForwardIterator>
         -: 1456:	void
-    #####: 1457:	_M_range_initialize(_ForwardIterator __first,
+      979: 1457:	_M_range_initialize(_ForwardIterator __first,
         -: 1458:			    _ForwardIterator __last, std::forward_iterator_tag)
         -: 1459:	{
-    #####: 1460:	  const size_type __n = std::distance(__first, __last);
-    #####: 1461:	  this->_M_impl._M_start = this->_M_allocate(__n);
-    #####: 1462:	  this->_M_impl._M_end_of_storage = this->_M_impl._M_start + __n;
-    #####: 1463:	  this->_M_impl._M_finish =
-    #####: 1464:	    std::__uninitialized_copy_a(__first, __last,
+      979: 1460:	  const size_type __n = std::distance(__first, __last);
+      979: 1461:	  this->_M_impl._M_start = this->_M_allocate(__n);
+      979: 1462:	  this->_M_impl._M_end_of_storage = this->_M_impl._M_start + __n;
+      979: 1463:	  this->_M_impl._M_finish =
+      979: 1464:	    std::__uninitialized_copy_a(__first, __last,
         -: 1465:					this->_M_impl._M_start,
-    #####: 1466:					_M_get_Tp_allocator());
-    #####: 1467:	}
+      979: 1466:					_M_get_Tp_allocator());
+      979: 1467:	}
 ------------------
 _ZNSt6vectorIS_IiSaIiEESaIS1_EE19_M_range_initializeIPKS1_EEvT_S7_St20forward_iterator_tag:
-function _ZNSt6vectorIS_IiSaIiEESaIS1_EE19_M_range_initializeIPKS1_EEvT_S7_St20forward_iterator_tag called 0 returned 0% blocks executed 0%
-    #####: 1457:	_M_range_initialize(_ForwardIterator __first,
+function _ZNSt6vectorIS_IiSaIiEESaIS1_EE19_M_range_initializeIPKS1_EEvT_S7_St20forward_iterator_tag called 116 returned 100% blocks executed 100%
+      116: 1457:	_M_range_initialize(_ForwardIterator __first,
         -: 1458:			    _ForwardIterator __last, std::forward_iterator_tag)
         -: 1459:	{
-    #####: 1460:	  const size_type __n = std::distance(__first, __last);
-    %%%%%: 1460-block  0
-call    0 never executed
-    #####: 1461:	  this->_M_impl._M_start = this->_M_allocate(__n);
-call    0 never executed
-    #####: 1462:	  this->_M_impl._M_end_of_storage = this->_M_impl._M_start + __n;
-    #####: 1463:	  this->_M_impl._M_finish =
-    #####: 1464:	    std::__uninitialized_copy_a(__first, __last,
-call    0 never executed
+      116: 1460:	  const size_type __n = std::distance(__first, __last);
+      116: 1460-block  0
+call    0 returned 116
+      116: 1461:	  this->_M_impl._M_start = this->_M_allocate(__n);
+call    0 returned 116
+      116: 1462:	  this->_M_impl._M_end_of_storage = this->_M_impl._M_start + __n;
+      116: 1463:	  this->_M_impl._M_finish =
+      116: 1464:	    std::__uninitialized_copy_a(__first, __last,
+call    0 returned 116
         -: 1465:					this->_M_impl._M_start,
-    #####: 1466:					_M_get_Tp_allocator());
-call    0 never executed
-    #####: 1467:	}
+      116: 1466:					_M_get_Tp_allocator());
+call    0 returned 116
+      116: 1467:	}
 ------------------
 _ZNSt6vectorIiSaIiEE19_M_range_initializeIPKiEEvT_S5_St20forward_iterator_tag:
-function _ZNSt6vectorIiSaIiEE19_M_range_initializeIPKiEEvT_S5_St20forward_iterator_tag called 0 returned 0% blocks executed 0%
-    #####: 1457:	_M_range_initialize(_ForwardIterator __first,
+function _ZNSt6vectorIiSaIiEE19_M_range_initializeIPKiEEvT_S5_St20forward_iterator_tag called 863 returned 100% blocks executed 100%
+      863: 1457:	_M_range_initialize(_ForwardIterator __first,
         -: 1458:			    _ForwardIterator __last, std::forward_iterator_tag)
         -: 1459:	{
-    #####: 1460:	  const size_type __n = std::distance(__first, __last);
-    %%%%%: 1460-block  0
-call    0 never executed
-    #####: 1461:	  this->_M_impl._M_start = this->_M_allocate(__n);
-call    0 never executed
-    #####: 1462:	  this->_M_impl._M_end_of_storage = this->_M_impl._M_start + __n;
-    #####: 1463:	  this->_M_impl._M_finish =
-    #####: 1464:	    std::__uninitialized_copy_a(__first, __last,
-call    0 never executed
+      863: 1460:	  const size_type __n = std::distance(__first, __last);
+      863: 1460-block  0
+call    0 returned 863
+      863: 1461:	  this->_M_impl._M_start = this->_M_allocate(__n);
+call    0 returned 863
+      863: 1462:	  this->_M_impl._M_end_of_storage = this->_M_impl._M_start + __n;
+      863: 1463:	  this->_M_impl._M_finish =
+      863: 1464:	    std::__uninitialized_copy_a(__first, __last,
+call    0 returned 863
         -: 1465:					this->_M_impl._M_start,
-    #####: 1466:					_M_get_Tp_allocator());
-call    0 never executed
-    #####: 1467:	}
+      863: 1466:					_M_get_Tp_allocator());
+call    0 returned 863
+      863: 1467:	}
 ------------------
         -: 1468:
         -: 1469:      // Called by the first initialize_dispatch above and by the
@@ -2164,50 +2164,50 @@ call    0 never executed
         -: 1745:  */
         -: 1746:  template<typename _Tp, typename _Alloc>
         -: 1747:    inline bool
-       51: 1748:    operator==(const vector<_Tp, _Alloc>& __x, const vector<_Tp, _Alloc>& __y)
-       51: 1749:    { return (__x.size() == __y.size()
-       51: 1750:	      && std::equal(__x.begin(), __x.end(), __y.begin())); }
+       69: 1748:    operator==(const vector<_Tp, _Alloc>& __x, const vector<_Tp, _Alloc>& __y)
+       69: 1749:    { return (__x.size() == __y.size()
+      69*: 1750:	      && std::equal(__x.begin(), __x.end(), __y.begin())); }
 ------------------
 _ZSteqIiSaIiEEbRKSt6vectorIT_T0_ES6_:
-function _ZSteqIiSaIiEEbRKSt6vectorIT_T0_ES6_ called 41 returned 100% blocks executed 100%
-       41: 1748:    operator==(const vector<_Tp, _Alloc>& __x, const vector<_Tp, _Alloc>& __y)
-       41: 1749:    { return (__x.size() == __y.size()
-       41: 1749-block  0
-call    0 returned 41
-call    1 returned 41
-       41: 1750:	      && std::equal(__x.begin(), __x.end(), __y.begin())); }
-branch  0 taken 39 (fallthrough)
-branch  1 taken 2
-       39: 1750-block  0
-call    2 returned 39
-call    3 returned 39
-call    4 returned 39
-call    5 returned 39
-branch  6 taken 36 (fallthrough)
-branch  7 taken 3
-       36: 1750-block  1
-        5: 1750-block  2
-       41: 1750-block  3
+function _ZSteqIiSaIiEEbRKSt6vectorIT_T0_ES6_ called 59 returned 100% blocks executed 92%
+       59: 1748:    operator==(const vector<_Tp, _Alloc>& __x, const vector<_Tp, _Alloc>& __y)
+       59: 1749:    { return (__x.size() == __y.size()
+       59: 1749-block  0
+call    0 returned 59
+call    1 returned 59
+      59*: 1750:	      && std::equal(__x.begin(), __x.end(), __y.begin())); }
+branch  0 taken 59 (fallthrough)
+branch  1 taken 0
+       59: 1750-block  0
+call    2 returned 59
+call    3 returned 59
+call    4 returned 59
+call    5 returned 59
+branch  6 taken 59 (fallthrough)
+branch  7 taken 0
+       59: 1750-block  1
+    %%%%%: 1750-block  2
+       59: 1750-block  3
 ------------------
 _ZSteqISt6vectorIiSaIiEESaIS2_EEbRKS0_IT_T0_ES8_:
-function _ZSteqISt6vectorIiSaIiEESaIS2_EEbRKS0_IT_T0_ES8_ called 10 returned 100% blocks executed 100%
+function _ZSteqISt6vectorIiSaIiEESaIS2_EEbRKS0_IT_T0_ES8_ called 10 returned 100% blocks executed 92%
        10: 1748:    operator==(const vector<_Tp, _Alloc>& __x, const vector<_Tp, _Alloc>& __y)
        10: 1749:    { return (__x.size() == __y.size()
        10: 1749-block  0
 call    0 returned 10
 call    1 returned 10
-       10: 1750:	      && std::equal(__x.begin(), __x.end(), __y.begin())); }
-branch  0 taken 6 (fallthrough)
-branch  1 taken 4
-        6: 1750-block  0
-call    2 returned 6
-call    3 returned 6
-call    4 returned 6
-call    5 returned 6
-branch  6 taken 5 (fallthrough)
-branch  7 taken 1
-        5: 1750-block  1
-        5: 1750-block  2
+      10*: 1750:	      && std::equal(__x.begin(), __x.end(), __y.begin())); }
+branch  0 taken 10 (fallthrough)
+branch  1 taken 0
+       10: 1750-block  0
+call    2 returned 10
+call    3 returned 10
+call    4 returned 10
+call    5 returned 10
+branch  6 taken 10 (fallthrough)
+branch  7 taken 0
+       10: 1750-block  1
+    %%%%%: 1750-block  2
        10: 1750-block  3
 ------------------
         -: 1751:

@@ -133,7 +133,7 @@
         -:  128:      typedef true_type is_always_equal;
         -:  129:#endif
         -:  130:
-       4*:  131:      allocator() throw() { }
+    #####:  131:      allocator() throw() { }
 ------------------
 _ZNSaISt6vectorIiSaIiEEEC1Ev:
 function _ZNSaISt6vectorIiSaIiEEEC1Ev called 0 returned 0% blocks executed 0%
@@ -142,10 +142,10 @@ function _ZNSaISt6vectorIiSaIiEEEC1Ev called 0 returned 0% blocks executed 0%
 call    0 never executed
 ------------------
 _ZNSaISt4pairIiiEEC1Ev:
-function _ZNSaISt4pairIiiEEC1Ev called 4 returned 100% blocks executed 100%
-        4:  131:      allocator() throw() { }
-        4:  131-block  0
-call    0 returned 4
+function _ZNSaISt4pairIiiEEC1Ev called 0 returned 0% blocks executed 0%
+    #####:  131:      allocator() throw() { }
+    %%%%%:  131-block  0
+call    0 never executed
 ------------------
 _ZNSaIiEC1Ev:
 function _ZNSaIiEC1Ev called 0 returned 0% blocks executed 0%
@@ -154,15 +154,15 @@ function _ZNSaIiEC1Ev called 0 returned 0% blocks executed 0%
 call    0 never executed
 ------------------
         -:  132:
-       6*:  133:      allocator(const allocator& __a) throw()
-       6*:  134:      : __allocator_base<_Tp>(__a) { }
+    #####:  133:      allocator(const allocator& __a) throw()
+    #####:  134:      : __allocator_base<_Tp>(__a) { }
 ------------------
 _ZNSaISt4pairIiiEEC2ERKS1_:
-function _ZNSaISt4pairIiiEEC2ERKS1_ called 6 returned 100% blocks executed 100%
-        6:  133:      allocator(const allocator& __a) throw()
-        6:  134:      : __allocator_base<_Tp>(__a) { }
-        6:  134-block  0
-call    0 returned 6
+function _ZNSaISt4pairIiiEEC2ERKS1_ called 0 returned 0% blocks executed 0%
+    #####:  133:      allocator(const allocator& __a) throw()
+    #####:  134:      : __allocator_base<_Tp>(__a) { }
+    %%%%%:  134-block  0
+call    0 never executed
 ------------------
 _ZNSaIiEC1ERKS_:
 function _ZNSaIiEC1ERKS_ called 0 returned 0% blocks executed 0%
@@ -196,7 +196,7 @@ call    0 never executed
         -:  136:      template<typename _Tp1>
         -:  137:	allocator(const allocator<_Tp1>&) throw() { }
         -:  138:
-      12*:  139:      ~allocator() throw() { }
+    #####:  139:      ~allocator() throw() { }
 ------------------
 _ZNSaISt6vectorIiSaIiEEED1Ev:
 function _ZNSaISt6vectorIiSaIiEEED1Ev called 0 returned 0% blocks executed 0%
@@ -211,16 +211,16 @@ function _ZNSaISt6vectorIiSaIiEEED2Ev called 0 returned 0% blocks executed 0%
 call    0 never executed
 ------------------
 _ZNSaISt4pairIiiEED1Ev:
-function _ZNSaISt4pairIiiEED1Ev called 6 returned 100% blocks executed 100%
-        6:  139:      ~allocator() throw() { }
-        6:  139-block  0
-call    0 returned 6
+function _ZNSaISt4pairIiiEED1Ev called 0 returned 0% blocks executed 0%
+    #####:  139:      ~allocator() throw() { }
+    %%%%%:  139-block  0
+call    0 never executed
 ------------------
 _ZNSaISt4pairIiiEED2Ev:
-function _ZNSaISt4pairIiiEED2Ev called 6 returned 100% blocks executed 100%
-        6:  139:      ~allocator() throw() { }
-        6:  139-block  0
-call    0 returned 6
+function _ZNSaISt4pairIiiEED2Ev called 0 returned 0% blocks executed 0%
+    #####:  139:      ~allocator() throw() { }
+    %%%%%:  139-block  0
+call    0 never executed
 ------------------
 _ZNSaIiED1Ev:
 function _ZNSaIiED1Ev called 0 returned 0% blocks executed 0%

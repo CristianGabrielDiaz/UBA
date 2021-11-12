@@ -167,14 +167,33 @@ bool iv2MayorOIgualIi2(eph_h th){
 }
 bool rangosValidos(eph_h th, eph_i ti){
      bool valido=false;
-     if(rangoTrimestre(th,ti) && /*rangoCodusu(th,ti) && */ rangoIv2(th)  &&rangoMiembrosHogar(th,ti)
+     if(rangoTrimestre(th,ti)&& rangoCodusuTi(ti) && rangoCodusuTh(th)  &&  rangoIv2(th)  &&rangoMiembrosHogar(th,ti)
      && rangoCh6(ti) && rangoP47t(ti) && rangoIv1(th) && rangoIi3(th)  && rangoIi7(th) && rangoRegion(th) && rangoMas500(th)
      && rangoCh4(ti) && rangoNivelEd(ti) && rangoEstado(ti) && rangoCatOcup(ti) && rangoPp04g(ti)){
         valido=true;
      }
      return valido;
 }
-//es necesario?
+bool rangoCodusuTh(eph_h th){
+    int i=0,noEnRango=0;
+    while(i<th.size()){
+        if(th[i][HOGCODUSU]<=0){
+            noEnRango ++;
+        }
+        i++;
+    }
+    return noEnRango==0;
+}
+bool rangoCodusuTi( eph_i ti){
+    int j=0,noEnRango=0;
+    while(j<ti.size()){
+        if(ti[j][INDCODUSU]<=0){
+            noEnRango ++;
+        }
+        j++;
+    }
+    return noEnRango==0;
+}
 
 bool rangoTrimestre(eph_h th, eph_i ti){
     int i=0,j=0,noEnRango=0;
@@ -482,38 +501,6 @@ bool tieneCasaChica(hogar th_k, eph_i ti){
 /*####################################################################################################################*/
 //IMPLENTACION PROBLEMA 6
 //IMPLENTACION PROBLEMA 7
-/*
-pair<int,int> findMinPosition(vector<pair<int,int>> &s, int d, int h) {
-    pair<int,int> min = d;
-    for(int i=d+1; i<h; i++) {
-        if (s[i].first < s[min].first) {
-            min = i;
-        }
-    }
-    return s[min];
-}
-void selectionSort(vector<pair<int,int>> &s) {
-    for(int i=0; i<s.size(); i++) {
-        int minPos = findMinPosition(s,i,s.size());
-        swap(s, i, minPos);
-    }
-}
-void swap(vector<pair<int,int>> &s,pair<int,int>& a, pair<int,int>& b){
-
-    a.first=a.first+b.first;
-    b.first=a.first-b.first;
-    a.first=a.first-b.first;
-
-    a.second=a.second+b.second;
-    b.second=a.second-b.second;
-    a.second=a.second-b.second;
-
-
-
-
-}
-*/
-
 void insertionSortRegion (eph_h &th ) {
     for(int i=0; i < th . size () ; i++) {
         insertarRegion (th ,i) ;
@@ -594,6 +581,68 @@ void swap(vector<vector<int>> &matriz, int i, int j) {
 /*####################################################################################################################*/
 
 //IMPLENTACION PROBLEMA 8
+vector<pair<int,int>> ingresoTotalPorHogar(eph_h th,eph_i ti){
+    vector<pair<int,int>> res={};
+    for (int i = 0; i < th.size(); ++i) {
+        int ingresos=0;
+        for (int j = 0; j < ti.size(); ++j) {
+            if (th[i][HOGCODUSU]==ti[j][INDCODUSU]){
+                ingresos += ti[j][p47T];
+            }
+        }
+        res.push_back(make_pair(th[i][HOGCODUSU],ingresos));
+    }
+    return res;
+}
+
+void ordenarPorIngresos( vector<pair<int, int>> &ingresosDeHogares ){//insertionSort
+    for(int i=0; i < ingresosDeHogares.size () ; i++) {
+        insertarPorIngresos (ingresosDeHogares ,i) ;
+    }
+}
+void insertarPorIngresos(vector<pair<int, int>> &ingresosDeHogares, int i) {
+
+    while (i > 0 && ingresosDeHogares[i].second < ingresosDeHogares [i -1].second) {
+        swapDupla(ingresosDeHogares ,i,i -1) ;
+        i--;
+    }
+}
+void swapDupla(vector<pair<int, int>> & ingresosDeHogares, int i, int j) {
+    pair<int, int> k=  ingresosDeHogares [i];
+    ingresosDeHogares[i]=  ingresosDeHogares [j];
+    ingresosDeHogares[j]=k;
+}
+
+
+
+vector<pair<int, int>> mesetaDeIngresosMasLarga(vector<pair<int, int>> &ingresosDeHogares) {
+    vector<pair<int, int>> mesetaMasLarga={};
+      for(int i = 0; i < ingresosDeHogares.size(); i++){
+          for(int j =i+1 ; j<ingresosDeHogares.size() ; j++){
+              vector<pair<int,int>> meseta={ingresosDeHogares[i],ingresosDeHogares[j]};
+              int diferencia= ingresosDeHogares[j].second-ingresosDeHogares[i].second;
+              if(diferencia>0){
+                  int siguienteIngresoDeLaMeseta= ingresosDeHogares[j].second+ diferencia;
+                  for(int k =j+1 ; k<ingresosDeHogares.size() ; k++){
+                      if(siguienteIngresoDeLaMeseta==ingresosDeHogares[k].second){
+                          meseta.push_back(ingresosDeHogares[k]);
+                          siguienteIngresoDeLaMeseta+=diferencia;
+                      }
+                  }
+                  if(meseta.size()>mesetaMasLarga.size()){
+                      mesetaMasLarga=meseta;
+                  }
+
+              }
+
+
+          }
+      }
+      return mesetaMasLarga;
+
+
+}
+
 
 
 //IMPLENTACION PROBLEMA 9

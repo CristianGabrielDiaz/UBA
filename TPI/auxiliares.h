@@ -28,13 +28,14 @@ bool iv2MayorOIgualIi2(eph_h th);
 
 bool rangosValidos(eph_h th, eph_i ti);
 
-bool rangoCodusu(eph_h th, eph_i ti);
+bool rangoCodusuTh(eph_h th);
+
+bool rangoCodusuTi(eph_i ti);
 
 bool rangoTrimestre(eph_h th, eph_h ti);
 
 bool rangoIv2(eph_h th);
 
-bool rangoIi2(eph_h th);
 
 bool rangoMiembrosHogar(eph_h th,eph_i ti);
 

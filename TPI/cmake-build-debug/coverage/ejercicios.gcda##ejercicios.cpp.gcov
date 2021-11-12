@@ -9,24 +9,24 @@
         -:    4:
         -:    5:using namespace std;
         -:    6:// Implementacion Problema 1
-function _Z16esEncuestaValidaSt6vectorIS_IiSaIiEESaIS1_EES3_ called 38 returned 100% blocks executed 67%
-       38:    7:bool esEncuestaValida ( eph_h th, eph_i ti ) {
-       38:    8:	bool resp = false;
-       38:    9:    if( esValida(th,ti) ){
-       38:    9-block  0
-call    0 returned 38
-call    1 returned 38
-branch  2 taken 38 (fallthrough)
+function _Z16esEncuestaValidaSt6vectorIS_IiSaIiEESaIS1_EES3_ called 40 returned 100% blocks executed 67%
+       40:    7:bool esEncuestaValida ( eph_h th, eph_i ti ) {
+       40:    8:	bool resp = false;
+       40:    9:    if( esValida(th,ti) ){
+       40:    9-block  0
+call    0 returned 40
+call    1 returned 40
+branch  2 taken 40 (fallthrough)
 branch  3 taken 0 (throw)
-       38:    9-block  1
-call    4 returned 38
-branch  5 taken 38 (fallthrough)
+       40:    9-block  1
+call    4 returned 40
+branch  5 taken 40 (fallthrough)
 branch  6 taken 0 (throw)
-       38:    9-block  2
-call    7 returned 38
-call    8 returned 38
+       40:    9-block  2
+call    7 returned 40
+call    8 returned 40
 branch  9 taken 11 (fallthrough)
-branch 10 taken 27
+branch 10 taken 29
     $$$$$:    9-block  3
 call   11 never executed
     $$$$$:    9-block  4
@@ -36,9 +36,9 @@ call   12 never executed
        11:   10-block  0
         -:   11:    }
         -:   12:	// TODO
-       38:   13:	return resp;
-       38:   13-block  0
-       38:   13-block  1
+       40:   13:	return resp;
+       40:   13-block  0
+       40:   13-block  1
         -:   14:}
         -:   15:
         -:   16:// Implementacion Problema 2
@@ -372,119 +372,354 @@ call    0 returned 2
         -:  105:}
         -:  106:
         -:  107:// Implementacion Problema 8
-function _Z16muestraHomogeneaRSt6vectorIS_IiSaIiEESaIS1_EES4_ called 2 returned 100% blocks executed 57%
-        2:  108:vector < hogar > muestraHomogenea( eph_h & th, eph_i & ti ){
-        4:  109:    hogar h = {};
-        2:  109-block  0
-call    0 returned 2
-        2:  109-block  1
-call    1 returned 2
-    $$$$$:  109-block  2
-call    2 never executed
-        6:  110:    vector < hogar > resp = {h};
-call    0 returned 2
-branch  1 taken 2 (fallthrough)
+function _Z16muestraHomogeneaRSt6vectorIS_IiSaIiEESaIS1_EES4_ called 3 returned 100% blocks executed 66%
+        3:  108:vector < hogar > muestraHomogenea( eph_h & th, eph_i & ti ){
+        9:  109:    vector<pair<int,int>> ingresosDeHogares=ingresoTotalPorHogar( th, ti);
+        3:  109-block  0
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
 branch  2 taken 0 (throw)
-        2:  110-block  0
-call    3 returned 2
-call    4 returned 2
-branch  5 taken 2 (fallthrough)
-branch  6 taken 0 (throw)
-        2:  110-block  1
-call    7 returned 2
-    $$$$$:  110-block  2
-    $$$$$:  110-block  3
+        3:  109-block  1
+call    3 returned 3
+branch  4 taken 3 (fallthrough)
+branch  5 taken 0 (throw)
+        3:  109-block  2
+call    6 returned 3
+branch  7 taken 3 (fallthrough)
+branch  8 taken 0 (throw)
+call    9 returned 3
+call   10 returned 3
+    $$$$$:  109-block  3
+    $$$$$:  109-block  4
+    $$$$$:  109-block  5
+call   11 never executed
+        3:  110:    ordenarPorIngresos( ingresosDeHogares );
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        6:  111:    vector<pair<int,int>>  ingresosHomogeneos = mesetaDeIngresosMasLarga (ingresosDeHogares);
+        3:  111-block  0
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        3:  111-block  1
+call    3 returned 3
+    $$$$$:  111-block  2
+call    4 never executed
+        3:  112:    vector < hogar > resp = {};
+        3:  112-block  0
+call    0 returned 3
+       12:  113:    for(int k=0;k<ingresosHomogeneos.size();k++){
+       12:  113-block  0
+call    0 returned 12
+branch  1 taken 9 (fallthrough)
+branch  2 taken 3
+        9:  113-block  1
+       86:  114:        for(int i=0;i<th.size();i++){
+        9:  114-block  0
+       86:  114-block  1
+call    0 returned 86
+branch  1 taken 77 (fallthrough)
+branch  2 taken 9
+       77:  114-block  2
+       77:  115:            if(ingresosHomogeneos[k].first==th[i][HOGCODUSU]){
+       77:  115-block  0
+call    0 returned 77
+call    1 returned 77
+call    2 returned 77
+branch  3 taken 9 (fallthrough)
+branch  4 taken 68
+        9:  116:                resp.push_back(th[i]);
+        9:  116-block  0
+call    0 returned 9
+call    1 returned 9
+branch  2 taken 9 (fallthrough)
+branch  3 taken 0 (throw)
+        -:  117:            }
+        -:  118:        }
+        -:  119:    }
+        3:  120:    if (resp.size() < 3){
+        3:  120-block  0
+call    0 returned 3
+branch  1 taken 1 (fallthrough)
+branch  2 taken 2
+       1*:  121:        resp = {};
+        1:  121-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  121-block  1
+        1:  121-block  2
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:  121-block  3
+call    5 never executed
+        1:  121-block  4
+    $$$$$:  121-block  5
+    $$$$$:  121-block  6
+branch  6 never executed
+branch  7 never executed
+    $$$$$:  121-block  7
 call    8 never executed
-    $$$$$:  110-block  4
-        -:  111:
-        -:  112:    // TODO
-        -:  113:
-        4:  114:    return  resp;
-        2:  114-block  0
-        2:  114-block  1
-        -:  115:}
-        -:  116:
-        -:  117:// Implementacion Problema 9
-function _Z14corregirRegionRSt6vectorIS_IiSaIiEESaIS1_EES3_ called 1 returned 100% blocks executed 100%
-        1:  118:void corregirRegion( eph_h & th, eph_i ti ) {
-        -:  119:	
-        -:  120:	// TODO
-        -:  121:	
-        1:  122:	return;
-        1:  122-block  0
-        -:  123:}
+    $$$$$:  121-block  8
+        -:  122:    }
+        -:  123:    // TODO
         -:  124:
-        -:  125:// Implementacion Problema 10
-function _Z31histogramaDeAnillosConcentricosSt6vectorIS_IiSaIiEESaIS1_EES3_St4pairIiiES1_ called 2 returned 100% blocks executed 100%
-        2:  126:vector < int > histogramaDeAnillosConcentricos( eph_h th, eph_i ti, pair < int, int > centro, vector < int > distancias ){
-        2:  127:	vector < int > resp = {};
-        2:  127-block  0
+        6:  125:    return  resp;
+        3:  125-block  0
+        3:  125-block  1
+        -:  126:}
+        -:  127:
+        -:  128:// Implementacion Problema 9
+function _Z14corregirRegionRSt6vectorIS_IiSaIiEESaIS1_EES3_ called 1 returned 100% blocks executed 100%
+        1:  129:void corregirRegion( eph_h & th, eph_i ti ) {
+        1:  130:	int j=0;
+        1:  130-block  0
+        5:  131:    while(j<th.size()){
+        5:  131-block  0
+call    0 returned 5
+branch  1 taken 4 (fallthrough)
+branch  2 taken 1
+        4:  132:        if(th[j][REGION]==GBA){
+        4:  132-block  0
+call    0 returned 4
+call    1 returned 4
+branch  2 taken 2 (fallthrough)
+branch  3 taken 2
+        2:  133:            th[j][REGION]=PAMPEANA;
+        2:  133-block  0
 call    0 returned 2
-        -:  128:	
-        -:  129:	// TODO
-        -:  130:	
-        2:  131:	return resp;
-        -:  132:}
-        -:  133:
-        -:  134:// Implementacion Problema 11
-function _Z16quitarIndividuosRSt6vectorIS_IiSaIiEESaIS1_EES4_S_ISt4pairIiiESaIS6_EE called 2 returned 100% blocks executed 45%
-        2:  135:pair < eph_h, eph_i > quitarIndividuos(eph_i & ti, eph_h & th, vector < pair < int, dato > >  busqueda ){
-       10:  136:    eph_h rth = {{-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1}};
-        2:  136-block  0
+call    1 returned 2
+        -:  134:        }
+        4:  135:        j++;
+        4:  135-block  0
+        -:  136:    }
+        -:  137:	// TODO
+        -:  138:	
+        1:  139:	return;
+        1:  139-block  0
+        -:  140:}
+        -:  141:
+        -:  142:// Implementacion Problema 10
+function _Z16quitarIndividuosRSt6vectorIS_IiSaIiEESaIS1_EES4_S_ISt4pairIiiESaIS6_EE called 3 returned 100% blocks executed 82%
+        3:  143:pair < eph_h, eph_i > quitarIndividuos(eph_i & ti, eph_h & th, vector<pair<int,dato>>  busqueda ) {
+        6:  144:    eph_h rth = {};
+        3:  144-block  0
+call    0 returned 3
+call    1 returned 3
+    $$$$$:  144-block  1
+call    2 never executed
+        6:  145:    eph_i rti = {};
+call    0 returned 3
+call    1 returned 3
+    $$$$$:  145-block  0
+call    2 never executed
+        3:  146:    pair<eph_h, eph_i> resp = make_pair(rth, rti);
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        3:  147:    int swapsti = 0, swapsth = 0;
+        6:  148:    eph_h th0 = th;
+        3:  148-block  0
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 returned 3
+    $$$$$:  148-block  1
+call    4 never executed
+        6:  149:    eph_i ti0 = ti;
+        3:  149-block  0
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        3:  149-block  1
+call    3 returned 3
+    $$$$$:  149-block  2
+call    4 never executed
+       28:  150:    for (int i = 0; i < ti0.size(); i++) {
+        3:  150-block  0
+       28:  150-block  1
+call    0 returned 28
+branch  1 taken 25 (fallthrough)
+branch  2 taken 3
+       25:  150-block  2
+       25:  151:        if (individuoBuscado(ti[0], busqueda)) {
+       25:  151-block  0
+call    0 returned 25
+branch  1 taken 25 (fallthrough)
+branch  2 taken 0 (throw)
+       25:  151-block  1
+call    3 returned 25
+call    4 returned 25
+branch  5 taken 25 (fallthrough)
+branch  6 taken 0 (throw)
+       25:  151-block  2
+call    7 returned 25
+branch  8 taken 25 (fallthrough)
+branch  9 taken 0 (throw)
+       25:  151-block  3
+call   10 returned 25
+call   11 returned 25
+branch 12 taken 13 (fallthrough)
+branch 13 taken 12
+    $$$$$:  151-block  4
+call   14 never executed
+    $$$$$:  151-block  5
+    $$$$$:  151-block  6
+call   15 never executed
+    $$$$$:  151-block  7
+       13:  152:            rti.push_back(ti[0]);
+       13:  152-block  0
+call    0 returned 13
+call    1 returned 13
+branch  2 taken 13 (fallthrough)
+branch  3 taken 0 (throw)
+       13:  153:            swap(ti, 0, ti.size() - 1);   //- swapsti
+       13:  153-block  0
+call    0 returned 13
+call    1 returned 13
+branch  2 taken 13 (fallthrough)
+branch  3 taken 0 (throw)
+       13:  154:            ti.pop_back();
+       13:  154-block  0
+call    0 returned 13
+       13:  155:            swapsti++;
+       67:  156:            for (int k = 0; k < (ti.size() - 1); k++) {
+       67:  156-block  0
+call    0 returned 67
+branch  1 taken 54 (fallthrough)
+branch  2 taken 13
+       54:  156-block  1
+       54:  157:                swap(ti, k, k + 1);
+       54:  157-block  0
+call    0 returned 54
+branch  1 taken 54 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  158:            }
+        -:  159:        }
+        -:  160:    }
+        8:  161:        for (int j = 0; j < th.size(); j++) {
+        3:  161-block  0
+        8:  161-block  1
+call    0 returned 8
+branch  1 taken 5 (fallthrough)
+branch  2 taken 3
+        5:  161-block  2
+        5:  162:            bool quiteTodos = true;
+       27:  163:            for (int w = 0; w < ti.size(); w++) {
+        5:  163-block  0
+       27:  163-block  1
+call    0 returned 27
+branch  1 taken 22 (fallthrough)
+branch  2 taken 5
+       22:  163-block  2
+       22:  164:                if (th[j][HOGCODUSU] == ti[w][INDCODUSU]) {
+       22:  164-block  0
+call    0 returned 22
+call    1 returned 22
+call    2 returned 22
+call    3 returned 22
+branch  4 taken 8 (fallthrough)
+branch  5 taken 14
+        8:  165:                    quiteTodos = false;
+        8:  165-block  0
+        -:  166:                }
+        -:  167:            }
+       25:  168:            for (int w = 0; w < rti.size(); w++) {
+        5:  168-block  0
+       25:  168-block  1
+call    0 returned 25
+branch  1 taken 20 (fallthrough)
+branch  2 taken 5
+       20:  168-block  2
+       20:  169:                if (th[j][HOGCODUSU] == rti[w][INDCODUSU]) {
+       20:  169-block  0
+call    0 returned 20
+call    1 returned 20
+call    2 returned 20
+call    3 returned 20
+branch  4 taken 3 (fallthrough)
+branch  5 taken 17
+        3:  170:                    rth.push_back(th[j]);
+        3:  170-block  0
+call    0 returned 3
+call    1 returned 3
+branch  2 taken 3 (fallthrough)
+branch  3 taken 0 (throw)
+        3:  171:                    if (quiteTodos) {
+        3:  171-block  0
+branch  0 taken 2 (fallthrough)
+branch  1 taken 1
+        2:  172:                        swap(th, j, th.size() - w - 1);
+        2:  172-block  0
 call    0 returned 2
 call    1 returned 2
 branch  2 taken 2 (fallthrough)
 branch  3 taken 0 (throw)
-        2:  136-block  1
-call    4 returned 2
-call    5 returned 2
-branch  6 taken 2 (fallthrough)
-branch  7 taken 0 (throw)
-        2:  136-block  2
-call    8 returned 2
-        2:  136-block  3
-call    9 returned 2
-call   10 returned 2
-    $$$$$:  136-block  4
-    $$$$$:  136-block  5
-call   11 never executed
-    $$$$$:  136-block  6
-    $$$$$:  136-block  7
-    $$$$$:  136-block  8
-    $$$$$:  136-block  9
-call   12 never executed
-       10:  137:    eph_i rti = {{-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1}};
+        2:  173:                        th.pop_back();
+        2:  173-block  0
 call    0 returned 2
-call    1 returned 2
-branch  2 taken 2 (fallthrough)
-branch  3 taken 0 (throw)
-        2:  137-block  0
-call    4 returned 2
-call    5 returned 2
-branch  6 taken 2 (fallthrough)
-branch  7 taken 0 (throw)
-        2:  137-block  1
-call    8 returned 2
-        2:  137-block  2
-call    9 returned 2
-        2:  137-block  3
-call   10 returned 2
-    $$$$$:  137-block  4
-    $$$$$:  137-block  5
-call   11 never executed
-    $$$$$:  137-block  6
-    $$$$$:  137-block  7
-    $$$$$:  137-block  8
-    $$$$$:  137-block  9
-call   12 never executed
-        2:  138:    pair < eph_h, eph_i > resp = make_pair(rth, rti);
+        2:  174:                        swapsth++;
+        3:  175:                        for (int k = 0; (k + 1) < th.size(); k++) {
+        3:  175-block  0
+call    0 returned 3
+branch  1 taken 1 (fallthrough)
+branch  2 taken 2
+        1:  175-block  1
+        1:  176:                            swap(th, j + k, j + k + 1);
+        1:  176-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  177:                        }
+        -:  178:                    }
+        -:  179:                }
+        -:  180:            }
+        -:  181:
+        -:  182:        }
+        -:  183:
+        -:  184:
+        -:  185:        // TODO
+        3:  186:        resp = make_pair(rth, rti);
+        3:  186-block  0
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        3:  186-block  1
+call    3 returned 3
+call    4 returned 3
+        -:  187:
+        6:  188:        return resp;
+        3:  188-block  0
+        -:  189:
+        -:  190:}
+        -:  191:
+        -:  192:// Implementacion Problema 11
+function _Z31histogramaDeAnillosConcentricosSt6vectorIS_IiSaIiEESaIS1_EES3_St4pairIiiES1_ called 2 returned 100% blocks executed 69%
+        2:  193:    vector<int> histogramaDeAnillosConcentricos(eph_h th, eph_i ti, pair<int, int> centro, vector<int> distancias) {
+        2:  194:        vector<int> resp = {};
+        2:  194-block  0
+call    0 returned 2
+        2:  195:        resp = hogaresEnAnillosConcentricos(distancias, centro, th);
 call    0 returned 2
 branch  1 taken 2 (fallthrough)
 branch  2 taken 0 (throw)
-        -:  139:		
-        -:  140:	// TODO
-        -:  141:	
-        4:  142:	return resp;
-        2:  142-block  0
-        2:  142-block  1
-        -:  143:}
+        2:  195-block  0
+call    3 returned 2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0 (throw)
+        2:  195-block  1
+call    6 returned 2
+call    7 returned 2
+call    8 returned 2
+    $$$$$:  195-block  2
+call    9 never executed
+    $$$$$:  195-block  3
+        -:  196:
+        -:  197:        // TODO
+        -:  198:
+        2:  199:        return resp;
+        2:  199-block  0
+        -:  200:    }
+        -:  201:
+        -:  202:

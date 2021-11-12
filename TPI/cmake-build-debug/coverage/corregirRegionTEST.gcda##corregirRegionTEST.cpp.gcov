@@ -46,5 +46,5 @@
         -:   41:
        1*:   42:    ASSERT_TRUE(esEncuestaValida(th,ti));
         1:   43:    corregirRegion(th, ti);
-        1:   44:    EXPECT_EQ( th, esperado );
+       1*:   44:    EXPECT_EQ( th, esperado );
         -:   45:}

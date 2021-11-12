@@ -197,11 +197,11 @@ function _ZSt4moveIRSaIcEEONSt16remove_referenceIT_E4typeEOS3_ called 0 returned
         -:  135:  */
         -:  136:  template<typename _Tp>
         -:  137:    inline _GLIBCXX17_CONSTEXPR _Tp*
-function _ZSt9addressofISt6vectorIiSaIiEEEPT_RS3_ called 0 returned 0% blocks executed 0%
-    #####:  138:    addressof(_Tp& __r) noexcept
-    #####:  139:    { return std::__addressof(__r); }
-    %%%%%:  139-block  0
-call    0 never executed
+function _ZSt9addressofISt6vectorIiSaIiEEEPT_RS3_ called 2 returned 100% blocks executed 100%
+        2:  138:    addressof(_Tp& __r) noexcept
+        2:  139:    { return std::__addressof(__r); }
+        2:  139-block  0
+call    0 returned 2
         -:  140:
         -:  141:  // _GLIBCXX_RESOLVE_LIB_DEFECTS
         -:  142:  // 2598. addressof works on temporaries

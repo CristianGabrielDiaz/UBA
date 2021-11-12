@@ -207,20 +207,14 @@
         -:  202:  template<typename _Iter>
         -:  203:    inline _GLIBCXX_CONSTEXPR
         -:  204:    typename iterator_traits<_Iter>::iterator_category
-      934:  205:    __iterator_category(const _Iter&)
-      934:  206:    { return typename iterator_traits<_Iter>::iterator_category(); }
-------------------
-_ZSt19__iterator_categoryIPKiENSt15iterator_traitsIT_E17iterator_categoryERKS3_:
-function _ZSt19__iterator_categoryIPKiENSt15iterator_traitsIT_E17iterator_categoryERKS3_ called 814 returned 100% blocks executed 100%
-      814:  205:    __iterator_category(const _Iter&)
-      814:  206:    { return typename iterator_traits<_Iter>::iterator_category(); }
-      814:  206-block  0
+      123:  205:    __iterator_category(const _Iter&)
+      123:  206:    { return typename iterator_traits<_Iter>::iterator_category(); }
 ------------------
 _ZSt19__iterator_categoryIPKSt6vectorIiSaIiEEENSt15iterator_traitsIT_E17iterator_categoryERKS6_:
-function _ZSt19__iterator_categoryIPKSt6vectorIiSaIiEEENSt15iterator_traitsIT_E17iterator_categoryERKS6_ called 114 returned 100% blocks executed 100%
-      114:  205:    __iterator_category(const _Iter&)
-      114:  206:    { return typename iterator_traits<_Iter>::iterator_category(); }
-      114:  206-block  0
+function _ZSt19__iterator_categoryIPKSt6vectorIiSaIiEEENSt15iterator_traitsIT_E17iterator_categoryERKS6_ called 117 returned 100% blocks executed 100%
+      117:  205:    __iterator_category(const _Iter&)
+      117:  206:    { return typename iterator_traits<_Iter>::iterator_category(); }
+      117:  206-block  0
 ------------------
 _ZSt19__iterator_categoryIPKSt4pairIifEENSt15iterator_traitsIT_E17iterator_categoryERKS5_:
 function _ZSt19__iterator_categoryIPKSt4pairIifEENSt15iterator_traitsIT_E17iterator_categoryERKS5_ called 6 returned 100% blocks executed 100%

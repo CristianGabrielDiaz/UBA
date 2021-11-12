@@ -470,23 +470,10 @@ function _ZN7testing8internal15TestFactoryBaseC2Ev called 0 returned 0% blocks e
         -:  463:template <class TestClass>
         -:  464:class TestFactoryImpl : public TestFactoryBase {
         -:  465: public:
-       33:  466:  virtual Test* CreateTest() { return new TestClass; }
+       35:  466:  virtual Test* CreateTest() { return new TestClass; }
 ------------------
-_ZN7testing8internal15TestFactoryImplI36esEncuestaValidaTEST_noRangoIi7_TestE10CreateTestEv:
-function _ZN7testing8internal15TestFactoryImplI36esEncuestaValidaTEST_noRangoIi7_TestE10CreateTestEv called 1 returned 100% blocks executed 83%
-        1:  466:  virtual Test* CreateTest() { return new TestClass; }
-        1:  466-block  0
-call    0 returned 1
-call    1 returned 1
-branch  2 taken 1 (fallthrough)
-branch  3 taken 0 (throw)
-        1:  466-block  1
-        1:  466-block  2
-    $$$$$:  466-block  3
-call    4 never executed
-------------------
-_ZN7testing8internal15TestFactoryImplI47esEncuestaValidaTEST_noMismoAnioIndividuos_TestE10CreateTestEv:
-function _ZN7testing8internal15TestFactoryImplI47esEncuestaValidaTEST_noMismoAnioIndividuos_TestE10CreateTestEv called 1 returned 100% blocks executed 83%
+_ZN7testing8internal15TestFactoryImplI39esEncuestaValidaTEST_noRangoRegion_TestE10CreateTestEv:
+function _ZN7testing8internal15TestFactoryImplI39esEncuestaValidaTEST_noRangoRegion_TestE10CreateTestEv called 1 returned 100% blocks executed 83%
         1:  466:  virtual Test* CreateTest() { return new TestClass; }
         1:  466-block  0
 call    0 returned 1
@@ -589,8 +576,8 @@ branch  3 taken 0 (throw)
     $$$$$:  466-block  3
 call    4 never executed
 ------------------
-_ZN7testing8internal15TestFactoryImplI43histHabitacionalTEST_validaeph2020_100_TestE10CreateTestEv:
-function _ZN7testing8internal15TestFactoryImplI43histHabitacionalTEST_validaeph2020_100_TestE10CreateTestEv called 1 returned 100% blocks executed 83%
+_ZN7testing8internal15TestFactoryImplI36esEncuestaValidaTEST_noRangoIi7_TestE10CreateTestEv:
+function _ZN7testing8internal15TestFactoryImplI36esEncuestaValidaTEST_noRangoIi7_TestE10CreateTestEv called 1 returned 100% blocks executed 83%
         1:  466:  virtual Test* CreateTest() { return new TestClass; }
         1:  466-block  0
 call    0 returned 1
@@ -602,8 +589,8 @@ branch  3 taken 0 (throw)
     $$$$$:  466-block  3
 call    4 never executed
 ------------------
-_ZN7testing8internal15TestFactoryImplI39esEncuestaValidaTEST_noRangoRegion_TestE10CreateTestEv:
-function _ZN7testing8internal15TestFactoryImplI39esEncuestaValidaTEST_noRangoRegion_TestE10CreateTestEv called 1 returned 100% blocks executed 83%
+_ZN7testing8internal15TestFactoryImplI47esEncuestaValidaTEST_noMismoAnioIndividuos_TestE10CreateTestEv:
+function _ZN7testing8internal15TestFactoryImplI47esEncuestaValidaTEST_noMismoAnioIndividuos_TestE10CreateTestEv called 1 returned 100% blocks executed 83%
         1:  466:  virtual Test* CreateTest() { return new TestClass; }
         1:  466-block  0
 call    0 returned 1
@@ -693,8 +680,8 @@ branch  3 taken 0 (throw)
     $$$$$:  466-block  3
 call    4 never executed
 ------------------
-_ZN7testing8internal15TestFactoryImplI32esEncuestaValidaTEST_valida_TestE10CreateTestEv:
-function _ZN7testing8internal15TestFactoryImplI32esEncuestaValidaTEST_valida_TestE10CreateTestEv called 1 returned 100% blocks executed 83%
+_ZN7testing8internal15TestFactoryImplI43esEncuestaValidaTEST_noEnRangoCodusuTh_TestE10CreateTestEv:
+function _ZN7testing8internal15TestFactoryImplI43esEncuestaValidaTEST_noEnRangoCodusuTh_TestE10CreateTestEv called 1 returned 100% blocks executed 83%
         1:  466:  virtual Test* CreateTest() { return new TestClass; }
         1:  466-block  0
 call    0 returned 1
@@ -706,73 +693,8 @@ branch  3 taken 0 (throw)
     $$$$$:  466-block  3
 call    4 never executed
 ------------------
-_ZN7testing8internal15TestFactoryImplI43histHabitacionalTEST_validaeph2018_100_TestE10CreateTestEv:
-function _ZN7testing8internal15TestFactoryImplI43histHabitacionalTEST_validaeph2018_100_TestE10CreateTestEv called 1 returned 100% blocks executed 83%
-        1:  466:  virtual Test* CreateTest() { return new TestClass; }
-        1:  466-block  0
-call    0 returned 1
-call    1 returned 1
-branch  2 taken 1 (fallthrough)
-branch  3 taken 0 (throw)
-        1:  466-block  1
-        1:  466-block  2
-    $$$$$:  466-block  3
-call    4 never executed
-------------------
-_ZN7testing8internal15TestFactoryImplI44esEncuestaValidaTEST_validaAnioNegativo_TestE10CreateTestEv:
-function _ZN7testing8internal15TestFactoryImplI44esEncuestaValidaTEST_validaAnioNegativo_TestE10CreateTestEv called 1 returned 100% blocks executed 83%
-        1:  466:  virtual Test* CreateTest() { return new TestClass; }
-        1:  466-block  0
-call    0 returned 1
-call    1 returned 1
-branch  2 taken 1 (fallthrough)
-branch  3 taken 0 (throw)
-        1:  466-block  1
-        1:  466-block  2
-    $$$$$:  466-block  3
-call    4 never executed
-------------------
-_ZN7testing8internal15TestFactoryImplI48esEncuestaValidaTEST_validaTrimestreEnRango_TestE10CreateTestEv:
-function _ZN7testing8internal15TestFactoryImplI48esEncuestaValidaTEST_validaTrimestreEnRango_TestE10CreateTestEv called 1 returned 100% blocks executed 83%
-        1:  466:  virtual Test* CreateTest() { return new TestClass; }
-        1:  466-block  0
-call    0 returned 1
-call    1 returned 1
-branch  2 taken 1 (fallthrough)
-branch  3 taken 0 (throw)
-        1:  466-block  1
-        1:  466-block  2
-    $$$$$:  466-block  3
-call    4 never executed
-------------------
-_ZN7testing8internal15TestFactoryImplI51esEncuestaValidaTEST_invalidaTrimestreNegativo_TestE10CreateTestEv:
-function _ZN7testing8internal15TestFactoryImplI51esEncuestaValidaTEST_invalidaTrimestreNegativo_TestE10CreateTestEv called 1 returned 100% blocks executed 83%
-        1:  466:  virtual Test* CreateTest() { return new TestClass; }
-        1:  466-block  0
-call    0 returned 1
-call    1 returned 1
-branch  2 taken 1 (fallthrough)
-branch  3 taken 0 (throw)
-        1:  466-block  1
-        1:  466-block  2
-    $$$$$:  466-block  3
-call    4 never executed
-------------------
-_ZN7testing8internal15TestFactoryImplI63esEncuestaValidaTEST_validaMenosOIgualA20MiembrosEnElHogar_TestE10CreateTestEv:
-function _ZN7testing8internal15TestFactoryImplI63esEncuestaValidaTEST_validaMenosOIgualA20MiembrosEnElHogar_TestE10CreateTestEv called 1 returned 100% blocks executed 83%
-        1:  466:  virtual Test* CreateTest() { return new TestClass; }
-        1:  466-block  0
-call    0 returned 1
-call    1 returned 1
-branch  2 taken 1 (fallthrough)
-branch  3 taken 0 (throw)
-        1:  466-block  1
-        1:  466-block  2
-    $$$$$:  466-block  3
-call    4 never executed
-------------------
-_ZN7testing8internal15TestFactoryImplI65esEncuestaValidaTEST_invalidaDormitoriosMayoresAHabitaciones_TestE10CreateTestEv:
-function _ZN7testing8internal15TestFactoryImplI65esEncuestaValidaTEST_invalidaDormitoriosMayoresAHabitaciones_TestE10CreateTestEv called 1 returned 100% blocks executed 83%
+_ZN7testing8internal15TestFactoryImplI43esEncuestaValidaTEST_noEnRangoCodusuTi_TestE10CreateTestEv:
+function _ZN7testing8internal15TestFactoryImplI43esEncuestaValidaTEST_noEnRangoCodusuTi_TestE10CreateTestEv called 1 returned 100% blocks executed 83%
         1:  466:  virtual Test* CreateTest() { return new TestClass; }
         1:  466-block  0
 call    0 returned 1
@@ -797,73 +719,8 @@ branch  3 taken 0 (throw)
     $$$$$:  466-block  3
 call    4 never executed
 ------------------
-_ZN7testing8internal15TestFactoryImplI69esEncuestaValidaTEST_invalidaDistintoAnioEntreHogaresEIndividuos_TestE10CreateTestEv:
-function _ZN7testing8internal15TestFactoryImplI69esEncuestaValidaTEST_invalidaDistintoAnioEntreHogaresEIndividuos_TestE10CreateTestEv called 1 returned 100% blocks executed 83%
-        1:  466:  virtual Test* CreateTest() { return new TestClass; }
-        1:  466-block  0
-call    0 returned 1
-call    1 returned 1
-branch  2 taken 1 (fallthrough)
-branch  3 taken 0 (throw)
-        1:  466-block  1
-        1:  466-block  2
-    $$$$$:  466-block  3
-call    4 never executed
-------------------
-_ZN7testing8internal15TestFactoryImplI53esEncuestaValidaTEST_invalidaDistintoAnioHogares_TestE10CreateTestEv:
-function _ZN7testing8internal15TestFactoryImplI53esEncuestaValidaTEST_invalidaDistintoAnioHogares_TestE10CreateTestEv called 1 returned 100% blocks executed 83%
-        1:  466:  virtual Test* CreateTest() { return new TestClass; }
-        1:  466-block  0
-call    0 returned 1
-call    1 returned 1
-branch  2 taken 1 (fallthrough)
-branch  3 taken 0 (throw)
-        1:  466-block  1
-        1:  466-block  2
-    $$$$$:  466-block  3
-call    4 never executed
-------------------
-_ZN7testing8internal15TestFactoryImplI70esEncuestaValidaTEST_invalidaIndividuosCodusuYComponenteRepetidos_TestE10CreateTestEv:
-function _ZN7testing8internal15TestFactoryImplI70esEncuestaValidaTEST_invalidaIndividuosCodusuYComponenteRepetidos_TestE10CreateTestEv called 1 returned 100% blocks executed 83%
-        1:  466:  virtual Test* CreateTest() { return new TestClass; }
-        1:  466-block  0
-call    0 returned 1
-call    1 returned 1
-branch  2 taken 1 (fallthrough)
-branch  3 taken 0 (throw)
-        1:  466-block  1
-        1:  466-block  2
-    $$$$$:  466-block  3
-call    4 never executed
-------------------
-_ZN7testing8internal15TestFactoryImplI56esEncuestaValidaTEST_invalidaHogaresCodusuRepetidos_TestE10CreateTestEv:
-function _ZN7testing8internal15TestFactoryImplI56esEncuestaValidaTEST_invalidaHogaresCodusuRepetidos_TestE10CreateTestEv called 1 returned 100% blocks executed 83%
-        1:  466:  virtual Test* CreateTest() { return new TestClass; }
-        1:  466-block  0
-call    0 returned 1
-call    1 returned 1
-branch  2 taken 1 (fallthrough)
-branch  3 taken 0 (throw)
-        1:  466-block  1
-        1:  466-block  2
-    $$$$$:  466-block  3
-call    4 never executed
-------------------
-_ZN7testing8internal15TestFactoryImplI54esEncuestaValidaTEST_invalidaIndividuosSinHogares_TestE10CreateTestEv:
-function _ZN7testing8internal15TestFactoryImplI54esEncuestaValidaTEST_invalidaIndividuosSinHogares_TestE10CreateTestEv called 1 returned 100% blocks executed 83%
-        1:  466:  virtual Test* CreateTest() { return new TestClass; }
-        1:  466-block  0
-call    0 returned 1
-call    1 returned 1
-branch  2 taken 1 (fallthrough)
-branch  3 taken 0 (throw)
-        1:  466-block  1
-        1:  466-block  2
-    $$$$$:  466-block  3
-call    4 never executed
-------------------
-_ZN7testing8internal15TestFactoryImplI61esEncuestaValidaTEST_invalidaSinTodosLosAtributosHogares_TestE10CreateTestEv:
-function _ZN7testing8internal15TestFactoryImplI61esEncuestaValidaTEST_invalidaSinTodosLosAtributosHogares_TestE10CreateTestEv called 1 returned 100% blocks executed 83%
+_ZN7testing8internal15TestFactoryImplI44esEncuestaValidaTEST_invalidaSinHogares_TestE10CreateTestEv:
+function _ZN7testing8internal15TestFactoryImplI44esEncuestaValidaTEST_invalidaSinHogares_TestE10CreateTestEv called 1 returned 100% blocks executed 83%
         1:  466:  virtual Test* CreateTest() { return new TestClass; }
         1:  466-block  0
 call    0 returned 1
@@ -888,8 +745,177 @@ branch  3 taken 0 (throw)
     $$$$$:  466-block  3
 call    4 never executed
 ------------------
-_ZN7testing8internal15TestFactoryImplI44esEncuestaValidaTEST_invalidaSinHogares_TestE10CreateTestEv:
-function _ZN7testing8internal15TestFactoryImplI44esEncuestaValidaTEST_invalidaSinHogares_TestE10CreateTestEv called 1 returned 100% blocks executed 83%
+_ZN7testing8internal15TestFactoryImplI61esEncuestaValidaTEST_invalidaSinTodosLosAtributosHogares_TestE10CreateTestEv:
+function _ZN7testing8internal15TestFactoryImplI61esEncuestaValidaTEST_invalidaSinTodosLosAtributosHogares_TestE10CreateTestEv called 1 returned 100% blocks executed 83%
+        1:  466:  virtual Test* CreateTest() { return new TestClass; }
+        1:  466-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  466-block  1
+        1:  466-block  2
+    $$$$$:  466-block  3
+call    4 never executed
+------------------
+_ZN7testing8internal15TestFactoryImplI54esEncuestaValidaTEST_invalidaIndividuosSinHogares_TestE10CreateTestEv:
+function _ZN7testing8internal15TestFactoryImplI54esEncuestaValidaTEST_invalidaIndividuosSinHogares_TestE10CreateTestEv called 1 returned 100% blocks executed 83%
+        1:  466:  virtual Test* CreateTest() { return new TestClass; }
+        1:  466-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  466-block  1
+        1:  466-block  2
+    $$$$$:  466-block  3
+call    4 never executed
+------------------
+_ZN7testing8internal15TestFactoryImplI56esEncuestaValidaTEST_invalidaHogaresCodusuRepetidos_TestE10CreateTestEv:
+function _ZN7testing8internal15TestFactoryImplI56esEncuestaValidaTEST_invalidaHogaresCodusuRepetidos_TestE10CreateTestEv called 1 returned 100% blocks executed 83%
+        1:  466:  virtual Test* CreateTest() { return new TestClass; }
+        1:  466-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  466-block  1
+        1:  466-block  2
+    $$$$$:  466-block  3
+call    4 never executed
+------------------
+_ZN7testing8internal15TestFactoryImplI70esEncuestaValidaTEST_invalidaIndividuosCodusuYComponenteRepetidos_TestE10CreateTestEv:
+function _ZN7testing8internal15TestFactoryImplI70esEncuestaValidaTEST_invalidaIndividuosCodusuYComponenteRepetidos_TestE10CreateTestEv called 1 returned 100% blocks executed 83%
+        1:  466:  virtual Test* CreateTest() { return new TestClass; }
+        1:  466-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  466-block  1
+        1:  466-block  2
+    $$$$$:  466-block  3
+call    4 never executed
+------------------
+_ZN7testing8internal15TestFactoryImplI53esEncuestaValidaTEST_invalidaDistintoAnioHogares_TestE10CreateTestEv:
+function _ZN7testing8internal15TestFactoryImplI53esEncuestaValidaTEST_invalidaDistintoAnioHogares_TestE10CreateTestEv called 1 returned 100% blocks executed 83%
+        1:  466:  virtual Test* CreateTest() { return new TestClass; }
+        1:  466-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  466-block  1
+        1:  466-block  2
+    $$$$$:  466-block  3
+call    4 never executed
+------------------
+_ZN7testing8internal15TestFactoryImplI69esEncuestaValidaTEST_invalidaDistintoAnioEntreHogaresEIndividuos_TestE10CreateTestEv:
+function _ZN7testing8internal15TestFactoryImplI69esEncuestaValidaTEST_invalidaDistintoAnioEntreHogaresEIndividuos_TestE10CreateTestEv called 1 returned 100% blocks executed 83%
+        1:  466:  virtual Test* CreateTest() { return new TestClass; }
+        1:  466-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  466-block  1
+        1:  466-block  2
+    $$$$$:  466-block  3
+call    4 never executed
+------------------
+_ZN7testing8internal15TestFactoryImplI32esEncuestaValidaTEST_valida_TestE10CreateTestEv:
+function _ZN7testing8internal15TestFactoryImplI32esEncuestaValidaTEST_valida_TestE10CreateTestEv called 1 returned 100% blocks executed 83%
+        1:  466:  virtual Test* CreateTest() { return new TestClass; }
+        1:  466-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  466-block  1
+        1:  466-block  2
+    $$$$$:  466-block  3
+call    4 never executed
+------------------
+_ZN7testing8internal15TestFactoryImplI65esEncuestaValidaTEST_invalidaDormitoriosMayoresAHabitaciones_TestE10CreateTestEv:
+function _ZN7testing8internal15TestFactoryImplI65esEncuestaValidaTEST_invalidaDormitoriosMayoresAHabitaciones_TestE10CreateTestEv called 1 returned 100% blocks executed 83%
+        1:  466:  virtual Test* CreateTest() { return new TestClass; }
+        1:  466-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  466-block  1
+        1:  466-block  2
+    $$$$$:  466-block  3
+call    4 never executed
+------------------
+_ZN7testing8internal15TestFactoryImplI63esEncuestaValidaTEST_validaMenosOIgualA20MiembrosEnElHogar_TestE10CreateTestEv:
+function _ZN7testing8internal15TestFactoryImplI63esEncuestaValidaTEST_validaMenosOIgualA20MiembrosEnElHogar_TestE10CreateTestEv called 1 returned 100% blocks executed 83%
+        1:  466:  virtual Test* CreateTest() { return new TestClass; }
+        1:  466-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  466-block  1
+        1:  466-block  2
+    $$$$$:  466-block  3
+call    4 never executed
+------------------
+_ZN7testing8internal15TestFactoryImplI51esEncuestaValidaTEST_invalidaTrimestreNegativo_TestE10CreateTestEv:
+function _ZN7testing8internal15TestFactoryImplI51esEncuestaValidaTEST_invalidaTrimestreNegativo_TestE10CreateTestEv called 1 returned 100% blocks executed 83%
+        1:  466:  virtual Test* CreateTest() { return new TestClass; }
+        1:  466-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  466-block  1
+        1:  466-block  2
+    $$$$$:  466-block  3
+call    4 never executed
+------------------
+_ZN7testing8internal15TestFactoryImplI48esEncuestaValidaTEST_validaTrimestreEnRango_TestE10CreateTestEv:
+function _ZN7testing8internal15TestFactoryImplI48esEncuestaValidaTEST_validaTrimestreEnRango_TestE10CreateTestEv called 1 returned 100% blocks executed 83%
+        1:  466:  virtual Test* CreateTest() { return new TestClass; }
+        1:  466-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  466-block  1
+        1:  466-block  2
+    $$$$$:  466-block  3
+call    4 never executed
+------------------
+_ZN7testing8internal15TestFactoryImplI44esEncuestaValidaTEST_validaAnioNegativo_TestE10CreateTestEv:
+function _ZN7testing8internal15TestFactoryImplI44esEncuestaValidaTEST_validaAnioNegativo_TestE10CreateTestEv called 1 returned 100% blocks executed 83%
+        1:  466:  virtual Test* CreateTest() { return new TestClass; }
+        1:  466-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  466-block  1
+        1:  466-block  2
+    $$$$$:  466-block  3
+call    4 never executed
+------------------
+_ZN7testing8internal15TestFactoryImplI43histHabitacionalTEST_validaeph2018_100_TestE10CreateTestEv:
+function _ZN7testing8internal15TestFactoryImplI43histHabitacionalTEST_validaeph2018_100_TestE10CreateTestEv called 1 returned 100% blocks executed 83%
+        1:  466:  virtual Test* CreateTest() { return new TestClass; }
+        1:  466-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  466-block  1
+        1:  466-block  2
+    $$$$$:  466-block  3
+call    4 never executed
+------------------
+_ZN7testing8internal15TestFactoryImplI43histHabitacionalTEST_validaeph2020_100_TestE10CreateTestEv:
+function _ZN7testing8internal15TestFactoryImplI43histHabitacionalTEST_validaeph2020_100_TestE10CreateTestEv called 1 returned 100% blocks executed 83%
         1:  466:  virtual Test* CreateTest() { return new TestClass; }
         1:  466-block  0
 call    0 returned 1

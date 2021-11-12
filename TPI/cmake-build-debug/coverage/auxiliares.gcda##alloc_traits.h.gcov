@@ -96,31 +96,42 @@
         -:   91:      destroy(_Alloc& __a, _Ptr __p)
         -:   92:      { _Base_type::destroy(__a, std::__to_address(__p)); }
         -:   93:
-   205095:   94:    static _Alloc _S_select_on_copy(const _Alloc& __a)
-   205095:   95:    { return _Base_type::select_on_container_copy_construction(__a); }
+   207120:   94:    static _Alloc _S_select_on_copy(const _Alloc& __a)
+   207120:   95:    { return _Base_type::select_on_container_copy_construction(__a); }
 ------------------
 _ZN9__gnu_cxx14__alloc_traitsISaIiEiE17_S_select_on_copyERKS1_:
-function _ZN9__gnu_cxx14__alloc_traitsISaIiEiE17_S_select_on_copyERKS1_ called 203253 returned 100% blocks executed 100%
-   203253:   94:    static _Alloc _S_select_on_copy(const _Alloc& __a)
-   203253:   95:    { return _Base_type::select_on_container_copy_construction(__a); }
-   203253:   95-block  0
-call    0 returned 203253
+function _ZN9__gnu_cxx14__alloc_traitsISaIiEiE17_S_select_on_copyERKS1_ called 205159 returned 100% blocks executed 100%
+   205159:   94:    static _Alloc _S_select_on_copy(const _Alloc& __a)
+   205159:   95:    { return _Base_type::select_on_container_copy_construction(__a); }
+   205159:   95-block  0
+call    0 returned 205159
 ------------------
 _ZN9__gnu_cxx14__alloc_traitsISaISt6vectorIiSaIiEEES3_E17_S_select_on_copyERKS4_:
-function _ZN9__gnu_cxx14__alloc_traitsISaISt6vectorIiSaIiEEES3_E17_S_select_on_copyERKS4_ called 1842 returned 100% blocks executed 100%
-     1842:   94:    static _Alloc _S_select_on_copy(const _Alloc& __a)
-     1842:   95:    { return _Base_type::select_on_container_copy_construction(__a); }
-     1842:   95-block  0
-call    0 returned 1842
+function _ZN9__gnu_cxx14__alloc_traitsISaISt6vectorIiSaIiEEES3_E17_S_select_on_copyERKS4_ called 1961 returned 100% blocks executed 100%
+     1961:   94:    static _Alloc _S_select_on_copy(const _Alloc& __a)
+     1961:   95:    { return _Base_type::select_on_container_copy_construction(__a); }
+     1961:   95-block  0
+call    0 returned 1961
 ------------------
         -:   96:
         -:   97:    static void _S_on_swap(_Alloc& __a, _Alloc& __b)
         -:   98:    { std::__alloc_on_swap(__a, __b); }
         -:   99:
-function _ZN9__gnu_cxx14__alloc_traitsISaIiEiE27_S_propagate_on_copy_assignEv called 49 returned 100% blocks executed 100%
-       49:  100:    static constexpr bool _S_propagate_on_copy_assign()
-       49:  101:    { return _Base_type::propagate_on_container_copy_assignment::value; }
-       49:  101-block  0
+      194:  100:    static constexpr bool _S_propagate_on_copy_assign()
+      194:  101:    { return _Base_type::propagate_on_container_copy_assignment::value; }
+------------------
+_ZN9__gnu_cxx14__alloc_traitsISaISt4pairIiiEES2_E27_S_propagate_on_copy_assignEv:
+function _ZN9__gnu_cxx14__alloc_traitsISaISt4pairIiiEES2_E27_S_propagate_on_copy_assignEv called 5 returned 100% blocks executed 100%
+        5:  100:    static constexpr bool _S_propagate_on_copy_assign()
+        5:  101:    { return _Base_type::propagate_on_container_copy_assignment::value; }
+        5:  101-block  0
+------------------
+_ZN9__gnu_cxx14__alloc_traitsISaIiEiE27_S_propagate_on_copy_assignEv:
+function _ZN9__gnu_cxx14__alloc_traitsISaIiEiE27_S_propagate_on_copy_assignEv called 189 returned 100% blocks executed 100%
+      189:  100:    static constexpr bool _S_propagate_on_copy_assign()
+      189:  101:    { return _Base_type::propagate_on_container_copy_assignment::value; }
+      189:  101-block  0
+------------------
         -:  102:
         -:  103:    static constexpr bool _S_propagate_on_move_assign()
         -:  104:    { return _Base_type::propagate_on_container_move_assignment::value; }
@@ -128,10 +139,21 @@ function _ZN9__gnu_cxx14__alloc_traitsISaIiEiE27_S_propagate_on_copy_assignEv ca
         -:  106:    static constexpr bool _S_propagate_on_swap()
         -:  107:    { return _Base_type::propagate_on_container_swap::value; }
         -:  108:
+    #####:  109:    static constexpr bool _S_always_equal()
+    #####:  110:    { return _Base_type::is_always_equal::value; }
+------------------
+_ZN9__gnu_cxx14__alloc_traitsISaISt4pairIiiEES2_E15_S_always_equalEv:
+function _ZN9__gnu_cxx14__alloc_traitsISaISt4pairIiiEES2_E15_S_always_equalEv called 0 returned 0% blocks executed 0%
+    #####:  109:    static constexpr bool _S_always_equal()
+    #####:  110:    { return _Base_type::is_always_equal::value; }
+    %%%%%:  110-block  0
+------------------
+_ZN9__gnu_cxx14__alloc_traitsISaIiEiE15_S_always_equalEv:
 function _ZN9__gnu_cxx14__alloc_traitsISaIiEiE15_S_always_equalEv called 0 returned 0% blocks executed 0%
     #####:  109:    static constexpr bool _S_always_equal()
     #####:  110:    { return _Base_type::is_always_equal::value; }
     %%%%%:  110-block  0
+------------------
         -:  111:
         -:  112:    static constexpr bool _S_nothrow_move()
         -:  113:    { return _S_propagate_on_move_assign() || _S_always_equal(); }

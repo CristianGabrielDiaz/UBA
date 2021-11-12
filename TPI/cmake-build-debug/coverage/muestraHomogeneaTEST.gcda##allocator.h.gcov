@@ -141,6 +141,12 @@ function _ZNSaISt6vectorIiSaIiEEEC1Ev called 0 returned 0% blocks executed 0%
     %%%%%:  131-block  0
 call    0 never executed
 ------------------
+_ZNSaISt6vectorIiSaIiEEEC2Ev:
+function _ZNSaISt6vectorIiSaIiEEEC2Ev called 0 returned 0% blocks executed 0%
+    #####:  131:      allocator() throw() { }
+    %%%%%:  131-block  0
+call    0 never executed
+------------------
 _ZNSaIiEC1Ev:
 function _ZNSaIiEC1Ev called 0 returned 0% blocks executed 0%
     #####:  131:      allocator() throw() { }

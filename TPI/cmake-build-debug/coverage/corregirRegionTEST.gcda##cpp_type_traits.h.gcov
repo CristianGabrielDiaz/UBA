@@ -410,8 +410,8 @@
         -:  405:  // remove the move_iterator wrapper.
         -:  406:  template<typename _Iterator>
         -:  407:    inline _Iterator
-    #####:  408:    __miter_base(_Iterator __it)
-    #####:  409:    { return __it; }
+    1726*:  408:    __miter_base(_Iterator __it)
+    1726*:  409:    { return __it; }
 ------------------
 _ZSt12__miter_baseIN9__gnu_cxx17__normal_iteratorIPKiSt6vectorIiSaIiEEEEET_S8_:
 function _ZSt12__miter_baseIN9__gnu_cxx17__normal_iteratorIPKiSt6vectorIiSaIiEEEEET_S8_ called 0 returned 0% blocks executed 0%
@@ -420,10 +420,10 @@ function _ZSt12__miter_baseIN9__gnu_cxx17__normal_iteratorIPKiSt6vectorIiSaIiEEE
     %%%%%:  409-block  0
 ------------------
 _ZSt12__miter_baseIPKiET_S2_:
-function _ZSt12__miter_baseIPKiET_S2_ called 0 returned 0% blocks executed 0%
-    #####:  408:    __miter_base(_Iterator __it)
-    #####:  409:    { return __it; }
-    %%%%%:  409-block  0
+function _ZSt12__miter_baseIPKiET_S2_ called 1726 returned 100% blocks executed 100%
+     1726:  408:    __miter_base(_Iterator __it)
+     1726:  409:    { return __it; }
+     1726:  409-block  0
 ------------------
         -:  410:
         -:  411:_GLIBCXX_END_NAMESPACE_VERSION

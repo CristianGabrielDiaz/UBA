@@ -140,21 +140,63 @@ void corregirRegion( eph_h & th, eph_i ti ) {
 }
 
 // Implementacion Problema 10
-vector < int > histogramaDeAnillosConcentricos( eph_h th, eph_i ti, pair < int, int > centro, vector < int > distancias ){
-	vector < int > resp = {};
-	
-	// TODO
-	
-	return resp;
+pair < eph_h, eph_i > quitarIndividuos(eph_i & ti, eph_h & th, vector<pair<int,dato>>  busqueda ) {
+    eph_h rth = {};
+    eph_i rti = {};
+    pair<eph_h, eph_i> resp = make_pair(rth, rti);
+    int swapsti = 0, swapsth = 0;
+    eph_h th0 = th;
+    eph_i ti0 = ti;
+    for (int i = 0; i < ti0.size(); i++) {
+        if (individuoBuscado(ti[0], busqueda)) {
+            rti.push_back(ti[0]);
+            swap(ti, 0, ti.size() - 1);   //- swapsti
+            ti.pop_back();
+            swapsti++;
+            for (int k = 0; k < (ti.size() - 1); k++) {
+                swap(ti, k, k + 1);
+            }
+        }
+    }
+        for (int j = 0; j < th.size(); j++) {
+            bool quiteTodos = true;
+            for (int w = 0; w < ti.size(); w++) {
+                if (th[j][HOGCODUSU] == ti[w][INDCODUSU]) {
+                    quiteTodos = false;
+                }
+            }
+            for (int w = 0; w < rti.size(); w++) {
+                if (th[j][HOGCODUSU] == rti[w][INDCODUSU]) {
+                    rth.push_back(th[j]);
+                    if (quiteTodos) {
+                        swap(th, j, th.size() - w - 1);
+                        th.pop_back();
+                        swapsth++;
+                        for (int k = 0; (k + 1) < th.size(); k++) {
+                            swap(th, j + k, j + k + 1);
+                        }
+                    }
+                }
+            }
+
+        }
+
+
+        // TODO
+        resp = make_pair(rth, rti);
+
+        return resp;
+
 }
 
 // Implementacion Problema 11
-pair < eph_h, eph_i > quitarIndividuos(eph_i & ti, eph_h & th, vector < pair < int, dato > >  busqueda ){
-    eph_h rth = {{-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1}};
-    eph_i rti = {{-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1}};
-    pair < eph_h, eph_i > resp = make_pair(rth, rti);
-		
-	// TODO
-	
-	return resp;
-}
+    vector<int> histogramaDeAnillosConcentricos(eph_h th, eph_i ti, pair<int, int> centro, vector<int> distancias) {
+        vector<int> resp = {};
+        resp = hogaresEnAnillosConcentricos(distancias, centro, th);
+
+        // TODO
+
+        return resp;
+    }
+
+

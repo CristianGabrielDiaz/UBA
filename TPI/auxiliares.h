@@ -102,6 +102,7 @@ float cantIndividuosQueTrabajan(eph_h th, eph_i ti);
 bool tieneCasaChica(hogar th_k, eph_i ti);
 
 //IMPLENTACION PROBLEMA 6
+
 //IMPLENTACION PROBLEMA 7
 
 void insertionSortRegion (eph_h &th );
@@ -123,7 +124,27 @@ void insertarCodusu(eph_i &ti, int i);
 void insertarComponenteEnCodusu(vector<vector<int>> &matriz, int i);
 
 //IMPLENTACION PROBLEMA 8
+vector<pair<int,int>> ingresoTotalPorHogar(eph_h th,eph_i ti);
+
+void ordenarPorIngresos( vector<pair<int, int>> &ingresosDeHogares );
+
+void insertarPorIngresos(vector<pair<int, int>> &ingresosDeHogares, int i);
+
+void swapDupla(vector<pair<int, int>> & ingresosDeHogares, int i, int j);
+
+vector<pair<int,int>> mesetaDeIngresosMasLarga(vector<pair<int,int>> &ingresosHogares);
+
 //IMPLENTACION PROBLEMA 9
 //IMPLENTACION PROBLEMA 10
+bool individuoBuscado(hogar ti_i, vector<pair<int,dato>> busqueda);
 //IMPLENTACION PROBLEMA 11
+
+float distanciaEuclediana(pair<int,int> centro,int latitud, int longitud);
+
+bool hogarEnAnillo (int distDesde, int distHasta, pair<int,int> centro ,hogar th_k);
+
+int cantHogaresEnAnillo (int distDesde,int distHasta,pair<int,int> centro,eph_h &th );
+
+vector<int> hogaresEnAnillosConcentricos (vector<int> distancias,pair<int,int> centro,eph_h &th );
+
 #endif //SOLUCION_AUXILIARES_H

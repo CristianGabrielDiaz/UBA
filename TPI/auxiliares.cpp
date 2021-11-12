@@ -505,11 +505,8 @@ void insertionSortRegion (eph_h &th ) {
     for(int i=0; i < th . size () ; i++) {
         insertarRegion (th ,i) ;
     }
-
 }
-
 void insertarRegion(eph_h &th, int i) {
-
     while (i > 0 && th [i][4] < th [i -1][4]) {//usamos 4 ya que REGION no coincide con lo definido en definiciones ya la tabla hogares le faltan filas
         swap (th ,i,i -1) ;
         i--;
@@ -520,7 +517,6 @@ void insertionSortCodusuEnRegion (eph_h &th ) {
         insertarCodusuEnRegion (th ,i) ;
     }
 }
-
 void insertarCodusuEnRegion(eph_h &th, int i) {
     if (i > 0 && th [i][4] == th[i -1][4]) {//REGION=4
         while (i > 0 && th[i][HOGCODUSU] < th[i - 1][HOGCODUSU]&& th [i][4] == th[i -1][4]) {
@@ -529,8 +525,6 @@ void insertarCodusuEnRegion(eph_h &th, int i) {
         }
     }
 }
-
-
 void insertionSortCodusu (eph_h &th, eph_i &ti) {
     int j=0;
     for(int i=0; i < th . size () ; i++) {
@@ -539,13 +533,9 @@ void insertionSortCodusu (eph_h &th, eph_i &ti) {
                 swap (ti ,j ,k) ;
                 j++;
             }
-
         }
-
     }
-
 }
-
 /*
 void insertarCodusu( eph_i &ti, int i) {//
     while (i < ti.size() && ti [i][INDCODUSU] < ti [i -1][INDCODUSU]) {
@@ -554,15 +544,11 @@ void insertarCodusu( eph_i &ti, int i) {//
     }
 }
 */
-
 void insertionSortComponenteEnCodusu(vector<vector<int>> &matriz) {
     for(int i=0; i < matriz . size () ; i++) {
         insertarComponenteEnCodusu (matriz ,i) ;
     }
-
 }
-
-
 void insertarComponenteEnCodusu(vector<vector<int>> &matriz, int i) {
     if (i > 0 && matriz [i][INDCODUSU] == matriz[i -1][INDCODUSU]) {
         int codusu1 = matriz[0][INDCODUSU],codusu2 = matriz[1][INDCODUSU],codusu3=matriz[2][INDCODUSU],codusu4= matriz[3][INDCODUSU];
@@ -572,7 +558,6 @@ void insertarComponenteEnCodusu(vector<vector<int>> &matriz, int i) {
         }
     }
 }
-
 void swap(vector<vector<int>> &matriz, int i, int j) {
     vector<int> k= matriz [i];
     matriz [i]= matriz [j];
@@ -647,4 +632,42 @@ vector<pair<int, int>> mesetaDeIngresosMasLarga(vector<pair<int, int>> &ingresos
 
 //IMPLENTACION PROBLEMA 9
 //IMPLENTACION PROBLEMA 10
+bool individuoBuscado(hogar ti_i, vector<pair<int,dato>> busqueda){
+    bool coincidenTodos=true;
+    for(int i=0; i < busqueda.size () ; i++){
+        if(busqueda[i].second!=ti_i[busqueda[i].first] ){
+            coincidenTodos=false;
+        }
+    }
+    return coincidenTodos;
+
+}
+
 //IMPLENTACION PROBLEMA 11
+
+float distanciaEuclediana(pair<int,int> centro,int latitud, int longitud){
+    return sqrt(pow(centro.first- latitud,2)+pow(centro.first-longitud,2));
+}
+
+
+bool hogarEnAnillo(int distDesde, int distHasta, pair<int, int> centro, hogar th_k) {
+    return (distDesde< distanciaEuclediana(centro, th_k[HOGLATITUD],th_k[HOGLONGITUD]) && distanciaEuclediana(centro, th_k[HOGLATITUD],th_k[HOGLONGITUD]) <=distHasta);
+}
+
+int cantHogaresEnAnillo (int distDesde,int distHasta,pair<int,int> centro,eph_h &th ){
+    int hogaresEnAnillo=0;
+    for(int i=0; i < th.size ();i++){
+        if(hogarEnAnillo(distDesde,distHasta,centro,th[i])){
+            hogaresEnAnillo++;
+        }
+    }
+    return hogaresEnAnillo;
+}
+vector<int>hogaresEnAnillosConcentricos (vector<int> distancias,pair<int,int> centro,eph_h &th ){
+    vector<int> resp={};
+    resp.push_back(cantHogaresEnAnillo(0, distancias[0], centro,th));
+    for(int i=0; i < (distancias.size ()-1);i++){
+        resp.push_back(cantHogaresEnAnillo(distancias[i], distancias[i+1], centro,th));
+    }
+    return  resp;
+}

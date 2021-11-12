@@ -28,7 +28,7 @@ TEST(muestraHomogeneaTEST, unaSolucionDe4) {
 //                                                ingresos
 //                                                   v
     eph_i ti = {{543,   2018, 1, 1, 1, 1, 36, 1,  3, 1, 1}, // 1
-                {334,   2018, 1, 1, 1, 1, 36, 1,  3, 90, 1},
+                {334,   2018, 1, 1, 1, 1, 36, 1,  3, 90, 1}, //180
                 {340,   2018, 1, 1, 1, 1, 36, 1,  3, 30, 1}, // 35
                 {340,   2018, 3, 1, 1, 1, 36, 1,  3, 5, 1},
                 {334,   2018, 2, 1, 1, 1, 31, 1,  3, 90, 1},
@@ -91,4 +91,22 @@ TEST(muestraHomogeneaTEST, dosSolucionesDe3) {
     vector <hogar> propuesto = muestraHomogenea(th,ti);
     bool esperado = res1 == propuesto || res2 == propuesto;
     EXPECT_EQ(true,esperado);
+}
+
+TEST(muestraHomogeneaTEST, unaSolucionDe0) {
+    vector <hogar> res = {};
+
+    eph_h th = {
+            {960,  2018, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1}, //0
+            {1009, 2018, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1}, //26
+    };
+//                                                ingresos
+//                                                   v
+    eph_i ti = {
+                {1009,  2018, 1, 1, 1, 2, 36, 1,  3, 26, 1}, // 26
+                {960,   2018, 3, 1, 1, 2, 51, 1,  4, 0,  1}, // 0
+                {960,   2018, 2, 1, 1, 2, 51, 1,  4, 0,  1},
+                {960,   2018, 1, 1, 1, 2, 51, 1,  4, 0,  1}
+    };
+    EXPECT_EQ(res,muestraHomogenea(th,ti));
 }
